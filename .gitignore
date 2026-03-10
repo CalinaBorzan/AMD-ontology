@@ -1,14 +1,29 @@
-# Project files
+# Environment
 .env
-__pycache__
+__pycache__/
+*.pyc
 
-# Readthedocs documentation build
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE files
+.idea/
+.vscode/
+
+# Build artifacts
 build/
-
-# PYPI build files
 dist/
-*.egg-info
+*.egg-info/
 
-# Pre-commit Hooks
-.mypy_cache
-.ruff_cache
+# Pre-commit hooks cache
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+
+# Large generated data (reproducible via prepare_amd_simple.py)
+data/stage-2/AMD/abstracts/
+data/stage-3/AMD/abstracts/

@@ -39,5 +39,16 @@ def extract_json_schema(text: str, json_encl_expr: list):
             except Exception:
                 logger.debug(f"Exception occured while trying {expr} as the start and end expression")
 
+    # Fallback: try to extract the largest JSON-looking object by curly braces
+    if schema is None:
+        try:
+            start = text.find("{")
+            end = text.rfind("}")
+            if start != -1 and end != -1 and end > start:
+                candidate = text[start : end + 1]
+                schema = json.loads(candidate)
+        except Exception:
+            logger.debug("Failed to extract JSON via curly-brace fallback")
+
     # Returning the extracted schema or if not found: None
     return schema

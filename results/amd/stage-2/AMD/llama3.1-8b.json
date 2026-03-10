@@ -1,0 +1,1019 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "Age-Related Macular Degeneration and its subtypes",
+            "subclasses": [
+                "DryAMD",
+                "WetAMD",
+                "GeographicAtrophy",
+                "IntermediateAMD",
+                "CNV",
+                "IllDefinedCNV"
+            ],
+            "instances": [
+                "AMD",
+                "DryAMD",
+                "WetAMD",
+                "GeographicAtrophy",
+                "IntermediateAMD",
+                "CNV",
+                "IllDefinedCNV"
+            ]
+        },
+        "DryAMD": {
+            "description": "Dry form of Age-Related Macular Degeneration",
+            "subclasses": [
+                "GeographicAtrophy"
+            ],
+            "instances": [
+                "DryAMD",
+                "GeographicAtrophy"
+            ]
+        },
+        "WetAMD": {
+            "description": "Wet form of Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "WetAMD"
+            ]
+        },
+        "GeographicAtrophy": {
+            "description": "Retinal cell death area in DryAMD",
+            "subclasses": [],
+            "instances": [
+                "GeographicAtrophy"
+            ]
+        },
+        "IntermediateAMD": {
+            "description": "Intermediate form of Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "IntermediateAMD"
+            ]
+        },
+        "CNV": {
+            "description": "Choroidal Neovascularization",
+            "subclasses": [
+                "ClassicCNV",
+                "OccultCNV",
+                "MinimallyClassicCNV",
+                "IllDefinedCNV"
+            ],
+            "instances": [
+                "ClassicCNV",
+                "OccultCNV",
+                "MinimallyClassicCNV",
+                "IllDefinedCNV"
+            ]
+        },
+        "ClassicCNV": {
+            "description": "Classic Choroidal Neovascularization",
+            "subclasses": [],
+            "instances": [
+                "ClassicCNV"
+            ]
+        },
+        "OccultCNV": {
+            "description": "Occult Choroidal Neovascularization",
+            "subclasses": [],
+            "instances": [
+                "OccultCNV"
+            ]
+        },
+        "MinimallyClassicCNV": {
+            "description": "Minimally Classic Choroidal Neovascularization",
+            "subclasses": [],
+            "instances": [
+                "MinimallyClassicCNV"
+            ]
+        },
+        "IllDefinedCNV": {
+            "description": "Ill-defined Choroidal Neovascularization",
+            "subclasses": [],
+            "instances": [
+                "IllDefinedCNV"
+            ]
+        },
+        "Treatment": {
+            "description": "Therapeutic approaches for Age-Related Macular Degeneration",
+            "subclasses": [
+                "AntiVEGF",
+                "Surgical",
+                "Supplements",
+                "Emerging"
+            ],
+            "instances": [
+                "AntiVEGF",
+                "Surgical",
+                "Supplements",
+                "Emerging"
+            ]
+        },
+        "AntiVEGF": {
+            "description": "Anti-VEGF therapy for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab",
+                "Brolucizumab"
+            ]
+        },
+        "Surgical": {
+            "description": "Surgical treatments for Age-Related Macular Degeneration",
+            "subclasses": [
+                "SubmacularSurgery",
+                "PhotodynamicTherapy"
+            ],
+            "instances": [
+                "SubmacularSurgery",
+                "PhotodynamicTherapy"
+            ]
+        },
+        "SubmacularSurgery": {
+            "description": "Submacular Surgery for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "SubmacularSurgery"
+            ]
+        },
+        "PhotodynamicTherapy": {
+            "description": "Photodynamic Therapy for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "PhotodynamicTherapy"
+            ]
+        },
+        "Supplements": {
+            "description": "Nutritional supplements for Age-Related Macular Degeneration",
+            "subclasses": [
+                "AREDS",
+                "Lutein",
+                "Zeaxanthin",
+                "Omega-3"
+            ],
+            "instances": [
+                "AREDS",
+                "Lutein",
+                "Zeaxanthin",
+                "Omega-3"
+            ]
+        },
+        "AREDS": {
+            "description": "Age-Related Eye Disease Study",
+            "subclasses": [],
+            "instances": [
+                "AREDS"
+            ]
+        },
+        "Lutein": {
+            "description": "Lutein supplement for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Lutein"
+            ]
+        },
+        "Zeaxanthin": {
+            "description": "Zeaxanthin supplement for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Zeaxanthin"
+            ]
+        },
+        "Omega-3": {
+            "description": "Omega-3 supplement for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Omega-3"
+            ]
+        },
+        "Emerging": {
+            "description": "Emerging treatments for Age-Related Macular Degeneration",
+            "subclasses": [
+                "GeneTherapy",
+                "ComplementInhibitors",
+                "StemCellTherapy"
+            ],
+            "instances": [
+                "GeneTherapy",
+                "ComplementInhibitors",
+                "StemCellTherapy"
+            ]
+        },
+        "GeneTherapy": {
+            "description": "Gene Therapy for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "GeneTherapy"
+            ]
+        },
+        "ComplementInhibitors": {
+            "description": "Complement Inhibitors for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "ComplementInhibitors"
+            ]
+        },
+        "StemCellTherapy": {
+            "description": "Stem Cell Therapy for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "StemCellTherapy"
+            ]
+        },
+        "GeneticMarker": {
+            "description": "Genetic markers associated with Age-Related Macular Degeneration",
+            "subclasses": [
+                "RiskGenes",
+                "MolecularTargets",
+                "GeneticVariants"
+            ],
+            "instances": [
+                "CFH",
+                "ARMS2",
+                "HTRA1",
+                "C3",
+                "CFB",
+                "C2",
+                "VEGF",
+                "PDGF",
+                "ComplementPathwayProteins",
+                "SNPs",
+                "CopyNumberVariations"
+            ]
+        },
+        "RiskGenes": {
+            "description": "Genes associated with increased risk of Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "CFH",
+                "ARMS2",
+                "HTRA1",
+                "C3",
+                "CFB",
+                "C2"
+            ]
+        },
+        "MolecularTargets": {
+            "description": "Molecular targets for Age-Related Macular Degeneration treatments",
+            "subclasses": [],
+            "instances": [
+                "VEGF",
+                "PDGF",
+                "ComplementPathwayProteins"
+            ]
+        },
+        "GeneticVariants": {
+            "description": "Genetic variants associated with Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "SNPs",
+                "CopyNumberVariations"
+            ]
+        },
+        "ImagingBiomarker": {
+            "description": "Imaging biomarkers for Age-Related Macular Degeneration",
+            "subclasses": [
+                "Structural",
+                "Functional"
+            ],
+            "instances": [
+                "Drusen",
+                "RetinalThickness",
+                "SubretinalFluid",
+                "PigmentEpithelialDetachment",
+                "VisualAcuity",
+                "ContrastSensitivity",
+                "ReadingSpeed",
+                "MacularPigmentOpticalDensity"
+            ]
+        },
+        "Structural": {
+            "description": "Structural imaging biomarkers for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Drusen",
+                "RetinalThickness",
+                "SubretinalFluid",
+                "PigmentEpithelialDetachment"
+            ]
+        },
+        "Functional": {
+            "description": "Functional diagnostic methods for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "VisualFieldTesting",
+                "Electroretinography",
+                "FlickerPhotometry"
+            ]
+        },
+        "DiagnosticMethod": {
+            "description": "Diagnostic methods for Age-Related Macular Degeneration",
+            "subclasses": [
+                "Imaging",
+                "Functional"
+            ],
+            "instances": [
+                "OCT",
+                "FluoresceinAngiography",
+                "ICGAngiography",
+                "FundusPhotography",
+                "FundusAutofluorescence",
+                "VisualFieldTesting",
+                "Electroretinography",
+                "FlickerPhotometry"
+            ]
+        },
+        "Imaging": {
+            "description": "Imaging diagnostic methods for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "OCT",
+                "FluoresceinAngiography",
+                "ICGAngiography",
+                "FundusPhotography",
+                "FundusAutofluorescence"
+            ]
+        },
+        "RiskFactor": {
+            "description": "Risk factors for Age-Related Macular Degeneration",
+            "subclasses": [
+                "NonModifiable",
+                "Modifiable"
+            ],
+            "instances": [
+                "Age",
+                "Genetics",
+                "FamilyHistory",
+                "Gender",
+                "Smoking",
+                "Diet",
+                "BMI/Obesity",
+                "SunExposure",
+                "CardiovascularDisease"
+            ]
+        },
+        "NonModifiable": {
+            "description": "Non-modifiable risk factors for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Age",
+                "Genetics",
+                "FamilyHistory",
+                "Gender"
+            ]
+        },
+        "Modifiable": {
+            "description": "Modifiable risk factors for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "Smoking",
+                "Diet",
+                "BMI/Obesity",
+                "SunExposure",
+                "CardiovascularDisease"
+            ]
+        },
+        "ClinicalOutcome": {
+            "description": "Clinical outcomes for Age-Related Macular Degeneration",
+            "subclasses": [
+                "Primary",
+                "Secondary"
+            ],
+            "instances": [
+                "VisualAcuityChange",
+                "PreventionOfModerate/SevereVisionLoss",
+                "LesionSizeChange",
+                "CNVRegression",
+                "ProgressionToLateAMD"
+            ]
+        },
+        "Primary": {
+            "description": "Primary clinical outcomes for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "VisualAcuityChange",
+                "PreventionOfModerate/SevereVisionLoss"
+            ]
+        },
+        "Secondary": {
+            "description": "Secondary clinical outcomes for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": [
+                "LesionSizeChange",
+                "CNVRegression",
+                "ProgressionToLateAMD"
+            ]
+        },
+        "MacularPigment": {
+            "description": "Macular pigment accumulation in the retina",
+            "subclasses": [],
+            "instances": [
+                "Lutein",
+                "Zeaxanthin"
+            ]
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Treatment approach for a specific disease",
+            "examples": [
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "inhibits": {
+            "domain": "Treatment",
+            "range": "MolecularTarget",
+            "description": "Treatment inhibits a specific molecular target",
+            "examples": [
+                [
+                    "Ranibizumab",
+                    "inhibits",
+                    "VEGF"
+                ]
+            ]
+        },
+        "causesOrIncreases": {
+            "domain": "RiskFactor",
+            "range": "Disease",
+            "description": "Risk factor causes or increases the risk of a specific disease",
+            "examples": [
+                [
+                    "Smoking",
+                    "causesOrIncreases",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "isSubtypeOf": {
+            "domain": "DiseaseSubtype",
+            "range": "ParentDisease",
+            "description": "Disease subtype is a subtype of a parent disease",
+            "examples": [
+                [
+                    "GeographicAtrophy",
+                    "isSubtypeOf",
+                    "DryAMD"
+                ]
+            ]
+        },
+        "indicates": {
+            "domain": "Biomarker",
+            "range": "Disease/Condition",
+            "description": "Biomarker indicates a specific disease or condition",
+            "examples": [
+                [
+                    "Drusen",
+                    "indicates",
+                    "DryAMD"
+                ]
+            ]
+        },
+        "diagnosedBy": {
+            "domain": "Disease",
+            "range": "DiagnosticMethod",
+            "description": "Disease is diagnosed by a specific diagnostic method",
+            "examples": [
+                [
+                    "WetAMD",
+                    "diagnosedBy",
+                    "FluoresceinAngiography"
+                ]
+            ]
+        },
+        "hasSymptom": {
+            "domain": "Disease",
+            "range": "Symptom",
+            "description": "Disease has a specific symptom",
+            "examples": [
+                [
+                    "WetAMD",
+                    "hasSymptom",
+                    "VisualAcuityChange"
+                ]
+            ]
+        },
+        "measuredBy": {
+            "domain": "Biomarker",
+            "range": "DiagnosticMethod",
+            "description": "Biomarker is measured by a specific diagnostic method",
+            "examples": [
+                [
+                    "VisualAcuity",
+                    "measuredBy",
+                    "VisualFieldTesting"
+                ]
+            ]
+        },
+        "associatedWith": {
+            "domain": "GeneticMarker",
+            "range": "Disease",
+            "description": "Genetic marker is associated with a specific disease",
+            "examples": [
+                [
+                    "CFH",
+                    "associatedWith",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "assessedBy": {
+            "domain": "ClinicalOutcome",
+            "range": "DiagnosticMethod",
+            "description": "Clinical outcome is assessed by a specific diagnostic method",
+            "examples": [
+                [
+                    "VisualAcuityChange",
+                    "assessedBy",
+                    "VisualFieldTesting"
+                ]
+            ]
+        },
+        "treatsAMD": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Treatment approach for Age-Related Macular Degeneration",
+            "examples": [
+                [
+                    "Lutein",
+                    "treatsAMD",
+                    "DryAMD"
+                ]
+            ]
+        },
+        "macularPigmentOpticalDensity": {
+            "domain": "Biomarker",
+            "range": "Disease/Condition",
+            "description": "Macular pigment optical density indicates a specific disease or condition",
+            "examples": [
+                [
+                    "MacularPigmentOpticalDensity",
+                    "indicates",
+                    "DryAMD"
+                ]
+            ]
+        },
+        "submacularSurgeryTreats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Submacular Surgery for Age-Related Macular Degeneration",
+            "examples": [
+                [
+                    "SubmacularSurgery",
+                    "treats",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "photodynamicTherapyTreats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Photodynamic Therapy for Age-Related Macular Degeneration",
+            "examples": [
+                [
+                    "PhotodynamicTherapy",
+                    "treats",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "corticosteroidTreatmentTreats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Corticosteroid treatment for Age-Related Macular Degeneration",
+            "examples": [
+                [
+                    "Corticosteroid",
+                    "treats",
+                    "IllDefinedCNV"
+                ]
+            ]
+        },
+        "fluocinoloneImplantTreats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Fluocinolone implant treatment for Age-Related Macular Degeneration",
+            "examples": [
+                [
+                    "FluocinoloneImplant",
+                    "treats",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "celecoxibTreats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "Celecoxib treatment for Age-Related Macular Degeneration",
+            "examples": [
+                [
+                    "Celecoxib",
+                    "treats",
+                    "WetAMD"
+                ]
+            ]
+        },
+        "celecoxibInhibits": {
+            "domain": "Treatment",
+            "range": "MolecularTarget",
+            "description": "Celecoxib inhibits a specific molecular target",
+            "examples": [
+                [
+                    "Celecoxib",
+                    "inhibits",
+                    "VEGF"
+                ]
+            ]
+        },
+        "newProperties": {
+            "associatedWith": {
+                "domain": "GeneticMarker",
+                "range": "Disease",
+                "description": "Genetic marker is associated with a specific disease",
+                "examples": [
+                    [
+                        "CFH",
+                        "associatedWith",
+                        "WetAMD"
+                    ]
+                ]
+            },
+            "assessedBy": {
+                "domain": "ClinicalOutcome",
+                "range": "DiagnosticMethod",
+                "description": "Clinical outcome is assessed by a specific diagnostic method",
+                "examples": [
+                    [
+                        "VisualAcuityChange",
+                        "assessedBy",
+                        "VisualFieldTesting"
+                    ]
+                ]
+            },
+            "treatsAMD": {
+                "domain": "Treatment",
+                "range": "Disease",
+                "description": "Treatment approach for Age-Related Macular Degeneration",
+                "examples": [
+                    [
+                        "Lutein",
+                        "treatsAMD",
+                        "DryAMD"
+                    ]
+                ]
+            },
+            "macularPigmentOpticalDensity": {
+                "domain": "Biomarker",
+                "range": "Disease/Condition",
+                "description": "Macular pigment optical density indicates a specific disease or condition",
+                "examples": [
+                    [
+                        "MacularPigmentOpticalDensity",
+                        "indicates",
+                        "DryAMD"
+                    ]
+                ]
+            }
+        },
+        "individuals": {
+            "category": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab",
+                "Brolucizumab",
+                "SubmacularSurgery",
+                "PhotodynamicTherapy",
+                "AREDS",
+                "Lutein",
+                "Zeaxanthin",
+                "Omega-3",
+                "GeneTherapy",
+                "ComplementInhibitors",
+                "StemCellTherapy",
+                "CFH",
+                "ARMS2",
+                "HTRA1",
+                "C3",
+                "CFB",
+                "C2",
+                "VEGF",
+                "PDGF",
+                "ComplementPathwayProteins",
+                "SNPs",
+                "CopyNumberVariations",
+                "Drusen",
+                "RetinalThickness",
+                "SubretinalFluid",
+                "PigmentEpithelialDetachment",
+                "VisualAcuity",
+                "ContrastSensitivity",
+                "ReadingSpeed",
+                "MacularPigmentOpticalDensity",
+                "OCT",
+                "FluoresceinAngiography",
+                "ICGAngiography",
+                "FundusPhotography",
+                "FundusAutofluorescence",
+                "VisualFieldTesting",
+                "Electroretinography",
+                "FlickerPhotometry",
+                "Age",
+                "Genetics",
+                "FamilyHistory",
+                "Gender",
+                "Smoking",
+                "Diet",
+                "BMI/Obesity",
+                "SunExposure",
+                "CardiovascularDisease",
+                "VisualAcuityChange",
+                "PreventionOfModerate/SevereVisionLoss",
+                "LesionSizeChange",
+                "CNVRegression",
+                "ProgressionToLateAMD",
+                "Corticosteroid",
+                "IllDefinedCNV",
+                "OccultCNV",
+                "MinimallyClassicCNV",
+                "ClassicCNV",
+                "GeographicAtrophy",
+                "IntermediateAMD",
+                "WetAMD",
+                "DryAMD",
+                "AMD",
+                "Celecoxib",
+                "Verteporfin",
+                "SNPs",
+                "CopyNumberVariations",
+                "ComplementPathwayProteins",
+                "TriamcinoloneAcetonide",
+                "PDT",
+                "TAC-PF",
+                "ShamInjections",
+                "TranspupillaryThermotherapy",
+                "Photocoagulation",
+                "LaserPhotocoagulation",
+                "Triamcinolone",
+                "Lutein/Zeaxanthin/AREDS",
+                "Verteporfin/PDT",
+                "Celecoxib/VEGF",
+                "SubmacularSurgery/PhotodynamicTherapy",
+                "FluocinoloneImplant/Corticosteroid",
+                "OCTFindings"
+            ],
+            "newClasses": {
+                "LaserInterferometry": {
+                    "description": "Laser interferometry method for measuring fundus pulsation",
+                    "subclasses": [],
+                    "instances": [
+                        "LaserInterferometry"
+                    ]
+                },
+                "PneumaticTonometer": {
+                    "description": "Pneumatic tonometer method for measuring pulsatile ocular blood flow",
+                    "subclasses": [],
+                    "instances": [
+                        "PneumaticTonometer"
+                    ]
+                },
+                "OcularRigidity": {
+                    "description": "Mechanical properties of the eye coats",
+                    "subclasses": [],
+                    "instances": [
+                        "OcularRigidity"
+                    ]
+                }
+            },
+            "newProperties": {
+                "associatedWith": {
+                    "domain": "GeneticMarker",
+                    "range": "Disease",
+                    "description": "Genetic marker is associated with a specific disease",
+                    "examples": [
+                        [
+                            "CFH",
+                            "associatedWith",
+                            "WetAMD"
+                        ]
+                    ]
+                },
+                "assessedBy": {
+                    "domain": "ClinicalOutcome",
+                    "range": "DiagnosticMethod",
+                    "description": "Clinical outcome is assessed by a specific diagnostic method",
+                    "examples": [
+                        [
+                            "VisualAcuityChange",
+                            "assessedBy",
+                            "VisualFieldTesting"
+                        ]
+                    ]
+                },
+                "treatsAMD": {
+                    "domain": "Treatment",
+                    "range": "Disease",
+                    "description": "Treatment approach for Age-Related Macular Degeneration",
+                    "examples": [
+                        [
+                            "Lutein",
+                            "treatsAMD",
+                            "DryAMD"
+                        ]
+                    ]
+                },
+                "macularPigmentOpticalDensity": {
+                    "domain": "Biomarker",
+                    "range": "Disease/Condition",
+                    "description": "Macular pigment optical density indicates a specific disease or condition",
+                    "examples": [
+                        [
+                            "MacularPigmentOpticalDensity",
+                            "indicates",
+                            "DryAMD"
+                        ]
+                    ]
+                }
+            },
+            "newIndividuals": {
+                "category": [
+                    "LaserInterferometry",
+                    "PneumaticTonometer",
+                    "OcularRigidity",
+                    "FundusPulsation",
+                    "PulsatileOcularBloodFlow",
+                    "CFH",
+                    "WetAMD"
+                ]
+            }
+        },
+        "newClasses": {
+            "HTRA1": {
+                "description": "HTRA1 gene associated with Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "HTRA1"
+                ]
+            },
+            "CFH": {
+                "description": "CFH gene associated with Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "CFH"
+                ]
+            },
+            "IntermediateAMD": {
+                "description": "Intermediate form of Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "IntermediateAMD"
+                ]
+            },
+            "GeneticVariants": {
+                "description": "Genetic variants associated with Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "SNPs",
+                    "CopyNumberVariations"
+                ]
+            },
+            "MolecularTargets": {
+                "description": "Molecular targets for Age-Related Macular Degeneration treatments",
+                "subclasses": [],
+                "instances": [
+                    "VEGF",
+                    "PDGF",
+                    "ComplementPathwayProteins"
+                ]
+            },
+            "RiskGenes": {
+                "description": "Genes associated with increased risk of Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "CFH",
+                    "ARMS2",
+                    "HTRA1",
+                    "C3",
+                    "CFB",
+                    "C2"
+                ]
+            },
+            "NonModifiable": {
+                "description": "Non-modifiable risk factors for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "Age",
+                    "Genetics",
+                    "FamilyHistory",
+                    "Gender"
+                ]
+            },
+            "Modifiable": {
+                "description": "Modifiable risk factors for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "Smoking",
+                    "Diet",
+                    "BMI/Obesity",
+                    "SunExposure",
+                    "CardiovascularDisease"
+                ]
+            },
+            "Structural": {
+                "description": "Structural imaging biomarkers for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "Drusen",
+                    "RetinalThickness",
+                    "SubretinalFluid",
+                    "PigmentEpithelialDetachment"
+                ]
+            },
+            "Functional": {
+                "description": "Functional diagnostic methods for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "VisualFieldTesting",
+                    "Electroretinography",
+                    "FlickerPhotometry"
+                ]
+            },
+            "Imaging": {
+                "description": "Imaging diagnostic methods for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "OCT",
+                    "FluoresceinAngiography",
+                    "ICGAngiography",
+                    "FundusPhotography",
+                    "FundusAutofluorescence"
+                ]
+            },
+            "ClinicalOutcome": {
+                "description": "Clinical outcomes for Age-Related Macular Degeneration",
+                "subclasses": [
+                    "Primary",
+                    "Secondary"
+                ],
+                "instances": [
+                    "VisualAcuityChange",
+                    "PreventionOfModerate/SevereVisionLoss",
+                    "LesionSizeChange",
+                    "CNVRegression",
+                    "ProgressionToLateAMD"
+                ]
+            },
+            "Primary": {
+                "description": "Primary clinical outcomes for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "VisualAcuityChange",
+                    "PreventionOfModerate/SevereVisionLoss"
+                ]
+            },
+            "Secondary": {
+                "description": "Secondary clinical outcomes for Age-Related Macular Degeneration",
+                "subclasses": [],
+                "instances": [
+                    "LesionSizeChange",
+                    "CNVRegression",
+                    "ProgressionToLateAMD"
+                ]
+            },
+            "MacularPigment": {
+                "description": "Macular pigment accumulation in the retina",
+                "subclasses": [],
+                "instances": [
+                    "Lutein",
+                    "Zeaxanthin"
+                ]
+            }
+        },
+        "newIndividuals": {
+            "category": [
+                "IntermediateAMD",
+                "SNPs",
+                "CopyNumberVariations",
+                "Celecoxib",
+                "Verteporfin",
+                "TAC-PF",
+                "ShamInjections",
+                "TranspupillaryThermotherapy",
+                "Photocoagulation",
+                "LaserPhotocoagulation",
+                "TriamcinoloneAcetonide",
+                "Lutein/Zeaxanthin/AREDS",
+                "Verteporfin/PDT",
+                "Celecoxib/VEGF",
+                "SubmacularSurgery/PhotodynamicTherapy",
+                "FluocinoloneImplant/Corticosteroid",
+                "OCTFindings"
+            ]
+        }
+    }
+}

@@ -21,7 +21,7 @@ class EnvConfig:
 
     # OLLAMA
     OLLAMA_base_url = os.getenv("OLLAMA_BASE_URL")
-    OLLAMA_context_length = 32768
+    OLLAMA_context_length = 65536   # Increased for larger models and long schema+abstract inputs
     OLLAMA_response_format = "json"
 
     # HuggingFace

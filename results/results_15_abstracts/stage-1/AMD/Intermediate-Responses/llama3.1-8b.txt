@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Age-Related Macular Degeneration (AMD) Process",
+  "description": "JSON schema representing the Age-Related Macular Degeneration process.",
+  "type": "object",
+  "properties": {
+    "diseaseType": {
+      "description": "Type of AMD: Dry or Wet.",
+      "type": "string",
+      "enum": ["Dry", "Wet"]
+    },
+    "pathologicalFeatures": {
+      "description": "List of pathological features associated with AMD.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/pathologicalFeature"
+      }
+    },
+    "keyGenesAndBiomarkers": {
+      "description": "List of key genes and biomarkers involved in AMD.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/keyGeneOrBiomarker"
+      }
+    },
+    "treatments": {
+      "description": "List of treatments for AMD.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/treatment"
+      }
+    },
+    "diagnosticMethods": {
+      "description": "List of diagnostic methods used to detect AMD.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/diagnosticMethod"
+      }
+    },
+    "researchAreas": {
+      "description": "List of research areas related to AMD.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/researchArea"
+      }
+    }
+  },
+  "definitions": {
+    "pathologicalFeature": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the pathological feature.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the pathological feature.",
+          "type": "string"
+        }
+      },
+      "required": ["name", "description"]
+    },
+    "keyGeneOrBiomarker": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the key gene or biomarker.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the key gene or biomarker.",
+          "type": "string"
+        }
+      },
+      "required": ["name", "description"]
+    },
+    "treatment": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the treatment.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the treatment.",
+          "type": "string"
+        }
+      },
+      "required": ["name", "description"]
+    },
+    "diagnosticMethod": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the diagnostic method.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the diagnostic method.",
+          "type": "string"
+        }
+      },
+      "required": ["name", "description"]
+    },
+    "researchArea": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the research area.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the research area.",
+          "type": "string"
+        }
+      },
+      "required": ["name", "description"]
+    }
+  }
+}

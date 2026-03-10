@@ -1,0 +1,936 @@
+{
+  "classes": {
+    "Disease": {
+      "description": "Represents diseases related to Age-Related Macular Degeneration (AMD).",
+      "subclasses": [
+        "DryAMD",
+        "WetAMD",
+        "GeographicAtrophy",
+        "IntermediateAMD",
+        "ChoroidalNeovascularMembrane",
+        "PathologicMyopia",
+        "PseudoxanthomaElasticum",
+        "MacularEdema",
+        "RubeosisIridis",
+        "NeovascularGlaucoma",
+        "ProliferativeDiabeticRetinopathy",
+        "ImmunologicalMechanism",
+        "PolypoidalChoroidalVasculopathy",
+        "EarlyAMD",
+        "OcularHistoplasmosisSyndrome",
+        "IllDefinedCNV",
+        "FeederVessels",
+        "UltrasoundEvaluation",
+        "NonExsudativeAMD",
+        "AtrophicMacularDegeneration",
+        "PigmentEpithelialDetachment",
+        "DepressiveDisorder",
+        "PosteriorVitreoMacularAdhesion",
+        "Glaucoma",
+        "DarkAdaptationDeficiency",
+        "AlzheimersDisease",
+        "ReticularPseudodrusen",
+        "GutMicrobiotaAlteration"
+      ],
+      "instances": []
+    },
+    "DryAMD": {
+      "description": "Dry form of AMD characterized by drusen deposits and gradual cell breakdown.",
+      "subclasses": [],
+      "instances": []
+    },
+    "WetAMD": {
+      "description": "Wet form of AMD characterized by abnormal blood vessel growth beneath the retina.",
+      "subclasses": [],
+      "instances": []
+    },
+    "GeographicAtrophy": {
+      "description": "Area of retinal cell death in AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "IntermediateAMD": {
+      "description": "Intermediate stage of AMD with moderate drusen and pigment changes.",
+      "subclasses": [],
+      "instances": []
+    },
+    "ChoroidalNeovascularMembrane": {
+      "description": "Choroidal neovascular membrane in AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "PathologicMyopia": {
+      "description": "Pathologic myopia associated with choroidal neovascularization.",
+      "subclasses": [],
+      "instances": []
+    },
+    "PseudoxanthomaElasticum": {
+      "description": "Pseudoxanthoma elasticum associated with choroidal neovascularization.",
+      "subclasses": [],
+      "instances": []
+    },
+    "MacularEdema": {
+      "description": "Macular edema not related to Retinal Vein Occlusion or Diabetic macular edema.",
+      "subclasses": [],
+      "instances": []
+    },
+    "RubeosisIridis": {
+      "description": "Rubeosis iridis associated with ocular neovascularization.",
+      "subclasses": [],
+      "instances": []
+    },
+    "NeovascularGlaucoma": {
+      "description": "Neovascular glaucoma associated with ocular neovascularization.",
+      "subclasses": [],
+      "instances": []
+    },
+    "ProliferativeDiabeticRetinopathy": {
+      "description": "Proliferative diabetic retinopathy requiring vitrectomy.",
+      "subclasses": [],
+      "instances": []
+    },
+    "ImmunologicalMechanism": {
+      "description": "Immunological mechanisms and their regulatory mechanisms in AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "PolypoidalChoroidalVasculopathy": {
+      "description": "Polypoidal choroidal vasculopathy, a subtype of exudative AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "EarlyAMD": {
+      "description": "Early stage of AMD with signs of intermediate to high-risk.",
+      "subclasses": [],
+      "instances": []
+    },
+    "OcularHistoplasmosisSyndrome": {
+      "description": "Ocular histoplasmosis syndrome associated with choroidal neovascularization.",
+      "subclasses": [],
+      "instances": []
+    },
+    "IllDefinedCNV": {
+      "description": "Ill-defined choroidal neovascularization that cannot be well demarcated on fluorescein angiography.",
+      "subclasses": [],
+      "instances": []
+    },
+    "FeederVessels": {
+      "description": "Feeder vessels that supply nutrients to choroidal neovascularization.",
+      "subclasses": [],
+      "instances": []
+    },
+    "UltrasoundEvaluation": {
+      "description": "Evaluation of ocular tissues using ultrasound techniques.",
+      "subclasses": [],
+      "instances": []
+    },
+    "NonExsudativeAMD": {
+      "description": "Non-exsudative form of AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "AtrophicMacularDegeneration": {
+      "description": "Atrophic form of AMD characterized by cell death in the macula.",
+      "subclasses": [],
+      "instances": []
+    },
+    "PigmentEpithelialDetachment": {
+      "description": "Pigment epithelial detachment in AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "DepressiveDisorder": {
+      "description": "Depressive disorders associated with AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "PosteriorVitreoMacularAdhesion": {
+      "description": "Posterior vitreomacular adhesion (VMA) associated with exudative AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "Glaucoma": {
+      "description": "Glaucoma associated with elevated intraocular pressure.",
+      "subclasses": [],
+      "instances": []
+    },
+    "DarkAdaptationDeficiency": {
+      "description": "Deficiency in dark adaptation, a functional measure in AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "AlzheimersDisease": {
+      "description": "Neurodegenerative disease affecting the brain and causing memory and thinking problems.",
+      "subclasses": [],
+      "instances": []
+    },
+    "ReticularPseudodrusen": {
+      "description": "Reticular pseudodrusen, an additional phenotypic characteristic frequently observed in patients with AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "GutMicrobiotaAlteration": {
+      "description": "Alterations in the gut microbiota composition that may be associated with AMD.",
+      "subclasses": [],
+      "instances": []
+    },
+    "Treatment": {
+      "description": "Therapeutic approaches for AMD.",
+      "subclasses": [
+        "AntiVEGFTherapy",
+        "SurgicalTherapy",
+        "SupplementTherapy",
+        "EmergingTherapy",
+        "SteroidTherapy",
+        "TranspupillaryThermotherapy",
+        "Ellex2RTLaser",
+        "StereotacticRadiosurgery",
+        "NightTimeLightTherapy",
+        "IntraocularLensImplantation",
+        "PulseDiodeLaserPhotocoagulation",
+        "OculomotorTraining",
+        "PhotodynamicTherapy",
+        "Rheohemapheresis",
+        "CNTFImplantTherapy",
+        "CopaxoneTherapy",
+        "ISONEPTherapy",
+        "LowVisionRehabilitation",
+        "PreferredRetinalLocusTraining",
+        "EccentricViewingTraining",
+        "ClosedCircuitTelevision",
+        "AntiTNFTherapy"
+      ],
+      "instances": []
+    },
+    "AntiVEGFTherapy": {
+      "description": "Anti-VEGF agents used in AMD treatment.",
+      "subclasses": [],
+      "instances": [
+        "Ranibizumab",
+        "Aflibercept",
+        "Bevacizumab",
+        "Brolucizumab",
+        "Conbercept",
+        "Verteporfin",
+        "Avastin",
+        "POT-4",
+        "OT-551",
+        "Dexamethasone",
+        "Lucentis",
+        "SqualamineLactate",
+        "TissuePlasminogenActivator"
+      ]
+    },
+    "SurgicalTherapy": {
+      "description": "Surgical treatments for AMD.",
+      "subclasses": [],
+      "instances": [
+        "PhotodynamicTherapy",
+        "LaserPhotocoagulation",
+        "SubmacularSurgery",
+        "IntraocularLensImplantation",
+        "TransparsPlanavitrectomy"
+      ]
+    },
+    "SupplementTherapy": {
+      "description": "Supplements used in AMD treatment.",
+      "subclasses": [],
+      "instances": [
+        "AREDS",
+        "Lutein",
+        "Zeaxanthin",
+        "Omega-3",
+        "Macuvite",
+        "GreenTeaPolyphenols",
+        "Saffron",
+        "MesoZeaxanthin"
+      ]
+    },
+    "EmergingTherapy": {
+      "description": "Emerging treatments for AMD.",
+      "subclasses": [],
+      "instances": [
+        "GeneTherapy",
+        "ComplementInhibitors",
+        "StemCellTherapy",
+        "RetinalProsthetics",
+        "CNTFImplantTherapy",
+        "Sirolimus"
+      ]
+    },
+    "SteroidTherapy": {
+      "description": "Steroid treatments for AMD.",
+      "subclasses": [],
+      "instances": [
+        "CorticosteroidInjection",
+        "FluocinoloneAcetonideImplant",
+        "TriamcinoloneAcetonide",
+        "Kenalog",
+        "TriamcinoloneAcetate",
+        "Dexamethasone"
+      ]
+    },
+    "TranspupillaryThermotherapy": {
+      "description": "Thermic treatment of choroidal neovascularization in AMD.",
+      "subclasses": [],
+      "instances": [
+        "TranspupillaryThermotherapy"
+      ]
+    },
+    "Ellex2RTLaser": {
+      "description": "Ellex 2RT laser treatment for AMD.",
+      "subclasses": [],
+      "instances": [
+        "Ellex2RTLaser"
+      ]
+    },
+    "StereotacticRadiosurgery": {
+      "description": "Stereotactic radiosurgery for treating wet AMD.",
+      "subclasses": [],
+      "instances": [
+        "StereotacticRadiosurgery"
+      ]
+    },
+    "NightTimeLightTherapy": {
+      "description": "Night-time light therapy for AMD.",
+      "subclasses": [],
+      "instances": [
+        "LowLevelNightTimeLightTherapy"
+      ]
+    },
+    "IntraocularLensImplantation": {
+      "description": "Intraocular lens implantation for visual rehabilitation in AMD.",
+      "subclasses": [],
+      "instances": [
+        "IOLVIP",
+        "SeeAgainLens"
+      ]
+    },
+    "PulseDiodeLaserPhotocoagulation": {
+      "description": "Pulse-diode laser photocoagulation for treating feeder vessels in AMD.",
+      "subclasses": [],
+      "instances": [
+        "PulseDiodeLaserPhotocoagulation"
+      ]
+    },
+    "OculomotorTraining": {
+      "description": "Oculomotor training for improving reading skills in AMD.",
+      "subclasses": [],
+      "instances": [
+        "OculomotorTrainingProgram"
+      ]
+    },
+    "PhotodynamicTherapy": {
+      "description": "Photodynamic therapy for treating choroidal neovascularization in AMD.",
+      "subclasses": [],
+      "instances": [
+        "PhotodynamicTherapy"
+      ]
+    },
+    "Rheohemapheresis": {
+      "description": "Rheohemapheresis treatment for AMD.",
+      "subclasses": [],
+      "instances": [
+        "Rheopheresis"
+      ]
+    },
+    "CNTFImplantTherapy": {
+      "description": "CNTF implant therapy for treating atrophic macular degeneration.",
+      "subclasses": [],
+      "instances": [
+        "CNTFImplant"
+      ]
+    },
+    "CopaxoneTherapy": {
+      "description": "Copaxone therapy for treating dry AMD.",
+      "subclasses": [],
+      "instances": [
+        "Copaxone"
+      ]
+    },
+    "ISONEPTherapy": {
+      "description": "ISONEP therapy for treating choroidal neovascularization in AMD.",
+      "subclasses": [],
+      "instances": [
+        "ISONEP"
+      ]
+    },
+    "LowVisionRehabilitation": {
+      "description": "Low vision rehabilitation for AMD.",
+      "subclasses": [],
+      "instances": [
+        "CollaborativeLowVisionRehabilitation",
+        "EnhancedLowVisionRehabilitation"
+      ]
+    },
+    "PreferredRetinalLocusTraining": {
+      "description": "Training to improve the use of preferred retinal loci in AMD.",
+      "subclasses": [],
+      "instances": [
+        "PreferredRetinalLocusTraining"
+      ]
+    },
+    "EccentricViewingTraining": {
+      "description": "Eccentric viewing training for visual rehabilitation in AMD.",
+      "subclasses": [],
+      "instances": [
+        "EccentricViewingTraining"
+      ]
+    },
+    "ClosedCircuitTelevision": {
+      "description": "Closed circuit television for visual rehabilitation in AMD.",
+      "subclasses": [],
+      "instances": [
+        "ClosedCircuitTelevision"
+      ]
+    },
+    "AntiTNFTherapy": {
+      "description": "Anti-TNF therapy for treating AMD.",
+      "subclasses": [],
+      "instances": [
+        "Infliximab"
+      ]
+    },
+    "GeneticMolecularBiomarker": {
+      "description": "Genetic and molecular biomarkers associated with AMD.",
+      "subclasses": [
+        "RiskGenes",
+        "MolecularTargets",
+        "GeneticVariants"
+      ],
+      "instances": []
+    },
+    "RiskGenes": {
+      "description": "Genes that increase the risk of AMD.",
+      "subclasses": [],
+      "instances": [
+        "CFH",
+        "ARMS2",
+        "HTRA1",
+        "C3",
+        "CFB",
+        "C2",
+        "ApoE",
+        "CX3CR1",
+        "VEGF",
+        "LOC",
+        "TAS2R38",
+        "PLEKHA1",
+        "VEGF-A",
+        "VEGF-B",
+        "VEGFR"
+      ]
+    },
+    "MolecularTargets": {
+      "description": "Molecular targets in AMD.",
+      "subclasses": [],
+      "instances": [
+        "VEGF",
+        "PDGF",
+        "ComplementPathwayProteins",
+        "S1P",
+        "TNF-alpha"
+      ]
+    },
+    "GeneticVariants": {
+      "description": "Genetic variants associated with AMD.",
+      "subclasses": [],
+      "instances": [
+        "SNPs",
+        "CopyNumberVariations"
+      ]
+    },
+    "ImagingClinicalBiomarker": {
+      "description": "Structural and functional biomarkers used in AMD.",
+      "subclasses": [
+        "StructuralBiomarkers",
+        "FunctionalBiomarkers"
+      ],
+      "instances": []
+    },
+    "StructuralBiomarkers": {
+      "description": "Structural biomarkers in AMD.",
+      "subclasses": [],
+      "instances": [
+        "Drusen",
+        "RetinalThickness",
+        "SubretinalFluid",
+        "PigmentEpithelialDetachment",
+        "MacularPigmentOpticalDensity",
+        "Lipofuscin",
+        "ChoroidalThickness",
+        "ReticularPseudodrusen"
+      ]
+    },
+    "FunctionalBiomarkers": {
+      "description": "Functional biomarkers in AMD.",
+      "subclasses": [],
+      "instances": [
+        "VisualAcuity",
+        "ContrastSensitivity",
+        "ReadingSpeed",
+        "MacularPigmentOpticalDensity",
+        "DarkAdaptation"
+      ]
+    },
+    "DiagnosticMethod": {
+      "description": "Diagnostic methods used in AMD.",
+      "subclasses": [
+        "ImagingMethods",
+        "FunctionalMethods"
+      ],
+      "instances": []
+    },
+    "ImagingMethods": {
+      "description": "Imaging methods for diagnosing AMD.",
+      "subclasses": [],
+      "instances": [
+        "OCT",
+        "FluoresceinAngiography",
+        "ICGA",
+        "FundusPhotography",
+        "FundusAutofluorescence",
+        "TwoWavelengthFundusAutofluorescence",
+        "Ultrasound",
+        "MultifocalObjectivePupilPerimetry",
+        "ETDRSVisualAcuity",
+        "OcularEchography",
+        "HRT",
+        "LaserDopplerFlowmetry",
+        "LaserInterferometry"
+      ]
+    },
+    "FunctionalMethods": {
+      "description": "Functional methods for diagnosing AMD.",
+      "subclasses": [],
+      "instances": [
+        "VisualFieldTesting",
+        "Electroretinography",
+        "FlickerPhotometry",
+        "HeterochromaticFlickerPhotometry"
+      ]
+    },
+    "RiskFactor": {
+      "description": "Risk factors associated with AMD.",
+      "subclasses": [
+        "NonModifiableRiskFactors",
+        "ModifiableRiskFactors"
+      ],
+      "instances": []
+    },
+    "NonModifiableRiskFactors": {
+      "description": "Non-modifiable risk factors for AMD.",
+      "subclasses": [],
+      "instances": [
+        "Age",
+        "Genetics",
+        "FamilyHistory",
+        "Gender"
+      ]
+    },
+    "ModifiableRiskFactors": {
+      "description": "Modifiable risk factors for AMD.",
+      "subclasses": [],
+      "instances": [
+        "Smoking",
+        "Diet",
+        "BMI",
+        "SunExposure",
+        "CardiovascularDisease",
+        "Hypertension",
+        "Hypotension",
+        "GutMicrobiotaAlteration"
+      ]
+    },
+    "ClinicalOutcome": {
+      "description": "Clinical outcomes in AMD.",
+      "subclasses": [
+        "PrimaryOutcomes",
+        "SecondaryOutcomes"
+      ],
+      "instances": []
+    },
+    "PrimaryOutcomes": {
+      "description": "Primary clinical outcomes in AMD.",
+      "subclasses": [],
+      "instances": [
+        "VisualAcuityChange",
+        "PreventionOfModerateSevereVisionLoss",
+        "ReadingSpeedImprovement"
+      ]
+    },
+    "SecondaryOutcomes": {
+      "description": "Secondary clinical outcomes in AMD.",
+      "subclasses": [],
+      "instances": [
+        "LesionSizeChange",
+        "CNVRegression",
+        "ProgressionToLateAMD",
+        "QualityOfLifeChange",
+        "PosteriorVitreoMacularAdhesion",
+        "ChoroidalThicknessChange",
+        "DarkAdaptationChange"
+      ]
+    }
+  },
+  "properties": {
+    "treats": {
+      "domain": "Treatment",
+      "range": "Disease",
+      "description": "Indicates that a treatment is used to treat a disease.",
+      "examples": [
+        ["Ranibizumab", "treats", "WetAMD"],
+        ["Aflibercept", "treats", "WetAMD"],
+        ["Macuvite", "treats", "AMD"],
+        ["SubmacularSurgery", "treats", "ChoroidalNeovascularization"],
+        ["CorticosteroidInjection", "treats", "IllDefinedCNV"],
+        ["FluocinoloneAcetonideImplant", "treats", "OccultCNV"],
+        ["LaserPhotocoagulation", "treats", "ChoroidalNeovascularMembrane"],
+        ["TriamcinoloneAcetonide", "treats", "WetAMD"],
+        ["Celecoxib", "treats", "ChoroidalNeovascularization"],
+        ["TranspupillaryThermotherapy", "treats", "OccultCNV"],
+        ["TranspupillaryThermotherapy", "treats", "MinimallyClassicCNV"],
+        ["Lutein", "treats", "AMD"],
+        ["Zeaxanthin", "treats", "AMD"],
+        ["GreenTeaPolyphenols", "treats", "AMD"],
+        ["Bevacizumab", "treats", "WetAMD"],
+        ["Verteporfin", "treats", "WetAMD"],
+        ["Aflibercept", "treats", "WetAMD"],
+        ["Ranibizumab", "treats", "PathologicMyopia"],
+        ["Ranibizumab", "treats", "PseudoxanthomaElasticum"],
+        ["Ranibizumab", "treats", "MacularEdema"],
+        ["Ranibizumab", "treats", "RubeosisIridis"],
+        ["Ranibizumab", "treats", "NeovascularGlaucoma"],
+        ["Ranibizumab", "treats", "ProliferativeDiabeticRetinopathy"],
+        ["Saffron", "treats", "DryAMD"],
+        ["Conbercept", "treats", "PolypoidalChoroidalVasculopathy"],
+        ["Ellex2RTLaser", "treats", "EarlyAMD"],
+        ["StereotacticRadiosurgery", "treats", "WetAMD"],
+        ["MesoZeaxanthin", "treats", "AMD"],
+        ["LowLevelNightTimeLightTherapy", "treats", "EarlyAMD"],
+        ["LowLevelNightTimeLightTherapy", "treats", "GeographicAtrophy"],
+        ["IOLVIP", "treats", "DryAMD"],
+        ["SeeAgainLens", "treats", "DryAMD"],
+        ["CorticosteroidInjection", "treats", "IllDefinedCNV"],
+        ["FluocinoloneAcetonideImplant", "treats", "ChoroidalNeovascularization"],
+        ["PulseDiodeLaserPhotocoagulation", "treats", "FeederVessels"],
+        ["Celecoxib", "treats", "WetAMD"],
+        ["TriamcinoloneAcetonide", "treats", "WetAMD"],
+        ["OculomotorTrainingProgram", "treats", "AMD"],
+        ["TranspupillaryThermotherapy", "treats", "OccultCNV"],
+        ["TranspupillaryThermotherapy", "treats", "MinimallyClassicCNV"],
+        ["Avastin", "treats", "WetAMD"],
+        ["TriamcinoloneAcetonide", "treats", "WetAMD"],
+        ["PhotodynamicTherapy", "treats", "ChoroidalNeovascularization"],
+        ["Rheopheresis", "treats", "DryAMD"],
+        ["CNTFImplant", "treats", "AtrophicMacularDegeneration"],
+        ["Copaxone", "treats", "DryAMD"],
+        ["POT-4", "treats", "WetAMD"],
+        ["OT-551", "treats", "GeographicAtrophy"],
+        ["TriamcinoloneAcetate", "treats", "WetAMD"],
+        ["Ranibizumab", "treats", "PigmentEpithelialDetachment"],
+        ["Sirolimus", "treats", "GeographicAtrophy"],
+        ["ISONEP", "treats", "ChoroidalNeovascularization"],
+        ["CollaborativeLowVisionRehabilitation", "treats", "DepressiveDisorder"],
+        ["EnhancedLowVisionRehabilitation", "treats", "DepressiveDisorder"],
+        ["EccentricViewingTraining", "treats", "AMD"],
+        ["ClosedCircuitTelevision", "treats", "AMD"],
+        ["Dexamethasone", "treats", "ChoroidalNeovascularization"],
+        ["TransparsPlanavitrectomy", "treats", "PosteriorVitreoMacularAdhesion"],
+        ["Lucentis", "treats", "WetAMD"],
+        ["SqualamineLactate", "treats", "WetAMD"],
+        ["TissuePlasminogenActivator", "treats", "SubmacularHaemorrhage"],
+        ["Infliximab", "treats", "ExudativeAMD"]
+      ]
+    },
+    "inhibits": {
+      "domain": "Treatment",
+      "range": "MolecularTargets",
+      "description": "Indicates that a treatment inhibits a molecular target.",
+      "examples": [
+        ["Ranibizumab", "inhibits", "VEGF"],
+        ["Aflibercept", "inhibits", "VEGF"],
+        ["Bevacizumab", "inhibits", "VEGF"],
+        ["Conbercept", "inhibits", "VEGF"],
+        ["Avastin", "inhibits", "VEGF"],
+        ["POT-4", "inhibits", "ComplementPathwayProteins"],
+        ["OT-551", "inhibits", "VEGF"],
+        ["Sirolimus", "inhibits", "InflammatoryFactors"],
+        ["ISONEP", "inhibits", "S1P"],
+        ["SqualamineLactate", "inhibits", "VEGF"],
+        ["SqualamineLactate", "inhibits", "PDGF"],
+        ["SqualamineLactate", "inhibits", "bFGF"],
+        ["Infliximab", "inhibits", "TNF-alpha"]
+      ]
+    },
+    "causesOrIncreases": {
+      "domain": "RiskFactor",
+      "range": "Disease",
+      "description": "Indicates that a risk factor causes or increases the risk of a disease.",
+      "examples": [
+        ["Age", "causesOrIncreases", "AMD"],
+        ["Smoking", "causesOrIncreases", "AMD"],
+        ["Diet", "causesOrIncreases", "AMD"],
+        ["PosteriorVitreoMacularAdhesion", "causesOrIncreases", "ExudativeAMD"],
+        ["Hypertension", "causesOrIncreases", "Glaucoma"],
+        ["Hypotension", "causesOrIncreases", "Glaucoma"],
+        ["GutMicrobiotaAlteration", "causesOrIncreases", "AMD"]
+      ]
+    },
+    "isSubtypeOf": {
+      "domain": "DiseaseSubtype",
+      "range": "Disease",
+      "description": "Indicates that a disease subtype is a subtype of a parent disease.",
+      "examples": [
+        ["DryAMD", "isSubtypeOf", "AMD"],
+        ["WetAMD", "isSubtypeOf", "AMD"],
+        ["OccultCNV", "isSubtypeOf", "ChoroidalNeovascularization"],
+        ["MinimallyClassicCNV", "isSubtypeOf", "ChoroidalNeovascularization"],
+        ["PolypoidalChoroidalVasculopathy", "isSubtypeOf", "AMD"],
+        ["EarlyAMD", "isSubtypeOf", "AMD"],
+        ["OcularHistoplasmosisSyndrome", "isSubtypeOf", "AMD"],
+        ["IllDefinedCNV", "isSubtypeOf", "ChoroidalNeovascularization"],
+        ["NonExsudativeAMD", "isSubtypeOf", "AMD"],
+        ["AtrophicMacularDegeneration", "isSubtypeOf", "AMD"],
+        ["PigmentEpithelialDetachment", "isSubtypeOf", "AMD"],
+        ["PosteriorVitreoMacularAdhesion", "isSubtypeOf", "ExudativeAMD"],
+        ["Glaucoma", "isSubtypeOf", "AMD"],
+        ["ReticularPseudodrusen", "isSubtypeOf", "AMD"],
+        ["GutMicrobiotaAlteration", "isSubtypeOf", "AMD"]
+      ]
+    },
+    "indicates": {
+      "domain": "ImagingClinicalBiomarker",
+      "range": "Disease",
+      "description": "Indicates that a biomarker indicates a disease or condition.",
+      "examples": [
+        ["Drusen", "indicates", "AMD"],
+        ["RetinalThickness", "indicates", "AMD"],
+        ["MacularPigmentOpticalDensity", "indicates", "AMD"],
+        ["ChoroidalThickness", "indicates", "Glaucoma"],
+        ["ReticularPseudodrusen", "indicates", "AMD"]
+      ]
+    },
+    "diagnosedBy": {
+      "domain": "Disease",
+      "range": "DiagnosticMethod",
+      "description": "Indicates that a disease is diagnosed by a diagnostic method.",
+      "examples": [
+        ["AMD", "diagnosedBy", "OCT"],
+        ["AMD", "diagnosedBy", "FluoresceinAngiography"],
+        ["AMD", "diagnosedBy", "MultifocalObjectivePupilPerimetry"],
+        ["AMD", "diagnosedBy", "OcularEchography"],
+        ["AMD", "diagnosedBy", "HRT"]
+      ]
+    },
+    "hasSymptom": {
+      "domain": "Disease",
+      "range": "Symptom",
+      "description": "Indicates that a disease has a symptom.",
+      "examples": [
+        ["AMD", "hasSymptom", "VisualAcuityChange"],
+        ["AMD", "hasSymptom", "ContrastSensitivityChange"]
+      ]
+    },
+    "measuredBy": {
+      "domain": "ImagingClinicalBiomarker",
+      "range": "DiagnosticMethod",
+      "description": "Indicates that a biomarker is measured by a diagnostic method.",
+      "examples": [
+        ["VisualAcuity", "measuredBy", "VisualAcuityTests"],
+        ["RetinalThickness", "measuredBy", "OCT"],
+        ["MacularPigmentOpticalDensity", "measuredBy", "HeterochromaticFlickerPhotometry"],
+        ["MacularPigmentOpticalDensity", "measuredBy", "TwoWavelengthFundusAutofluorescence"],
+        ["ChoroidalThickness", "measuredBy", "OCT"],
+        ["ReticularPseudodrusen", "measuredBy", "FundusAutofluorescence"]
+      ]
+    },
+    "associatedWith": {
+      "domain": "GeneticMolecularBiomarker",
+      "range": "Disease",
+      "description": "Indicates that a genetic or molecular biomarker is associated with a disease.",
+      "examples": [
+        ["CFH", "associatedWith", "AMD"],
+        ["VEGF", "associatedWith", "AMD"],
+        ["LOC", "associatedWith", "AMD"],
+        ["HTRA1", "associatedWith", "AMD"],
+        ["TAS2R38", "associatedWith", "AMD"],
+        ["PLEKHA1", "associatedWith", "AMD"],
+        ["VEGF-A", "associatedWith", "AMD"],
+        ["VEGF-B", "associatedWith", "AMD"],
+        ["VEGFR", "associatedWith", "AMD"],
+        ["TNF-alpha", "associatedWith", "AMD"]
+      ]
+    },
+    "assessedBy": {
+      "domain": "ClinicalOutcome",
+      "range": "DiagnosticMethod",
+      "description": "Indicates that a clinical outcome is assessed by a diagnostic method.",
+      "examples": [
+        ["VisualAcuityChange", "assessedBy", "VisualAcuityTests"],
+        ["LesionSizeChange", "assessedBy", "OCT"],
+        ["ChoroidalThicknessChange", "assessedBy", "OCT"]
+      ]
+    }
+  },
+  "individuals": {
+    "category": [
+      "AMD",
+      "DryAMD",
+      "WetAMD",
+      "GeographicAtrophy",
+      "IntermediateAMD",
+      "ChoroidalNeovascularization",
+      "Drusen",
+      "RetinalPigmentEpitheliumDetachment",
+      "Ranibizumab",
+      "Aflibercept",
+      "Bevacizumab",
+      "Brolucizumab",
+      "PhotodynamicTherapy",
+      "LaserPhotocoagulation",
+      "SubmacularSurgery",
+      "AREDS",
+      "Lutein",
+      "Zeaxanthin",
+      "Omega-3",
+      "Macuvite",
+      "GeneTherapy",
+      "ComplementInhibitors",
+      "StemCellTherapy",
+      "CFH",
+      "ARMS2",
+      "HTRA1",
+      "C3",
+      "CFB",
+      "C2",
+      "ApoE",
+      "VEGF",
+      "PDGF",
+      "ComplementPathwayProteins",
+      "SNPs",
+      "CopyNumberVariations",
+      "Drusen",
+      "RetinalThickness",
+      "SubretinalFluid",
+      "PigmentEpithelialDetachment",
+      "VisualAcuity",
+      "ContrastSensitivity",
+      "ReadingSpeed",
+      "MacularPigmentOpticalDensity",
+      "OCT",
+      "FluoresceinAngiography",
+      "ICGA",
+      "FundusPhotography",
+      "FundusAutofluorescence",
+      "TwoWavelengthFundusAutofluorescence",
+      "VisualFieldTesting",
+      "Electroretinography",
+      "FlickerPhotometry",
+      "HeterochromaticFlickerPhotometry",
+      "Age",
+      "Genetics",
+      "FamilyHistory",
+      "Gender",
+      "Smoking",
+      "Diet",
+      "BMI",
+      "SunExposure",
+      "CardiovascularDisease",
+      "Hypertension",
+      "Hypotension",
+      "VisualAcuityChange",
+      "PreventionOfModerateSevereVisionLoss",
+      "LesionSizeChange",
+      "CNVRegression",
+      "ProgressionToLateAMD",
+      "QualityOfLifeChange",
+      "IllDefinedCNV",
+      "CorticosteroidInjection",
+      "FluocinoloneAcetonideImplant",
+      "OccultCNV",
+      "FeederVessels",
+      "ChoroidalNeovascularMembrane",
+      "Celecoxib",
+      "TriamcinoloneAcetonide",
+      "TranspupillaryThermotherapy",
+      "MinimallyClassicCNV",
+      "Ultrasound",
+      "Lipofuscin",
+      "GreenTeaPolyphenols",
+      "PneumotonometricMeasurementOfPOBF",
+      "LaserInterferometricMeasurementOfFundusPulsation",
+      "Verteporfin",
+      "PazopanibEyeDrops",
+      "PathologicMyopia",
+      "PseudoxanthomaElasticum",
+      "MacularEdema",
+      "RubeosisIridis",
+      "NeovascularGlaucoma",
+      "ProliferativeDiabeticRetinopathy",
+      "Saffron",
+      "Aspirin",
+      "MultifocalObjectivePupilPerimetry",
+      "PreferredRetinalLocusTraining",
+      "ImmunologicalMechanism",
+      "ETDRSVisualAcuity",
+      "PolypoidalChoroidalVasculopathy",
+      "Conbercept",
+      "Ellex2RTLaser",
+      "EarlyAMD",
+      "StereotacticRadiosurgery",
+      "MesoZeaxanthin",
+      "LowLevelNightTimeLightTherapy",
+      "Acetazolamide",
+      "IOLVIP",
+      "SeeAgainLens",
+      "OcularHistoplasmosisSyndrome",
+      "QualityOfLifeChange",
+      "PulseDiodeLaserPhotocoagulation",
+      "Celecoxib",
+      "CX3CR1",
+      "TriamcinoloneAcetonide",
+      "OculomotorTrainingProgram",
+      "ReadingSpeedImprovement",
+      "Avastin",
+      "Kenalog",
+      "Rheopheresis",
+      "NonExsudativeAMD",
+      "CNTFImplant",
+      "Copaxone",
+      "POT-4",
+      "OT-551",
+      "TriamcinoloneAcetate",
+      "Electroretinography",
+      "PigmentEpithelialDetachment",
+      "HRT",
+      "Sirolimus",
+      "ISONEP",
+      "DepressiveDisorder",
+      "CollaborativeLowVisionRehabilitation",
+      "EnhancedLowVisionRehabilitation",
+      "LaserDopplerFlowmetry",
+      "LaserInterferometry",
+      "EccentricViewingTraining",
+      "ClosedCircuitTelevision",
+      "Dexamethasone",
+      "PosteriorVitreoMacularAdhesion",
+      "TransparsPlanavitrectomy",
+      "ChoroidalThicknessChange",
+      "Glaucoma",
+      "DarkAdaptationDeficiency",
+      "DarkAdaptationChange",
+      "Lucentis",
+      "SqualamineLactate",
+      "TissuePlasminogenActivator",
+      "SubmacularHaemorrhage",
+      "OculomotorTrainingProgram",
+      "ReadingSpeedImprovement",
+      "AlzheimersDisease",
+      "StereotacticRadiosurgery",
+      "ReticularPseudodrusen",
+      "GutMicrobiotaAlteration",
+      "Infliximab"
+    ]
+  }
+}
