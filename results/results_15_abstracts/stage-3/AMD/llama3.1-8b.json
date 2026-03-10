@@ -1,0 +1,274 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Age-Related Macular Degeneration (AMD) Process",
+    "description": "JSON schema representing the Age-Related Macular Degeneration process.",
+    "type": "object",
+    "properties": {
+        "diseaseType": {
+            "description": "Type of AMD: Dry (Geographic Atrophy) or Wet (Neovascular)",
+            "type": "string"
+        },
+        "pathologicalFeatures": {
+            "description": "List of pathological features associated with AMD",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "#/definitions/drusen"
+                },
+                {
+                    "$ref": "#/definitions/geographicAtrophy"
+                },
+                {
+                    "$ref": "#/definitions/choroidalNeovascularization"
+                }
+            ]
+        },
+        "keyGenesAndBiomarkers": {
+            "description": "List of key genes and biomarkers associated with AMD",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "#/definitions/complementGenes"
+                },
+                {
+                    "$ref": "#/definitions/arms2Htra1"
+                }
+            ]
+        },
+        "treatments": {
+            "description": "List of treatments for AMD",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "#/definitions/antiVegfTherapy"
+                },
+                {
+                    "$ref": "#/definitions/photodynamicTherapy"
+                }
+            ]
+        },
+        "diagnosticMethods": {
+            "description": "List of diagnostic methods for AMD",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "#/definitions/opticalCoherenceTomography"
+                },
+                {
+                    "$ref": "#/definitions/fundusPhotography"
+                }
+            ]
+        },
+        "researchAreas": {
+            "description": "List of research areas related to AMD",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "#/definitions/diseaseMechanisms"
+                },
+                {
+                    "$ref": "#/definitions/novelTreatments"
+                }
+            ]
+        },
+        "choroidalNeovascularizationType": {
+            "description": "Type of choroidal neovascularization: Well-defined or Ill-defined",
+            "type": "string"
+        },
+        "fundusAutofluorescenceChanges": {
+            "description": "Predictive factors for AMD development and progression based on fundus autofluorescence imaging",
+            "type": "array"
+        },
+        "studyDesign": {
+            "description": "Study design: Randomized controlled trial or observational study",
+            "type": "string"
+        },
+        "participantInclusionCriteria": {
+            "description": "Participant inclusion criteria: Age, sex, AMD status",
+            "type": "object",
+            "properties": {
+                "ageRange": {
+                    "$ref": "#/definitions/ageRange"
+                },
+                "sex": {
+                    "$ref": "#/definitions/sex"
+                }
+            }
+        },
+        "studyDuration": {
+            "description": "Study duration: Number of months or years",
+            "type": "integer"
+        },
+        "biopsyProcedure": {
+            "description": "Details about the biopsy procedure, including number of biopsies and intervals between them",
+            "type": "object",
+            "properties": {
+                "numBiopsies": {
+                    "$ref": "#/definitions/numBiopsies"
+                },
+                "biopsyInterval": {
+                    "$ref": "#/definitions/biopsyInterval"
+                }
+            }
+        },
+        "geneticRiskFactors": {
+            "description": "Genetic risk factors for AMD development and progression",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "#/definitions/snp"
+                },
+                {
+                    "$ref": "#/definitions/apoe"
+                }
+            ]
+        },
+        "populationStudy": {
+            "description": "Details about the population study, including number of participants and location",
+            "type": "object",
+            "properties": {
+                "numParticipants": {
+                    "$ref": "#/definitions/numParticipants"
+                },
+                "studyLocation": {
+                    "$ref": "#/definitions/studyLocation"
+                }
+            }
+        },
+        "studyMethods": {
+            "description": "Detailed description of the study methods used to investigate AMD",
+            "type": "string"
+        },
+        "ultrasoundTechniques": {
+            "description": "Details about the ultrasound techniques used for diagnosis and treatment monitoring",
+            "type": "object",
+            "properties": {
+                "frequency": {
+                    "$ref": "#/definitions/frequency"
+                },
+                "scanningMode": {
+                    "$ref": "#/definitions/scanningMode"
+                }
+            }
+        },
+        "diagnosticUltrasoundData": {
+            "description": "Details about the diagnostic ultrasound data, including retinal and choroidal thickness profiles",
+            "type": "object"
+        }
+    },
+    "required": [
+        "diseaseType",
+        "pathologicalFeatures",
+        "keyGenesAndBiomarkers",
+        "treatments",
+        "diagnosticMethods",
+        "researchAreas",
+        "choroidalNeovascularizationType"
+    ],
+    "definitions": {
+        "drusen": {
+            "$ref": "#/definitions/drusen"
+        },
+        "geographicAtrophy": {
+            "$ref": "#/definitions/geographicAtrophy"
+        },
+        "choroidalNeovascularization": {
+            "$ref": "#/definitions/choroidalNeovascularization"
+        },
+        "rpeDysfunction": {
+            "$ref": "#/definitions/rpeDysfunction"
+        },
+        "complementGenes": {
+            "$ref": "#/definitions/complementGenes"
+        },
+        "arms2Htra1": {
+            "$ref": "#/definitions/arms2Htra1"
+        },
+        "vegf": {
+            "$ref": "#/definitions/vegf"
+        },
+        "antiVegfTherapy": {
+            "$ref": "#/definitions/antiVegfTherapy"
+        },
+        "photodynamicTherapy": {
+            "$ref": "#/definitions/photodynamicTherapy"
+        },
+        "opticalCoherenceTomography": {
+            "$ref": "#/definitions/opticalCoherenceTomography"
+        },
+        "fundusPhotography": {
+            "$ref": "#/definitions/fundusPhotography"
+        },
+        "fluoresceinAngiography": {
+            "$ref": "#/definitions/fluoresceinAngiography"
+        },
+        "visualAcuityTests": {
+            "$ref": "#/definitions/visualAcuityTests"
+        },
+        "diseaseMechanisms": {
+            "$ref": "#/definitions/diseaseMechanisms"
+        },
+        "novelTreatments": {
+            "$ref": "#/definitions/novelTreatments"
+        },
+        "biomarkerDiscovery": {
+            "$ref": "#/definitions/biomarkerDiscovery"
+        },
+        "geneticAssociations": {
+            "$ref": "#/definitions/geneticAssociations"
+        },
+        "preventionStrategies": {
+            "$ref": "#/definitions/preventionStrategies"
+        },
+        "diagnosticImprovements": {
+            "$ref": "#/definitions/diagnosticImprovements"
+        },
+        "cfh": {
+            "$ref": "#/definitions/cfh"
+        },
+        "c3": {
+            "$ref": "#/definitions/c3"
+        },
+        "c2": {
+            "$ref": "#/definitions/c2"
+        },
+        "cfb": {
+            "$ref": "#/definitions/cfb"
+        },
+        "ranibizumab": {
+            "$ref": "#/definitions/ranibizumab"
+        },
+        "aflibercept": {
+            "$ref": "#/definitions/aflibercept"
+        },
+        "bevacizumab": {
+            "$ref": "#/definitions/bevacizumab"
+        },
+        "areds": {
+            "$ref": "#/definitions/areds"
+        },
+        "areds2": {
+            "$ref": "#/definitions/areds2"
+        },
+        "snellenChart": {
+            "$ref": "#/definitions/snellenChart"
+        },
+        "tumblingE": {
+            "$ref": "#/definitions/tumblingE"
+        },
+        "snp": {
+            "$ref": "#/definitions/snp"
+        },
+        "apoe": {
+            "$ref": "#/definitions/apoe"
+        },
+        "frequency": {
+            "description": "Ultrasound frequency used for diagnosis and treatment monitoring",
+            "type": "integer"
+        },
+        "scanningMode": {
+            "description": "Scanning mode used for ultrasound imaging",
+            "type": "string"
+        }
+    }
+}

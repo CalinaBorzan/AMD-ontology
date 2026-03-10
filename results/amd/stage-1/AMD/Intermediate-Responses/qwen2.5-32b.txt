@@ -1,0 +1,219 @@
+{  
+  "classes": {  
+    "Disease": {  
+      "description": "Represents diseases related to Age-Related Macular Degeneration (AMD).",  
+      "subclasses": ["DryAMD", "WetAMD", "GeographicAtrophy", "IntermediateAMD"],  
+      "instances": []  
+    },  
+    "DryAMD": {  
+      "description": "Dry form of AMD characterized by drusen deposits and gradual cell breakdown.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "WetAMD": {  
+      "description": "Wet form of AMD characterized by abnormal blood vessel growth beneath the retina.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "GeographicAtrophy": {  
+      "description": "Area of retinal cell death in AMD.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "IntermediateAMD": {  
+      "description": "Intermediate stage of AMD with moderate drusen and pigment changes.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "PathologicalEntity": {  
+      "description": "Entities that represent pathological features of AMD.",  
+      "subclasses": ["ChoroidalNeovascularization", "Drusen", "RetinalPigmentEpitheliumDetachment"],  
+      "instances": []  
+    },  
+    "ChoroidalNeovascularization": {  
+      "description": "Abnormal vessel growth in AMD.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "Drusen": {  
+      "description": "Yellow deposits under the retina in AMD.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "RetinalPigmentEpitheliumDetachment": {  
+      "description": "Detachment of the retinal pigment epithelium in AMD.",  
+      "subclasses": [],  
+      "instances": []  
+    },  
+    "Treatment": {  
+      "description": "Therapeutic approaches for AMD.",  
+      "subclasses": ["AntiVEGFTherapy", "SurgicalTherapy", "SupplementTherapy", "EmergingTherapy"],  
+      "instances": []  
+    },  
+    "AntiVEGFTherapy": {  
+      "description": "Anti-VEGF agents used in AMD treatment.",  
+      "subclasses": [],  
+      "instances": ["Ranibizumab", "Aflibercept", "Bevacizumab", "Brolucizumab"]  
+    },  
+    "SurgicalTherapy": {  
+      "description": "Surgical treatments for AMD.",  
+      "subclasses": [],  
+      "instances": ["PhotodynamicTherapy", "LaserPhotocoagulation", "SubmacularSurgery"]  
+    },  
+    "SupplementTherapy": {  
+      "description": "Supplements used in AMD treatment.",  
+      "subclasses": [],  
+      "instances": ["AREDS", "Lutein", "Zeaxanthin", "Omega-3"]  
+    },  
+    "EmergingTherapy": {  
+      "description": "Emerging treatments for AMD.",  
+      "subclasses": [],  
+      "instances": ["GeneTherapy", "ComplementInhibitors", "StemCellTherapy"]  
+    },  
+    "GeneticMolecularBiomarker": {  
+      "description": "Genetic and molecular biomarkers associated with AMD.",  
+      "subclasses": ["RiskGenes", "MolecularTargets", "GeneticVariants"],  
+      "instances": []  
+    },  
+    "RiskGenes": {  
+      "description": "Genes that increase the risk of AMD.",  
+      "subclasses": [],  
+      "instances": ["CFH", "ARMS2", "HTRA1", "C3", "CFB", "C2"]  
+    },  
+    "MolecularTargets": {  
+      "description": "Molecular targets in AMD.",  
+      "subclasses": [],  
+      "instances": ["VEGF", "PDGF", "ComplementPathwayProteins"]  
+    },  
+    "GeneticVariants": {  
+      "description": "Genetic variants associated with AMD.",  
+      "subclasses": [],  
+      "instances": ["SNPs", "CopyNumberVariations"]  
+    },  
+    "ImagingClinicalBiomarker": {  
+      "description": "Structural and functional biomarkers used in AMD.",  
+      "subclasses": ["StructuralBiomarkers", "FunctionalBiomarkers"],  
+      "instances": []  
+    },  
+    "StructuralBiomarkers": {  
+      "description": "Structural biomarkers in AMD.",  
+      "subclasses": [],  
+      "instances": ["Drusen", "RetinalThickness", "SubretinalFluid", "PigmentEpithelialDetachment"]  
+    },  
+    "FunctionalBiomarkers": {  
+      "description": "Functional biomarkers in AMD.",  
+      "subclasses": [],  
+      "instances": ["VisualAcuity", "ContrastSensitivity", "ReadingSpeed", "MacularPigmentOpticalDensity"]  
+    },  
+    "DiagnosticMethod": {  
+      "description": "Diagnostic methods used in AMD.",  
+      "subclasses": ["ImagingMethods", "FunctionalMethods"],  
+      "instances": []  
+    },  
+    "ImagingMethods": {  
+      "description": "Imaging methods for diagnosing AMD.",  
+      "subclasses": [],  
+      "instances": ["OCT", "FluoresceinAngiography", "ICGA", "FundusPhotography", "FundusAutofluorescence"]  
+    },  
+    "FunctionalMethods": {  
+      "description": "Functional methods for diagnosing AMD.",  
+      "subclasses": [],  
+      "instances": ["VisualFieldTesting", "Electroretinography", "FlickerPhotometry"]  
+    },  
+    "RiskFactor": {  
+      "description": "Risk factors associated with AMD.",  
+      "subclasses": ["NonModifiableRiskFactors", "ModifiableRiskFactors"],  
+      "instances": []  
+    },  
+    "NonModifiableRiskFactors": {  
+      "description": "Non-modifiable risk factors for AMD.",  
+      "subclasses": [],  
+      "instances": ["Age", "Genetics", "FamilyHistory", "Gender"]  
+    },  
+    "ModifiableRiskFactors": {  
+      "description": "Modifiable risk factors for AMD.",  
+      "subclasses": [],  
+      "instances": ["Smoking", "Diet", "BMI", "SunExposure", "CardiovascularDisease"]  
+    },  
+    "ClinicalOutcome": {  
+      "description": "Clinical outcomes in AMD.",  
+      "subclasses": ["PrimaryOutcomes", "SecondaryOutcomes"],  
+      "instances": []  
+    },  
+    "PrimaryOutcomes": {  
+      "description": "Primary clinical outcomes in AMD.",  
+      "subclasses": [],  
+      "instances": ["VisualAcuityChange", "PreventionOfModerateSevereVisionLoss"]  
+    },  
+    "SecondaryOutcomes": {  
+      "description": "Secondary clinical outcomes in AMD.",  
+      "subclasses": [],  
+      "instances": ["LesionSizeChange", "CNVRegression", "ProgressionToLateAMD"]  
+    }  
+  },  
+  "properties": {  
+    "treats": {  
+      "domain": "Treatment",  
+      "range": "Disease",  
+      "description": "Indicates that a treatment is used to treat a disease.",  
+      "examples": [["Ranibizumab", "treats", "WetAMD"], ["Aflibercept", "treats", "WetAMD"]]  
+    },  
+    "inhibits": {  
+      "domain": "Treatment",  
+      "range": "MolecularTargets",  
+      "description": "Indicates that a treatment inhibits a molecular target.",  
+      "examples": [["Ranibizumab", "inhibits", "VEGF"], ["Aflibercept", "inhibits", "VEGF"]]  
+    },  
+    "causesOrIncreases": {  
+      "domain": "RiskFactor",  
+      "range": "Disease",  
+      "description": "Indicates that a risk factor causes or increases the risk of a disease.",  
+      "examples": [["Age", "causesOrIncreases", "AMD"], ["Smoking", "causesOrIncreases", "AMD"]]  
+    },  
+    "isSubtypeOf": {  
+      "domain": "DiseaseSubtype",  
+      "range": "Disease",  
+      "description": "Indicates that a disease subtype is a subtype of a parent disease.",  
+      "examples": [["DryAMD", "isSubtypeOf", "AMD"], ["WetAMD", "isSubtypeOf", "AMD"]]  
+    },  
+    "indicates": {  
+      "domain": "ImagingClinicalBiomarker",  
+      "range": "Disease",  
+      "description": "Indicates that a biomarker indicates a disease or condition.",  
+      "examples": [["Drusen", "indicates", "AMD"], ["RetinalThickness", "indicates", "AMD"]]  
+    },  
+    "diagnosedBy": {  
+      "domain": "Disease",  
+      "range": "DiagnosticMethod",  
+      "description": "Indicates that a disease is diagnosed by a diagnostic method.",  
+      "examples": [["AMD", "diagnosedBy", "OCT"], ["AMD", "diagnosedBy", "FluoresceinAngiography"]]  
+    },  
+    "hasSymptom": {  
+      "domain": "Disease",  
+      "range": "Symptom",  
+      "description": "Indicates that a disease has a symptom.",  
+      "examples": [["AMD", "hasSymptom", "VisualAcuityChange"], ["AMD", "hasSymptom", "ContrastSensitivityChange"]]  
+    },  
+    "measuredBy": {  
+      "domain": "ImagingClinicalBiomarker",  
+      "range": "DiagnosticMethod",  
+      "description": "Indicates that a biomarker is measured by a diagnostic method.",  
+      "examples": [["VisualAcuity", "measuredBy", "VisualAcuityTests"], ["RetinalThickness", "measuredBy", "OCT"]]  
+    },  
+    "associatedWith": {  
+      "domain": "GeneticMolecularBiomarker",  
+      "range": "Disease",  
+      "description": "Indicates that a genetic or molecular biomarker is associated with a disease.",  
+      "examples": [["CFH", "associatedWith", "AMD"], ["VEGF", "associatedWith", "AMD"]]  
+    },  
+    "assessedBy": {  
+      "domain": "ClinicalOutcome",  
+      "range": "DiagnosticMethod",  
+      "description": "Indicates that a clinical outcome is assessed by a diagnostic method.",  
+      "examples": [["VisualAcuityChange", "assessedBy", "VisualAcuityTests"], ["LesionSizeChange", "assessedBy", "OCT"]]  
+    }  
+  },  
+  "individuals": {  
+    "category": ["AMD", "DryAMD", "WetAMD", "GeographicAtrophy", "IntermediateAMD", "ChoroidalNeovascularization", "Drusen", "RetinalPigmentEpitheliumDetachment", "Ranibizumab", "Aflibercept", "Bevacizumab", "Brolucizumab", "PhotodynamicTherapy", "LaserPhotocoagulation", "SubmacularSurgery", "AREDS", "Lutein", "Zeaxanthin", "Omega-3", "GeneTherapy", "ComplementInhibitors", "StemCellTherapy", "CFH", "ARMS2", "HTRA1", "C3", "CFB", "C2", "VEGF", "PDGF", "ComplementPathwayProteins", "SNPs", "CopyNumberVariations", "Drusen", "RetinalThickness", "SubretinalFluid", "PigmentEpithelialDetachment", "VisualAcuity", "ContrastSensitivity", "ReadingSpeed", "MacularPigmentOpticalDensity", "OCT", "FluoresceinAngiography", "ICGA", "FundusPhotography", "FundusAutofluorescence", "VisualFieldTesting", "Electroretinography", "FlickerPhotometry", "Age", "Genetics", "FamilyHistory", "Gender", "Smoking", "Diet", "BMI", "SunExposure", "CardiovascularDisease", "VisualAcuityChange", "PreventionOfModerateSevereVisionLoss", "LesionSizeChange", "CNVRegression", "ProgressionToLateAMD"]  
+  }  
+}

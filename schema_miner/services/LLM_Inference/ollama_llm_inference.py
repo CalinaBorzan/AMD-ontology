@@ -27,7 +27,7 @@ class OLLAMA_LLM_Inference(LLM_Inference):
 
         # The Large Language Model to use for Inference
         self.model = OllamaLLM(
-            base_url=None,
+            base_url=self.base_url or None,
             model=self.model_name,
             num_ctx=self.context_length,
             temperature=self.temperature,
@@ -53,8 +53,11 @@ class OLLAMA_LLM_Inference(LLM_Inference):
             # Formatting the prompt
             prompt = super().format_prompt_template(prompt_template, var_dict)
 
+            # OllamaLLM expects a plain string input for text generation.
+            input_text = prompt.to_string()
+
             # Invoking the model's completion API with the prompt
-            model_output = self.model.invoke(prompt.to_messages())
+            model_output = self.model.invoke(input_text)
 
             # Parsing the LLM's output to extract the final output
             model_output = StrOutputParser().invoke(model_output)

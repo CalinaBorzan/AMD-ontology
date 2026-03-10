@@ -3,7 +3,7 @@ from pathlib import Path
 
 from schema_miner.config.llmRegistry import LLMRegistry
 from schema_miner.config.processConfig import ProcessConfig
-from schema_miner.prompts.schema_extraction import prompt_template1, prompt_template2
+from schema_miner.prompts.schema_extraction import prompt_template1, prompt_template2, prompt_template3
 from schema_miner.services.LLM_Inference.inference_runner import llm_inference
 from schema_miner.utils.file_utils import load_json_input, load_text_input, save_json_file
 
@@ -152,8 +152,8 @@ def extract_schema_stage3(llm_model_name: str, refined_schema: dict | Path, expe
         "domain_expert_review": review,
     }
 
-    # Update the Schema using the LLM and a Scientific Paper as Input
-    schema = llm_inference(llm_inference_class, llm_model_name, prompt_template2, var_dict, result_file_path)
+    # Update the Schema using Stage 3 validation prompt (prompt_template3)
+    schema = llm_inference(llm_inference_class, llm_model_name, prompt_template3, var_dict, result_file_path)
 
     # Optionally save extracted schema on disk
     if save_schema:

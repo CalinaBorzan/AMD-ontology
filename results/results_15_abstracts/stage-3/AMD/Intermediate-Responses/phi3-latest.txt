@@ -1,0 +1,321 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Refined Age-Related Macular Degeneration Process Schema with Treatment Studies and Optical Neural Causes Insights",
+  "type": "object",
+  "properties": {
+    "patientInformation": {
+      "description": "Patient demographic and relevant health information for studies on AMD.",
+      "required": ["age"],
+      "properties": {
+        "age": {
+          "description": "Age of the patient, typically between 50 to 85 years old. This is a critical factor in assessing risk and progression rates."
+        },
+        "sex": {
+          "enum": ["male", "female"],
+          "description": "Sex of the patient as it may influence AMD prevalence."
+        }
+      }
+    },
+    "eyeInformation": {
+      "required": ["rightEye", "leftEye"],
+      "properties": {
+        "rightEye": {
+          "description": "Assessment of vision impairment in the right eye."
+        },
+        "visionImpairmentRightEye": {
+          "dataType": "boolean",
+          "description": "Boolean indicating if there is any vision impairment detected in the right eye."
+        },
+        "leftEye": {
+          "description": "Assessment of vision impairment in the left eye."
+        },
+        "visionImpairmentLeftEye": {
+          "dataType": "boolean",
+          "description": "Boolean indicating if there is any vision impairment detected in the left eye."
+        },
+        "drusenCountRightEye": {
+          "type": "integer",
+          "description": "The count of drusen in the right eye as a sign of AMD progression. This study introduces reticular pseudodrusen (RPD) which are not yet well-understood, but their presence is significant."
+        },
+        "pigmentaryChangesInDrusen": {
+          "description": "Presence and extent of pigmentary changes within drusens. This property has been added to reflect the findings from recent studies on RPD in AMD patients, which are not yet fully understood."
+        },
+        "reticularPseudodrusenRightEye": {
+          "description": "Presence of reticular pseudodrusen (RPD) as a new property based on the Reticular Pseudodrusen Progression Study. This is significant in assessing AMD progression."
+        }
+      }
+    },
+    "geneticFactorsContributingToAMD": {
+      "description": "Genetic factors that may contribute to Age-Related Macular Degeneration.",
+      "properties": {
+        "familyHistoryOfAMD": {
+          "description": "Family history of AMD."
+        },
+        "geneticMarkers": {
+          "description": "Specific genetic markers or mutations contributing to Age-Related Macular Degeneration identified in research. APOE4 gene variant is known but other potential predictive markers are yet unknown and should be investigated."
+        }
+      }
+    },
+    "lifestyleFactors": {
+      "description": "Lifestyle factors that may influence Age-Related Macular Degeneration, including smoking status and diet quality.",
+      "properties": {
+        "smokingStatus": {
+          "enum": ["current", "past"],
+          "description": "Current or past tobacco use of the patient."
+        },
+        "dietQuality": {
+          "enum": ["poor", "average", "good"],
+          "description": "Diet quality which can influence AMD progression and severity. Cysteine-rich diet is mentioned as a potential risk factor, but more research on this aspect may be needed."
+        }
+      }
+    },
+    "treatmentHistory": {
+      "type": "array",
+      "description": "Details of treatments received for Age-Related Macular Degeneration.",
+      "itemsReference": "#/definitions/treatment"
+    },
+    "patientOutcomes": {
+      "description": "Patient outcomes following treatments for Age-Related Macular Degeneration."
+    },
+    "treatment": {
+      "title": "Treatment Details",
+      "description": "Details of a treatment administered for Age-Related Macular Degeneration, including the name and administration route.",
+      "properties": {
+        "name": {
+          "description": "The name of the treatment."
+        },
+        "administrationRoute": {
+          "enum": ["intravitreal injection"],
+          "description": "How STEREOTACTIC RADIO THERAPY (STEREO) is administered, which involves robotically controlled device projecting radiation. As it's a randomized trial comparing stereotactic radiotherapy to sham control and ranibizumab, this should be 'random', but since the treatment is not yet standard or widely used in clinical practice, we can specify that frequency as variable."
+        },
+        "frequency": {
+          "description": "Frequency of treatments for STEREOTACTIC RADIO THERAPY (STAR). As it's a randomized trial with varying doses and frequencies not yet standard, we can specify this as 'variable'.",
+          "type": "string"
+        },
+        "duration": {
+          "description": "Duration over which treatment is administered. This should be variable due to the nature of STAR being a randomized trial with varying doses (0 and 16 Gray)."
+        }
+      }
+    },
+    "treatmentPlan": {
+      "description": "Treatment plan including safety visits and follow-up protocols. Participants will attend for examination monthly for two years.",
+      "properties": {
+        "monthlyVisits": {
+          "type": "integer",
+          "minimum": 24,
+          "description": "Number of months in the initial treatment phase."
+        },
+        "yearsFollowUp": {
+          "enum": [3, 4],
+          "description": "Years after which safety visits are conducted to exclude delayed radiation damage.",
+          "type": "integer"
+        }
+      }
+    },
+    "treatmentProtocol": {
+      "description": "Treatment protocol including the use of ranibizumab as an anti-VEGF agent in both treatment and control arms."
+    },
+    "safetyMonitoring": {
+      "properties": {
+        "eyeExaminations": {
+          "type": "array",
+          "itemsReference": "#/definitions/eyeExaminationResults",
+          "description": "Eye chart vision tests conducted monthly."
+        },
+        "imagingScans": {
+          "enum": ["OCT"],
+          "description": "Laser scan of the macula to monitor disease activity and treatment effects.",
+          "type": "string"
+        },
+        "angiographyImaging": {
+          "description": "Angiography imaging conducted at baseline and yearly thereafter for 4 years."
+        }
+      }
+    },
+    "feedbackMechanism": {
+      "type": "object",
+      "properties": {
+        "visualFunctionFeedback": {
+          "description": "Experienced health economists will look at the cost of treatment in relation to any improvement in quality of life."
+        }
+      }
+    },
+    "outcomeMeasures": {
+      "title": "Outcome Measures",
+      "properties": {
+        "eyeInjectionsCount": {
+          "description": "Number of eye injections administered during the study.",
+          "type": "integer"
+        },
+        "visualFunctionOnEyeChart": {
+          "description": "Visual function on an eye chart, indicating any improvement or decline."
+        }
+      }
+    },
+    "eyeExaminationResults": {
+      "title": "Eye Examination Results",
+      "properties": {
+        "visionTestOutcome": {
+          "type": "boolean",
+          "description": "Vision test outcome, indicating any improvement or decline."
+        }
+      }
+    },
+    "imagingResults": {
+      "title": "Imaging Results",
+      "enum": ["OCT"],
+      "description": "Laser scan of the macula to monitor disease activity and treatment effects.",
+      "type": "string"
+    },
+    "definitions": {
+      "treatment": {
+        "title": "Treatment Details for StereoTactic Radiotherapy (STAR)",
+        "properties": {
+          "name": {
+            "description": "The name of the treatment, which is 'Stereotactic Radiotherapy' in this context."
+          },
+          "administrationRoute": {
+            "enum": ["intravitreal injection"],
+            "description": "How STEREOTACTIC RADIO THERAPY (STEREO) is administered, which involves robotically controlled device projecting radiation. As it's a randomized trial comparing stereotactic radiotherapy to sham control and ranibizumab, this should be 'random', but since the treatment is not yet standard or widely used in clinical practice, we can specify that frequency as variable."
+          },
+          "frequency": {
+            "description": "Frequency of treatments for STEREOTACTIC RADIO THERAPY (STAR). As it's a randomized trial with varying doses and frequencies not yet standard, we can specify this as 'variable'.",
+            "type": "string"
+          },
+          "duration": {
+            "description": "Duration of each radiation session. As it's a randomized trial with varying doses (0 and 16 Gray), this should be 'variable'.",
+            "type": "string"
+          }
+        }
+      },
+      "eyeExaminationResults": {
+        "title": "Eye Examination Results",
+        "properties": {
+          "visionTestOutcome": {
+            "description": "Vision test outcome, indicating any improvement or decline.",
+            "type": "boolean"
+          }
+      }
+    },
+    "treatmentDetailsForSTAR": {
+      "title": "Treatment Details for StereoTactic Radiotherapy (STAR)",
+      "properties": {
+        "name": {
+          "description": "The name of the treatment, which is 'Stereotactic Radiotherapy' in this context."
+        },
+        "administrationRoute": {
+          "enum": ["intravitreal injection"],
+          "description": "How STEREOTACTIC RADIO THERAPY (STEREO) is administered, which involves robotically controlled device projecting radiation. As it's a randomized trial comparing stereotactic radiotherapy to sham control and ranibizumab, this should be 'random', but since the treatment is not yet standard or widely used in clinical practice, we can specify that frequency as variable."
+        },
+        "frequency": {
+          "description": "Frequency of treatments for STEREOTACTIC RADIO THERAPY (STAR). As it's a randomized trial with varying doses and frequencies not yet standard, we can specify this as 'variable'.",
+          "type": "string"
+        },
+        "duration": {
+          "description": "Duration of each radiation session. As it's a randomized trial with varying doses (0 and 16 Gray), this should be 'variable'.",
+          "type": "string"
+        }
+      }
+    },
+    "participantAllocation": {
+      "description": "Participants are randomly allocated to dummy STAR or live STAR, with doses of either 0 or 16 Gray."
+    },
+    "treatmentPlan": {
+      "description": "Treatment plan including safety visits and follow-up protocols. Participants will attend for examination monthly for two years.",
+      "properties": {
+        "monthlyVisits": {
+          "type": "integer",
+          "minimum": 24,
+          "description": "Number of months in the initial treatment phase."
+        },
+        "yearsFollowUp": {
+          "enum": [3, 4],
+          "description": "Years after which safety visits are conducted to exclude delayed radiation damage.",
+          "type": "integer"
+        }
+      }
+    },
+    "treatmentProtocol": {
+      "description": "Treatment protocol including the use of ranibizumab as an anti-VEGF agent in both treatment and control arms."
+    },
+    "safetyMonitoring": {
+      "properties": {
+        "eyeExaminations": {
+          "type": "array",
+          "itemsReference": "#/definitions/eyeExaminationResults"
+        },
+        "imagingScans": {
+          "enum": ["OCT"],
+          "description": "Laser scan of the macula to monitor disease activity and treatment effects."
+        },
+        "angiographyImaging": {
+          "description": "Angiography imaging conducted at baseline and yearly thereafter for 4 years."
+        }
+      }
+    },
+    "feedbackMechanism": {
+      "type": "object",
+      "properties": {
+        "visualFunctionFeedback": {
+          "description": "Experienced health economists will look at the cost of treatment in relation to any improvement in quality of life."
+        }
+      }
+    },
+    "outcomeMeasures": {
+      "title": "Outcome Measures",
+      "properties": {
+        "eyeInjectionsCount": {
+          "description": "Number of eye injections administered during the study.",
+          "type": "integer"
+        },
+        "visualFunctionOnEyeChart": {
+          "description": "Visual function on an eye chart, indicating any improvement or decline."
+        }
+      }
+    },
+    "eyeExaminationResults": {
+      "title": "Eye Examination Results",
+      "properties": {
+        "visionTestOutcome": {
+          "description": "Vision test outcome, indicating any improvement or decline.",
+          "type": "boolean"
+        }
+      }
+    },
+    "imagingResults": {
+      "title": "Imaging Results",
+      "enum": ["OCT"],
+      "description": "Laser scan of the macula to monitor disease activity and treatment effects."
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

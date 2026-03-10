@@ -1,0 +1,42 @@
+# Age-Related Macular Degeneration (AMD) Domain Specification
+
+## Overview
+Age-Related Macular Degeneration (AMD) is a progressive eye disease affecting the macula, 
+the central part of the retina. It is the leading cause of vision loss in people over 60.
+
+## Key Concepts
+
+### Disease Types
+- Dry AMD (Geographic Atrophy): Drusen deposits and gradual cell breakdown
+- Wet AMD (Neovascular): Abnormal blood vessel growth beneath retina
+
+### Pathological Features
+- Drusen: Yellow deposits under retina
+- Geographic Atrophy: Retinal cell death areas
+- Choroidal Neovascularization (CNV): Abnormal vessel growth
+- Retinal Pigment Epithelium (RPE) dysfunction
+
+### Key Genes and Biomarkers
+- Complement genes: CFH, C3, C2, CFB
+- ARMS2/HTRA1
+- VEGF (Vascular Endothelial Growth Factor)
+
+### Treatments
+- Anti-VEGF therapy: Ranibizumab, Aflibercept, Bevacizumab
+- Photodynamic therapy: Verteporfin
+- AREDS/AREDS2 supplements
+- Laser therapy
+
+### Diagnostic Methods
+- Optical Coherence Tomography (OCT)
+- Fundus Photography
+- Fluorescein Angiography
+- Visual Acuity Tests
+
+## Research Areas
+- Disease mechanisms and causation
+- Novel treatments
+- Biomarker discovery
+- Genetic associations
+- Prevention strategies
+- Diagnostic improvements

@@ -1,42 +1,71 @@
 system_prompt = """
-Context: You are a data schema designer tasked with refining an initial JSON schema for an {process_name} process. The schema you are working on was created during the previous stage by incorporating insights from scientific literature and domain expert reviews. In this stage, you will further refine the schema by reviewing additional scientific literature and domain expert evaluations of the schema from the previous stage. The goal is to improve the schema's comprehensiveness and accuracy.
+Context: You are in the final validation stage of building a medical ontology for {process_name}. You have a comprehensive schema built from multiple AMD research abstracts. Your task is to validate and extend it using additional AMD abstracts.
 
-Iterative Process: To refine the schema, you will go through an iterative process in which, for each iteration, you will be provided with:
+IMPORTANT ABOUT INPUT: Each input is a research ABSTRACT (150-300 words). Abstracts do not contain full methodological detail or quantitative tables. Do NOT exclude a valid AMD entity simply because it lacks dosage, measurement units, or statistical values in this abstract.
 
-1. One Research Paper: Each research paper details aspects of the {process_name} process, potentially introducing new properties, constraints, or variants not covered in the initial schema.
-2. Current JSON Schema: You will receive an updated schema at each iteration, incorporating the latest adjustments based on the previous papers and feedback.
-3. Domain Expert Review: Experts have provided evaluations of the initial schema and feedback on revisions to make. You will use this expert feedback as guidance to further refine the schema with respect to merging properties, grouping related properties, and identifying properties which were missed if any, in each iteration.
+Validation Focus:
+1. **Completeness**: Does this abstract mention AMD entities or relationships not yet in the schema? If yes, ADD them.
+2. **Consistency**: Do the findings align with existing schema structure? If a conflict exists, note it but keep the existing structure unless clearly wrong.
+3. **Accuracy**: Do relationships make medical sense for AMD? (e.g., anti-VEGF treats Wet AMD is correct)
+4. **Coverage Threshold**: A property or class should be RETAINED if it has appeared in at least 2 abstracts across the pipeline, even without quantitative support.
 
-Objective in Each Iteration:
-With each research paper and expert feedback, your task is to enhance the schema by:
+In this stage:
+- ADD new AMD entities/relationships whenever they appear in the abstract — do not be overly conservative
+- Do NOT add purely study-specific metadata (specific RCT enrollment numbers, researcher names, institution names)
+- Maintain schema stability: do not restructure existing classes unless there is a clear medical error
+- Focus on high-confidence AMD medical knowledge
 
-1. Validating Existing properties: Ensure that each property in the schema aligns with findings from the current research paper and expert feedback. Modify property definitions, constraints, or data types as needed to improve accuracy and clarity.
-2. Adding New properties: If a relevant property is mentioned in the research paper but is missing from the schema, incorporate it, ensuring it has the appropriate data type, description, units, and constraints.
-3. Applying Expert Recommendations: Use expert feedback to guide refinements, adjusting descriptions, data types, or constraints as recommended to ensure the schema aligns with established {process_name} standards and practices.
-4. Documenting and Organizing: Keep the JSON schema well-structured, using nested objects where appropriate, and ensure that each new or modified property is documented with descriptions, data types, and any relevant units or constraints.
-5. Avoiding Redundancy and Overspecialization: The schema should remain stable across iterations and must not include unnecessary new properties if they overlap with existing ones or compromise the schema's generality.
+AMD Entities to Check For in Every Abstract:
+- New AMD subtypes, CNV variants, or pathological features not yet in schema
+- New anti-VEGF agents, surgical techniques, or supplement formulations
+- Genetic associations (CFH, ARMS2, HTRA1, C3, complement pathway genes)
+- Imaging biomarkers (OCT findings, autofluorescence patterns, angiography findings)
+- Treatment outcomes expressible as class properties (e.g., hasOutcome: VisualAcuityStabilization)
+- Risk factor associations not yet captured
 
-Additional Instructions:
-1. In your response, always include the full and final refined JSON schema for the current iteration, reflecting all updates. Do not provide partial or snippet-based updates.
-2. Do not include specific example values, experimental results, or other data directly from the research papers in the schema. The schema should remain generalized and applicable across various papers.
+RETENTION RULE: Never remove an existing class, property, or individual from the schema at this stage. Only add.
 
-Output Format: Generate the refined schema in standard JSON format. For each property, include a description field to clarify its purpose or constraints within the {process_name} process.
-
-End Goal: After all iterations, the final JSON schema should comprehensively and accurately represent the {process_name} process by combining insights from the initial specification, multiple research papers, and expert evaluations.
+Output: Complete, validated JSON schema in ```json fenced code block.
 """
 
 user_prompt = """
-Here is the current {process_name} process JSON schema, along with content from one research paper and any relevant domain expert feedback. Use these materials to refine the schema.
+Here is the current {process_name} ontology schema and a new AMD validation abstract. Validate completeness and add any missing AMD knowledge.
 
-Current JSON Schema: {current_schema}
+Current Ontology Schema:
+{current_schema}
 
-Research Paper Content: {full_text}
+Validation Abstract:
+{full_text}
 
-Domain Expert Feedback (optional): {domain_expert_review}
+Expert Validation Guidance:
+{domain_expert_review}
 
-The schema should:
+Your validation task:
+1. **Scan for missing AMD content**: Check the abstract for:
+   - AMD disease subtypes or pathological entities not in schema
+   - Treatments (anti-VEGF, PDT, laser, gene therapy, supplements) not in schema
+   - Genetic markers or risk genes (CFH, ARMS2, HTRA1, VEGF, C3, ApoE) not in schema
+   - Diagnostic methods (OCT, FA, ICG, fundus autofluorescence, perimetry) not in schema
+   - Biomarkers (drusen type/size, retinal thickness, macular pigment, subretinal fluid) not in schema
+   - Risk factors (age, smoking, genetics, diet, cardiovascular disease) not in schema
+   - Clinical outcomes (visual acuity, lesion size, progression) not in schema
+   - Relationships not yet in properties section
 
-1. Include all relevant properties.
-2. Use standard JSON schema format with appropriate data types, descriptions, and units where applicable.
-3. Group related parameters in nested objects as needed to reflect the {process_name} process structure.
+2. **Apply coverage threshold**: Add any entity or relationship that appears in this abstract, regardless of whether numeric details are provided. Abstracts routinely omit dosage and measurement details — this does NOT make the entity invalid.
+
+3. **Verify relationship accuracy**: Ensure all AMD medical relationships in the existing schema are medically sound:
+   - anti-VEGF agents should TREAT WetAMD (not DryAMD)
+   - CFH gene variants should be ASSOCIATED_WITH AMD risk
+   - OCT should DIAGNOSE retinal structural changes
+
+4. **Return the COMPLETE validated and extended schema** in ```json format.
+
+Also ensure the "individuals" section contains specific AMD instances:
+- treatments: All specific drug/therapy names encountered (Ranibizumab, Aflibercept, Bevacizumab, Verteporfin, AREDS, Lutein, Zeaxanthin, etc.)
+- diseases: All specific AMD subtypes/entities (WetAMD, DryAMD, GeographicAtrophy, CNV, DrusenDeposits, etc.)
+- biomarkers: All specific measurable entities (DrуsenSize, RetinalThickness, SubretinalFluid, MacularPigmentDensity, VEGF, CFH, etc.)
+- diagnosticMethods: All specific modalities (OCT, FluoresceinAngiography, ICGAngiography, FundusPhotography, FundusAutofluorescence, ETDRSVisualAcuity, etc.)
+- geneticMarkers: All AMD-associated genes/variants mentioned (CFH, ARMS2, HTRA1, C3, CFB, VEGF, ApoE, CX3CR1, etc.)
+
+Remember: Every abstract adds value. Do not skip adding content just because this is "validation" — completeness matters.
 """

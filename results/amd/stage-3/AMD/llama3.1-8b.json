@@ -1,0 +1,556 @@
+{
+    "classes": {
+        "Disease": {
+            "name": "AgeRelatedMacularDegeneration",
+            "description": "Age-related macular degeneration disease entity"
+        },
+        "DiseaseSubtype": {
+            "name": "GeographicAtrophy",
+            "description": "Geographic atrophy disease subtype"
+        },
+        "PathologicalEntity": {
+            "name": "MinimallyClassicCNV",
+            "description": "Pathological entity in occult CNV"
+        },
+        "Treatment": {
+            "name": "IntravitrealInjection",
+            "description": "Intravitreal injection treatment"
+        },
+        "GeneticMarker": {
+            "name": "ARMS2",
+            "description": "ARMS2 gene marker"
+        },
+        "DiagnosticMethod": {
+            "name": "FluoresceinAngiography",
+            "description": "Fluorescein angiography diagnostic method"
+        },
+        "Biomarker": {
+            "name": "RetinalThickness",
+            "description": "Retinal thickness biomarker"
+        },
+        "RiskFactor": {
+            "name": "Genetics",
+            "description": "Genetics risk factor"
+        },
+        "GeneticVariant": {
+            "name": "C3",
+            "description": "C3 gene variant"
+        },
+        "TreatmentApproach": {
+            "name": "TrainedRetinalLocusTraining",
+            "description": "Trained retinal locus training treatment approach"
+        },
+        "NeovascularAMD": {
+            "name": "NeovascularAMD",
+            "description": "Neovascular AMD disease subtype"
+        },
+        "ChoroidalNeovascularMembrane": {
+            "name": "ChoroidalNeovascularMembrane",
+            "description": "Choroidal neovascular membrane pathological entity"
+        },
+        "NonExsudativeAMD": {
+            "name": "NonExsudativeAMD",
+            "description": "Non-exsudative AMD disease subtype"
+        },
+        "MacularPigment": {
+            "name": "MacularPigment",
+            "description": "Macular pigment biomarker"
+        },
+        "LateAMD": {
+            "name": "LateAMD",
+            "description": "Late age-related macular degeneration disease subtype"
+        },
+        "SubmacularHemorrhage": {
+            "name": "SubmacularHemorrhage",
+            "description": "Submacular hemorrhage pathological entity"
+        },
+        "TissuePlasminogenActivator": {
+            "name": "TissuePlasminogenActivator",
+            "description": "Tissue plasminogen activator treatment"
+        },
+        "Perfluoropropane": {
+            "name": "Perfluoropropane",
+            "description": "Perfluoropropane treatment"
+        },
+        "AMD": {
+            "name": "AMD",
+            "description": "Age-related macular degeneration disease entity"
+        },
+        "EyeMovementReadingTraining": {
+            "name": "EyeMovementReadingTraining",
+            "description": "Eye movement reading training treatment approach"
+        },
+        "WetAMD": {
+            "name": "WetAMD",
+            "description": "Wet age-related macular degeneration disease subtype"
+        },
+        "DryAMD": {
+            "name": "DryAMD",
+            "description": "Dry age-related macular degeneration disease subtype"
+        },
+        "Ranibizumab": {
+            "name": "Ranibizumab",
+            "description": "Ranibizumab treatment"
+        },
+        "FundusAutofluorescence": {
+            "name": "FundusAutofluorescence",
+            "description": "Fundus autofluorescence diagnostic method"
+        },
+        "DSGA": {
+            "name": "DSGA",
+            "description": "Directional Spread of Geographic Atrophy study"
+        },
+        "FAM": {
+            "name": "FAM",
+            "description": "Fundus Autofluorescence in Age-related Macular Degeneration study"
+        },
+        "AlzheimerDisease": {
+            "name": "AlzheimerDisease",
+            "description": "Alzheimer disease entity"
+        },
+        "DrusenDeposits": {
+            "name": "DrusenDeposits",
+            "description": "Drusen deposits pathological entity"
+        },
+        "AmyloidBeta": {
+            "name": "AmyloidBeta",
+            "description": "Amyloid beta pathological entity"
+        },
+        "StereotacticRadiotherapy": {
+            "name": "StereotacticRadiotherapy",
+            "description": "Stereotactic radiotherapy treatment"
+        },
+        "CFH": {
+            "name": "CFH",
+            "description": "Complement factor H gene marker"
+        },
+        "HTRA1": {
+            "name": "HTRA1",
+            "description": "HTRA1 gene marker"
+        },
+        "C3": {
+            "name": "C3",
+            "description": "C3 gene variant"
+        },
+        "C2": {
+            "name": "C2",
+            "description": "C2 gene marker"
+        },
+        "CFB": {
+            "name": "CFB",
+            "description": "CFB gene marker"
+        },
+        "VEGF": {
+            "name": "VEGF",
+            "description": "VEGF gene marker"
+        },
+        "ApoE": {
+            "name": "ApoE",
+            "description": "ApoE gene marker"
+        },
+        "OCT": {
+            "name": "OCT",
+            "description": "Optical Coherence Tomography diagnostic method"
+        },
+        "ReticularPseudodrusen": {
+            "name": "ReticularPseudodrusen",
+            "description": "Reticular pseudodrusen pathological entity"
+        },
+        "PlekhA1": {
+            "name": "PlekhA1",
+            "description": "PlekhA1 gene marker"
+        },
+        "HTRA-1": {
+            "name": "HTRA-1",
+            "description": "HTRA-1 gene marker"
+        },
+        "VEGF-A": {
+            "name": "VEGF-A",
+            "description": "VEGF-A gene marker"
+        },
+        "VEGF-B": {
+            "name": "VEGF-B",
+            "description": "VEGF-B gene marker"
+        },
+        "VEGFR": {
+            "name": "VEGFR",
+            "description": "VEGFR gene marker"
+        },
+        "Avastin": {
+            "name": "Avastin",
+            "description": "Avastin treatment"
+        },
+        "Lucentis": {
+            "name": "Lucentis",
+            "description": "Lucentis treatment"
+        },
+        "ExudativeAMD": {
+            "name": "ExudativeAMD",
+            "description": "Exudative AMD disease subtype"
+        },
+        "TNF-alpha": {
+            "name": "TNF-alpha",
+            "description": "Tumor necrosis factor alpha"
+        },
+        "Infliximab": {
+            "name": "Infliximab",
+            "description": "Infliximab treatment"
+        },
+        "Remicade": {
+            "name": "Remicade",
+            "description": "Remicade treatment"
+        }
+    },
+    "properties": {
+        "TREATS": {
+            "domain": "SqualamineLactate",
+            "range": "NeovascularAMD"
+        },
+        "ASSOCIATED_WITH": {
+            "domain": "CFH",
+            "range": "Disease"
+        },
+        "DIAGNOSES": {
+            "domain": "OCT",
+            "range": "Disease"
+        },
+        "MEASURES": {
+            "domain": "LipofuscinAccumulation",
+            "range": "Disease"
+        },
+        "INCREASES_RISK_OF": {
+            "domain": "Genetics",
+            "range": "Disease"
+        },
+        "PREDICTS": {
+            "domain": "VisualAcuity",
+            "range": "OccultCNV"
+        },
+        "USES": {
+            "domain": "TrainedRetinalLocusTraining",
+            "range": "TreatmentApproach"
+        },
+        "TREATS_WET_AMD": {
+            "domain": "AntiVEGF",
+            "range": "WetAMD"
+        },
+        "TREATS_DRY_AMD": {
+            "domain": "PhotodynamicTherapy",
+            "range": "DryAMD"
+        },
+        "TREATS_NON_EXSUDATIVE_AMD": {
+            "domain": "LaserSurgery",
+            "range": "NonExsudativeAMD"
+        },
+        "AUGMENTS": {
+            "domain": "LuteinSupplementation",
+            "range": "MacularPigment"
+        },
+        "TREATS_LATE_AMD": {
+            "domain": "AntiVEGF",
+            "range": "LateAMD"
+        },
+        "TREATS_SUBMACULAR_HEMORRHAGE": {
+            "domain": "TissuePlasminogenActivator",
+            "range": "SubmacularHemorrhage"
+        },
+        "TREATS_SUBMACULAR_HEMORRHAGE_WITH_PERFLUOROPROPAINE": {
+            "domain": "Perfluoropropane",
+            "range": "SubmacularHemorrhage"
+        },
+        "TREATS_AMD": {
+            "domain": "EyeMovementReadingTraining",
+            "range": "AMD"
+        },
+        "TREATS_WET_AMD_WITH_RANIBIZUMAB": {
+            "domain": "Ranibizumab",
+            "range": "WetAMD"
+        },
+        "TREATS_GEOGRAPHIC_ATROPHY": {
+            "domain": "AntiVEGF",
+            "range": "GeographicAtrophy"
+        },
+        "DIAGNOSES_GEOGRAPHIC_ATROPHY": {
+            "domain": "FundusAutofluorescence",
+            "range": "GeographicAtrophy"
+        },
+        "ASSOCIATED_WITH_ALZHEIMERS": {
+            "domain": "AmyloidBeta",
+            "range": "AlzheimerDisease"
+        },
+        "PREDISPOSES_TO_AMD": {
+            "domain": "Genetics",
+            "range": "AMD"
+        },
+        "DIAGNOSES_AMD": {
+            "domain": "OCT",
+            "range": "AMD"
+        },
+        "MEASURES_AMD": {
+            "domain": "LipofuscinAccumulation",
+            "range": "AMD"
+        },
+        "TREATS_AMD_WITH_RANIBIZUMAB": {
+            "domain": "Ranibizumab",
+            "range": "AMD"
+        },
+        "TREATS_WET_AMD_WITH_STEREOTACTIC_RADIO_THERAPY": {
+            "domain": "StereotacticRadiotherapy",
+            "range": "WetAMD"
+        },
+        "TREATS_LATE_AMD_WITH_RANIBIZUMAB": {
+            "domain": "Ranibizumab",
+            "range": "LateAMD"
+        },
+        "TREATS_WET_AMD_WITH_AFLIBERCEPT": {
+            "domain": "Aflibercept",
+            "range": "WetAMD"
+        },
+        "TREATS_WET_AMD_WITH_BEVAZIZUMAB": {
+            "domain": "Bevacizumab",
+            "range": "WetAMD"
+        },
+        "TREATS_WET_AMD_WITH_VERTEPORFIN": {
+            "domain": "Verteporfin",
+            "range": "WetAMD"
+        },
+        "TREATS_DRY_AMD_WITH_LASER_SURGERY": {
+            "domain": "LaserSurgery",
+            "range": "DryAMD"
+        },
+        "TREATS_DRY_AMD_WITH_PDT": {
+            "domain": "PhotodynamicTherapy",
+            "range": "DryAMD"
+        },
+        "TREATS_GEOGRAPHIC_ATROPHY_WITH_RANIBIZUMAB": {
+            "domain": "Ranibizumab",
+            "range": "GeographicAtrophy"
+        },
+        "TREATS_SUBMACULAR_HEMORRHAGE_WITH_TISSUE_PLASMINOGEN_ACTIVATOR": {
+            "domain": "TissuePlasminogenActivator",
+            "range": "SubmacularHemorrhage"
+        },
+        "ASSOCIATED_WITH_C3": {
+            "domain": "C3",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_HTRA1": {
+            "domain": "HTRA1",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_VEGF": {
+            "domain": "VEGF",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_APOE": {
+            "domain": "ApoE",
+            "range": "Disease"
+        },
+        "TREATS_WET_AMD_WITH_OCT": {
+            "domain": "OCT",
+            "range": "WetAMD"
+        },
+        "ASSOCIATED_WITH_RETICULAR_PSEUDODRUSEN": {
+            "domain": "ReticularPseudodrusen",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_PLEKHA1": {
+            "domain": "PlekhA1",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_HTRA-1": {
+            "domain": "HTRA-1",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_VEGF-A": {
+            "domain": "VEGF-A",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_VEGF-B": {
+            "domain": "VEGF-B",
+            "range": "Disease"
+        },
+        "ASSOCIATED_WITH_VEGFR": {
+            "domain": "VEGFR",
+            "range": "Disease"
+        },
+        "TREATS_EXUDATIVE_AMD": {
+            "domain": "Avastin",
+            "range": "ExudativeAMD"
+        },
+        "TREATS_EXUDATIVE_AMD_WITH_INFLIXIMAB": {
+            "domain": "Infliximab",
+            "range": "ExudativeAMD"
+        }
+    },
+    "individuals": {
+        "LateAMD": [
+            "LateAMD"
+        ],
+        "SubmacularHemorrhage": [
+            "SubmacularHemorrhage"
+        ],
+        "TissuePlasminogenActivator": [
+            "TissuePlasminogenActivator"
+        ],
+        "Perfluoropropane": [
+            "Perfluoropropane"
+        ],
+        "Ranibizumab": [
+            "Ranibizumab"
+        ],
+        "WetAMD": [
+            "WetAMD"
+        ],
+        "DryAMD": [
+            "DryAMD"
+        ],
+        "GeographicAtrophy": [
+            "GeographicAtrophy"
+        ],
+        "MinimallyClassicCNV": [
+            "MinimallyClassicCNV"
+        ],
+        "NeovascularAMD": [
+            "NeovascularAMD"
+        ],
+        "ChoroidalNeovascularMembrane": [
+            "ChoroidalNeovascularMembrane"
+        ],
+        "NonExsudativeAMD": [
+            "NonExsudativeAMD"
+        ],
+        "MacularPigment": [
+            "MacularPigment"
+        ],
+        "RetinalThickness": [
+            "RetinalThickness"
+        ],
+        "SubretinalFluid": [
+            "SubretinalFluid"
+        ],
+        "DrusenSize": [
+            "DrusenSize"
+        ],
+        "VEGF": [
+            "VEGF"
+        ],
+        "CFH": [
+            "CFH"
+        ],
+        "ARMS2": [
+            "ARMS2"
+        ],
+        "HTRA1": [
+            "HTRA1"
+        ],
+        "C3": [
+            "C3"
+        ],
+        "ApoE": [
+            "ApoE"
+        ],
+        "C3F8": [
+            "C3F8"
+        ],
+        "OCT": [
+            "OCT"
+        ],
+        "FluoresceinAngiography": [
+            "FluoresceinAngiography"
+        ],
+        "ICGAngiography": [
+            "ICGAngiography"
+        ],
+        "FundusPhotography": [
+            "FundusPhotography"
+        ],
+        "FundusAutofluorescence": [
+            "FundusAutofluorescence"
+        ],
+        "ETDRSVisualAcuity": [
+            "ETDRSVisualAcuity"
+        ],
+        "EyeMovementReadingTraining": [
+            "EyeMovementReadingTraining"
+        ],
+        "DSGA": [
+            "DSGA"
+        ],
+        "FAM": [
+            "FAM"
+        ],
+        "AlzheimerDisease": [
+            "AlzheimerDisease"
+        ],
+        "AmyloidBeta": [
+            "AmyloidBeta"
+        ],
+        "DrusenDeposits": [
+            "DrusenDeposits"
+        ],
+        "StereotacticRadiotherapy": [
+            "StereotacticRadiotherapy"
+        ],
+        "Aflibercept": [
+            "Aflibercept"
+        ],
+        "Bevacizumab": [
+            "Bevacizumab"
+        ],
+        "Verteporfin": [
+            "Verteporfin"
+        ],
+        "Lutein": [
+            "Lutein"
+        ],
+        "Zeaxanthin": [
+            "Zeaxanthin"
+        ],
+        "AntiVEGF": [
+            "AntiVEGF"
+        ],
+        "PhotodynamicTherapy": [
+            "PhotodynamicTherapy"
+        ],
+        "LaserSurgery": [
+            "LaserSurgery"
+        ],
+        "ReticularPseudodrusen": [
+            "ReticularPseudodrusen"
+        ],
+        "PlekhA1": [
+            "PlekhA1"
+        ],
+        "HTRA-1": [
+            "HTRA-1"
+        ],
+        "VEGF-A": [
+            "VEGF-A"
+        ],
+        "VEGF-B": [
+            "VEGF-B"
+        ],
+        "VEGFR": [
+            "VEGFR"
+        ],
+        "Avastin": [
+            "Avastin"
+        ],
+        "Lucentis": [
+            "Lucentis"
+        ],
+        "ExudativeAMD": [
+            "ExudativeAMD"
+        ],
+        "TNF-alpha": [
+            "TNF-alpha"
+        ],
+        "Infliximab": [
+            "Infliximab"
+        ],
+        "Remicade": [
+            "Remicade"
+        ]
+    }
+}
