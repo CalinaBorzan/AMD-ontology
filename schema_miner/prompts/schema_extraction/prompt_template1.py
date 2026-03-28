@@ -1,9 +1,9 @@
 system_prompt = """
 Context: You are a medical knowledge extraction expert creating an ontology for {process_name}. {process_description}
 
-IMPORTANT: The input you will receive is a DOMAIN SPECIFICATION synthesized from multiple AMD research abstracts (not a full-length paper). It contains clinical, genetic, imaging, and treatment information in summary form. Expect concise descriptions without detailed quantitative measurements — this is normal and does NOT indicate missing information.
+IMPORTANT: The input is a DOMAIN SPECIFICATION from AMD research abstracts. Expect concise descriptions without quantitative measurements — this is normal.
 
-Objective: Extract medical entities and their relationships to build an ontology schema (NOT a procedural schema). The schema should represent medical knowledge: diseases, treatments, symptoms, biomarkers, risk factors, diagnostic methods, and their relationships.
+Objective: Extract medical entities and relationships to build an ontology schema. The schema should represent: diseases, treatments, biomarkers, risk factors, diagnostic methods, and their relationships.
 
 The schema MUST have this structure:
 {{
@@ -27,13 +27,19 @@ The schema MUST have this structure:
   }}
 }}
 
+CLASS vs INDIVIDUAL:
+- A CLASS is a category that can have subtypes. Ask: "can this have subtypes?" If yes, it is a class.
+  WetAMD is a class (type of AMD). AntiVEGFTherapy is a class (type of treatment).
+- An INDIVIDUAL is one specific real-world thing that cannot have subtypes.
+  Ranibizumab is an individual (one specific drug). CFH is an individual (one specific gene). OCT is an individual (one specific device).
+- An entity is EITHER a class OR an individual. NEVER both (no punning).
+
 CRITICAL INSTRUCTIONS:
-1. Extract MEDICAL CONCEPTS (diseases, drugs, biomarkers, symptoms), NOT procedures
-2. Define RELATIONSHIPS (treats, causes, indicates, diagnoses), NOT steps
-3. Use specific AMD medical terminology (e.g., choroidal neovascularization, drusen, RPE)
-4. Create hierarchical class structures: Disease → WetAMD, DryAMD, GeographicAtrophy
-5. Focus on WHAT exists and HOW things relate, NOT HOW to perform a procedure
-6. Do NOT require quantitative values — a class or relationship is valid even if no numeric data is given
+1. Hierarchy: Disease → AMD → WetAMD, DryAMD, GeographicAtrophy. ONLY actual AMD variants go under AMD. Associated diseases (Glaucoma, Alzheimer's, Diabetic Retinopathy) go under Disease directly — they are NOT subtypes of AMD.
+2. Extract MEDICAL CONCEPTS (diseases, drugs, biomarkers), NOT procedures
+3. Define RELATIONSHIPS (treats, causes, indicates, diagnoses), NOT steps
+4. Use specific AMD terminology (choroidal neovascularization, drusen, RPE, VEGF)
+5. Do NOT require quantitative values — a class or relationship is valid even without numeric data
 
 Output Format: Valid JSON ONLY. Use ```json fenced code block.
 """
@@ -41,42 +47,40 @@ Output Format: Valid JSON ONLY. Use ```json fenced code block.
 user_prompt = """
 Based on the AMD domain specification below, create an initial medical ontology schema for {process_name}.
 
-NOTE: This domain specification is derived from AMD research ABSTRACTS. It may be concise and lack full quantitative detail. Extract all identifiable medical entities and relationships even if specific numbers or measurements are not mentioned.
-
 Domain Specification:
 {context}
 
 Extract and organize these AMD-specific entity types:
 
 1. **Disease Classes** — Main types and subtypes:
-   - AMD subtypes: Dry AMD (atrophic), Wet AMD (neovascular), Geographic Atrophy, Intermediate AMD
-   - Pathological entities: Choroidal Neovascularization (CNV), Drusen, Retinal Pigment Epithelium detachment
+   - AMD subtypes (under AMD): Dry AMD, Wet AMD, Geographic Atrophy, Intermediate AMD
+   - Associated diseases (under Disease, NOT under AMD): Glaucoma, Alzheimer's, Diabetic Retinopathy
+   - Pathological entities: Choroidal Neovascularization (CNV), Drusen, RPE detachment
 
 2. **Treatment Classes** — Therapeutic approaches:
    - Anti-VEGF agents: Ranibizumab (Lucentis), Aflibercept (Eylea), Bevacizumab (Avastin), Brolucizumab
-   - Surgical: Photodynamic Therapy (PDT) with Verteporfin, Laser Photocoagulation, Submacular Surgery
-   - Supplements: AREDS formulation, Lutein, Zeaxanthin, Omega-3
+   - Surgical: Photodynamic Therapy (PDT), Laser Photocoagulation, Submacular Surgery
+   - Supplements: AREDS, Lutein, Zeaxanthin, Omega-3
    - Emerging: Gene therapy, Complement inhibitors, Stem cell therapy
 
 3. **Genetic/Molecular Biomarker Classes**:
-   - Risk genes: CFH (Complement Factor H), ARMS2, HTRA1, C3, CFB, C2
+   - Risk genes: CFH, ARMS2, HTRA1, C3, CFB, C2
    - Molecular targets: VEGF, PDGF, Complement pathway proteins
-   - Genetic variants: SNPs, copy number variations
 
 4. **Imaging and Clinical Biomarker Classes**:
-   - Structural: Drusen (soft/hard), Retinal thickness, Subretinal fluid, Pigment epithelial detachment
-   - Functional: Visual acuity (ETDRS), Contrast sensitivity, Reading speed, Macular pigment optical density
+   - Structural: Drusen, Retinal thickness, Subretinal fluid
+   - Functional: Visual acuity (ETDRS), Contrast sensitivity, Reading speed
 
 5. **Diagnostic Method Classes**:
-   - Imaging: OCT (Optical Coherence Tomography), Fluorescein Angiography, ICG Angiography, Fundus Photography, Fundus Autofluorescence
+   - Imaging: OCT, Fluorescein Angiography, ICG Angiography, Fundus Photography, Fundus Autofluorescence
    - Functional: Visual field testing, Electroretinography, Flicker photometry
 
 6. **Risk Factor Classes**:
-   - Non-modifiable: Age (>50), Genetics, Family history, Gender (female)
+   - Non-modifiable: Age, Genetics, Family history, Gender
    - Modifiable: Smoking, Diet, BMI/Obesity, Sun exposure, Cardiovascular disease
 
 7. **Clinical Outcome Classes**:
-   - Primary: Visual acuity change, Prevention of moderate/severe vision loss
+   - Primary: Visual acuity change, Prevention of vision loss
    - Secondary: Lesion size change, CNV regression, Progression to late AMD
 
 Define at minimum these relationships:
@@ -91,5 +95,5 @@ Define at minimum these relationships:
 - **associatedWith**: GeneticMarker → Disease
 - **assessedBy**: ClinicalOutcome → DiagnosticMethod
 
-Return ONLY the complete JSON schema in the format specified above. Use ```json fenced code block.
+Return ONLY the complete JSON schema. Use ```json fenced code block.
 """
