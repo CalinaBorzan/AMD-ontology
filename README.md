@@ -14,30 +14,34 @@ An automated pipeline for building an OWL ontology for AMD (Age-Related Macular 
 - **rdflib** for OWL generation and semantic enrichment
 - **DL-Learner 1.5.0** for automated class expression learning
 
-## Pipeline
+## Pipeline (agentic delta-based, produces AMD3.owl)
 
 ```
 abstracts_with_id.json
         │
         ▼
-prepare_amd_simple.py       → organises abstracts into stage directories
+prepare_amd_simple.py                → organises abstracts into stage directories
         │
         ▼
-run_amd_hitl.py             → Stage 1: schema from domain spec
-                              Stage 2: refinement on 20 abstracts
-                              Stage 3: validation on 100 abstracts
-                              (Human-in-the-Loop corrections between stages)
+run_schema_miner_agentic.py          → Stage 1: schema from domain spec
+                                       Stage 2: refinement on curated abstracts
+                                       Stage 3: extension on full corpus
+                                       (delta-based propose_delta tool calls,
+                                        class gate + hallucination guard)
         │
         ▼
-convert_to_owl.py           → converts final JSON schema to AMD.owl
+run_validate_ontology_agent.py       → ReAct validation agent — inspects,
+                                       proposes structured fixes, HITL approval
         │
         ▼
-enrich_owl.py               → links 100 abstract individuals to schema
-                              entities via 6 enrichment properties
-                              (+401 RDF triples)
+convert_to_owl.py                    → converts validated JSON → AMD3.owl
         │
         ▼
-dl_learner/                 → OWL class expression learning experiments
+Protégé + HermiT reasoner            → domain/range inference validation
+        │
+        ▼
+dl-learner/                          → 15 CELOE / ELTL experiments for
+                                       axiom discovery and KG completion
 ```
 
 ## Results
@@ -58,51 +62,70 @@ Key extracted relations: `Ranibizumab treats WetAMD`, `Bevacizumab inhibits VEGF
 
 ```bash
 pip install -r requirements.txt
-# Install Ollama and pull model
+```
+
+The final production run used **Groq cloud** with `llama-3.3-70b-versatile`.
+Set your API key in `.env`:
+```
+GROQ_API_KEY=your_key_here
+```
+
+Local Ollama (`qwen2.5:32b`, `llama3.1:8b`) is also supported as a fallback.
+Install Ollama and pull the model if using local inference:
+```bash
 ollama pull qwen2.5:32b
 ```
 
-## Usage
+DL-Learner 1.5.0 and Java 8+ are required for the axiom-learning step.
+Protégé 5.x + HermiT reasoner are required for OWL reasoner validation.
+
+## Reproducing the thesis results
 
 **Step 1 — Prepare data**
 ```bash
 python prepare_amd_simple.py abstracts_with_id.json
 ```
 
-**Step 2 — Run pipeline (Human-in-the-Loop)**
+**Step 2 — Run the agentic pipeline (all 3 stages)**
 ```bash
-python run_amd_hitl.py
+python run_schema_miner_agentic.py
 ```
+Produces `results/amd/final/amd_ontology_final.json` — 12 classes, 100 instances, 112 triples.
 
-**Step 3 — Convert to OWL**
+**Step 3 — Run the validation agent (ReAct with 9 inspection tools)**
 ```bash
-python convert_to_owl.py results/amd/final/<model>.json
+python run_validate_ontology_agent.py
 ```
+Proposes structured fixes; human approves each one before it is applied.
 
-**Step 4 — Enrich ontology**
+**Step 4 — Convert to OWL**
 ```bash
-python enrich_owl.py
+python convert_to_owl.py results/amd/final/amd_ontology_final.json
 ```
+Produces `AMD3.owl` and `AMD3.ttl`.
 
-**Step 5 — DL-Learner experiments**
+**Step 5 — Reasoner validation**
+Open `AMD3.owl` in Protégé and run HermiT to detect domain/range violations.
+
+**Step 6 — DL-Learner experiments**
 ```bash
-# See dl_learner/README.md
-java -jar dllearner-1.5.0/bin/cli dl_learner/dl_learner_mechanistic.conf
+# See dl-learner/README.md for the full experiment list
+java -jar dllearner-1.5.0/bin/cli dl-learner/experiment6_vegf_inhibitors.conf
 ```
+15 experiments cited in the thesis are in `dl-learner/` (experiments 3, 6, 8, 9, 10, 12, 15, 16, 17, 19, 21, 22, 23, 24, 25).
 
 ## Key Files
 
 | File | Description |
 |------|-------------|
-| `AMD.owl` | Final enriched OWL ontology |
-| `AMD.ttl` | Same ontology in Turtle format |
+| `AMD3.owl` / `AMD3.ttl` | Final OWL ontology (12 classes, 100 instances, 112 triples) |
+| `results/amd/final/amd_ontology_final.json` | Final validated JSON schema |
 | `abstracts_with_id.json` | Input: 100 AMD clinical trial abstracts with NCT IDs |
-| `run_amd_hitl.py` | Main pipeline script with Human-in-the-Loop |
+| `run_schema_miner_agentic.py` | Main agentic pipeline (delta-based, all 3 stages) |
+| `run_validate_ontology_agent.py` | ReAct validation agent (9 inspection tools + HITL) |
 | `convert_to_owl.py` | JSON schema → OWL/XML conversion |
-| `enrich_owl.py` | Semantic enrichment of abstract individuals |
 | `prepare_amd_simple.py` | Data preparation and directory setup |
-| `Dockerfile` | Docker environment for DL-Learner |
-| `dl_learner/` | DL-Learner configuration files and results |
+| `dl-learner/` | 15 DL-Learner CELOE/ELTL experiment configs |
 
 ## Model Comparison
 
