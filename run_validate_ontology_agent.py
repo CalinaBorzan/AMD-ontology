@@ -25,6 +25,7 @@ Usage:
 
 import argparse
 import json
+import os
 import time
 from pathlib import Path
 
@@ -45,7 +46,7 @@ SCHEMA = {}
 PROPOSED_FIXES = []
 
 NCBI_ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
-NCBI_EMAIL = "calina.borzan18@yahoo.com"
+NCBI_EMAIL = os.getenv("NCBI_EMAIL", "your.email@example.com")
 
 
 # ── Tools for the agent ──────────────────────────────────────────────────────
