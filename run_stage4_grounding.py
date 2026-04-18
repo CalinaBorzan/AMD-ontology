@@ -20,6 +20,7 @@ Run:
 import argparse
 import json
 import logging
+import os
 import re
 import time
 from pathlib import Path
@@ -260,7 +261,7 @@ def filter_candidates(search_term: str, candidates: list[dict],
 OLS4_URL      = "https://www.ebi.ac.uk/ols4/api/search"
 NCBI_ESEARCH  = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 NCBI_ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
-NCBI_EMAIL    = "calina.borzan18@yahoo.com"
+NCBI_EMAIL    = os.getenv("NCBI_EMAIL", "your.email@example.com")
 
 
 def query_ols4(term: str, ontologies: str = "snomed,chebi,go,hp") -> list[dict]:
