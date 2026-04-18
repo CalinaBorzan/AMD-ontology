@@ -1,0 +1,1623 @@
+{
+  "classes": {
+    "Disease": {
+      "description": "Top-level disease class",
+      "subclasses": [
+        "AMD"
+      ],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "disease",
+        "matches": [
+          {
+            "ontology": "[HPO]",
+            "id": "HP:0000608",
+            "uri": "http://purl.obolibrary.org/obo/HP_0000608",
+            "label": "Macular degeneration",
+            "confidence": "high"
+          },
+          {
+            "ontology": "[MeSH]",
+            "id": "D008268",
+            "uri": "https://id.nlm.nih.gov/mesh/D008268",
+            "label": "Macular Degeneration",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "AMD": {
+      "description": "Age-related macular degeneration affecting the macula",
+      "subclasses": [
+        "DryAMD",
+        "WetAMD",
+        "GeographicAtrophy",
+        "IllDefinedCNVM",
+        "OccultCNVM",
+        "CombinedCNVM",
+        "ChoroidalNeovascularization",
+        "ChoroidalNeovascularizationWithDisciformScar",
+        "EarlyARM",
+        "LateARM",
+        "PolypoidalChoroidalVasculopathy"
+      ],
+      "features": [
+        "Drusen",
+        "RetinalPigmentEpitheliumDysfunction",
+        "MacularPigmentOpticalDensity",
+        "RetinalThickness",
+        "FeederVessels",
+        "InflammatoryResponse",
+        "SingleNucleotidePolymorphism",
+        "ChoriocapillariesChanges",
+        "ChoroidalVascularDensity",
+        "LesionSize",
+        "RPEDepigmentation",
+        "IncreasedRetinalPigment",
+        "LargeDrusen",
+        "FundusAutofluorescence",
+        "MacularPigmentCarotenoids",
+        "PreferredRetinalLocations",
+        "OcularRigidity",
+        "PigmentEpithelialDetachment",
+        "ChoroidalBloodFlow",
+        "ReticularPseudodrusen"
+      ],
+      "riskFactorFor": [
+        "Age",
+        "Smoking",
+        "Genetics",
+        "Aspirin",
+        "TobaccoUse"
+      ],
+      "outcomeOf": [
+        "VisualAcuity",
+        "LesionSize",
+        "ElectrophysiologicalOutcomes",
+        "Incidence",
+        "Progression",
+        "ReadingSpeed",
+        "EmotionalStatus",
+        "CognitiveStatus",
+        "TwoLineImprovement"
+      ],
+      "treats": [
+        "Treatment"
+      ],
+      "diagnosedBy": [
+        "DiagnosticMethod"
+      ],
+      "regulates": [
+        "ImmunologicalMechanism"
+      ],
+      "promotes": [
+        "HomeReadingTraining"
+      ],
+      "newFeatures": [
+        "PreferredRetinalLocations"
+      ],
+      "improves": [
+        "VisualAcuity",
+        "FixationStability",
+        "ReadingSpeed"
+      ],
+      "prevents": [
+        "Supplements"
+      ],
+      "slowsProgression": [
+        "NightTimeLightTherapy"
+      ],
+      "blocks": [
+        "VascularEndothelialGrowthFactor"
+      ],
+      "downregulatesInflammatoryResponse": [
+        "InflammatoryResponse"
+      ],
+      "evaluatesMacularPigment": [
+        "MacularPigmentOpticalDensity"
+      ],
+      "enhancesEffectiveness": [
+        "PhotodynamicTherapy"
+      ],
+      "associatedWith": [
+        "S1P"
+      ],
+      "preventsConversion": [
+        "DryAMD"
+      ],
+      "predictsProgression": [
+        "FundusAutofluorescence"
+      ],
+      "correlatesWithProgression": [
+        "ReticularPseudodrusen"
+      ],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "disease",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D008268",
+            "uri": "https://id.nlm.nih.gov/mesh/D008268",
+            "label": "Macular Degeneration",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "DryAMD": {
+      "description": "Atrophic AMD with drusen deposits and gradual cell breakdown",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "WetAMD": {
+      "description": "Neovascular AMD with abnormal blood vessel growth beneath the retina",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "GeographicAtrophy": {
+      "description": "Areas of retinal cell death in AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "[HPO]",
+            "id": "HP:0031609",
+            "uri": "http://purl.obolibrary.org/obo/HP_0031609",
+            "label": "Macular geographic atrophy",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "IllDefinedCNVM": {
+      "description": "Choroidal neovascularization that cannot be well demarcated on fluorescein angiography",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "OccultCNVM": {
+      "description": "Less well-formed choroidal neovascularization",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "CombinedCNVM": {
+      "description": "Choroidal neovascularization with both well-formed and occult components",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "ChoroidalNeovascularization": {
+      "description": "Abnormal vessel growth beneath the retina",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "HP:0011506",
+            "uri": "http://purl.obolibrary.org/obo/HP_0011506",
+            "label": "Choroidal neovascularization",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ChoroidalNeovascularizationWithDisciformScar": {
+      "description": "Choroidal neovascularization with a disciform scar",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "EarlyARM": {
+      "description": "Early stage of age-related maculopathy with large soft indistinct drusen, RPE depigmentation, and increased retinal pigment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "phenotype",
+        "matches": []
+      }
+    },
+    "LateARM": {
+      "description": "Late stage of age-related maculopathy with exudative macular degeneration and geographic atrophy",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "PathologicalFeature": {
+      "description": "Features associated with AMD",
+      "subclasses": [
+        "Drusen",
+        "RetinalPigmentEpitheliumDysfunction",
+        "MacularPigmentOpticalDensity",
+        "RetinalThickness",
+        "FeederVessels",
+        "InflammatoryResponse",
+        "SingleNucleotidePolymorphism",
+        "ChoriocapillariesChanges",
+        "ChoroidalVascularDensity",
+        "LesionSize",
+        "RPEDepigmentation",
+        "IncreasedRetinalPigment",
+        "LargeDrusen",
+        "FundusAutofluorescence",
+        "MacularPigmentCarotenoids",
+        "PreferredRetinalLocations",
+        "OcularRigidity",
+        "PigmentEpithelialDetachment",
+        "ChoroidalBloodFlow",
+        "ReticularPseudodrusen"
+      ],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "OcularRigidity": {
+      "description": "Mechanical properties of the eye coats that may affect choroidal blood flow",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "HP:0002063",
+            "uri": "http://purl.obolibrary.org/obo/HP_0002063",
+            "label": "Rigidity",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Drusen": {
+      "description": "Yellow deposits under the retina",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "HP:0011510",
+            "uri": "http://purl.obolibrary.org/obo/HP_0011510",
+            "label": "Drusen",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "LargeDrusen": {
+      "description": "Drusen larger than 125 microns",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "phenotype",
+        "matches": []
+      }
+    },
+    "RetinalPigmentEpitheliumDysfunction": {
+      "description": "Dysfunction of the retinal pigment epithelium",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "MacularPigmentOpticalDensity": {
+      "description": "Measurement of macular pigment optical density",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "measurement",
+        "matches": []
+      }
+    },
+    "RetinalThickness": {
+      "description": "Measurement of retinal thickness",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "FeederVessels": {
+      "description": "Vessels that supply nutrients to choroidal neovascularization",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "[GO]",
+            "id": "UBERON:0001776",
+            "uri": "http://purl.obolibrary.org/obo/UBERON_0001776",
+            "label": "optic choroid",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "InflammatoryResponse": {
+      "description": "Inflammatory response in the retina of patients with choroidal neovascularization",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "GO:0006954",
+            "uri": "http://purl.obolibrary.org/obo/GO_0006954",
+            "label": "inflammatory response",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "SingleNucleotidePolymorphism": {
+      "description": "Small gene variances that may predispose individuals to AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "gene",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D020641",
+            "uri": "https://id.nlm.nih.gov/mesh/D020641",
+            "label": "Polymorphism, Single Nucleotide",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ChoriocapillariesChanges": {
+      "description": "Changes in the choriocapillaries associated with AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "ChoroidalVascularDensity": {
+      "description": "Changes in the density of choroidal vessels associated with AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "LesionSize": {
+      "description": "Measurement of the size of lesions in AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "measurement",
+        "matches": []
+      }
+    },
+    "RPEDepigmentation": {
+      "description": "Depigmentation of the retinal pigment epithelium",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "GO",
+            "id": "UBERON:0001782",
+            "uri": "http://purl.obolibrary.org/obo/UBERON_0001782",
+            "label": "pigmented layer of retina",
+            "confidence": "high"
+          },
+          {
+            "ontology": "HPO",
+            "id": "UBERON:0001782",
+            "uri": "http://purl.obolibrary.org/obo/UBERON_0001782",
+            "label": "pigmented layer of retina",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "IncreasedRetinalPigment": {
+      "description": "Increased retinal pigment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "PigmentEpithelialDetachment": {
+      "description": "Detachment of the retinal pigment epithelium",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D012163",
+            "uri": "https://id.nlm.nih.gov/mesh/D012163",
+            "label": "Retinal Detachment",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ChoroidalBloodFlow": {
+      "description": "Measurement of choroidal blood flow",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "measurement",
+        "matches": []
+      }
+    },
+    "Treatment": {
+      "description": "Interventions for AMD",
+      "subclasses": [
+        "AntiVEGFTherapy",
+        "PhotodynamicTherapy",
+        "Supplements",
+        "LaserTherapy",
+        "SubmacularSurgery",
+        "CorticosteroidInjection",
+        "SustainedReleaseSteroidImplant",
+        "PulseDiodeLaserPhotocoagulation",
+        "Cyclooxygenine2Inhibition",
+        "TranspupillaryThermotherapy",
+        "OculomotorTraining",
+        "PazopanibEyeDrops",
+        "SaffronSupplementation",
+        "Aspirin",
+        "HomeReadingTraining",
+        "Conbercept",
+        "Ellex2RT",
+        "StereotacticRadiosurgery",
+        "NightTimeLightTherapy",
+        "IntraocularLensImplantation",
+        "Rheohemapheresis",
+        "CNTFImplant",
+        "Copaxone",
+        "ComplementInhibitor",
+        "OT551",
+        "Sirolimus",
+        "iSONEP",
+        "CollaborativeLowVisionRehabilitation",
+        "EccentricViewingTraining",
+        "ClosedCircuitTelevision",
+        "SqualamineLactate",
+        "TissuePlasminogenActivator",
+        "Perfluoropropane",
+        "AntiTNFTherapy"
+      ],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "AntiVEGFTherapy": {
+      "description": "Anti-VEGF intravitreal agents for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "PhotodynamicTherapy": {
+      "description": "Photodynamic therapy for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "ChEBI",
+            "id": "CHEBI:32293",
+            "uri": "http://purl.obolibrary.org/obo/CHEBI_32293",
+            "label": "verteporfin",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Supplements": {
+      "description": "Supplements for AMD prevention and treatment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "LaserTherapy": {
+      "description": "Laser therapy for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "other",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D053685",
+            "uri": "https://id.nlm.nih.gov/mesh/D053685",
+            "label": "Laser Therapy",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "SubmacularSurgery": {
+      "description": "Surgical removal of subfoveal choroidal neovascularization for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "CorticosteroidInjection": {
+      "description": "Intravitreal corticosteroid injection for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "drug",
+        "matches": []
+      }
+    },
+    "SustainedReleaseSteroidImplant": {
+      "description": "Sustained-release steroid implant for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "ChEBI",
+            "id": "CHEBI:35341",
+            "uri": "http://purl.obolibrary.org/obo/CHEBI_35341",
+            "label": "steroid",
+            "confidence": "high"
+          },
+          {
+            "ontology": "HPO",
+            "id": "CHEBI:35341",
+            "uri": "http://purl.obolibrary.org/obo/CHEBI_35341",
+            "label": "steroid",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "PulseDiodeLaserPhotocoagulation": {
+      "description": "Laser treatment to close feeder vessels in AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "Cyclooxygenine2Inhibition": {
+      "description": "Cyclooxygenase-2 inhibition for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "TranspupillaryThermotherapy": {
+      "description": "Thermic treatment of choroidal neovascularization in AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "OculomotorTraining": {
+      "description": "Training program to improve visual skills and reading in AMD patients",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "PazopanibEyeDrops": {
+      "description": "Pazopanib administered as eye drops for neovascular AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "SaffronSupplementation": {
+      "description": "Saffron supplementation for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "dietary_supplement",
+        "matches": [
+          {
+            "ontology": "ChEBI",
+            "id": "CHEBI:79068",
+            "uri": "http://purl.obolibrary.org/obo/CHEBI_79068",
+            "label": "crocin-1",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Aspirin": {
+      "description": "Aspirin for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D001241",
+            "uri": "https://id.nlm.nih.gov/mesh/D001241",
+            "label": "Aspirin",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "HomeReadingTraining": {
+      "description": "Home reading training for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "Ellex2RT": {
+      "description": "A new type of laser used in the treatment of early AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "StereotacticRadiosurgery": {
+      "description": "Radiation therapy using a robotically controlled device that projects overlapping beams of radiation onto the macula",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "diagnostic",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D016634",
+            "uri": "https://id.nlm.nih.gov/mesh/D016634",
+            "label": "Radiosurgery",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "NightTimeLightTherapy": {
+      "description": "Dim green light therapy for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "other",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D028022",
+            "uri": "https://id.nlm.nih.gov/mesh/D028022",
+            "label": "Low-Level Light Therapy",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "IntraocularLensImplantation": {
+      "description": "Procedure to implant an artificial lens to improve vision in AMD patients",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "diagnostic",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D019654",
+            "uri": "https://id.nlm.nih.gov/mesh/D019654",
+            "label": "Lens Implantation, Intraocular",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Rheohemapheresis": {
+      "description": "Extracorporeal therapy where plasma is separated from blood cells and depleted of high molecular weight proteins",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "drug",
+        "matches": []
+      }
+    },
+    "CNTFImplant": {
+      "description": "Implants of Encapsulated Human NTC-201 Cells Releasing Ciliary Neurotrophic Factor (CNTF) for atrophic macular degeneration",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "GO",
+            "id": "PR:000005663",
+            "uri": "http://purl.obolibrary.org/obo/PR_000005663",
+            "label": "ciliary neurotrophic factor",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "GeneticMarker": {
+      "description": "Genes and variants associated with AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "gene",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D005819",
+            "uri": "https://id.nlm.nih.gov/mesh/D005819",
+            "label": "Genetic Markers",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "DiagnosticMethod": {
+      "description": "Methods for diagnosing AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "MacularPigmentCarotenoids": {
+      "description": "Carotenoids that form macular pigments",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "other",
+        "matches": []
+      }
+    },
+    "PreferredRetinalLocations": {
+      "description": "Locations in the retina used for compensating for diseased foveae",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "RiskFactor": {
+      "description": "Factors that increase the risk of developing AMD",
+      "subclasses": [
+        "Age",
+        "Smoking",
+        "Genetics",
+        "Aspirin",
+        "TobaccoUse"
+      ],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "PATO:0000639",
+            "uri": "http://purl.obolibrary.org/obo/PATO_0000639",
+            "label": "degenerate",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Age": {
+      "description": "Increasing age as a risk factor for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "Smoking": {
+      "description": "Smoking as a risk factor for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "Genetics": {
+      "description": "Genetic predisposition as a risk factor for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "PATO:0000639",
+            "uri": "http://purl.obolibrary.org/obo/PATO_0000639",
+            "label": "degenerate",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ClinicalOutcome": {
+      "description": "Outcomes of AMD treatment and progression",
+      "subclasses": [
+        "VisualAcuity",
+        "LesionSize",
+        "ElectrophysiologicalOutcomes",
+        "Incidence",
+        "Progression",
+        "ReadingSpeed",
+        "EmotionalStatus",
+        "CognitiveStatus",
+        "TwoLineImprovement"
+      ],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "clinical",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D016896",
+            "uri": "https://id.nlm.nih.gov/mesh/D016896",
+            "label": "Treatment Outcome",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "VisualAcuity": {
+      "description": "Measurement of visual acuity as an outcome of AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "measurement",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D014792",
+            "uri": "https://id.nlm.nih.gov/mesh/D014792",
+            "label": "Visual Acuity",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ElectrophysiologicalOutcomes": {
+      "description": "Electrophysiological outcomes as a result of AMD treatment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "drug",
+        "matches": []
+      }
+    },
+    "Incidence": {
+      "description": "Measurement of the incidence of AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "measurement",
+        "matches": [
+          {
+            "ontology": "MeSH",
+            "id": "D015994",
+            "uri": "https://id.nlm.nih.gov/mesh/D015994",
+            "label": "Incidence",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Progression": {
+      "description": "Measurement of the progression of AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "diagnostic",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D018450",
+            "uri": "https://id.nlm.nih.gov/mesh/D018450",
+            "label": "Disease Progression",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ReadingSpeed": {
+      "description": "Measurement of reading speed as an outcome of AMD treatment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "drug",
+        "matches": []
+      }
+    },
+    "EmotionalStatus": {
+      "description": "Measurement of emotional status as an outcome of AMD treatment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "drug",
+        "matches": []
+      }
+    },
+    "CognitiveStatus": {
+      "description": "Measurement of cognitive status as an outcome of AMD treatment",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "measurement",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D000085542",
+            "uri": "https://id.nlm.nih.gov/mesh/D000085542",
+            "label": "Functional Status",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "ImmunologicalMechanism": {
+      "description": "Immunological mechanisms and their regulatory mechanisms in AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "GO",
+            "id": "UBERON:0000467",
+            "uri": "http://purl.obolibrary.org/obo/UBERON_0000467",
+            "label": "anatomical system",
+            "confidence": "high"
+          },
+          {
+            "ontology": "HPO",
+            "id": "UBERON:0000467",
+            "uri": "http://purl.obolibrary.org/obo/UBERON_0000467",
+            "label": "anatomical system",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "PolypoidalChoroidalVasculopathy": {
+      "description": "A common subtype of exudative AMD affecting the choroid and retina",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "clinical",
+        "matches": [
+          {
+            "ontology": "HPO",
+            "id": "HP:0025569",
+            "uri": "http://purl.obolibrary.org/obo/HP_0025569",
+            "label": "Polypoidal choroidal vasculopathy",
+            "confidence": "high"
+          },
+          {
+            "ontology": "MeSH",
+            "id": "D000092342",
+            "uri": "https://id.nlm.nih.gov/mesh/D000092342",
+            "label": "Polypoidal Choroidal Vasculopathy",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "TwoLineImprovement": {
+      "description": "Outcome measure indicating a two-line improvement in visual acuity",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "measurement",
+        "matches": []
+      }
+    },
+    "ComplementInhibitor": {
+      "description": "Intravitreal complement inhibitor therapy for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D051056",
+            "uri": "https://id.nlm.nih.gov/mesh/D051056",
+            "label": "Complement Inactivating Agents",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "OT551": {
+      "description": "OT-551 ophthalmic solution for treating geographic atrophy associated with age-related macular degeneration",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "CollaborativeLowVisionRehabilitation": {
+      "description": "A collaborative low vision rehabilitation intervention to prevent depressive disorders in AMD patients",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "concept_type": "clinical",
+        "matches": []
+      }
+    },
+    "EccentricViewingTraining": {
+      "description": "Training program to improve visual skills and reading in AMD patients using eccentric vision",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": false,
+        "matches": []
+      }
+    },
+    "ClosedCircuitTelevision": {
+      "description": "Electronic magnification system for AMD patients to compensate for loss of detail vision",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "phenotype",
+        "matches": [
+          {
+            "ontology": "GO",
+            "id": "GO:0007601",
+            "uri": "http://purl.obolibrary.org/obo/GO_0007601",
+            "label": "visual perception",
+            "confidence": "high"
+          },
+          {
+            "ontology": "HPO",
+            "id": "GO:0007601",
+            "uri": "http://purl.obolibrary.org/obo/GO_0007601",
+            "label": "visual perception",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "TissuePlasminogenActivator": {
+      "description": "Tissue plasminogen activator for dissolving blood clots in submacular hemorrhage",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D010959",
+            "uri": "https://id.nlm.nih.gov/mesh/D010959",
+            "label": "Tissue Plasminogen Activator",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "Perfluoropropane": {
+      "description": "Perfluoropropane gas used to displace blood clots away from the macula",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "other",
+        "matches": [
+          {
+            "ontology": "ChEBI",
+            "id": "CHEBI:31980",
+            "uri": "http://purl.obolibrary.org/obo/CHEBI_31980",
+            "label": "octafluoropropane",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    "AntiTNFTherapy": {
+      "description": "Anti-TNF therapy for AMD",
+      "subclasses": [],
+      "ontology_grounding": {
+        "grounded": true,
+        "concept_type": "drug",
+        "matches": [
+          {
+            "ontology": "[MeSH]",
+            "id": "D000079424",
+            "uri": "https://id.nlm.nih.gov/mesh/D000079424",
+            "label": "Tumor Necrosis Factor Inhibitors",
+            "confidence": "high"
+          }
+        ]
+      }
+    }
+  },
+  "properties": {
+    "treats": {
+      "domain": "Treatment",
+      "range": "AMD",
+      "description": "A treatment method that addresses AMD"
+    },
+    "associatedWith": {
+      "domain": "Ranibizumab",
+      "range": "ArterialThromboembolicEvents",
+      "description": "Ranibizumab is associated with an increased risk of arterial thromboembolic events"
+    },
+    "diagnosedBy": {
+      "domain": "AMD",
+      "range": "DiagnosticMethod",
+      "description": "A diagnostic method used to diagnose AMD"
+    },
+    "features": {
+      "domain": "AMD",
+      "range": "PathologicalFeature",
+      "description": "Pathological features associated with AMD"
+    },
+    "riskFactorFor": {
+      "domain": "RiskFactor",
+      "range": "AMD",
+      "description": "A risk factor that increases the likelihood of developing AMD"
+    },
+    "outcomeOf": {
+      "domain": "ClinicalOutcome",
+      "range": "AMD",
+      "description": "An outcome resulting from AMD progression or treatment"
+    },
+    "improves": {
+      "domain": "OculomotorTraining",
+      "range": "ClinicalOutcome",
+      "description": "Improves visual acuity, fixation stability, and reading speed"
+    },
+    "regulates": {
+      "domain": "ImmunologicalMechanism",
+      "range": "AMD",
+      "description": "Regulatory mechanisms of AMD through immunological pathways"
+    },
+    "promotes": {
+      "domain": "HomeReadingTraining",
+      "range": "ClinicalOutcome",
+      "description": "Promotes cognitive abilities and improves emotional status"
+    },
+    "treatsSpecific": {
+      "domain": "Treatment",
+      "range": "PolypoidalChoroidalVasculopathy",
+      "description": "A treatment method that addresses Polypoidal Choroidal Vasculopathy"
+    },
+    "prevents": {
+      "domain": "Supplements",
+      "range": "AMD",
+      "description": "Supplements that may prevent AMD"
+    },
+    "increases": {
+      "domain": "Supplements",
+      "range": "MacularPigmentOpticalDensity",
+      "description": "Supplements that increase macular pigment optical density"
+    },
+    "slowsProgression": {
+      "domain": "NightTimeLightTherapy",
+      "range": "AMD",
+      "description": "A treatment method that slows the progression of AMD"
+    },
+    "blocks": {
+      "domain": "AntiVEGFTherapy",
+      "range": "VascularEndothelialGrowthFactor",
+      "description": "Anti-VEGF therapy blocks VEGF"
+    },
+    "lowersEyePressure": {
+      "domain": "Acetazolamide",
+      "range": "IntraocularPressure",
+      "description": "Acetazolamide lowers eye pressure in patients with glaucoma"
+    },
+    "preventsProgression": {
+      "domain": "Ellex2RT",
+      "range": "AMD",
+      "description": "Prevents the progression of early AMD"
+    },
+    "improvesVisualAcuity": {
+      "domain": "IntraocularLensImplantation",
+      "range": "TwoLineImprovement",
+      "description": "Improves visual acuity by at least two lines on standard eye test charts"
+    },
+    "improvesContrastSensitivity": {
+      "domain": "PelliRobsonCharts",
+      "range": "AMD",
+      "description": "Improves contrast sensitivity in AMD patients"
+    },
+    "measuresReadingSpeed": {
+      "domain": "ReadingSpeedTest",
+      "range": "AMD",
+      "description": "Measures reading speed in AMD patients"
+    },
+    "downregulatesInflammatoryResponse": {
+      "domain": "CorticosteroidInjection",
+      "range": "InflammatoryResponse",
+      "description": "Corticosteroid injection downregulates inflammatory response in AMD"
+    },
+    "evaluatesMacularPigment": {
+      "domain": "FlickerPhotometry",
+      "range": "MacularPigmentOpticalDensity",
+      "description": "Evaluates macular pigment optical density"
+    },
+    "enhancesEffectiveness": {
+      "domain": "Cyclooxygenine2Inhibition",
+      "range": "PhotodynamicTherapy",
+      "description": "Enhances the effectiveness of photodynamic therapy"
+    },
+    "predictsProgression": {
+      "domain": "FundusAutofluorescence",
+      "range": "AMD",
+      "description": "Fundus autofluorescence predicts disease progression"
+    },
+    "correlatesWith": {
+      "domain": "FundusAutofluorescence",
+      "range": "RetinalSensitivity",
+      "description": "Fundus autofluorescence correlates with retinal sensitivity"
+    },
+    "improvesDryAMD": {
+      "domain": "Rheopheresis",
+      "range": "DryAMD",
+      "description": "Improves visual acuity in dry AMD"
+    },
+    "preventsConversion": {
+      "domain": "Copaxone",
+      "range": "DryAMD",
+      "description": "Prevents the conversion of dry AMD to wet AMD"
+    },
+    "associatesWith": {
+      "domain": "GeneticMarker",
+      "range": "TreatmentResponse",
+      "description": "Genetic markers associated with treatment response"
+    },
+    "safetyAndTolerability": {
+      "domain": "ComplementInhibitor",
+      "range": "AMD",
+      "description": "Initial safety and tolerability information on intravitreal complement inhibitor therapy in AMD patients"
+    },
+    "protectsRPECells": {
+      "domain": "OT551",
+      "range": "RetinalPigmentEpitheliumDysfunction",
+      "description": "OT-551 protects RPE cells and photoreceptors from oxidative damage"
+    },
+    "blocksAngiogenesis": {
+      "domain": "OT551",
+      "range": "VascularEndothelialGrowthFactor",
+      "description": "OT-551 blocks angiogenesis stimulated by VEGF and other growth factors"
+    },
+    "measuresRetinalFunction": {
+      "domain": "Electroretinography",
+      "range": "AMD",
+      "description": "Measures retinal function using electroretinograms"
+    },
+    "reducesFluence": {
+      "domain": "PhotodynamicTherapy",
+      "range": "AMD",
+      "description": "Reduces fluence in photodynamic therapy to minimize collateral damage"
+    },
+    "measuresMacularThickness": {
+      "domain": "HeidelbergRetinalTomograph",
+      "range": "RetinalThickness",
+      "description": "Measures macular thickness using laser imaging"
+    },
+    "improvesReadingSkills": {
+      "domain": "OculomotorTraining",
+      "range": "ReadingSpeed",
+      "description": "Improves reading skills and reading speed in AMD patients"
+    },
+    "inhibitsInflammation": {
+      "domain": "Sirolimus",
+      "range": "InflammatoryResponse",
+      "description": "Sirolimus inhibits inflammation in AMD"
+    },
+    "evaluatesGA": {
+      "domain": "FundusPhotography",
+      "range": "GeographicAtrophy",
+      "description": "Fundus photography evaluates geographic atrophy"
+    },
+    "measuresGAChange": {
+      "domain": "FundusPhotography",
+      "range": "LesionSize",
+      "description": "Fundus photography measures changes in geographic atrophy area"
+    },
+    "targets": {
+      "domain": "iSONEP",
+      "range": "S1P",
+      "description": "iSONEP targets S1P to modulate angiogenesis, inflammation, and fibrosis in AMD"
+    },
+    "preventsDepression": {
+      "domain": "CollaborativeLowVisionRehabilitation",
+      "range": "EmotionalStatus",
+      "description": "Prevents depressive disorders in AMD patients"
+    },
+    "measuresChoroidalBloodFlow": {
+      "domain": "LaserDopplerFlowmetry",
+      "range": "ChoroidalBloodFlow",
+      "description": "Measures choroidal blood flow"
+    },
+    "measuresOpticalImperfections": {
+      "domain": "WavefrontAnalysis",
+      "range": "AMD",
+      "description": "Measures optical imperfections in the eye"
+    },
+    "improvesReadingSpeed": {
+      "domain": "EccentricViewingTraining",
+      "range": "ReadingSpeed",
+      "description": "Improves reading speed in AMD patients using eccentric vision"
+    },
+    "providesMagnification": {
+      "domain": "ClosedCircuitTelevision",
+      "range": "AMD",
+      "description": "Provides high levels of magnification to compensate for loss of detail vision in AMD patients"
+    },
+    "preventsConversionToWetAMD": {
+      "domain": "Supplements",
+      "range": "DryAMD",
+      "description": "Supplements that may prevent the conversion of dry AMD to wet AMD"
+    },
+    "effectiveDoseAndSafety": {
+      "domain": "Bevacizumab",
+      "range": "WetAMD",
+      "description": "Bevacizumab effective dose and safety for Neovascular Age-related Macular Degeneration (nAMD)"
+    },
+    "contraindicatedFor": {
+      "domain": "Ranibizumab",
+      "range": "CerebrovascularEvents",
+      "description": "Ranibizumab is contraindicated for patients with history of cerebrovascular events"
+    },
+    "correlatesDarkAdaptation": {
+      "domain": "DarkAdaptation",
+      "range": "AMD",
+      "description": "Correlates dark adaptation with AMD progression and severity"
+    },
+    "inhibitsInflammationInGA": {
+      "domain": "Sirolimus",
+      "range": "GeographicAtrophy",
+      "description": "Sirolimus inhibits inflammation in geographic atrophy"
+    },
+    "correlatesWithProgression": {
+      "domain": "ReticularPseudodrusen",
+      "range": "AMD",
+      "description": "Reticular pseudodrusen correlates with progression to advanced AMD"
+    },
+    "correlatesWithRisk": {
+      "domain": "rs1061170",
+      "range": "AMD",
+      "description": "Polymorphism rs1061170 on CFH correlates with risk of AMD"
+    },
+    "evaluatesEarlyChanges": {
+      "domain": "OCT",
+      "range": "AMD",
+      "description": "Evaluates early changes in parameters of optical coherence tomography (OCT) in patients with AMD"
+    },
+    "inhibitsAngiogenesis": {
+      "domain": "SqualamineLactate",
+      "range": "VascularEndothelialGrowthFactor",
+      "description": "Squalamine lactate inhibits angiogenesis induced by VEGF, PDGF, or bFGF"
+    },
+    "predictsGAProgression": {
+      "domain": "FundusAutofluorescence",
+      "range": "GeographicAtrophy",
+      "description": "Fundus autofluorescence predicts progression of geographic atrophy"
+    },
+    "correlatesWithMacularPigment": {
+      "domain": "TAS2R38",
+      "range": "MacularPigmentOpticalDensity",
+      "description": "TAS2R38 correlates with macular pigment optical density"
+    },
+    "dissolvesClot": {
+      "domain": "TissuePlasminogenActivator",
+      "range": "SubmacularHaemorrhage",
+      "description": "Tissue plasminogen activator dissolves blood clots in submacular hemorrhage"
+    },
+    "displacesClot": {
+      "domain": "Perfluoropropane",
+      "range": "SubmacularHaemorrhage",
+      "description": "Perfluoropropane displaces blood clots away from the macula"
+    },
+    "improvesHomeReadingTraining": {
+      "domain": "HomeReadingTraining",
+      "range": "ReadingSpeed",
+      "description": "Improves reading speed in AMD patients through home-based training"
+    },
+    "reducesNeedForInjections": {
+      "domain": "StereotacticRadiosurgery",
+      "range": "AntiVEGFTherapy",
+      "description": "Stereotactic radiosurgery reduces the need for anti-VEGF injections in treating wet AMD"
+    },
+    "predictsTreatmentTiming": {
+      "domain": "OCT",
+      "range": "AntiVEGFTherapy",
+      "description": "Predicts the timing of anti-VEGF treatments based on 3D OCT image analysis"
+    },
+    "correlatesWithGutMicrobiome": {
+      "domain": "GeneticMarker",
+      "range": "GutMicrobiome",
+      "description": "Genetic markers correlate with alterations in the gut microbiome"
+    },
+    "treatsWithAvastin": {
+      "domain": "Avastin",
+      "range": "WetAMD",
+      "description": "Treats wet AMD with Avastin injections"
+    },
+    "reducesInjectionFrequency": {
+      "domain": "Avastin",
+      "range": "WetAMD",
+      "description": "Reduces the frequency of intravitreal injections in the treatment of wet AMD"
+    },
+    "antiTNFTherapy": {
+      "domain": "AntiTNFTherapy",
+      "range": "WetAMD",
+      "description": "Anti-TNF therapy for treating wet AMD"
+    }
+  },
+  "individuals": {
+    "AntiVEGFTherapy": [
+      "Ranibizumab",
+      "Aflibercept",
+      "Bevacizumab",
+      "Conbercept",
+      "Lucentis",
+      "Avastin"
+    ],
+    "PhotodynamicTherapy": [
+      "Verteporfin"
+    ],
+    "Supplements": [
+      "AREDS",
+      "AREDS2",
+      "Macuvite",
+      "Lutein",
+      "Zeaxanthin",
+      "GreenTeaPolyphenols",
+      "SaffronSupplementation",
+      "MesoZeaxanthin"
+    ],
+    "GeneticMarker": [
+      "CFH",
+      "C3",
+      "C2",
+      "CFB",
+      "ARMS2",
+      "HTRA1",
+      "VEGF",
+      "ApoE",
+      "CX3CR1",
+      "ComplementActivation",
+      "S1P",
+      "LOC",
+      "rs11200638",
+      "rs1061170",
+      "TAS2R38",
+      "rs1410996",
+      "rs10490924",
+      "rs9332739",
+      "rs641153",
+      "rs10033900",
+      "rs2230199",
+      "PLEKHA1",
+      "VEGF-A",
+      "VEGF-B",
+      "VEGFR",
+      "TNFAlpha"
+    ],
+    "DiagnosticMethod": [
+      "OCT",
+      "FundusPhotography",
+      "FluoresceinAngiography",
+      "VisualAcuityTests",
+      "HeterochromaticFlickerPhotometry",
+      "FundusAutofluorescence",
+      "FlickerPhotometry",
+      "IndocyanineGreenAngiography",
+      "HighSpeedIndocyanineGreenAngiography",
+      "UltrasoundEvaluation",
+      "LaserInterferometricMeasurement",
+      "MultifocalObjectivePupilPerimetry",
+      "IReST",
+      "RadnerReadingChart",
+      "IntraocularLensEvaluation",
+      "PelliRobsonCharts",
+      "ReadingSpeedTest",
+      "MNReadAcuityCharts",
+      "PepperVisualSkillsForReadingTest",
+      "ViewSentencesTest",
+      "HighResolutionUltrasoundImaging",
+      "ETDRS",
+      "Electroretinography",
+      "HeidelbergRetinalTomograph",
+      "LaserDopplerFlowmetry",
+      "WavefrontAnalysis",
+      "DarkAdaptation"
+    ],
+    "CorticosteroidInjection": [
+      "Triamcinolone",
+      "Preservative-Free Triamcinolone Acetonide"
+    ],
+    "SustainedReleaseSteroidImplant": [
+      "Fluocinolone Acetonide Implant"
+    ],
+    "Cyclooxygenine2Inhibition": [
+      "Celecoxib"
+    ],
+    "IntraocularLensImplantation": [
+      "IOL VIP",
+      "SeeAgainLens"
+    ],
+    "TriamcinoloneAcetonide": [
+      "Triamcinolone",
+      "Preservative-Free Triamcinolone Acetonide"
+    ],
+    "CNTFImplant": [
+      "Encapsulated Human NTC-201 Cells Releasing CNTF"
+    ],
+    "ComplementInhibitor": [
+      "POT-4"
+    ],
+    "OT551": [
+      "OT-551"
+    ],
+    "iSONEP": [
+      "Sonepcizumab [LT1009]"
+    ],
+    "SqualamineLactate": [
+      "Squalamine Lactate Ophthalmic Formulation 0.2% BID"
+    ],
+    "AntiTNFTherapy": [
+      "Infliximab",
+      "Remicade"
+    ]
+  }
+}

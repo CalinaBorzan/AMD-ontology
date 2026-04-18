@@ -1,7 +1,6 @@
 """
 Convert SCHEMA-MINERpro JSON to OWL Ontology
-Takes the JSON schema from Stage 3 and creates AMD.owl file
-NOW WITH AUTOMATIC INSTANCE CREATION FROM ABSTRACTS!
+Takes the JSON schema from Stage 3 and creates AMD2.owl file
 
 Usage:
     python convert_to_owl.py <path_to_json_schema>
@@ -16,13 +15,13 @@ from pathlib import Path
 import sys
 
 
-def json_to_owl(json_file, output_owl_file="AMD.owl"):
+def json_to_owl(json_file, output_owl_file="AMD3.owl"):
     """
     Convert SCHEMA-MINERpro JSON schema to OWL ontology
 
     Args:
         json_file: Path to final JSON schema (e.g., results/stage-3/AMD/llama3.1-8b.json)
-        output_owl_file: Where to save the OWL file (default: AMD.owl)
+        output_owl_file: Where to save the OWL file (default: AMD2.owl)
     """
 
     print(f"📂 Loading JSON schema from: {json_file}")
@@ -166,82 +165,6 @@ def json_to_owl(json_file, output_owl_file="AMD.owl"):
                     individuals_count += 1
                     print(f"   ✅ Added individual: {instance_name} ({category})")
 
-    # ===== 🆕 PROCESS ABSTRACT INSTANCES FROM METADATA =====
-    print("\n📄 Creating instances from abstracts metadata...")
-
-    # Load abstracts metadata (created by prepare_data_from_abstracts.py)
-    metadata_file = Path("data/abstracts_metadata.json")
-    abstract_instances_count = 0
-    wet_amd_count = 0
-    dry_amd_count = 0
-    generic_amd_count = 0
-
-    if metadata_file.exists():
-        print(f"   Loading metadata from: {metadata_file}")
-
-        with open(metadata_file, 'r', encoding='utf-8') as f:
-            abstracts_data = json.load(f)
-
-        print(f"   Found {len(abstracts_data)} abstracts to process\n")
-
-        for abstract in abstracts_data:
-            abstract_id = abstract['id']
-            abstract_text = abstract['text'].lower()
-
-            # Create instance URI using the real abstract ID
-            instance_uri = AMD[f"abstract_{abstract_id}"]
-            g.add((instance_uri, RDF.type, OWL.NamedIndividual))
-            g.add((instance_uri, RDFS.label, Literal(f"Abstract {abstract_id}")))
-
-            # Analyze text to determine AMD type
-            wet_keywords = [
-                'wet amd', 'neovascular', 'cnv', 'choroidal neovascularization',
-                'exudative', 'ranibizumab', 'lucentis', 'bevacizumab', 'avastin',
-                'aflibercept', 'eylea', 'anti-vegf', 'vegf', 'anti vegf',
-                'subretinal fluid', 'intraretinal fluid', 'photodynamic therapy'
-            ]
-
-            dry_keywords = [
-                'dry amd', 'geographic atrophy', 'drusen', 'non-exudative',
-                'atrophic', 'reticular pseudodrusen', 'non exudative',
-                'areds', 'age related eye disease study'
-            ]
-
-            is_wet = any(keyword in abstract_text for keyword in wet_keywords)
-            is_dry = any(keyword in abstract_text for keyword in dry_keywords)
-
-            # Assign type based on keywords
-            if is_wet and is_dry:
-                # Both mentioned - use WetAMD (more specific/severe)
-                g.add((instance_uri, RDF.type, AMD.WetAMD))
-                wet_amd_count += 1
-                print(f"   ✅ WetAMD: abstract_{abstract_id}")
-            elif is_wet:
-                g.add((instance_uri, RDF.type, AMD.WetAMD))
-                wet_amd_count += 1
-                print(f"   ✅ WetAMD: abstract_{abstract_id}")
-            elif is_dry:
-                g.add((instance_uri, RDF.type, AMD.DryAMD))
-                dry_amd_count += 1
-                print(f"   ✅ DryAMD: abstract_{abstract_id}")
-            else:
-                # Generic AMD case
-                g.add((instance_uri, RDF.type, AMD.Disease))
-                generic_amd_count += 1
-                print(f"   ✅ AMD (generic): abstract_{abstract_id}")
-
-            abstract_instances_count += 1
-
-        print(f"\n   📊 Abstract Instances Summary:")
-        print(f"      Total: {abstract_instances_count}")
-        print(f"      WetAMD: {wet_amd_count}")
-        print(f"      DryAMD: {dry_amd_count}")
-        print(f"      Generic AMD: {generic_amd_count}")
-    else:
-        print(f"   ⚠️  No metadata file found at {metadata_file}")
-        print(f"   Skipping instance creation from abstracts")
-        print(f"   💡 Run: python prepare_data_from_abstracts.py abstracts_with_id.json")
-
     # ===== SAVE OWL FILE =====
     print(f"\n💾 Saving OWL ontology to: {output_owl_file}")
 
@@ -263,25 +186,10 @@ def json_to_owl(json_file, output_owl_file="AMD.owl"):
     print(f"   Object Properties: {properties_count}")
     print(f"   Relationship Triples: {triples_count}")
     print(f"   Schema Individuals: {individuals_count}")
-    print(f"   Abstract Instances: {abstract_instances_count}")
-    print(f"      - WetAMD: {wet_amd_count}")
-    print(f"      - DryAMD: {dry_amd_count}")
-    print(f"      - Generic AMD: {generic_amd_count}")
 
-    print(f"\n📁 Files created:")
-    print(f"   ✅ {output_owl_file} (OWL/XML format - use with Protégé)")
-    print(f"   ✅ {turtle_file} (Turtle format - human readable)")
-
-    print("\n💡 Next steps:")
-    print("   1. Open AMD.owl in Protégé to visualize the ontology")
-    print("   2. Use DL-Learner with these abstract instances!")
-    print("   3. Manually refine with domain expert feedback")
-    print("   4. Export to your preferred format (RDF, OWL, TTL)")
-
-    if abstract_instances_count > 0:
-        print("\n🎯 DL-Learner Example Config:")
-        print("   lp.positiveExamples = { \"amd:abstract_NCT00001615\", \"amd:abstract_NCT00260403\" }")
-        print("   lp.negativeExamples = { \"amd:abstract_NCT00393692\", \"amd:abstract_NCT00342251\" }")
+    print(f"\n   Files created:")
+    print(f"   {output_owl_file} (OWL/XML format)")
+    print(f"   {turtle_file} (Turtle format)")
 
     return output_owl_file
 

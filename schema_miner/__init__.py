@@ -14,15 +14,11 @@
 from schema_miner import (
     config,
     ontology_grounding,
-    pdf_text_extractor,
     schema_extractor,
-    schemas,
 )
 
 __all__ = [
     "schema_extractor",
     "ontology_grounding",
-    "pdf_text_extractor",
-    "schemas",
     "config",
 ]
