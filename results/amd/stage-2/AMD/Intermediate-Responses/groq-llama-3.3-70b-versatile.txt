@@ -1,0 +1,51 @@
+```json
+{
+  "classes": [
+    "Disease",
+    "AMD",
+    "WetAMD",
+    "DryAMD",
+    "GeographicAtrophy",
+    "GeneticMarker",
+    "DiagnosticMethod",
+    "Treatment",
+    "AntiVEGFTherapy"
+  ],
+  "individuals": [
+    {
+      "name": "CFH",
+      "type": "GeneticMarker"
+    },
+    {
+      "name": "HTRA1",
+      "type": "GeneticMarker"
+    },
+    {
+      "name": "OCT",
+      "type": "DiagnosticMethod"
+    },
+    {
+      "name": "Fluoroscein Angiography",
+      "type": "DiagnosticMethod"
+    },
+    {
+      "name": "Slit Lamp Exam",
+      "type": "DiagnosticMethod"
+    },
+    {
+      "name": "Indirect Ophthalmoscopy",
+      "type": "DiagnosticMethod"
+    },
+    {
+      "name": "Fundus Photos",
+      "type": "DiagnosticMethod"
+    },
+    {
+      "name": "Spectral Domain Optical Coherence Tomography",
+      "type": "DiagnosticMethod"
+    }
+  ]
+}
+```
+
+Note: The abstract does not mention specific anti-VEGF treatments, so none are added to the "individuals" section. The "classes" section includes the hierarchy of disease subtypes as required. The "individuals" section includes specific named entities such as genes (CFH, HTRA1) and diagnostic methods (OCT, Fluoroscein Angiography, etc.).

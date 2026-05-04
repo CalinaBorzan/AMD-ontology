@@ -1,0 +1,281 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "Top-level disease category",
+            "subclasses": [
+                "AMD"
+            ]
+        },
+        "AMD": {
+            "description": "Age-related macular degeneration",
+            "subclasses": [
+                "WetAMD",
+                "DryAMD",
+                "GeographicAtrophy",
+                "AdvancedAMD",
+                "NeovascularAMD",
+                "AgeRelatedMaculopathy",
+                "EarlyARM",
+                "LateARM",
+                "ExudativeMacularDegeneration",
+                "EarlyAMD"
+            ]
+        },
+        "WetAMD": {
+            "description": "Neovascular AMD with abnormal blood vessel growth",
+            "subclasses": []
+        },
+        "DryAMD": {
+            "description": "Atrophic AMD with drusen and RPE degeneration",
+            "subclasses": []
+        },
+        "GeographicAtrophy": {
+            "description": "Advanced dry AMD with retinal cell death",
+            "subclasses": []
+        },
+        "AdvancedAMD": {
+            "description": "Severe stage of AMD",
+            "subclasses": []
+        },
+        "NeovascularAMD": {
+            "description": "AMD characterized by choroidal neovascularization",
+            "subclasses": []
+        },
+        "AgeRelatedMaculopathy": {
+            "description": "Synonym for AMD, emphasizing age-related maculopathy",
+            "subclasses": [
+                "EarlyARM",
+                "LateARM"
+            ]
+        },
+        "EarlyARM": {
+            "description": "Early age-related maculopathy with large soft indistinct drusen, retinal pigment epithelial (RPE) depigmentation",
+            "subclasses": []
+        },
+        "LateARM": {
+            "description": "Late age-related maculopathy with exudative macular degeneration and geographic atrophy",
+            "subclasses": [
+                "ExudativeMacularDegeneration"
+            ]
+        },
+        "ExudativeMacularDegeneration": {
+            "description": "Subtype of late ARM characterized by fluid leakage",
+            "subclasses": []
+        },
+        "EarlyAMD": {
+            "description": "Early stage of AMD with soft confluent drusen",
+            "subclasses": []
+        },
+        "PathologicalFeature": {
+            "description": "Characteristics of AMD",
+            "subclasses": [
+                "Drusen",
+                "ChoroidalNeovascularization",
+                "RetinalPigmentEpitheliumDysfunction",
+                "MacularPigment",
+                "SubfovealCNV",
+                "Inflammation",
+                "ReactiveOxygenSpecies",
+                "SerousDetachment"
+            ]
+        },
+        "Treatment": {
+            "description": "AMD therapeutic interventions",
+            "subclasses": [
+                "AntiVEGFTherapy",
+                "PhotodynamicTherapy",
+                "AREDSupplement",
+                "LaserTherapy",
+                "DietarySupplement",
+                "SubmacularSurgery",
+                "Corticosteroid"
+            ]
+        },
+        "AntiVEGFTherapy": {
+            "description": "Anti-VEGF intravitreal agents",
+            "subclasses": []
+        },
+        "Biomarker": {
+            "description": "Indicators of AMD progression",
+            "subclasses": [
+                "MacularPigmentOpticalDensity",
+                "VEGF",
+                "RetinalThickness",
+                "LeakageArea",
+                "RetinalThicknessProfiles",
+                "ChoroidalThicknessProfiles",
+                "VascularDensity",
+                "GeneExpressionPattern",
+                "VisualAcuity",
+                "ReadingRate",
+                "ChoroidalBloodFlow",
+                "GeneticPolymorphism"
+            ]
+        },
+        "DiagnosticMethod": {
+            "description": "Methods for diagnosing AMD",
+            "subclasses": [
+                "OCT",
+                "FundusPhotography",
+                "FluoresceinAngiography",
+                "VisualAcuityTests",
+                "FundusAutofluorescenceImaging",
+                "LaserDopplerFlowmetry",
+                "LaserInterferometry"
+            ]
+        },
+        "Outcome": {
+            "description": "Results of AMD progression or treatment",
+            "subclasses": [
+                "VisionLoss",
+                "QualityOfLife",
+                "StabilizationOfVision",
+                "ReductionInLeakageArea",
+                "Depression"
+            ]
+        },
+        "VisionLoss": {
+            "description": "Decrease in visual acuity",
+            "subclasses": []
+        },
+        "QualityOfLife": {
+            "description": "Impact on patient's life quality",
+            "subclasses": []
+        },
+        "Nutrient": {
+            "description": "Dietary components",
+            "subclasses": [
+                "Lutein",
+                "Zeaxanthin"
+            ]
+        },
+        "Antioxidant": {
+            "description": "Substances preventing oxidation",
+            "subclasses": []
+        },
+        "RiskFactor": {
+            "description": "Factors increasing AMD risk",
+            "subclasses": [
+                "Age",
+                "Smoking",
+                "GeneticMarker",
+                "OxidativeStress",
+                "Inflammation"
+            ]
+        },
+        "BiophysicalParameter": {
+            "description": "Physical parameters related to AMD",
+            "subclasses": [
+                "FundusPulsation",
+                "PulsatileOcularBloodFlow"
+            ]
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "AMD",
+            "description": "Therapeutic intervention for AMD"
+        },
+        "associatedWith": {
+            "domain": "GeneticMarker",
+            "range": "AMD",
+            "description": "Gene variant increases AMD risk"
+        },
+        "diagnosedBy": {
+            "domain": "AMD",
+            "range": "DiagnosticMethod",
+            "description": "AMD diagnosed by imaging or testing method"
+        },
+        "hasFeature": {
+            "domain": "AMD",
+            "range": "PathologicalFeature",
+            "description": "AMD characterized by pathological feature"
+        },
+        "leadsTo": {
+            "domain": "AMD",
+            "range": "Outcome",
+            "description": "AMD progression results in outcome"
+        },
+        "supplements": {
+            "domain": "DietarySupplement",
+            "range": "Nutrient",
+            "description": "Dietary supplement contains nutrient"
+        },
+        "riskFactor": {
+            "domain": "AMD",
+            "range": [
+                "Age",
+                "Smoking",
+                "GeneticMarker",
+                "OxidativeStress",
+                "Inflammation"
+            ],
+            "description": "Factors increasing AMD risk"
+        },
+        "measuredBy": {
+            "domain": "BiophysicalParameter",
+            "range": "DiagnosticMethod",
+            "description": "Biophysical parameter measured by diagnostic method"
+        },
+        "indicates": {
+            "domain": "Biomarker",
+            "range": "AMD",
+            "description": "Biomarker indicates AMD progression"
+        }
+    },
+    "individuals": {
+        "AntiVEGFTherapy": [
+            "Ranibizumab",
+            "Aflibercept",
+            "Bevacizumab"
+        ],
+        "GeneticMarker": [
+            "CFH",
+            "C3",
+            "C2",
+            "CFB",
+            "ARMS2",
+            "HTRA1",
+            "ApoE"
+        ],
+        "Biomarker": [
+            "VEGF"
+        ],
+        "DiagnosticMethod": [
+            "OCT",
+            "FundusPhotography",
+            "FluoresceinAngiography",
+            "VisualAcuityTests",
+            "FundusAutofluorescenceImaging",
+            "LaserDopplerFlowmetry",
+            "LaserInterferometry"
+        ],
+        "Treatment": [
+            "Verteporfin",
+            "AREDS2 supplements",
+            "Corticosteroid",
+            "FluocinoloneAcetonideImplant",
+            "Celecoxib",
+            "TriamcinoloneAcetonide"
+        ],
+        "PathologicalFeature": [
+            "Drusen",
+            "ChoroidalNeovascularization"
+        ],
+        "DietarySupplement": [
+            "Macuvite"
+        ],
+        "Nutrient": [
+            "Zeaxanthin",
+            "Lutein"
+        ],
+        "Antioxidant": [
+            "Green tea polyphenols"
+        ],
+        "GeneticPolymorphism": [
+            "rs11200638",
+            "rs1061170"
+        ]
+    }
+}

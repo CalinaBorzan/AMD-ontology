@@ -1,0 +1,1342 @@
+@prefix amd: <http://example.org/amd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+amd:AMD_Ontology a owl:Ontology ;
+    rdfs:label "Age-Related Macular Degeneration Ontology" ;
+    rdfs:comment "AMD ontology auto-generated from research abstracts using SCHEMA-MINERpro and Agentic AI" ;
+    owl:versionInfo "1.0" .
+
+amd:AREDSsupplements a owl:Class ;
+    rdfs:label "AREDSsupplements" ;
+    rdfs:comment "AREDS/AREDS2 supplements" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:ARMS2 a owl:Class ;
+    rdfs:label "ARMS2" ;
+    rdfs:comment "ARMS2" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:ApoE a owl:Class ;
+    rdfs:label "ApoE" ;
+    rdfs:comment "ApoE" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:AutofluorescenceImaging a owl:Class ;
+    rdfs:label "AutofluorescenceImaging" ;
+    rdfs:comment "Autofluorescence imaging" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:C2 a owl:Class ;
+    rdfs:label "C2" ;
+    rdfs:comment "C2" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:C3 a owl:Class ;
+    rdfs:label "C3" ;
+    rdfs:comment "C3" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:CFB a owl:Class ;
+    rdfs:label "CFB" ;
+    rdfs:comment "CFB" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:CFH a owl:Class ;
+    rdfs:label "CFH" ;
+    rdfs:comment "CFH" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:CX3CR1 a owl:Class ;
+    rdfs:label "CX3CR1" ;
+    rdfs:comment "CX3CR1" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:CollaborativeLowVisionRehabilitation a owl:Class ;
+    rdfs:label "CollaborativeLowVisionRehabilitation" ;
+    rdfs:comment "Collaborative low vision rehabilitation for AMD patients" ;
+    rdfs:subClassOf amd:LowVisionRehabilitation .
+
+amd:ConfocalScanningLaserOphthalmoscopy a owl:Class ;
+    rdfs:label "ConfocalScanningLaserOphthalmoscopy" ;
+    rdfs:comment "Confocal scanning laser ophthalmoscopy" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:CorticosteroidInjection a owl:Class ;
+    rdfs:label "CorticosteroidInjection" ;
+    rdfs:comment "Corticosteroid injection around the eye" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:DarkAdaptationProtocol a owl:Class ;
+    rdfs:label "DarkAdaptationProtocol" ;
+    rdfs:comment "Dark adaptation protocol for AMD diagnosis" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:ETDRS a owl:Class ;
+    rdfs:label "ETDRS" ;
+    rdfs:comment "ETDRS visual acuity test" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:EarlyARM a owl:Class ;
+    rdfs:label "EarlyARM" ;
+    rdfs:comment "EarlyARM" ;
+    rdfs:subClassOf amd:AgeRelatedMaculopathy .
+
+amd:EccentricViewingAwareness a owl:Class ;
+    rdfs:label "EccentricViewingAwareness" ;
+    rdfs:comment "Eccentric viewing awareness training" ;
+    rdfs:subClassOf amd:EccentricViewingTraining,
+        amd:OculomotorTraining,
+        amd:OculomotorTrainingProgram .
+
+amd:ElectrophysiologicalTesting a owl:Class ;
+    rdfs:label "ElectrophysiologicalTesting" ;
+    rdfs:comment "Electrophysiological testing" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:FluoresceinAngiography a owl:Class ;
+    rdfs:label "FluoresceinAngiography" ;
+    rdfs:comment "Fluorescein angiography" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:FullFieldElectroretinography a owl:Class ;
+    rdfs:label "FullFieldElectroretinography" ;
+    rdfs:comment "FullFieldElectroretinography" ;
+    rdfs:subClassOf amd:Electroretinography .
+
+amd:FundusPerimetry a owl:Class ;
+    rdfs:label "FundusPerimetry" ;
+    rdfs:comment "Fundus perimetry" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:FundusPhotography a owl:Class ;
+    rdfs:label "FundusPhotography" ;
+    rdfs:comment "Fundus photography" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:HTRA1 a owl:Class ;
+    rdfs:label "HTRA1" ;
+    rdfs:comment "HTRA1" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:HeterochromaticFlickerPhotometry a owl:Class ;
+    rdfs:label "HeterochromaticFlickerPhotometry" ;
+    rdfs:comment "Heterochromatic flicker photometry" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:IReST a owl:Class ;
+    rdfs:label "IReST" ;
+    rdfs:comment "IReST reading speed test" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:IllDefinedChoroidalNeovascularization a owl:Class ;
+    rdfs:label "IllDefinedChoroidalNeovascularization" ;
+    rdfs:comment "Ill-defined choroidal neovascularization" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:IndirectOphthalmoscopy a owl:Class ;
+    rdfs:label "IndirectOphthalmoscopy" ;
+    rdfs:comment "Indirect ophthalmoscopy" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:IndocyanineGreenAngiography a owl:Class ;
+    rdfs:label "IndocyanineGreenAngiography" ;
+    rdfs:comment "Indocyanine green angiography" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:IntravitrealImplant a owl:Class ;
+    rdfs:label "IntravitrealImplant" ;
+    rdfs:comment "Intravitreal implant for sustained-release of medication" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:LOC a owl:Class ;
+    rdfs:label "LOC" ;
+    rdfs:comment "LOC" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:LargeSoftIndistinctDrusen a owl:Class ;
+    rdfs:label "LargeSoftIndistinctDrusen" ;
+    rdfs:comment "LargeSoftIndistinctDrusen" ;
+    rdfs:subClassOf amd:Drusen .
+
+amd:LaserDopplerFlowmetry a owl:Class ;
+    rdfs:label "LaserDopplerFlowmetry" ;
+    rdfs:comment "Laser Doppler flowmetry" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:LaserInterferometry a owl:Class ;
+    rdfs:label "LaserInterferometry" ;
+    rdfs:comment "Laser interferometry" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:LateAMD a owl:Class ;
+    rdfs:label "LateAMD" ;
+    rdfs:comment "Late age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:LateARM a owl:Class ;
+    rdfs:label "LateARM" ;
+    rdfs:comment "LateARM" ;
+    rdfs:subClassOf amd:AgeRelatedMaculopathy .
+
+amd:LipofuscinAccumulation a owl:Class ;
+    rdfs:label "LipofuscinAccumulation" ;
+    rdfs:comment "Accumulation of lipofuscin in RPE cells" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:MAIAMicroperimetry a owl:Class ;
+    rdfs:label "MAIAMicroperimetry" ;
+    rdfs:comment "Microperimetry using the MAIA device" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:MNReadAcuityCharts a owl:Class ;
+    rdfs:label "MNReadAcuityCharts" ;
+    rdfs:comment "MNRead acuity charts" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:MacularEdema a owl:Class ;
+    rdfs:label "MacularEdema" ;
+    rdfs:comment "Fluid accumulation in the macula" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:MultifocalObjectivePupilPerimetry a owl:Class ;
+    rdfs:label "MultifocalObjectivePupilPerimetry" ;
+    rdfs:comment "Multifocal objective pupil perimetry" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:NeovascularGlaucoma a owl:Class ;
+    rdfs:label "NeovascularGlaucoma" ;
+    rdfs:comment "Neovascular glaucoma" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:OccultChoroidalNeovascularization a owl:Class ;
+    rdfs:label "OccultChoroidalNeovascularization" ;
+    rdfs:comment "Less well-formed neovascularization" ;
+    rdfs:subClassOf amd:ChoroidalNeovascularMembraneFormation,
+        amd:ChoroidalNeovascularization .
+
+amd:OpticalCoherenceTomography a owl:Class ;
+    rdfs:label "OpticalCoherenceTomography" ;
+    rdfs:comment "OCT" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:PatternElectroretinography a owl:Class ;
+    rdfs:label "PatternElectroretinography" ;
+    rdfs:comment "PatternElectroretinography" ;
+    rdfs:subClassOf amd:Electroretinography .
+
+amd:PazopanibEyeDrops a owl:Class ;
+    rdfs:label "PazopanibEyeDrops" ;
+    rdfs:comment "Pazopanib eye drops for neovascular AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:PepperVisualSkillsForReadingTest a owl:Class ;
+    rdfs:label "PepperVisualSkillsForReadingTest" ;
+    rdfs:comment "Pepper visual skills for reading test" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:PigmentEpithelialDetachment a owl:Class ;
+    rdfs:label "PigmentEpithelialDetachment" ;
+    rdfs:comment "Pigment epithelial detachment" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:PlGF a owl:Class ;
+    rdfs:label "PlGF" ;
+    rdfs:comment "PlGF" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:ProliferativeDiabeticRetinopathy a owl:Class ;
+    rdfs:label "ProliferativeDiabeticRetinopathy" ;
+    rdfs:comment "Proliferative diabetic retinopathy" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:RadnerReadingTest a owl:Class ;
+    rdfs:label "RadnerReadingTest" ;
+    rdfs:comment "Radner reading test" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:ReadingPractice a owl:Class ;
+    rdfs:label "ReadingPractice" ;
+    rdfs:comment "Reading practice with sequentially lexical information" ;
+    rdfs:subClassOf amd:OculomotorTraining,
+        amd:OculomotorTrainingProgram .
+
+amd:RetinalPerivascularSheathing a owl:Class ;
+    rdfs:label "RetinalPerivascularSheathing" ;
+    rdfs:comment "Retinal perivascular sheathing" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:RetinalPigmentEpithelialDepigmentation a owl:Class ;
+    rdfs:label "RetinalPigmentEpithelialDepigmentation" ;
+    rdfs:comment "RetinalPigmentEpithelialDepigmentation" ;
+    rdfs:subClassOf amd:RetinalPigmentEpitheliumDysfunction .
+
+amd:RubeosisIridis a owl:Class ;
+    rdfs:label "RubeosisIridis" ;
+    rdfs:comment "Rubeosis iridis" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:S1P a owl:Class ;
+    rdfs:label "S1P" ;
+    rdfs:comment "S1P" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:SaffronSupplementation a owl:Class ;
+    rdfs:label "SaffronSupplementation" ;
+    rdfs:comment "Saffron supplementation for dry AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:SlitLampExam a owl:Class ;
+    rdfs:label "SlitLampExam" ;
+    rdfs:comment "Slit lamp examination" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:TreatAndExtendRegimen a owl:Class ;
+    rdfs:label "TreatAndExtendRegimen" ;
+    rdfs:comment "Treat and extend regimen for neovascular AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:TwoWavelengthFundusAutofluorescence a owl:Class ;
+    rdfs:label "TwoWavelengthFundusAutofluorescence" ;
+    rdfs:comment "Two-wavelength fundus autofluorescence" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:VEGF a owl:Class ;
+    rdfs:label "VEGF" ;
+    rdfs:comment "VEGF" ;
+    rdfs:subClassOf amd:GeneticMarker .
+
+amd:VeteransAdministrationLowVisionVisualFunctioningQuestionnaire a owl:Class ;
+    rdfs:label "VeteransAdministrationLowVisionVisualFunctioningQuestionnaire" ;
+    rdfs:comment "Veterans administration low vision visual functioning questionnaire" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:ViewSentencesTest a owl:Class ;
+    rdfs:label "ViewSentencesTest" ;
+    rdfs:comment "View sentences test" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:VisualAcuityTests a owl:Class ;
+    rdfs:label "VisualAcuityTests" ;
+    rdfs:comment "Visual acuity tests" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:Vitrectomy a owl:Class ;
+    rdfs:label "Vitrectomy" ;
+    rdfs:comment "Surgical removal of vitreous gel" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:WavefrontAnalysis a owl:Class ;
+    rdfs:label "WavefrontAnalysis" ;
+    rdfs:comment "Wavefront analysis technology" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:WellFormedChoroidalNeovascularization a owl:Class ;
+    rdfs:label "WellFormedChoroidalNeovascularization" ;
+    rdfs:comment "Well-formed neovascularization" ;
+    rdfs:subClassOf amd:ChoroidalNeovascularMembraneFormation,
+        amd:ChoroidalNeovascularization .
+
+amd:abstract_2006-001200-36 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2006-001200-36" .
+
+amd:abstract_2007-005462-12 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2007-005462-12" .
+
+amd:abstract_2011-000243-24 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2011-000243-24" .
+
+amd:abstract_2012-005500-18 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2012-005500-18" .
+
+amd:abstract_2013-000133-12 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2013-000133-12" .
+
+amd:abstract_2013-001208-12 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2013-001208-12" .
+
+amd:abstract_2013-001421-55 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2013-001421-55" .
+
+amd:abstract_2015-002302-36 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract 2015-002302-36" .
+
+amd:abstract_ACTRN12612000729820 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ACTRN12612000729820" .
+
+amd:abstract_ACTRN12613000755730 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ACTRN12613000755730" .
+
+amd:abstract_ACTRN12614000497606 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ACTRN12614000497606" .
+
+amd:abstract_ACTRN12614001103651 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ACTRN12614001103651" .
+
+amd:abstract_CHICTR-CCC-12002408 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract CHICTR-CCC-12002408" .
+
+amd:abstract_DRKS00005900 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract DRKS00005900" .
+
+amd:abstract_DRKS00015609 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract DRKS00015609" .
+
+amd:abstract_DRKS00021615 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract DRKS00021615" .
+
+amd:abstract_ISRCTN10396126 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN10396126" .
+
+amd:abstract_ISRCTN10524984 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN10524984" .
+
+amd:abstract_ISRCTN12884465 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN12884465" .
+
+amd:abstract_ISRCTN13894787 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN13894787" .
+
+amd:abstract_ISRCTN55089134 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN55089134" .
+
+amd:abstract_ISRCTN82148651 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN82148651" .
+
+amd:abstract_ISRCTN86106799 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN86106799" .
+
+amd:abstract_ISRCTN87077451 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN87077451" .
+
+amd:abstract_ISRCTN87850962 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN87850962" .
+
+amd:abstract_ISRCTN93069723 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract ISRCTN93069723" .
+
+amd:abstract_NCT00000150 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00000150" .
+
+amd:abstract_NCT00001615 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00001615" .
+
+amd:abstract_NCT00006202 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00006202" .
+
+amd:abstract_NCT00008515 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00008515" .
+
+amd:abstract_NCT00018070 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00018070" .
+
+amd:abstract_NCT00043680 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00043680" .
+
+amd:abstract_NCT00058695 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00058695" .
+
+amd:abstract_NCT00100009 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00100009" .
+
+amd:abstract_NCT00125632 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00125632" .
+
+amd:abstract_NCT00260403 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00260403" .
+
+amd:abstract_NCT00277784 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00277784" .
+
+amd:abstract_NCT00279695 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00279695" .
+
+amd:abstract_NCT00342251 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00342251" .
+
+amd:abstract_NCT00342342 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00342342" .
+
+amd:abstract_NCT00357578 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00357578" .
+
+amd:abstract_NCT00376701 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00376701" .
+
+amd:abstract_NCT00393692 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00393692" .
+
+amd:abstract_NCT00443911 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00443911" .
+
+amd:abstract_NCT00447954 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00447954" .
+
+amd:abstract_NCT00460967 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00460967" .
+
+amd:abstract_NCT00466076 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00466076" .
+
+amd:abstract_NCT00469352 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00469352" .
+
+amd:abstract_NCT00473928 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00473928" .
+
+amd:abstract_NCT00485394 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00485394" .
+
+amd:abstract_NCT00500344 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00500344" .
+
+amd:abstract_NCT00523406 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00523406" .
+
+amd:abstract_NCT00539734 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00539734" .
+
+amd:abstract_NCT00590694 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00590694" .
+
+amd:abstract_NCT00627718 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00627718" .
+
+amd:abstract_NCT00668213 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00668213" .
+
+amd:abstract_NCT00718653 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00718653" .
+
+amd:abstract_NCT00746668 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00746668" .
+
+amd:abstract_NCT00766649 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00766649" .
+
+amd:abstract_NCT00767949 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00767949" .
+
+amd:abstract_NCT00769015 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00769015" .
+
+amd:abstract_NCT00808197 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00808197" .
+
+amd:abstract_NCT00879671 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00879671" .
+
+amd:abstract_NCT00926913 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00926913" .
+
+amd:abstract_NCT00971464 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00971464" .
+
+amd:abstract_NCT00991666 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT00991666" .
+
+amd:abstract_NCT01042860 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01042860" .
+
+amd:abstract_NCT01115387 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01115387" .
+
+amd:abstract_NCT01127360 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01127360" .
+
+amd:abstract_NCT01162746 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01162746" .
+
+amd:abstract_NCT01269697 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01269697" .
+
+amd:abstract_NCT01291121 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01291121" .
+
+amd:abstract_NCT01306591 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01306591" .
+
+amd:abstract_NCT01319188 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01319188" .
+
+amd:abstract_NCT01333891 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01333891" .
+
+amd:abstract_NCT01352975 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01352975" .
+
+amd:abstract_NCT01445548 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01445548" .
+
+amd:abstract_NCT01447043 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01447043" .
+
+amd:abstract_NCT01464710 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01464710" .
+
+amd:abstract_NCT01464723 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01464723" .
+
+amd:abstract_NCT01499628 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01499628" .
+
+amd:abstract_NCT01669447 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01669447" .
+
+amd:abstract_NCT01678963 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01678963" .
+
+amd:abstract_NCT01694095 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01694095" .
+
+amd:abstract_NCT01712035 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01712035" .
+
+amd:abstract_NCT01712841 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01712841" .
+
+amd:abstract_NCT01778231 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01778231" .
+
+amd:abstract_NCT01778491 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01778491" .
+
+amd:abstract_NCT01835067 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01835067" .
+
+amd:abstract_NCT01853930 a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01853930" .
+
+amd:abstract_NCT01933152 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT01933152" .
+
+amd:abstract_NCT02051998 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02051998" .
+
+amd:abstract_NCT02226835 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02226835" .
+
+amd:abstract_NCT02243878 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02243878" .
+
+amd:abstract_NCT02248324 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02248324" .
+
+amd:abstract_NCT02308215 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02308215" .
+
+amd:abstract_NCT02345317 a amd:DryAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02345317" .
+
+amd:abstract_NCT02438111 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NCT02438111" .
+
+amd:abstract_NL1132 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NL1132" .
+
+amd:abstract_NL855 a amd:WetAMD,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract NL855" .
+
+amd:analyzesGeneExpression a owl:ObjectProperty ;
+    rdfs:label "analyzesGeneExpression" ;
+    rdfs:comment "Analyzes gene expression" ;
+    rdfs:domain amd:PolymeraseChainReaction ;
+    rdfs:range amd:GeneticMarker .
+
+amd:appliesTo a owl:ObjectProperty ;
+    rdfs:label "appliesTo" ;
+    rdfs:comment "Applies to early AMD" ;
+    rdfs:domain amd:2RT ;
+    rdfs:range amd:EarlyAMD .
+
+amd:assessesRetinalFunction a owl:ObjectProperty ;
+    rdfs:label "assessesRetinalFunction" ;
+    rdfs:comment "Assesses retinal function in AMD patients" ;
+    rdfs:domain amd:Electroretinography ;
+    rdfs:range amd:AMD .
+
+amd:associatedWith a owl:ObjectProperty ;
+    rdfs:label "associatedWith" ;
+    rdfs:comment "Associated with AMD" ;
+    rdfs:domain amd:GeneticMarker ;
+    rdfs:range amd:AMD .
+
+amd:closesFeederVessels a owl:ObjectProperty ;
+    rdfs:label "closesFeederVessels" ;
+    rdfs:comment "Closes feeder vessels in choroidal neovascularization" ;
+    rdfs:domain amd:PulseDiodeLaserPhotocoagulation ;
+    rdfs:range amd:ChoroidalNeovascularization .
+
+amd:comparesTreatmentMethods a owl:ObjectProperty ;
+    rdfs:label "comparesTreatmentMethods" ;
+    rdfs:comment "Compares treatment methods for choroidal neovascularization in AMD" ;
+    rdfs:domain amd:TranspupillaryThermotherapy ;
+    rdfs:range amd:PhotodynamicTherapy .
+
+amd:detectsOcularTumors a owl:ObjectProperty ;
+    rdfs:label "detectsOcularTumors" ;
+    rdfs:comment "Detects ocular tumors" ;
+    rdfs:domain amd:Ultrasound ;
+    rdfs:range amd:OcularTumors .
+
+amd:diagnoses a owl:ObjectProperty ;
+    rdfs:label "diagnoses" ;
+    rdfs:comment "Diagnoses AMD" ;
+    rdfs:domain amd:DiagnosticMethod ;
+    rdfs:range amd:AMD .
+
+amd:diagnosesAMD a owl:ObjectProperty ;
+    rdfs:label "diagnosesAMD" ;
+    rdfs:comment "Diagnoses AMD" ;
+    rdfs:domain amd:HighResolutionUltrasoundImaging ;
+    rdfs:range amd:AMD .
+
+amd:diagnosesGlaucoma a owl:ObjectProperty ;
+    rdfs:label "diagnosesGlaucoma" ;
+    rdfs:comment "Diagnoses glaucoma" ;
+    rdfs:domain amd:Ultrasound ;
+    rdfs:range amd:Glaucoma .
+
+amd:enhances a owl:ObjectProperty ;
+    rdfs:label "enhances" ;
+    rdfs:comment "Enhances reading speed and emotional status in AMD patients" ;
+    rdfs:domain amd:ReadingTraining ;
+    rdfs:range amd:AMD .
+
+amd:evaluatesAccommodativeFunction a owl:ObjectProperty ;
+    rdfs:label "evaluatesAccommodativeFunction" ;
+    rdfs:comment "Evaluates accommodative function" ;
+    rdfs:domain amd:Ultrasound ;
+    rdfs:range amd:AccommodativeFunction .
+
+amd:examinesBloodSamples a owl:ObjectProperty ;
+    rdfs:label "examinesBloodSamples" ;
+    rdfs:comment "Examines blood samples" ;
+    rdfs:domain amd:BloodSample ;
+    rdfs:range amd:GeneticMarker .
+
+amd:examinesSkinBiopsy a owl:ObjectProperty ;
+    rdfs:label "examinesSkinBiopsy" ;
+    rdfs:comment "Examines skin biopsy" ;
+    rdfs:domain amd:SkinBiopsy ;
+    rdfs:range amd:GeneticMarker .
+
+amd:identifiesGeneticRiskFactors a owl:ObjectProperty ;
+    rdfs:label "identifiesGeneticRiskFactors" ;
+    rdfs:comment "Identifies genetic risk factors for AMD" ;
+    rdfs:domain amd:GeneticMarker ;
+    rdfs:range amd:AMD .
+
+amd:imagesChoroid a owl:ObjectProperty ;
+    rdfs:label "imagesChoroid" ;
+    rdfs:comment "Images the choroid" ;
+    rdfs:domain amd:HighResolutionUltrasoundImaging ;
+    rdfs:range amd:Choroid .
+
+amd:improves a owl:ObjectProperty ;
+    rdfs:label "improves" ;
+    rdfs:comment "Improves visual acuity and reading speed in AMD patients" ;
+    rdfs:domain amd:PreferredRetinalLocusTraining ;
+    rdfs:range amd:AMD .
+
+amd:improvesBCVA a owl:ObjectProperty ;
+    rdfs:label "improvesBCVA" ;
+    rdfs:comment "Improves best-corrected visual acuity in dry AMD patients" ;
+    rdfs:domain amd:Rheohemapheresis ;
+    rdfs:range amd:DryAMD .
+
+amd:improvesReadingAccuracy a owl:ObjectProperty ;
+    rdfs:label "improvesReadingAccuracy" ;
+    rdfs:comment "Improves reading accuracy in AMD patients" ;
+    rdfs:domain amd:EccentricViewingTraining ;
+    rdfs:range amd:AMD .
+
+amd:improvesReadingSpeed a owl:ObjectProperty ;
+    rdfs:label "improvesReadingSpeed" ;
+    rdfs:comment "Improves reading speed in AMD patients" ;
+    rdfs:domain amd:OculomotorTrainingProgram ;
+    rdfs:range amd:AMD .
+
+amd:improvesVision a owl:ObjectProperty ;
+    rdfs:label "improvesVision" ;
+    rdfs:comment "Improves vision in patients with dry AMD" ;
+    rdfs:domain amd:DoubleIntraocularLensImplant ;
+    rdfs:range amd:DryAMD .
+
+amd:improvesVisualAcuity a owl:ObjectProperty ;
+    rdfs:label "improvesVisualAcuity" ;
+    rdfs:comment "Improves visual acuity in AMD patients" ;
+    rdfs:domain amd:Celecoxib ;
+    rdfs:range amd:AMD .
+
+amd:increasesLuteinBloodLevels a owl:ObjectProperty ;
+    rdfs:label "increasesLuteinBloodLevels" ;
+    rdfs:comment "Increases lutein blood levels in AMD patients" ;
+    rdfs:domain amd:LuteinSupplementation ;
+    rdfs:range amd:AMD .
+
+amd:increasesZeaxanthinBloodLevels a owl:ObjectProperty ;
+    rdfs:label "increasesZeaxanthinBloodLevels" ;
+    rdfs:comment "Increases zeaxanthin blood levels in AMD patients" ;
+    rdfs:domain amd:ZeaxanthinSupplementation ;
+    rdfs:range amd:AMD .
+
+amd:inducesPosteriorVitreousDetachment a owl:ObjectProperty ;
+    rdfs:label "inducesPosteriorVitreousDetachment" ;
+    rdfs:comment "Induces posterior vitreous detachment in AMD patients" ;
+    rdfs:domain amd:IntravitreousInjectionOfExpansileGas ;
+    rdfs:range amd:AMD .
+
+amd:inhibitsComplementActivation a owl:ObjectProperty ;
+    rdfs:label "inhibitsComplementActivation" ;
+    rdfs:comment "Inhibits complement activation in neovascular AMD" ;
+    rdfs:domain amd:POT4Therapy ;
+    rdfs:range amd:NeovascularAMD .
+
+amd:inhibitsS1P a owl:ObjectProperty ;
+    rdfs:label "inhibitsS1P" ;
+    rdfs:comment "Inhibits S1P in choroidal neovascularization" ;
+    rdfs:domain amd:Sonepcizumab ;
+    rdfs:range amd:ChoroidalNeovascularization .
+
+amd:investigatesCombinationTherapy a owl:ObjectProperty ;
+    rdfs:label "investigatesCombinationTherapy" ;
+    rdfs:comment "Investigates combination therapy for neovascular AMD" ;
+    rdfs:domain amd:CombinationTherapy ;
+    rdfs:range amd:NeovascularAMD .
+
+amd:involves a owl:ObjectProperty ;
+    rdfs:label "involves" ;
+    rdfs:comment "Involves treatment of PCV" ;
+    rdfs:domain amd:ConberceptIntravitrealInjection ;
+    rdfs:range amd:PolypoidalChoroidalVasculopathy .
+
+amd:lowersEyePressure a owl:ObjectProperty ;
+    rdfs:label "lowersEyePressure" ;
+    rdfs:comment "Lowers eye pressure in glaucoma patients" ;
+    rdfs:domain amd:AcetazolamideTherapy ;
+    rdfs:range amd:Glaucoma .
+
+amd:measuresFundusPulsation a owl:ObjectProperty ;
+    rdfs:label "measuresFundusPulsation" ;
+    rdfs:comment "Measures fundus pulsation in AMD patients" ;
+    rdfs:domain amd:LaserInterferometricMeasurementOfFundusPulsation ;
+    rdfs:range amd:AMD .
+
+amd:measuresMacularThickness a owl:ObjectProperty ;
+    rdfs:label "measuresMacularThickness" ;
+    rdfs:comment "Measures macular thickness in AMD patients" ;
+    rdfs:domain amd:HeidelbergRetinalTomograph ;
+    rdfs:range amd:AMD .
+
+amd:measuresPerfusion a owl:ObjectProperty ;
+    rdfs:label "measuresPerfusion" ;
+    rdfs:comment "Measures perfusion of the choroid" ;
+    rdfs:domain amd:HighResolutionUltrasoundImaging ;
+    rdfs:range amd:Choroid .
+
+amd:measuresPulsatileOcularBloodFlow a owl:ObjectProperty ;
+    rdfs:label "measuresPulsatileOcularBloodFlow" ;
+    rdfs:comment "Measures pulsatile ocular blood flow in AMD patients" ;
+    rdfs:domain amd:PneumotonometricMeasurementOfPulsatileOcularBloodFlow ;
+    rdfs:range amd:AMD .
+
+amd:monitorsGlaucomaTreatment a owl:ObjectProperty ;
+    rdfs:label "monitorsGlaucomaTreatment" ;
+    rdfs:comment "Monitors glaucoma treatment" ;
+    rdfs:domain amd:Ultrasound ;
+    rdfs:range amd:Glaucoma .
+
+amd:monitorsTumorGrowth a owl:ObjectProperty ;
+    rdfs:label "monitorsTumorGrowth" ;
+    rdfs:comment "Monitors tumor growth" ;
+    rdfs:domain amd:Ultrasound ;
+    rdfs:range amd:OcularTumors .
+
+amd:predictsTreatmentResponse a owl:ObjectProperty ;
+    rdfs:label "predictsTreatmentResponse" ;
+    rdfs:comment "Predicts treatment response to intravitreal Lucentis" ;
+    rdfs:domain amd:SNPGenotyping ;
+    rdfs:range amd:AMD .
+
+amd:preservesVision a owl:ObjectProperty ;
+    rdfs:label "preservesVision" ;
+    rdfs:comment "Preserves vision in patients with geographic atrophy" ;
+    rdfs:domain amd:SirolimusSubconjunctivalInjection ;
+    rdfs:range amd:GeographicAtrophy .
+
+amd:prevents a owl:ObjectProperty ;
+    rdfs:label "prevents" ;
+    rdfs:comment "Prevents AMD" ;
+    rdfs:domain amd:AspirinTherapy ;
+    rdfs:range amd:AMD .
+
+amd:preventsConversionToWetAMD a owl:ObjectProperty ;
+    rdfs:label "preventsConversionToWetAMD" ;
+    rdfs:comment "Prevents conversion to wet AMD" ;
+    rdfs:domain amd:CopaxoneTherapy ;
+    rdfs:range amd:DryAMD .
+
+amd:preventsDepressiveDisorders a owl:ObjectProperty ;
+    rdfs:label "preventsDepressiveDisorders" ;
+    rdfs:comment "Prevents depressive disorders in AMD patients" ;
+    rdfs:domain amd:LowVisionRehabilitation ;
+    rdfs:range amd:AMD .
+
+amd:preventsVisionLoss a owl:ObjectProperty ;
+    rdfs:label "preventsVisionLoss" ;
+    rdfs:comment "Prevents vision loss in AMD patients" ;
+    rdfs:domain amd:FluocinoloneAcetonideImplant ;
+    rdfs:range amd:AMD .
+
+amd:reducesInflammation a owl:ObjectProperty ;
+    rdfs:label "reducesInflammation" ;
+    rdfs:comment "Reduces inflammation in AMD patients" ;
+    rdfs:domain amd:Cyclooxygenase2Inhibition ;
+    rdfs:range amd:AMD .
+
+amd:reducesNeedFor a owl:ObjectProperty ;
+    rdfs:label "reducesNeedFor" ;
+    rdfs:comment "Reduces need for regular injections of ranibizumab" ;
+    rdfs:domain amd:StereotacticRadiotherapy ;
+    rdfs:range amd:WetAMD .
+
+amd:rejuvenates a owl:ObjectProperty ;
+    rdfs:label "rejuvenates" ;
+    rdfs:comment "Rejuvenates retina in AMD patients" ;
+    rdfs:domain amd:RetinalRejuvenation ;
+    rdfs:range amd:AMD .
+
+amd:releasesCNTF a owl:ObjectProperty ;
+    rdfs:label "releasesCNTF" ;
+    rdfs:comment "Releases CNTF for atrophic macular degeneration" ;
+    rdfs:domain amd:CNTFImplant ;
+    rdfs:range amd:AtrophicAMD .
+
+amd:slowsProgressionOf a owl:ObjectProperty ;
+    rdfs:label "slowsProgressionOf" ;
+    rdfs:comment "Slows progression of AMD" ;
+    rdfs:domain amd:LowLevelNightTimeLightTherapy ;
+    rdfs:range amd:AMD .
+
+amd:stabilizesVision a owl:ObjectProperty ;
+    rdfs:label "stabilizesVision" ;
+    rdfs:comment "Stabilizes vision in AMD patients" ;
+    rdfs:domain amd:SubmacularSurgery ;
+    rdfs:range amd:AMD .
+
+amd:targets a owl:ObjectProperty ;
+    rdfs:label "targets" ;
+    rdfs:comment "Targets Wet AMD" ;
+    rdfs:domain amd:AntiVEGFTherapy ;
+    rdfs:range amd:WetAMD .
+
+amd:treats a owl:ObjectProperty ;
+    rdfs:label "treats" ;
+    rdfs:comment "Treats AMD" ;
+    rdfs:domain amd:Treatment ;
+    rdfs:range amd:AMD .
+
+amd:treatsGeographicAtrophy a owl:ObjectProperty ;
+    rdfs:label "treatsGeographicAtrophy" ;
+    rdfs:comment "Treats geographic atrophy associated with age-related macular degeneration" ;
+    rdfs:domain amd:OT551Therapy ;
+    rdfs:range amd:GeographicAtrophy .
+
+amd:treatsNonExsudativeAMD a owl:ObjectProperty ;
+    rdfs:label "treatsNonExsudativeAMD" ;
+    rdfs:comment "Treats non-exsudative AMD" ;
+    rdfs:domain amd:Rheohemapheresis ;
+    rdfs:range amd:NonExsudativeAMD .
+
+amd:2RT a owl:Class ;
+    rdfs:label "2RT" ;
+    rdfs:comment "2RT laser therapy for early AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:AcetazolamideTherapy a owl:Class ;
+    rdfs:label "AcetazolamideTherapy" ;
+    rdfs:comment "Acetazolamide therapy for glaucoma" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:AntiVEGFTherapy a owl:Class ;
+    rdfs:label "AntiVEGFTherapy" ;
+    rdfs:comment "Anti-VEGF agents" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:AspirinTherapy a owl:Class ;
+    rdfs:label "AspirinTherapy" ;
+    rdfs:comment "Aspirin therapy for AMD prevention" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:AtrophicAMD a owl:Class ;
+    rdfs:label "AtrophicAMD" ;
+    rdfs:comment "Atrophic age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:CNTFImplant a owl:Class ;
+    rdfs:label "CNTFImplant" ;
+    rdfs:comment "CNTF implant for atrophic macular degeneration" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:ConberceptIntravitrealInjection a owl:Class ;
+    rdfs:label "ConberceptIntravitrealInjection" ;
+    rdfs:comment "Conbercept intravitreal injection for PCV" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:CopaxoneTherapy a owl:Class ;
+    rdfs:label "CopaxoneTherapy" ;
+    rdfs:comment "Copaxone therapy for dry AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:Cyclooxygenase2Inhibition a owl:Class ;
+    rdfs:label "Cyclooxygenase2Inhibition" ;
+    rdfs:comment "Cyclooxygenase-2 inhibition" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:DoubleIntraocularLensImplant a owl:Class ;
+    rdfs:label "DoubleIntraocularLensImplant" ;
+    rdfs:comment "Double intra-ocular lens implant for visual rehabilitation of patients with dry age-related macular degeneration" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:Drusen a owl:Class ;
+    rdfs:label "Drusen" ;
+    rdfs:comment "Yellow deposits under retina" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:EarlyAMD a owl:Class ;
+    rdfs:label "EarlyAMD" ;
+    rdfs:comment "Early age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:ExudativeAMD a owl:Class ;
+    rdfs:label "ExudativeAMD" ;
+    rdfs:comment "Exudative age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:FluocinoloneAcetonideImplant a owl:Class ;
+    rdfs:label "FluocinoloneAcetonideImplant" ;
+    rdfs:comment "Fluocinolone acetonide implant for choroidal neovascularization" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:HeidelbergRetinalTomograph a owl:Class ;
+    rdfs:label "HeidelbergRetinalTomograph" ;
+    rdfs:comment "Heidelberg retinal tomograph" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:IntravitreousInjectionOfExpansileGas a owl:Class ;
+    rdfs:label "IntravitreousInjectionOfExpansileGas" ;
+    rdfs:comment "IntravitreousInjectionOfExpansileGas" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:LaserInterferometricMeasurementOfFundusPulsation a owl:Class ;
+    rdfs:label "LaserInterferometricMeasurementOfFundusPulsation" ;
+    rdfs:comment "LaserInterferometricMeasurementOfFundusPulsation" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:LaserTherapy a owl:Class ;
+    rdfs:label "LaserTherapy" ;
+    rdfs:comment "Laser therapy" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:LowLevelNightTimeLightTherapy a owl:Class ;
+    rdfs:label "LowLevelNightTimeLightTherapy" ;
+    rdfs:comment "Low-level night-time light therapy for AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:LuteinSupplementation a owl:Class ;
+    rdfs:label "LuteinSupplementation" ;
+    rdfs:comment "Lutein supplementation for AMD" ;
+    rdfs:subClassOf amd:DietarySupplement,
+        amd:Treatment .
+
+amd:NonExsudativeAMD a owl:Class ;
+    rdfs:label "NonExsudativeAMD" ;
+    rdfs:comment "Non-exsudative age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:OT551Therapy a owl:Class ;
+    rdfs:label "OT551Therapy" ;
+    rdfs:comment "OT-551 therapy for geographic atrophy associated with age-related macular degeneration" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:POT4Therapy a owl:Class ;
+    rdfs:label "POT4Therapy" ;
+    rdfs:comment "POT-4 therapy for neovascular AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:PhotodynamicTherapy a owl:Class ;
+    rdfs:label "PhotodynamicTherapy" ;
+    rdfs:comment "Photodynamic therapy" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:PolypoidalChoroidalVasculopathy a owl:Class ;
+    rdfs:label "PolypoidalChoroidalVasculopathy" ;
+    rdfs:comment "Polypoidal choroidal vasculopathy" ;
+    rdfs:subClassOf amd:AMD,
+        amd:ExudativeAMD .
+
+amd:PreferredRetinalLocusTraining a owl:Class ;
+    rdfs:label "PreferredRetinalLocusTraining" ;
+    rdfs:comment "Training to improve visual acuity and reading speed" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:PulseDiodeLaserPhotocoagulation a owl:Class ;
+    rdfs:label "PulseDiodeLaserPhotocoagulation" ;
+    rdfs:comment "Pulse-diode laser photocoagulation" ;
+    rdfs:subClassOf amd:LaserTherapy,
+        amd:Treatment .
+
+amd:ReadingTraining a owl:Class ;
+    rdfs:label "ReadingTraining" ;
+    rdfs:comment "Special home reading training for AMD patients" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:RetinalPigmentEpitheliumDysfunction a owl:Class ;
+    rdfs:label "RetinalPigmentEpitheliumDysfunction" ;
+    rdfs:comment "RPE dysfunction" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:RetinalRejuvenation a owl:Class ;
+    rdfs:label "RetinalRejuvenation" ;
+    rdfs:comment "Retinal rejuvenation using Ellex 2RT laser" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:SNPGenotyping a owl:Class ;
+    rdfs:label "SNPGenotyping" ;
+    rdfs:comment "SNP genotyping for AMD-susceptibility genes" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:SirolimusSubconjunctivalInjection a owl:Class ;
+    rdfs:label "SirolimusSubconjunctivalInjection" ;
+    rdfs:comment "SirolimusSubconjunctivalInjection" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:Sonepcizumab a owl:Class ;
+    rdfs:label "Sonepcizumab" ;
+    rdfs:comment "Sonepcizumab (LT1009) for choroidal neovascularization secondary to AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:StereotacticRadiotherapy a owl:Class ;
+    rdfs:label "StereotacticRadiotherapy" ;
+    rdfs:comment "Stereotactic radiotherapy for wet AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:SubmacularSurgery a owl:Class ;
+    rdfs:label "SubmacularSurgery" ;
+    rdfs:comment "Surgical removal of subfoveal choroidal neovascularization" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:TranspupillaryThermotherapy a owl:Class ;
+    rdfs:label "TranspupillaryThermotherapy" ;
+    rdfs:comment "Thermic treatment of choroidal neovascularization in AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:ZeaxanthinSupplementation a owl:Class ;
+    rdfs:label "ZeaxanthinSupplementation" ;
+    rdfs:comment "Zeaxanthin supplementation for AMD" ;
+    rdfs:subClassOf amd:DietarySupplement .
+
+amd:AgeRelatedMaculopathy a owl:Class ;
+    rdfs:label "AgeRelatedMaculopathy" ;
+    rdfs:comment "Degeneration or atrophy of the macula" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:ChoroidalNeovascularMembraneFormation a owl:Class ;
+    rdfs:label "ChoroidalNeovascularMembraneFormation" ;
+    rdfs:comment "Choroidal neovascular membrane formation" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:DietarySupplement a owl:Class ;
+    rdfs:label "DietarySupplement" ;
+    rdfs:comment "Dietary supplements for AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:EccentricViewingTraining a owl:Class ;
+    rdfs:label "EccentricViewingTraining" ;
+    rdfs:comment "Eccentric viewing training for visual rehabilitation" .
+
+amd:GeographicAtrophy a owl:Class ;
+    rdfs:label "GeographicAtrophy" ;
+    rdfs:comment "Retinal cell death areas" ;
+    rdfs:subClassOf amd:AMD,
+        amd:DryAMD .
+
+amd:LowVisionRehabilitation a owl:Class ;
+    rdfs:label "LowVisionRehabilitation" ;
+    rdfs:comment "Low vision rehabilitation for AMD patients" .
+
+amd:NeovascularAMD a owl:Class ;
+    rdfs:label "NeovascularAMD" ;
+    rdfs:comment "Neovascular age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:OculomotorTraining a owl:Class ;
+    rdfs:label "OculomotorTraining" ;
+    rdfs:comment "Oculomotor training for reading rehabilitation" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:Rheohemapheresis a owl:Class ;
+    rdfs:label "Rheohemapheresis" ;
+    rdfs:comment "Extracorporeal therapy for non-exsudative AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:Electroretinography a owl:Class ;
+    rdfs:label "Electroretinography" ;
+    rdfs:comment "Electroretinography for retinal function assessment" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:HighResolutionUltrasoundImaging a owl:Class ;
+    rdfs:label "HighResolutionUltrasoundImaging" ;
+    rdfs:comment "High-resolution ultrasound imaging of the retina and choroid" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:OculomotorTrainingProgram a owl:Class ;
+    rdfs:label "OculomotorTrainingProgram" ;
+    rdfs:comment "Oculomotor training program for reading rehabilitation in macular disease" .
+
+amd:ChoroidalNeovascularization a owl:Class ;
+    rdfs:label "ChoroidalNeovascularization" ;
+    rdfs:comment "Abnormal vessel growth" ;
+    rdfs:subClassOf amd:PathologicalFeature .
+
+amd:Ultrasound a owl:Class ;
+    rdfs:label "Ultrasound" ;
+    rdfs:comment "Ultrasound imaging" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:PathologicalFeature a owl:Class ;
+    rdfs:label "PathologicalFeature" ;
+    rdfs:comment "Abnormal characteristics of AMD" .
+
+amd:DryAMD a owl:Class ;
+    rdfs:label "DryAMD" ;
+    rdfs:comment "Dry age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:GeneticMarker a owl:Class ;
+    rdfs:label "GeneticMarker" ;
+    rdfs:comment "AMD risk genes" .
+
+amd:Disease a owl:Class ;
+    rdfs:label "Disease" ;
+    rdfs:comment "Top-level disease" .
+
+amd:DiagnosticMethod a owl:Class ;
+    rdfs:label "DiagnosticMethod" ;
+    rdfs:comment "AMD diagnostic methods" .
+
+amd:AMD a owl:Class ;
+    rdfs:label "AMD" ;
+    rdfs:comment "Age-related macular degeneration" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:Treatment a owl:Class ;
+    rdfs:label "Treatment" ;
+    rdfs:comment "AMD treatments" .
+
+amd:WetAMD a owl:Class ;
+    rdfs:label "WetAMD" ;
+    rdfs:comment "Neovascular age-related macular degeneration" ;
+    rdfs:subClassOf amd:AMD .
+

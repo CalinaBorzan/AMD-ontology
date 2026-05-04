@@ -1,0 +1,990 @@
+@prefix amd: <http://example.org/amd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+amd:AMDGenotype a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "AMDGenotype" ;
+    amd:associatedWith amd:AMD .
+
+amd:AMDPhenotype a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "AMDPhenotype" .
+
+amd:AMD_Ontology a owl:Ontology ;
+    rdfs:label "Age-Related Macular Degeneration Ontology" ;
+    rdfs:comment "AMD ontology auto-generated from research abstracts using SCHEMA-MINERpro and Agentic AI" ;
+    owl:versionInfo "1.0" .
+
+amd:AMRS2 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "AMRS2" ;
+    amd:associatedWith amd:AMD .
+
+amd:ARMS2 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "ARMS2" ;
+    amd:associatedWith amd:AMD,
+        amd:AgeRelatedMaculopathy .
+
+amd:AccommodationDisease a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "AccommodationDisease" ;
+    amd:diagnosedBy amd:Ultrasound .
+
+amd:Acetazolamide a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Acetazolamide" ;
+    amd:treats amd:Glaucoma .
+
+amd:AdvancedAMD a owl:Class ;
+    rdfs:label "AdvancedAMD" ;
+    rdfs:comment "Advanced Age-related Macular Degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:Aflibercept a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Aflibercept" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:WetAMD .
+
+amd:AmyloidBeta a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "AmyloidBeta" .
+
+amd:Antioxidant a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Antioxidant" ;
+    amd:treats amd:AMD .
+
+amd:ApoE a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "ApoE" ;
+    amd:associatedWith amd:AMD,
+        amd:MacularPigment .
+
+amd:ArterialHypertension a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "ArterialHypertension" ;
+    amd:causesOrIncreases amd:AMD,
+        amd:Glaucoma .
+
+amd:ArterialHypotension a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "ArterialHypotension" ;
+    amd:treats amd:Phenylephrine .
+
+amd:Aspirin a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Aspirin" ;
+    amd:associatedWith amd:AMD ;
+    amd:treats amd:AMD .
+
+amd:AtrophicAgeRelatedMacularDegeneration a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "AtrophicAgeRelatedMacularDegeneration" ;
+    amd:diagnosedBy amd:FundusAutofluorescenceImaging .
+
+amd:Avastin a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Avastin" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:ChoroidalNeovascularization,
+        amd:ExudativeARMD .
+
+amd:BF a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "BF" ;
+    amd:associatedWith amd:AMD .
+
+amd:BetaCarotene a amd:AntioxidantSupplement,
+        owl:NamedIndividual ;
+    rdfs:label "BetaCarotene" .
+
+amd:Bevacizumab a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Bevacizumab" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:ExudativeAgeRelatedMacularDegeneration,
+        amd:ExudativeMaculopathy,
+        amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:WetAMD .
+
+amd:C2 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "C2" ;
+    amd:associatedWith amd:AMD .
+
+amd:C3 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "C3" ;
+    amd:associatedWith amd:AMD .
+
+amd:CFB a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "CFB" .
+
+amd:CFH a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "CFH" ;
+    amd:associatedWith amd:AMD,
+        amd:AgeRelatedMaculopathy .
+
+amd:CFI a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "CFI" .
+
+amd:CNTF a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "CNTF" .
+
+amd:CNTFImplant a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "CNTFImplant" ;
+    amd:treats amd:AtrophicMacularDegeneration .
+
+amd:CX3CR1 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "CX3CR1" ;
+    amd:associatedWith amd:AMD .
+
+amd:Carotenoid a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Carotenoid" .
+
+amd:Cataract a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Cataract" ;
+    amd:diagnosedBy amd:OCT .
+
+amd:Celecoxib a amd:Cyclooxygenase2Inhibition,
+        owl:NamedIndividual ;
+    rdfs:label "Celecoxib" ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:CerebrovascularEvent a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "CerebrovascularEvent" ;
+    amd:causesOrIncreases amd:ArterialThromboembolicEvent .
+
+amd:ClosedCircuitTelevisionTraining a amd:VisualRehabilitation,
+        owl:NamedIndividual ;
+    rdfs:label "ClosedCircuitTelevisionTraining" .
+
+amd:CombinationTherapy a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "CombinationTherapy" .
+
+amd:Conbercept a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Conbercept" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:PolypoidalChoroidalVasculopathy .
+
+amd:Copaxone a amd:ImmunomodulatorySubstance,
+        owl:NamedIndividual ;
+    rdfs:label "Copaxone" ;
+    amd:treats amd:DryAMD .
+
+amd:CoronaryArteryDisease a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "CoronaryArteryDisease" ;
+    amd:causesOrIncreases amd:ArterialThromboembolicEvent .
+
+amd:CorticalCataract a owl:Class ;
+    rdfs:label "CorticalCataract" ;
+    rdfs:comment "A type of cataract" .
+
+amd:CorticosteroidTreatment a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "CorticosteroidTreatment" .
+
+amd:DarkAdaptation a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "DarkAdaptation" .
+
+amd:Dexamethasone a amd:IntravitrealDexamethasone,
+        owl:NamedIndividual ;
+    rdfs:label "Dexamethasone" .
+
+amd:EarlyARM a amd:AgeRelatedMaculopathy,
+        owl:NamedIndividual ;
+    rdfs:label "EarlyARM" .
+
+amd:EccentricViewingTraining a amd:VisualRehabilitation,
+        owl:NamedIndividual ;
+    rdfs:label "EccentricViewingTraining" ;
+    amd:treats amd:LowVision .
+
+amd:Electroretinography a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Electroretinography" .
+
+amd:ExudativeAgeRelatedMacularDegenerationWithPosteriorVMA a amd:ExudativeAgeRelatedMacularDegeneration,
+        owl:NamedIndividual ;
+    rdfs:label "ExudativeAgeRelatedMacularDegenerationWithPosteriorVMA" .
+
+amd:Eylea a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Eylea" ;
+    amd:treats amd:WetAMD .
+
+amd:FeederVessels a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "FeederVessels" .
+
+amd:FluocinoloneAcetonide a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "FluocinoloneAcetonide" ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:GeneticAssessment a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "GeneticAssessment" .
+
+amd:GeneticPolymorphism a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "GeneticPolymorphism" .
+
+amd:GeneticRiskFactor a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "GeneticRiskFactor" ;
+    amd:associatedWith amd:AMD ;
+    amd:causesOrIncreases amd:AMD,
+        amd:NeovascularAMD .
+
+amd:GeneticRiskFactorForAMD a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "GeneticRiskFactorForAMD" ;
+    amd:causesOrIncreases amd:AMD .
+
+amd:GeneticRiskFactorForARM a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "GeneticRiskFactorForARM" .
+
+amd:GeographicAtrophyProgression a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "GeographicAtrophyProgression" .
+
+amd:GutMetagenome a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "GutMetagenome" ;
+    amd:causesOrIncreases amd:AMD .
+
+amd:HTRA1 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "HTRA1" ;
+    amd:associatedWith amd:AMD,
+        amd:AgeRelatedMaculopathy,
+        amd:NeovascularAMD .
+
+amd:HighResolutionUltrasoundImaging a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "HighResolutionUltrasoundImaging" .
+
+amd:IReST a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "IReST" .
+
+amd:IdiopathicChoroidalNeovascularization a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "IdiopathicChoroidalNeovascularization" .
+
+amd:IllDefinedChoroidalNeovascularization a amd:ChoroidalNeovascularization,
+        owl:NamedIndividual ;
+    rdfs:label "IllDefinedChoroidalNeovascularization" ;
+    amd:causesOrIncreases amd:VisualImpairment .
+
+amd:ImmunologicalMechanism a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "ImmunologicalMechanism" .
+
+amd:IntraocularLens a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "IntraocularLens" ;
+    amd:treats amd:DryAMD .
+
+amd:IntravitrealComplementInhibitor a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "IntravitrealComplementInhibitor" .
+
+amd:LOC387715 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "LOC387715" .
+
+amd:LaserTreatment a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "LaserTreatment" ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:LateARM a amd:AgeRelatedMaculopathy,
+        owl:NamedIndividual ;
+    rdfs:label "LateARM" .
+
+amd:Lipofuscin a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Lipofuscin" ;
+    amd:associatedWith amd:GeographicAtrophy .
+
+amd:LowLevelNightTimeLightTherapy a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "LowLevelNightTimeLightTherapy" ;
+    amd:treats amd:AMD .
+
+amd:LowVisionDepression a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "LowVisionDepression" .
+
+amd:Lucentis a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Lucentis" ;
+    amd:treats amd:ExudativeARMD,
+        amd:NeovascularAMD,
+        amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:SubfovealNeovascularMembrane,
+        amd:WetAMD .
+
+amd:Lutein a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Lutein" ;
+    amd:associatedWith amd:AMD,
+        amd:MacularPigment ;
+    amd:treats amd:NonExsudativeAgeRelatedMacularDegeneration .
+
+amd:LuteinAndZeaxanthinSupplement a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "LuteinAndZeaxanthinSupplement" .
+
+amd:LuteinSupplementation a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "LuteinSupplementation" ;
+    amd:treats amd:AgeRelatedMaculopathy .
+
+amd:MacularEdema a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "MacularEdema" ;
+    amd:associatedWith amd:WetAMD .
+
+amd:Monocyte a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Monocyte" .
+
+amd:NeovascularMaculopathy a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "NeovascularMaculopathy" .
+
+amd:NeurodegenerativeDisease a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "NeurodegenerativeDisease" .
+
+amd:NonExudativeAgeRelatedMacularDegeneration a owl:Class ;
+    rdfs:label "NonExudativeAgeRelatedMacularDegeneration" ;
+    amd:diagnosedBy amd:OCT ;
+    rdfs:comment "A type of age-related macular degeneration characterized by the absence of exudation" .
+
+amd:NuclearCataract a owl:Class ;
+    rdfs:label "NuclearCataract" ;
+    rdfs:comment "A type of cataract" .
+
+amd:Nutrition a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Nutrition" .
+
+amd:OcularFundusPulsation a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "OcularFundusPulsation" .
+
+amd:OcularHistoplasmosisSyndrome a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "OcularHistoplasmosisSyndrome" .
+
+amd:OcularRigidity a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "OcularRigidity" .
+
+amd:OcularTumor a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "OcularTumor" ;
+    amd:diagnosedBy amd:Ultrasound .
+
+amd:OculomotorControlExercises a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "OculomotorControlExercises" ;
+    amd:treats amd:AMD .
+
+amd:OculomotorTraining a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "OculomotorTraining" .
+
+amd:OxidativeDamage amd:causesOrIncreases amd:GeographicAtrophy .
+
+amd:PLEKHA1 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "PLEKHA1" ;
+    amd:associatedWith amd:AMD .
+
+amd:Pazopanib a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Pazopanib" ;
+    amd:treats amd:NeovascularAgeRelatedMacularDegeneration .
+
+amd:Perfluoropropane a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Perfluoropropane" ;
+    amd:treats amd:SubmacularHaemorrhage .
+
+amd:Pharmacogenetics a amd:GeneticEpidemiology,
+        owl:NamedIndividual ;
+    rdfs:label "Pharmacogenetics" .
+
+amd:Photocoagulation a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Photocoagulation" .
+
+amd:PhotodynamicTherapy a owl:Class ;
+    rdfs:label "PhotodynamicTherapy" ;
+    amd:inhibits amd:ChoroidalNeovascularization ;
+    amd:treats amd:ChoroidalNeovascularization,
+        amd:NeovascularAMD,
+        amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:WetAMD ;
+    rdfs:comment "A type of treatment that uses light to destroy abnormal blood vessels" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:PigmentEpithelialDetachment a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "PigmentEpithelialDetachment" ;
+    amd:associatedWith amd:NeovascularAgeRelatedMacularDegeneration .
+
+amd:PosteriorSubcapsularCataract a owl:Class ;
+    rdfs:label "PosteriorSubcapsularCataract" ;
+    rdfs:comment "A type of cataract" .
+
+amd:PreferredRetinalLocus a owl:Class ;
+    rdfs:label "PreferredRetinalLocus" ;
+    rdfs:comment "The part of the retina that patients naturally start using after central vision is lost" .
+
+amd:PulsatileOcularBloodFlow a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "PulsatileOcularBloodFlow" .
+
+amd:Ranibizumab a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Ranibizumab" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:ChoroidalNeovascularization,
+        amd:ExudativeAgeRelatedMacularDegeneration,
+        amd:ExudativeMaculopathy,
+        amd:NeovascularAMD,
+        amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:NeovascularGlaucoma,
+        amd:ProliferativeDiabeticRetinopathy,
+        amd:RubeosisIridis,
+        amd:WetAMD .
+
+amd:ReadingRehabilitation a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "ReadingRehabilitation" ;
+    amd:treats amd:MacularDisease .
+
+amd:ReadingTraining a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "ReadingTraining" ;
+    amd:treats amd:VisualImpairment .
+
+amd:ReticularPseudodrusen a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "ReticularPseudodrusen" ;
+    amd:associatedWith amd:AMD ;
+    amd:causesOrIncreases amd:GeographicAtrophy .
+
+amd:RetinalRejuvenation a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "RetinalRejuvenation" .
+
+amd:Retinopathy a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Retinopathy" .
+
+amd:Rheohemapheresis a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Rheohemapheresis" ;
+    amd:treats amd:NonExsudativeAgeRelatedMacularDegeneration .
+
+amd:Rheopheresis a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Rheopheresis" ;
+    amd:associatedWith amd:VisualImpairment ;
+    amd:treats amd:DryAMD .
+
+amd:Saffron a amd:SaffronSupplementation,
+        owl:NamedIndividual ;
+    rdfs:label "Saffron" .
+
+amd:SerousDetachment a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "SerousDetachment" .
+
+amd:Sirolimus a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Sirolimus" ;
+    amd:treats amd:GeographicAtrophy .
+
+amd:SkinFibroblast a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "SkinFibroblast" .
+
+amd:Sonepcizumab a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Sonepcizumab" .
+
+amd:SqualamineLactate a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "SqualamineLactate" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:NeovascularAMD .
+
+amd:StereotacticRadiotherapy a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "StereotacticRadiotherapy" ;
+    amd:treats amd:WetAMD .
+
+amd:SubmacularSurgery a owl:Class ;
+    rdfs:label "SubmacularSurgery" ;
+    amd:treats amd:ChoroidalNeovascularization,
+        amd:SubfovealChoroidalNeovascularization ;
+    rdfs:comment "A surgical procedure to remove subfoveal choroidal neovascularization" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:SystemicHemodynamicParameters a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "SystemicHemodynamicParameters" .
+
+amd:TAS2R38Gene a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "TAS2R38Gene" ;
+    amd:associatedWith amd:MacularPigment .
+
+amd:ThreeDimensionalImaging a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "ThreeDimensionalImaging" .
+
+amd:TrainedRetinalLocus a owl:Class ;
+    rdfs:label "TrainedRetinalLocus" ;
+    rdfs:comment "A retinal area that is thought to be better suited for everyday visual tasks" .
+
+amd:TranspupillaryThermotherapy a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "TranspupillaryThermotherapy" ;
+    amd:treats amd:NeovascularAMD .
+
+amd:TriamcinoloneAcetonide a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "TriamcinoloneAcetonide" ;
+    amd:treats amd:NeovascularAgeRelatedMacularDegeneration .
+
+amd:UnilateralChoroidalNeovascularisation a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "UnilateralChoroidalNeovascularisation" .
+
+amd:VEGFR a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "VEGFR" ;
+    amd:associatedWith amd:AMD .
+
+amd:Verteporfin a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Verteporfin" ;
+    amd:treats amd:NeovascularAgeRelatedMacularDegeneration .
+
+amd:VisualImpairmentDueToAMD a amd:VisualImpairment,
+        owl:NamedIndividual ;
+    rdfs:label "VisualImpairmentDueToAMD" .
+
+amd:VisualImpairmentDueToCentralVisionLoss a amd:VisualImpairment,
+        owl:NamedIndividual ;
+    rdfs:label "VisualImpairmentDueToCentralVisionLoss" .
+
+amd:VitaminC a amd:AntioxidantSupplement,
+        owl:NamedIndividual ;
+    rdfs:label "VitaminC" .
+
+amd:VitaminE a amd:AntioxidantSupplement,
+        owl:NamedIndividual ;
+    rdfs:label "VitaminE" .
+
+amd:WebBasedPlatform a owl:Class ;
+    rdfs:label "WebBasedPlatform" ;
+    rdfs:comment "A platform for administering training exercises" ;
+    rdfs:subClassOf amd:DiagnosticMethod .
+
+amd:WoundRepair a owl:Class ;
+    rdfs:label "WoundRepair" ;
+    rdfs:comment "The process of wound repair" .
+
+amd:Zeaxanthin a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Zeaxanthin" ;
+    amd:associatedWith amd:AMD .
+
+amd:ZincSupplement a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "ZincSupplement" ;
+    amd:associatedWith amd:AMD .
+
+amd:assessedBy a owl:ObjectProperty ;
+    rdfs:label "assessedBy" ;
+    rdfs:comment "A clinical outcome assessed by a method" ;
+    rdfs:domain amd:ClinicalOutcome ;
+    rdfs:range amd:DiagnosticMethod .
+
+amd:associatedWith a owl:ObjectProperty ;
+    rdfs:label "associatedWith" ;
+    rdfs:comment "A gene associated with a disease" ;
+    rdfs:domain amd:GeneticBiomarker ;
+    rdfs:range amd:Disease .
+
+amd:causesOrIncreases a owl:ObjectProperty ;
+    rdfs:label "causesOrIncreases" ;
+    rdfs:comment "A risk factor that causes or increases a disease" ;
+    rdfs:domain amd:RiskFactor ;
+    rdfs:range amd:Disease .
+
+amd:diagnosedBy a owl:ObjectProperty ;
+    rdfs:label "diagnosedBy" ;
+    rdfs:comment "A disease diagnosed via a method" ;
+    rdfs:domain amd:Disease ;
+    rdfs:range amd:DiagnosticMethod .
+
+amd:hasSymptom a owl:ObjectProperty ;
+    rdfs:label "hasSymptom" ;
+    rdfs:comment "A disease has a clinical symptom" ;
+    rdfs:domain amd:Disease ;
+    rdfs:range amd:ClinicalOutcome .
+
+amd:iSONEP a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "iSONEP" ;
+    amd:inhibits amd:S1P ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:indicates a owl:ObjectProperty ;
+    rdfs:label "indicates" ;
+    rdfs:comment "A biomarker that indicates a disease" ;
+    rdfs:domain amd:Biomarker ;
+    rdfs:range amd:Disease .
+
+amd:inhibits a owl:ObjectProperty ;
+    rdfs:label "inhibits" ;
+    rdfs:comment "A treatment that inhibits a molecular target" ;
+    rdfs:domain amd:Treatment ;
+    rdfs:range amd:MolecularTarget .
+
+amd:measuredBy a owl:ObjectProperty ;
+    rdfs:label "measuredBy" ;
+    rdfs:comment "A biomarker measured by a method" ;
+    rdfs:domain amd:Biomarker ;
+    rdfs:range amd:DiagnosticMethod .
+
+amd:rs1061170 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "rs1061170" .
+
+amd:rs11200638 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "rs11200638" .
+
+amd:treats a owl:ObjectProperty ;
+    rdfs:label "treats" ;
+    rdfs:comment "A treatment that manages a disease" ;
+    rdfs:domain amd:Treatment ;
+    rdfs:range amd:Disease .
+
+amd:AtrophicMacularDegeneration a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "AtrophicMacularDegeneration" .
+
+amd:Cyclooxygenase2Inhibition a owl:Class ;
+    rdfs:label "Cyclooxygenase2Inhibition" ;
+    rdfs:comment "A type of treatment that inhibits cyclooxygenase-2" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:GeneticEpidemiology a owl:Class ;
+    rdfs:label "GeneticEpidemiology" ;
+    rdfs:comment "Study of genetic factors in disease development" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:ICG a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "ICG" .
+
+amd:ImagingBiomarker a owl:Class ;
+    rdfs:label "ImagingBiomarker" ;
+    rdfs:comment "A biomarker used for imaging in Age-related Macular Degeneration" ;
+    rdfs:subClassOf amd:Biomarker .
+
+amd:ImmunomodulatorySubstance a owl:Class ;
+    rdfs:label "ImmunomodulatorySubstance" ;
+    rdfs:comment "A substance that modulates the immune system" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:IntravitrealDexamethasone a owl:Class ;
+    rdfs:label "IntravitrealDexamethasone" ;
+    amd:treats amd:NeovascularAMD ;
+    rdfs:comment "A type of steroid treatment for AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:MOS_SF-36 a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "MOS SF-36" .
+
+amd:MacularDisease a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "MacularDisease" .
+
+amd:MultifocalObjectivePupilPerimetry a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "MultifocalObjectivePupilPerimetry" .
+
+amd:NEI_VFQ-25 a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "NEI VFQ-25" .
+
+amd:NeovascularGlaucoma a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "NeovascularGlaucoma" .
+
+amd:PatternElectroretinography a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "PatternElectroretinography" .
+
+amd:Phenylephrine a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Phenylephrine" .
+
+amd:PolypoidalChoroidalVasculopathy a amd:ExudativeMaculopathy,
+        owl:NamedIndividual ;
+    rdfs:label "PolypoidalChoroidalVasculopathy" ;
+    amd:diagnosedBy amd:OCT .
+
+amd:ProliferativeDiabeticRetinopathy a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "ProliferativeDiabeticRetinopathy" .
+
+amd:RubeosisIridis a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "RubeosisIridis" .
+
+amd:S1P a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "S1P" .
+
+amd:SaffronSupplementation a owl:Class ;
+    rdfs:label "SaffronSupplementation" ;
+    amd:treats amd:DryAMD ;
+    rdfs:comment "Saffron supplementation as a treatment for dry AMD" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:SubfovealChoroidalNeovascularization a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "SubfovealChoroidalNeovascularization" .
+
+amd:SubfovealNeovascularMembrane a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "SubfovealNeovascularMembrane" ;
+    amd:diagnosedBy amd:OCT .
+
+amd:VisualFunctionBiomarker a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "VisualFunctionBiomarker" ;
+    amd:measuredBy amd:DiagnosticMethod .
+
+amd:ArterialThromboembolicEvent a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "ArterialThromboembolicEvent" .
+
+amd:ETDRS a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "ETDRS" .
+
+amd:ExudativeARMD a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "ExudativeARMD" ;
+    amd:associatedWith amd:ChoroidalNeovascularization .
+
+amd:FundusAutofluorescenceImaging a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "FundusAutofluorescenceImaging" .
+
+amd:Glaucoma a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Glaucoma" ;
+    amd:associatedWith amd:IntraocularPressure ;
+    amd:diagnosedBy amd:IntraocularPressure,
+        amd:OCT,
+        amd:Ultrasound .
+
+amd:IntraocularPressure a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "IntraocularPressure" .
+
+amd:LowVision a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "LowVision" .
+
+amd:NonExsudativeAgeRelatedMacularDegeneration a amd:AgeRelatedMaculopathy,
+        owl:NamedIndividual ;
+    rdfs:label "NonExsudativeAgeRelatedMacularDegeneration" ;
+    amd:diagnosedBy amd:ETDRS,
+        amd:OCT .
+
+amd:SubmacularHaemorrhage a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "SubmacularHaemorrhage" .
+
+amd:VisualRehabilitation a owl:Class ;
+    rdfs:label "VisualRehabilitation" ;
+    amd:treats amd:VisualImpairment ;
+    rdfs:comment "A treatment to help improve vision in people with visual impairment" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:AntioxidantSupplement a owl:Class ;
+    rdfs:label "AntioxidantSupplement" ;
+    amd:treats amd:AMD ;
+    rdfs:comment "Antioxidant supplements used in AREDS" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:ExudativeAgeRelatedMacularDegeneration a owl:Class ;
+    rdfs:label "ExudativeAgeRelatedMacularDegeneration" ;
+    amd:diagnosedBy amd:OCT ;
+    rdfs:comment "A subtype of AgeRelatedMacularDegeneration characterized by the growth of new, fragile blood vessels under the macula" .
+
+amd:ExudativeMaculopathy a owl:Class ;
+    rdfs:label "ExudativeMaculopathy" ;
+    amd:diagnosedBy amd:OCT ;
+    rdfs:comment "A condition characterized by the accumulation of fluid and proteins in the macula" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:MacularPigment a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "MacularPigment" ;
+    amd:associatedWith amd:AMD ;
+    amd:indicates amd:AMD ;
+    amd:measuredBy amd:DiagnosticMethod ;
+    amd:treats amd:AMD .
+
+amd:Ultrasound a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Ultrasound" .
+
+amd:DryAMD a owl:Class ;
+    rdfs:label "DryAMD" ;
+    rdfs:comment "Dry Age-Related Macular Degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:ClinicalOutcome a owl:Class ;
+    rdfs:label "ClinicalOutcome" ;
+    rdfs:comment "A measurable result of a treatment or disease progression" .
+
+amd:GeographicAtrophy a owl:Class ;
+    rdfs:label "GeographicAtrophy" ;
+    amd:associatedWith amd:VisualImpairment ;
+    amd:diagnosedBy amd:FundusAutofluorescenceImaging ;
+    rdfs:comment "A type of AMD characterized by dryness in the macula" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:VEGF a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "VEGF" ;
+    amd:associatedWith amd:ChoroidalNeovascularization,
+        amd:NeovascularAMD ;
+    amd:causesOrIncreases amd:WetAMD .
+
+amd:AgeRelatedMaculopathy a owl:Class ;
+    rdfs:label "AgeRelatedMaculopathy" ;
+    rdfs:comment "degeneration or atrophy of the macula - the center part of the retina responsible for fine vision" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:AntiVEGFTherapy a owl:Class ;
+    rdfs:label "AntiVEGFTherapy" ;
+    amd:treats amd:AMD,
+        amd:NeovascularAMD ;
+    rdfs:comment "Anti-Vascular Endothelial Growth Factor therapy" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:RiskFactor a owl:Class ;
+    rdfs:label "RiskFactor" ;
+    rdfs:comment "A factor that increases the likelihood of developing a disease" .
+
+amd:VisualImpairment a owl:Class ;
+    rdfs:label "VisualImpairment" ;
+    rdfs:comment "A condition where a person has a reduced ability to see" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:WetAMD a owl:Class ;
+    rdfs:label "WetAMD" ;
+    amd:causesOrIncreases amd:SubmacularHaemorrhage ;
+    amd:diagnosedBy amd:MultifocalObjectivePupilPerimetry ;
+    rdfs:comment "Wet Age-Related Macular Degeneration" ;
+    rdfs:subClassOf amd:AMD .
+
+amd:NeovascularAMD a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "NeovascularAMD" ;
+    amd:associatedWith amd:GeographicAtrophy ;
+    amd:diagnosedBy amd:ETDRS,
+        amd:ICG,
+        amd:OCT,
+        amd:PatternElectroretinography .
+
+amd:OCT a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "OCT" .
+
+amd:NeovascularAgeRelatedMacularDegeneration a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "NeovascularAgeRelatedMacularDegeneration" .
+
+amd:ChoroidalNeovascularization a owl:Class ;
+    rdfs:label "ChoroidalNeovascularization" ;
+    amd:causesOrIncreases amd:NeovascularAgeRelatedMacularDegeneration,
+        amd:VisualImpairment ;
+    amd:diagnosedBy amd:MOS_SF-36,
+        amd:NEI_VFQ-25 ;
+    rdfs:comment "A disease characterized by the growth of new blood vessels in the choroid" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:Gene a owl:Class ;
+    rdfs:label "Gene" ;
+    rdfs:comment "A genetic entity" .
+
+amd:DiagnosticMethod a owl:Class ;
+    rdfs:label "DiagnosticMethod" ;
+    rdfs:comment "A procedure or test used to diagnose a disease" .
+
+amd:Biomarker a owl:Class ;
+    rdfs:label "Biomarker" ;
+    rdfs:comment "A measurable indicator of a biological state or condition" .
+
+amd:AMD a owl:Class ;
+    rdfs:label "AMD" ;
+    amd:associatedWith amd:Biomarker,
+        amd:VisualImpairment ;
+    amd:causesOrIncreases amd:LowVision ;
+    amd:diagnosedBy amd:DiagnosticMethod,
+        amd:ImagingBiomarker,
+        amd:OCT,
+        amd:VisualFunctionBiomarker ;
+    rdfs:comment "Age-Related Macular Degeneration" ;
+    rdfs:subClassOf amd:Disease .
+
+amd:Disease a owl:Class ;
+    rdfs:label "Disease" ;
+    rdfs:comment "A medical condition affecting the human body" .
+
+amd:Treatment a owl:Class ;
+    rdfs:label "Treatment" ;
+    rdfs:comment "A medical intervention used to manage or cure a disease" .
+

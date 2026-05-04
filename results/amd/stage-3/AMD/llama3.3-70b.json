@@ -1,0 +1,993 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "Top-level disease",
+            "subclasses": {
+                "AMD": {}
+            }
+        },
+        "AMD": {
+            "description": "Age-related macular degeneration",
+            "subclasses": {
+                "DryAMD": {},
+                "WetAMD": {},
+                "IllDefinedChoroidalNeovascularization": {},
+                "GeographicAtrophy": {},
+                "ChoroidalNeovascularMembraneFormation": {},
+                "AgeRelatedMaculopathy": {},
+                "AtrophicAMD": {},
+                "ExudativeAMD": {},
+                "EarlyAMD": {},
+                "LateAMD": {},
+                "NeovascularAMD": {},
+                "PolypoidalChoroidalVasculopathy": {},
+                "NonExsudativeAMD": {}
+            }
+        },
+        "DryAMD": {
+            "description": "Dry age-related macular degeneration",
+            "subclasses": {
+                "GeographicAtrophy": {}
+            }
+        },
+        "WetAMD": {
+            "description": "Neovascular age-related macular degeneration",
+            "subclasses": {}
+        },
+        "IllDefinedChoroidalNeovascularization": {
+            "description": "Ill-defined choroidal neovascularization",
+            "subclasses": {}
+        },
+        "GeographicAtrophy": {
+            "description": "Retinal cell death areas",
+            "subclasses": {}
+        },
+        "ChoroidalNeovascularMembraneFormation": {
+            "description": "Choroidal neovascular membrane formation",
+            "subclasses": {
+                "WellFormedChoroidalNeovascularization": {},
+                "OccultChoroidalNeovascularization": {}
+            }
+        },
+        "AgeRelatedMaculopathy": {
+            "description": "Degeneration or atrophy of the macula",
+            "subclasses": {
+                "EarlyARM": {},
+                "LateARM": {}
+            }
+        },
+        "AtrophicAMD": {
+            "description": "Atrophic age-related macular degeneration",
+            "subclasses": {}
+        },
+        "ExudativeAMD": {
+            "description": "Exudative age-related macular degeneration",
+            "subclasses": {
+                "PolypoidalChoroidalVasculopathy": {}
+            }
+        },
+        "EarlyAMD": {
+            "description": "Early age-related macular degeneration",
+            "subclasses": {}
+        },
+        "LateAMD": {
+            "description": "Late age-related macular degeneration",
+            "subclasses": {}
+        },
+        "NeovascularAMD": {
+            "description": "Neovascular age-related macular degeneration",
+            "subclasses": {}
+        },
+        "PolypoidalChoroidalVasculopathy": {
+            "description": "Polypoidal choroidal vasculopathy",
+            "subclasses": {}
+        },
+        "NonExsudativeAMD": {
+            "description": "Non-exsudative age-related macular degeneration",
+            "subclasses": {}
+        },
+        "PathologicalFeature": {
+            "description": "Abnormal characteristics of AMD",
+            "subclasses": {
+                "Drusen": {},
+                "ChoroidalNeovascularization": {},
+                "RetinalPigmentEpitheliumDysfunction": {},
+                "LipofuscinAccumulation": {},
+                "RetinalPerivascularSheathing": {},
+                "RubeosisIridis": {},
+                "NeovascularGlaucoma": {},
+                "ProliferativeDiabeticRetinopathy": {},
+                "PigmentEpithelialDetachment": {},
+                "MacularEdema": {}
+            }
+        },
+        "Drusen": {
+            "description": "Yellow deposits under retina",
+            "subclasses": {
+                "LargeSoftIndistinctDrusen": {}
+            }
+        },
+        "ChoroidalNeovascularization": {
+            "description": "Abnormal vessel growth",
+            "subclasses": {
+                "OccultChoroidalNeovascularization": {},
+                "WellFormedChoroidalNeovascularization": {}
+            }
+        },
+        "OccultChoroidalNeovascularization": {
+            "description": "Less well-formed neovascularization",
+            "subclasses": {}
+        },
+        "WellFormedChoroidalNeovascularization": {
+            "description": "Well-formed neovascularization",
+            "subclasses": {}
+        },
+        "RetinalPigmentEpitheliumDysfunction": {
+            "description": "RPE dysfunction",
+            "subclasses": {
+                "RetinalPigmentEpithelialDepigmentation": {}
+            }
+        },
+        "LipofuscinAccumulation": {
+            "description": "Accumulation of lipofuscin in RPE cells",
+            "subclasses": {}
+        },
+        "RetinalPerivascularSheathing": {
+            "description": "Retinal perivascular sheathing",
+            "subclasses": {}
+        },
+        "RubeosisIridis": {
+            "description": "Rubeosis iridis",
+            "subclasses": {}
+        },
+        "NeovascularGlaucoma": {
+            "description": "Neovascular glaucoma",
+            "subclasses": {}
+        },
+        "ProliferativeDiabeticRetinopathy": {
+            "description": "Proliferative diabetic retinopathy",
+            "subclasses": {}
+        },
+        "PigmentEpithelialDetachment": {
+            "description": "Pigment epithelial detachment",
+            "subclasses": {}
+        },
+        "MacularEdema": {
+            "description": "Fluid accumulation in the macula",
+            "subclasses": {}
+        },
+        "GeneticMarker": {
+            "description": "AMD risk genes",
+            "subclasses": {
+                "CFH": {},
+                "C3": {},
+                "C2": {},
+                "CFB": {},
+                "ARMS2": {},
+                "HTRA1": {},
+                "VEGF": {},
+                "ApoE": {},
+                "PlGF": {},
+                "CX3CR1": {},
+                "S1P": {},
+                "LOC": {}
+            }
+        },
+        "Treatment": {
+            "description": "AMD treatments",
+            "subclasses": {
+                "AntiVEGFTherapy": {},
+                "PhotodynamicTherapy": {},
+                "AREDSsupplements": {},
+                "LaserTherapy": {},
+                "DietarySupplement": {},
+                "SubmacularSurgery": {},
+                "CorticosteroidInjection": {},
+                "IntravitrealImplant": {},
+                "Cyclooxygenase2Inhibition": {},
+                "TranspupillaryThermotherapy": {},
+                "OculomotorTraining": {},
+                "PazopanibEyeDrops": {},
+                "Vitrectomy": {},
+                "TreatAndExtendRegimen": {},
+                "SaffronSupplementation": {},
+                "AspirinTherapy": {},
+                "PreferredRetinalLocusTraining": {},
+                "ReadingTraining": {},
+                "ConberceptIntravitrealInjection": {},
+                "2RT": {},
+                "StereotacticRadiotherapy": {},
+                "LowLevelNightTimeLightTherapy": {},
+                "AcetazolamideTherapy": {},
+                "RetinalRejuvenation": {},
+                "DoubleIntraocularLensImplant": {},
+                "LuteinSupplementation": {},
+                "FluocinoloneAcetonideImplant": {},
+                "PulseDiodeLaserPhotocoagulation": {},
+                "HighResolutionUltrasoundImaging": {},
+                "Rheohemapheresis": {},
+                "CNTFImplant": {},
+                "CopaxoneTherapy": {},
+                "POT4Therapy": {},
+                "OT551Therapy": {},
+                "Electroretinography": {},
+                "SirolimusSubconjunctivalInjection": {},
+                "Sonepcizumab": {},
+                "IntravitreousInjectionOfExpansileGas": {}
+            }
+        },
+        "AntiVEGFTherapy": {
+            "description": "Anti-VEGF agents",
+            "subclasses": {}
+        },
+        "PhotodynamicTherapy": {
+            "description": "Photodynamic therapy",
+            "subclasses": {}
+        },
+        "AREDSsupplements": {
+            "description": "AREDS/AREDS2 supplements",
+            "subclasses": {}
+        },
+        "LaserTherapy": {
+            "description": "Laser therapy",
+            "subclasses": {
+                "PulseDiodeLaserPhotocoagulation": {}
+            }
+        },
+        "DietarySupplement": {
+            "description": "Dietary supplements for AMD",
+            "subclasses": {
+                "LuteinSupplementation": {},
+                "ZeaxanthinSupplementation": {}
+            }
+        },
+        "SubmacularSurgery": {
+            "description": "Surgical removal of subfoveal choroidal neovascularization",
+            "subclasses": {}
+        },
+        "CorticosteroidInjection": {
+            "description": "Corticosteroid injection around the eye",
+            "subclasses": {}
+        },
+        "IntravitrealImplant": {
+            "description": "Intravitreal implant for sustained-release of medication",
+            "subclasses": {}
+        },
+        "Cyclooxygenase2Inhibition": {
+            "description": "Cyclooxygenase-2 inhibition",
+            "subclasses": {}
+        },
+        "TranspupillaryThermotherapy": {
+            "description": "Thermic treatment of choroidal neovascularization in AMD",
+            "subclasses": {}
+        },
+        "OculomotorTraining": {
+            "description": "Oculomotor training for reading rehabilitation",
+            "subclasses": {
+                "EccentricViewingAwareness": {},
+                "ReadingPractice": {}
+            }
+        },
+        "PazopanibEyeDrops": {
+            "description": "Pazopanib eye drops for neovascular AMD",
+            "subclasses": {}
+        },
+        "Vitrectomy": {
+            "description": "Surgical removal of vitreous gel",
+            "subclasses": {}
+        },
+        "TreatAndExtendRegimen": {
+            "description": "Treat and extend regimen for neovascular AMD",
+            "subclasses": {}
+        },
+        "SaffronSupplementation": {
+            "description": "Saffron supplementation for dry AMD",
+            "subclasses": {}
+        },
+        "AspirinTherapy": {
+            "description": "Aspirin therapy for AMD prevention",
+            "subclasses": {}
+        },
+        "PreferredRetinalLocusTraining": {
+            "description": "Training to improve visual acuity and reading speed",
+            "subclasses": {}
+        },
+        "ReadingTraining": {
+            "description": "Special home reading training for AMD patients",
+            "subclasses": {}
+        },
+        "ConberceptIntravitrealInjection": {
+            "description": "Conbercept intravitreal injection for PCV",
+            "subclasses": {}
+        },
+        "2RT": {
+            "description": "2RT laser therapy for early AMD",
+            "subclasses": {}
+        },
+        "StereotacticRadiotherapy": {
+            "description": "Stereotactic radiotherapy for wet AMD",
+            "subclasses": {}
+        },
+        "LowLevelNightTimeLightTherapy": {
+            "description": "Low-level night-time light therapy for AMD",
+            "subclasses": {}
+        },
+        "AcetazolamideTherapy": {
+            "description": "Acetazolamide therapy for glaucoma",
+            "subclasses": {}
+        },
+        "RetinalRejuvenation": {
+            "description": "Retinal rejuvenation using Ellex 2RT laser",
+            "subclasses": {}
+        },
+        "DoubleIntraocularLensImplant": {
+            "description": "Double intra-ocular lens implant for visual rehabilitation of patients with dry age-related macular degeneration",
+            "subclasses": {}
+        },
+        "LuteinSupplementation": {
+            "description": "Lutein supplementation for AMD",
+            "subclasses": {}
+        },
+        "FluocinoloneAcetonideImplant": {
+            "description": "Fluocinolone acetonide implant for choroidal neovascularization",
+            "subclasses": {}
+        },
+        "PulseDiodeLaserPhotocoagulation": {
+            "description": "Pulse-diode laser photocoagulation",
+            "subclasses": {}
+        },
+        "HighResolutionUltrasoundImaging": {
+            "description": "High-resolution ultrasound imaging of the retina and choroid",
+            "subclasses": {}
+        },
+        "Rheohemapheresis": {
+            "description": "Extracorporeal therapy for non-exsudative AMD",
+            "subclasses": {}
+        },
+        "CNTFImplant": {
+            "description": "CNTF implant for atrophic macular degeneration",
+            "subclasses": {}
+        },
+        "CopaxoneTherapy": {
+            "description": "Copaxone therapy for dry AMD",
+            "subclasses": {}
+        },
+        "POT4Therapy": {
+            "description": "POT-4 therapy for neovascular AMD",
+            "subclasses": {}
+        },
+        "OT551Therapy": {
+            "description": "OT-551 therapy for geographic atrophy associated with age-related macular degeneration",
+            "subclasses": {}
+        },
+        "Electroretinography": {
+            "description": "Electroretinography for retinal function assessment",
+            "subclasses": {
+                "PatternElectroretinography": {},
+                "FullFieldElectroretinography": {}
+            }
+        },
+        "DiagnosticMethod": {
+            "description": "AMD diagnostic methods",
+            "subclasses": {
+                "OpticalCoherenceTomography": {},
+                "FundusPhotography": {},
+                "FluoresceinAngiography": {},
+                "VisualAcuityTests": {},
+                "HeterochromaticFlickerPhotometry": {},
+                "TwoWavelengthFundusAutofluorescence": {},
+                "IndocyanineGreenAngiography": {},
+                "Ultrasound": {},
+                "FundusPerimetry": {},
+                "ConfocalScanningLaserOphthalmoscopy": {},
+                "LaserDopplerFlowmetry": {},
+                "LaserInterferometry": {},
+                "SlitLampExam": {},
+                "IndirectOphthalmoscopy": {},
+                "ElectrophysiologicalTesting": {},
+                "MultifocalObjectivePupilPerimetry": {},
+                "MAIAMicroperimetry": {},
+                "MNReadAcuityCharts": {},
+                "PepperVisualSkillsForReadingTest": {},
+                "ViewSentencesTest": {},
+                "VeteransAdministrationLowVisionVisualFunctioningQuestionnaire": {},
+                "RadnerReadingTest": {},
+                "IReST": {},
+                "ETDRS": {},
+                "SNPGenotyping": {},
+                "HeidelbergRetinalTomograph": {},
+                "AutofluorescenceImaging": {},
+                "WavefrontAnalysis": {},
+                "LaserInterferometricMeasurementOfFundusPulsation": {},
+                "DarkAdaptationProtocol": {}
+            }
+        },
+        "OpticalCoherenceTomography": {
+            "description": "OCT",
+            "subclasses": {}
+        },
+        "FundusPhotography": {
+            "description": "Fundus photography",
+            "subclasses": {}
+        },
+        "FluoresceinAngiography": {
+            "description": "Fluorescein angiography",
+            "subclasses": {}
+        },
+        "VisualAcuityTests": {
+            "description": "Visual acuity tests",
+            "subclasses": {}
+        },
+        "HeterochromaticFlickerPhotometry": {
+            "description": "Heterochromatic flicker photometry",
+            "subclasses": {}
+        },
+        "TwoWavelengthFundusAutofluorescence": {
+            "description": "Two-wavelength fundus autofluorescence",
+            "subclasses": {}
+        },
+        "IndocyanineGreenAngiography": {
+            "description": "Indocyanine green angiography",
+            "subclasses": {}
+        },
+        "Ultrasound": {
+            "description": "Ultrasound imaging",
+            "subclasses": {}
+        },
+        "FundusPerimetry": {
+            "description": "Fundus perimetry",
+            "subclasses": {}
+        },
+        "ConfocalScanningLaserOphthalmoscopy": {
+            "description": "Confocal scanning laser ophthalmoscopy",
+            "subclasses": {}
+        },
+        "LaserDopplerFlowmetry": {
+            "description": "Laser Doppler flowmetry",
+            "subclasses": {}
+        },
+        "LaserInterferometry": {
+            "description": "Laser interferometry",
+            "subclasses": {}
+        },
+        "SlitLampExam": {
+            "description": "Slit lamp examination",
+            "subclasses": {}
+        },
+        "IndirectOphthalmoscopy": {
+            "description": "Indirect ophthalmoscopy",
+            "subclasses": {}
+        },
+        "ElectrophysiologicalTesting": {
+            "description": "Electrophysiological testing",
+            "subclasses": {}
+        },
+        "MultifocalObjectivePupilPerimetry": {
+            "description": "Multifocal objective pupil perimetry",
+            "subclasses": {}
+        },
+        "MAIAMicroperimetry": {
+            "description": "Microperimetry using the MAIA device",
+            "subclasses": {}
+        },
+        "MNReadAcuityCharts": {
+            "description": "MNRead acuity charts",
+            "subclasses": {}
+        },
+        "PepperVisualSkillsForReadingTest": {
+            "description": "Pepper visual skills for reading test",
+            "subclasses": {}
+        },
+        "ViewSentencesTest": {
+            "description": "View sentences test",
+            "subclasses": {}
+        },
+        "VeteransAdministrationLowVisionVisualFunctioningQuestionnaire": {
+            "description": "Veterans administration low vision visual functioning questionnaire",
+            "subclasses": {}
+        },
+        "RadnerReadingTest": {
+            "description": "Radner reading test",
+            "subclasses": {}
+        },
+        "IReST": {
+            "description": "IReST reading speed test",
+            "subclasses": {}
+        },
+        "ETDRS": {
+            "description": "ETDRS visual acuity test",
+            "subclasses": {}
+        },
+        "SNPGenotyping": {
+            "description": "SNP genotyping for AMD-susceptibility genes",
+            "subclasses": {}
+        },
+        "HeidelbergRetinalTomograph": {
+            "description": "Heidelberg retinal tomograph",
+            "subclasses": {}
+        },
+        "AutofluorescenceImaging": {
+            "description": "Autofluorescence imaging",
+            "subclasses": {}
+        },
+        "WavefrontAnalysis": {
+            "description": "Wavefront analysis technology",
+            "subclasses": {}
+        },
+        "ZeaxanthinSupplementation": {
+            "description": "Zeaxanthin supplementation for AMD",
+            "subclasses": {}
+        },
+        "OculomotorTrainingProgram": {
+            "description": "Oculomotor training program for reading rehabilitation in macular disease",
+            "subclasses": {
+                "EccentricViewingAwareness": {},
+                "ReadingPractice": {}
+            }
+        },
+        "EccentricViewingAwareness": {
+            "description": "Eccentric viewing awareness training",
+            "subclasses": {}
+        },
+        "ReadingPractice": {
+            "description": "Reading practice with sequentially lexical information",
+            "subclasses": {}
+        },
+        "Sonepcizumab": {
+            "description": "Sonepcizumab (LT1009) for choroidal neovascularization secondary to AMD",
+            "subclasses": {}
+        },
+        "LowVisionRehabilitation": {
+            "description": "Low vision rehabilitation for AMD patients",
+            "subclasses": {
+                "CollaborativeLowVisionRehabilitation": {}
+            }
+        },
+        "CollaborativeLowVisionRehabilitation": {
+            "description": "Collaborative low vision rehabilitation for AMD patients",
+            "subclasses": {}
+        },
+        "EccentricViewingTraining": {
+            "description": "Eccentric viewing training for visual rehabilitation",
+            "subclasses": {
+                "EccentricViewingAwareness": {}
+            }
+        },
+        "DarkAdaptationProtocol": {
+            "description": "Dark adaptation protocol for AMD diagnosis",
+            "subclasses": {}
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "AMD",
+            "description": "Treats AMD"
+        },
+        "diagnoses": {
+            "domain": "DiagnosticMethod",
+            "range": "AMD",
+            "description": "Diagnoses AMD"
+        },
+        "associatedWith": {
+            "domain": "GeneticMarker",
+            "range": "AMD",
+            "description": "Associated with AMD"
+        },
+        "prevents": {
+            "domain": "AspirinTherapy",
+            "range": "AMD",
+            "description": "Prevents AMD"
+        },
+        "improves": {
+            "domain": "PreferredRetinalLocusTraining",
+            "range": "AMD",
+            "description": "Improves visual acuity and reading speed in AMD patients"
+        },
+        "targets": {
+            "domain": "AntiVEGFTherapy",
+            "range": "WetAMD",
+            "description": "Targets Wet AMD"
+        },
+        "enhances": {
+            "domain": "ReadingTraining",
+            "range": "AMD",
+            "description": "Enhances reading speed and emotional status in AMD patients"
+        },
+        "involves": {
+            "domain": "ConberceptIntravitrealInjection",
+            "range": "PolypoidalChoroidalVasculopathy",
+            "description": "Involves treatment of PCV"
+        },
+        "appliesTo": {
+            "domain": "2RT",
+            "range": "EarlyAMD",
+            "description": "Applies to early AMD"
+        },
+        "reducesNeedFor": {
+            "domain": "StereotacticRadiotherapy",
+            "range": "WetAMD",
+            "description": "Reduces need for regular injections of ranibizumab"
+        },
+        "slowsProgressionOf": {
+            "domain": "LowLevelNightTimeLightTherapy",
+            "range": "AMD",
+            "description": "Slows progression of AMD"
+        },
+        "lowersEyePressure": {
+            "domain": "AcetazolamideTherapy",
+            "range": "Glaucoma",
+            "description": "Lowers eye pressure in glaucoma patients"
+        },
+        "rejuvenates": {
+            "domain": "RetinalRejuvenation",
+            "range": "AMD",
+            "description": "Rejuvenates retina in AMD patients"
+        },
+        "improvesVision": {
+            "domain": "DoubleIntraocularLensImplant",
+            "range": "DryAMD",
+            "description": "Improves vision in patients with dry AMD"
+        },
+        "stabilizesVision": {
+            "domain": "SubmacularSurgery",
+            "range": "AMD",
+            "description": "Stabilizes vision in AMD patients"
+        },
+        "increasesLuteinBloodLevels": {
+            "domain": "LuteinSupplementation",
+            "range": "AMD",
+            "description": "Increases lutein blood levels in AMD patients"
+        },
+        "increasesZeaxanthinBloodLevels": {
+            "domain": "ZeaxanthinSupplementation",
+            "range": "AMD",
+            "description": "Increases zeaxanthin blood levels in AMD patients"
+        },
+        "preventsVisionLoss": {
+            "domain": "FluocinoloneAcetonideImplant",
+            "range": "AMD",
+            "description": "Prevents vision loss in AMD patients"
+        },
+        "closesFeederVessels": {
+            "domain": "PulseDiodeLaserPhotocoagulation",
+            "range": "ChoroidalNeovascularization",
+            "description": "Closes feeder vessels in choroidal neovascularization"
+        },
+        "reducesInflammation": {
+            "domain": "Cyclooxygenase2Inhibition",
+            "range": "AMD",
+            "description": "Reduces inflammation in AMD patients"
+        },
+        "improvesVisualAcuity": {
+            "domain": "Celecoxib",
+            "range": "AMD",
+            "description": "Improves visual acuity in AMD patients"
+        },
+        "identifiesGeneticRiskFactors": {
+            "domain": "GeneticMarker",
+            "range": "AMD",
+            "description": "Identifies genetic risk factors for AMD"
+        },
+        "comparesTreatmentMethods": {
+            "domain": "TranspupillaryThermotherapy",
+            "range": "PhotodynamicTherapy",
+            "description": "Compares treatment methods for choroidal neovascularization in AMD"
+        },
+        "imagesChoroid": {
+            "domain": "HighResolutionUltrasoundImaging",
+            "range": "Choroid",
+            "description": "Images the choroid"
+        },
+        "measuresPerfusion": {
+            "domain": "HighResolutionUltrasoundImaging",
+            "range": "Choroid",
+            "description": "Measures perfusion of the choroid"
+        },
+        "diagnosesGlaucoma": {
+            "domain": "Ultrasound",
+            "range": "Glaucoma",
+            "description": "Diagnoses glaucoma"
+        },
+        "monitorsGlaucomaTreatment": {
+            "domain": "Ultrasound",
+            "range": "Glaucoma",
+            "description": "Monitors glaucoma treatment"
+        },
+        "evaluatesAccommodativeFunction": {
+            "domain": "Ultrasound",
+            "range": "AccommodativeFunction",
+            "description": "Evaluates accommodative function"
+        },
+        "detectsOcularTumors": {
+            "domain": "Ultrasound",
+            "range": "OcularTumors",
+            "description": "Detects ocular tumors"
+        },
+        "monitorsTumorGrowth": {
+            "domain": "Ultrasound",
+            "range": "OcularTumors",
+            "description": "Monitors tumor growth"
+        },
+        "diagnosesAMD": {
+            "domain": "HighResolutionUltrasoundImaging",
+            "range": "AMD",
+            "description": "Diagnoses AMD"
+        },
+        "analyzesGeneExpression": {
+            "domain": "PolymeraseChainReaction",
+            "range": "GeneticMarker",
+            "description": "Analyzes gene expression"
+        },
+        "examinesSkinBiopsy": {
+            "domain": "SkinBiopsy",
+            "range": "GeneticMarker",
+            "description": "Examines skin biopsy"
+        },
+        "examinesBloodSamples": {
+            "domain": "BloodSample",
+            "range": "GeneticMarker",
+            "description": "Examines blood samples"
+        },
+        "investigatesCombinationTherapy": {
+            "domain": "CombinationTherapy",
+            "range": "NeovascularAMD",
+            "description": "Investigates combination therapy for neovascular AMD"
+        },
+        "treatsNonExsudativeAMD": {
+            "domain": "Rheohemapheresis",
+            "range": "NonExsudativeAMD",
+            "description": "Treats non-exsudative AMD"
+        },
+        "releasesCNTF": {
+            "domain": "CNTFImplant",
+            "range": "AtrophicAMD",
+            "description": "Releases CNTF for atrophic macular degeneration"
+        },
+        "improvesBCVA": {
+            "domain": "Rheohemapheresis",
+            "range": "DryAMD",
+            "description": "Improves best-corrected visual acuity in dry AMD patients"
+        },
+        "preventsConversionToWetAMD": {
+            "domain": "CopaxoneTherapy",
+            "range": "DryAMD",
+            "description": "Prevents conversion to wet AMD"
+        },
+        "predictsTreatmentResponse": {
+            "domain": "SNPGenotyping",
+            "range": "AMD",
+            "description": "Predicts treatment response to intravitreal Lucentis"
+        },
+        "inhibitsComplementActivation": {
+            "domain": "POT4Therapy",
+            "range": "NeovascularAMD",
+            "description": "Inhibits complement activation in neovascular AMD"
+        },
+        "treatsGeographicAtrophy": {
+            "domain": "OT551Therapy",
+            "range": "GeographicAtrophy",
+            "description": "Treats geographic atrophy associated with age-related macular degeneration"
+        },
+        "assessesRetinalFunction": {
+            "domain": "Electroretinography",
+            "range": "AMD",
+            "description": "Assesses retinal function in AMD patients"
+        },
+        "measuresMacularThickness": {
+            "domain": "HeidelbergRetinalTomograph",
+            "range": "AMD",
+            "description": "Measures macular thickness in AMD patients"
+        },
+        "improvesReadingSpeed": {
+            "domain": "OculomotorTrainingProgram",
+            "range": "AMD",
+            "description": "Improves reading speed in AMD patients"
+        },
+        "preservesVision": {
+            "domain": "SirolimusSubconjunctivalInjection",
+            "range": "GeographicAtrophy",
+            "description": "Preserves vision in patients with geographic atrophy"
+        },
+        "inhibitsS1P": {
+            "domain": "Sonepcizumab",
+            "range": "ChoroidalNeovascularization",
+            "description": "Inhibits S1P in choroidal neovascularization"
+        },
+        "preventsDepressiveDisorders": {
+            "domain": "LowVisionRehabilitation",
+            "range": "AMD",
+            "description": "Prevents depressive disorders in AMD patients"
+        },
+        "improvesReadingAccuracy": {
+            "domain": "EccentricViewingTraining",
+            "range": "AMD",
+            "description": "Improves reading accuracy in AMD patients"
+        },
+        "measuresFundusPulsation": {
+            "domain": "LaserInterferometricMeasurementOfFundusPulsation",
+            "range": "AMD",
+            "description": "Measures fundus pulsation in AMD patients"
+        },
+        "measuresPulsatileOcularBloodFlow": {
+            "domain": "PneumotonometricMeasurementOfPulsatileOcularBloodFlow",
+            "range": "AMD",
+            "description": "Measures pulsatile ocular blood flow in AMD patients"
+        },
+        "inducesPosteriorVitreousDetachment": {
+            "domain": "IntravitreousInjectionOfExpansileGas",
+            "range": "AMD",
+            "description": "Induces posterior vitreous detachment in AMD patients"
+        }
+    },
+    "individuals": {
+        "AntiVEGFTherapy": {
+            "Ranibizumab": {},
+            "Aflibercept": {},
+            "Bevacizumab": {},
+            "Conbercept": {},
+            "Avastin": {}
+        },
+        "GeneticMarker": {
+            "CFH": {},
+            "C3": {},
+            "C2": {},
+            "CFB": {},
+            "ARMS2": {},
+            "HTRA1": {},
+            "VEGF": {},
+            "ApoE": {},
+            "PlGF": {},
+            "CX3CR1": {},
+            "S1P": {},
+            "LOC": {}
+        },
+        "PhotodynamicTherapy": {
+            "Verteporfin": {}
+        },
+        "DietarySupplement": {
+            "Macuvite": {},
+            "Lutein": {},
+            "Zeaxanthin": {},
+            "Saffron": {},
+            "Meso-Zeaxanthin": {}
+        },
+        "SubmacularSurgery": {},
+        "CorticosteroidInjection": {
+            "TriamcinoloneAcetonide": {}
+        },
+        "IntravitrealImplant": {
+            "FluocinoloneAcetonideImplant": {}
+        },
+        "Cyclooxygenase2Inhibition": {
+            "Celecoxib": {}
+        },
+        "TranspupillaryThermotherapy": {},
+        "OculomotorTraining": {
+            "EccentricViewingAwareness": {},
+            "ReadingPractice": {}
+        },
+        "PazopanibEyeDrops": {
+            "Pazopanib": {}
+        },
+        "Vitrectomy": {},
+        "TreatAndExtendRegimen": {},
+        "SaffronSupplementation": {},
+        "AspirinTherapy": {
+            "Aspirin": {}
+        },
+        "PreferredRetinalLocusTraining": {
+            "MAIAMicroperimetryBasedTraining": {}
+        },
+        "ReadingTraining": {
+            "SpecialHomeReadingTraining": {}
+        },
+        "ReadingSpeedTest": {
+            "RadnerReadingTest": {},
+            "IReST": {}
+        },
+        "ConberceptIntravitrealInjection": {
+            "Conbercept": {}
+        },
+        "2RT": {
+            "Ellex2RT": {}
+        },
+        "StereotacticRadiotherapy": {
+            "STAR": {}
+        },
+        "LowLevelNightTimeLightTherapy": {
+            "PolyphotonixMedicalLtdLightMask": {}
+        },
+        "AcetazolamideTherapy": {
+            "Acetazolamide": {}
+        },
+        "RetinalRejuvenation": {
+            "Ellex2RT": {}
+        },
+        "DoubleIntraocularLensImplant": {
+            "SeeAgainLens": {}
+        },
+        "LuteinSupplementation": {
+            "Lutein": {}
+        },
+        "FluocinoloneAcetonideImplant": {
+            "FluocinoloneAcetonide": {}
+        },
+        "PulseDiodeLaserPhotocoagulation": {
+            "PulseDiodeLaser": {}
+        },
+        "HighResolutionUltrasoundImaging": {
+            "20MHzUltrasound": {}
+        },
+        "PolymeraseChainReaction": {
+            "PCR": {}
+        },
+        "NorthernBlotAnalysis": {
+            "NBA": {}
+        },
+        "DifferentialDisplay": {
+            "DD": {}
+        },
+        "MicroarrayTechnology": {
+            "MT": {}
+        },
+        "CombinationTherapy": {
+            "TripleTherapy": {},
+            "DoubleTherapy": {},
+            "Monotherapy": {}
+        },
+        "Rheohemapheresis": {
+            "RheohemapheresisTreatment": {}
+        },
+        "CNTFImplant": {
+            "NTC-201Cells": {}
+        },
+        "CopaxoneTherapy": {
+            "Copaxone": {}
+        },
+        "SNPGenotyping": {
+            "SNPGenotypingTest": {}
+        },
+        "POT4Therapy": {
+            "POT-4": {}
+        },
+        "OT551Therapy": {
+            "OT-551": {}
+        },
+        "Electroretinography": {
+            "PatternElectroretinography": {},
+            "FullFieldElectroretinography": {}
+        },
+        "Lucentis": {
+            "Ranibizumab": {}
+        },
+        "HeidelbergRetinalTomograph": {
+            "HRTII": {}
+        },
+        "GreenTeaPolyphenols": {
+            "GreenTeaExtract": {}
+        },
+        "OculomotorTrainingProgram": {
+            "EccentricViewingAwareness": {},
+            "ReadingPractice": {}
+        },
+        "SirolimusSubconjunctivalInjection": {
+            "Sirolimus": {}
+        },
+        "Sonepcizumab": {
+            "LT1009": {}
+        },
+        "LowVisionRehabilitation": {
+            "CollaborativeLowVisionRehabilitation": {}
+        },
+        "EccentricViewingTraining": {
+            "EccentricViewingAwareness": {}
+        },
+        "Dexamethasone": {
+            "IntravitrealDexamethasone": {}
+        },
+        "IntravitreousInjectionOfExpansileGas": {
+            "ExpansileGas": {}
+        }
+    }
+}
