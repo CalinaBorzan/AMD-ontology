@@ -1,0 +1,1466 @@
+[
+  {
+    "name": "Disease",
+    "pipeline_class": "Disease",
+    "cui": "C0012634",
+    "umls_name": "Disease",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Glaucoma",
+    "pipeline_class": "Disease",
+    "cui": "C0017601",
+    "umls_name": "Glaucoma",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Cataract",
+    "pipeline_class": "Disease",
+    "cui": "C1690964",
+    "umls_name": "cataract on exam (physical finding)",
+    "semtypes": [
+      "T033"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Retinopathy",
+    "pipeline_class": "Disease",
+    "cui": "C0035309",
+    "umls_name": "Retinal Diseases",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Uveitis",
+    "pipeline_class": "Disease",
+    "cui": "C0042164",
+    "umls_name": "Uveitis",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Treatment",
+    "pipeline_class": "Treatment",
+    "cui": "C1705169",
+    "umls_name": "Biomaterial Treatment",
+    "semtypes": [
+      "T077"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Verteporfin",
+    "pipeline_class": "Treatment",
+    "cui": "C0387288",
+    "umls_name": "verteporfin",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Corticosteroid",
+    "pipeline_class": "Treatment",
+    "cui": "C0001617",
+    "umls_name": "Adrenal Cortex Hormones",
+    "semtypes": [
+      "T109",
+      "T121",
+      "T125"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Celecoxib",
+    "pipeline_class": "Treatment",
+    "cui": "C0538927",
+    "umls_name": "celecoxib",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Pazopanib",
+    "pipeline_class": "Treatment",
+    "cui": "C1831796",
+    "umls_name": "pazopanib",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Vitrectomy",
+    "pipeline_class": "Treatment",
+    "cui": "C0042903",
+    "umls_name": "Vitrectomy",
+    "semtypes": [
+      "T061"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Aspirin",
+    "pipeline_class": "Treatment",
+    "cui": "C0004057",
+    "umls_name": "aspirin",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Macuvite",
+    "pipeline_class": "Treatment",
+    "cui": "C2979419",
+    "umls_name": "Macuvite with Lutein",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Tropicamide",
+    "pipeline_class": "Treatment",
+    "cui": "C0041190",
+    "umls_name": "tropicamide",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Acetazolamide",
+    "pipeline_class": "Treatment",
+    "cui": "C0000981",
+    "umls_name": "acetazolamide",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Photocoagulation",
+    "pipeline_class": "Treatment",
+    "cui": "C0023694",
+    "umls_name": "Light Coagulation",
+    "semtypes": [
+      "T061"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Rheohemapheresis",
+    "pipeline_class": "Treatment",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "Rheopheresis",
+    "pipeline_class": "Treatment",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "Copaxone",
+    "pipeline_class": "Treatment",
+    "cui": "C0528175",
+    "umls_name": "Copaxone",
+    "semtypes": [
+      "T116",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "OT-551",
+    "pipeline_class": "Treatment",
+    "cui": "C2934726",
+    "umls_name": "OT-551",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "PDT",
+    "pipeline_class": "Treatment",
+    "cui": "C0031740",
+    "umls_name": "Photochemotherapy",
+    "semtypes": [
+      "T061"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Sirolimus",
+    "pipeline_class": "Treatment",
+    "cui": "C0072980",
+    "umls_name": "sirolimus",
+    "semtypes": [
+      "T109",
+      "T195"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "iSONEP",
+    "pipeline_class": "Treatment",
+    "cui": "C5227753",
+    "umls_name": "isonep",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Sonepcizumab",
+    "pipeline_class": "Treatment",
+    "cui": "C2699489",
+    "umls_name": "sonepcizumab",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Dexamethasone",
+    "pipeline_class": "Treatment",
+    "cui": "C0011777",
+    "umls_name": "dexamethasone",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Phenylephrine",
+    "pipeline_class": "Treatment",
+    "cui": "C0031469",
+    "umls_name": "phenylephrine",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Perfluoropropane",
+    "pipeline_class": "Treatment",
+    "cui": "C0937858",
+    "umls_name": "perflutren",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Saffron",
+    "pipeline_class": "Treatment",
+    "cui": "C0376238",
+    "umls_name": "Saffron",
+    "semtypes": [
+      "T002"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Zinc",
+    "pipeline_class": "Treatment",
+    "cui": "C3714650",
+    "umls_name": "Zinc Drug Class",
+    "semtypes": [
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Copper",
+    "pipeline_class": "Treatment",
+    "cui": "C0009968",
+    "umls_name": "copper",
+    "semtypes": [
+      "T121",
+      "T123",
+      "T196"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Biomarker",
+    "pipeline_class": "Biomarker",
+    "cui": "C0005516",
+    "umls_name": "Biological Markers",
+    "semtypes": [
+      "T201"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Drusen",
+    "pipeline_class": "Biomarker",
+    "cui": "C1260959",
+    "umls_name": "Drusen",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "CFH",
+    "pipeline_class": "Biomarker",
+    "cui": "C0122577",
+    "umls_name": "complement factor H, human",
+    "semtypes": [
+      "T116",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "C3",
+    "pipeline_class": "Biomarker",
+    "cui": "C1571455",
+    "umls_name": "C3 protein, human",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "ARMS2",
+    "pipeline_class": "Biomarker",
+    "cui": "C1824219",
+    "umls_name": "ARMS2 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "HTRA1",
+    "pipeline_class": "Biomarker",
+    "cui": "C1258300",
+    "umls_name": "HtrA1 protein, human",
+    "semtypes": [
+      "T116",
+      "T126"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Lutein",
+    "pipeline_class": "Biomarker",
+    "cui": "C0043328",
+    "umls_name": "lutein",
+    "semtypes": [
+      "T109",
+      "T121",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Zeaxanthin",
+    "pipeline_class": "Biomarker",
+    "cui": "C0078752",
+    "umls_name": "zeaxanthin",
+    "semtypes": [
+      "T109",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Treatment"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Monocytes",
+    "pipeline_class": "Biomarker",
+    "cui": "C0026473",
+    "umls_name": "Monocytes",
+    "semtypes": [
+      "T025"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Fibroblasts",
+    "pipeline_class": "Biomarker",
+    "cui": "C0016030",
+    "umls_name": "Fibroblasts",
+    "semtypes": [
+      "T025"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Lipofuscin",
+    "pipeline_class": "Biomarker",
+    "cui": "C0023789",
+    "umls_name": "Lipofuscin",
+    "semtypes": [
+      "T109",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "rs11200638",
+    "pipeline_class": "Biomarker",
+    "cui": "C4012639",
+    "umls_name": "HTRA1, -512G-A (dbSNP rs11200638)",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "rs1061170",
+    "pipeline_class": "Biomarker",
+    "cui": "C3149258",
+    "umls_name": "CFH, TYR402HIS (dbSNP rs1061170)",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Microglia",
+    "pipeline_class": "Biomarker",
+    "cui": "C0206116",
+    "umls_name": "Microglia",
+    "semtypes": [
+      "T025"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Plasma",
+    "pipeline_class": "Biomarker",
+    "cui": "C1609077",
+    "umls_name": "Plasma - SpecimenType",
+    "semtypes": [
+      "T031"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Photoreceptor",
+    "pipeline_class": "Biomarker",
+    "cui": "C0031760",
+    "umls_name": "Photoreceptors",
+    "semtypes": [
+      "T025"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "DiagnosticMethod",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "OCT",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C0029279",
+    "umls_name": "ORNITHINE CARBAMOYLTRANSFERASE",
+    "semtypes": [
+      "T116",
+      "T126"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Maculometer",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "MOS SF-36",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C4481637",
+    "umls_name": "RAND Medical Outcomes Study SF-36 Survey Instrument",
+    "semtypes": [
+      "T170"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "NEI VFQ-25",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "ETDRS",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C5942789",
+    "umls_name": "ETDRS acuity test",
+    "semtypes": [
+      "T058"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "ICG",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C0230547",
+    "umls_name": "Interchromatin granule",
+    "semtypes": [
+      "T026"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Ultrasound",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C0220934",
+    "umls_name": "Ultrasonic",
+    "semtypes": [
+      "T169"
+    ],
+    "mapped_classes": [
+      "ClinicalOutcome"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "MAIA",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C0323300",
+    "umls_name": "Hemileuca maia",
+    "semtypes": [
+      "T204"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "IReST",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C5557500",
+    "umls_name": "International Reading Speed Text Test",
+    "semtypes": [
+      "T170"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Refractometer",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C1608928",
+    "umls_name": "Refractometer",
+    "semtypes": [
+      "T074"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "ERG",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C1551083",
+    "umls_name": "Erg - unit of measure",
+    "semtypes": [
+      "T081"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Electroretinography",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C0013867",
+    "umls_name": "Electroretinography",
+    "semtypes": [
+      "T060"
+    ],
+    "mapped_classes": [
+      "DiagnosticMethod"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "PAECT",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C1083883",
+    "umls_name": "Paectes",
+    "semtypes": [
+      "T204"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Angiography",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C0002978",
+    "umls_name": "angiogram",
+    "semtypes": [
+      "T060"
+    ],
+    "mapped_classes": [
+      "DiagnosticMethod"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Pyrosequencing",
+    "pipeline_class": "DiagnosticMethod",
+    "cui": "C2732543",
+    "umls_name": "Pyrosequencing",
+    "semtypes": [
+      "T059"
+    ],
+    "mapped_classes": [
+      "DiagnosticMethod"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "RiskFactor",
+    "pipeline_class": "RiskFactor",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "Age",
+    "pipeline_class": "RiskFactor",
+    "cui": "C1114365",
+    "umls_name": "Age:Time:Pt:^Patient:Qn",
+    "semtypes": [
+      "T201"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Smoking",
+    "pipeline_class": "RiskFactor",
+    "cui": "C0037369",
+    "umls_name": "Smoking",
+    "semtypes": [
+      "T055"
+    ],
+    "mapped_classes": [
+      "RiskFactor"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Sunlight",
+    "pipeline_class": "RiskFactor",
+    "cui": "C0038817",
+    "umls_name": "Sunlight",
+    "semtypes": [
+      "T070"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Occupation",
+    "pipeline_class": "RiskFactor",
+    "cui": "C0028811",
+    "umls_name": "Occupations",
+    "semtypes": [
+      "T090"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Oxygen",
+    "pipeline_class": "RiskFactor",
+    "cui": "C0030054",
+    "umls_name": "oxygen",
+    "semtypes": [
+      "T121",
+      "T123",
+      "T196"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Hypoxia",
+    "pipeline_class": "RiskFactor",
+    "cui": "C1963140",
+    "umls_name": "Hypoxia, CTCAE",
+    "semtypes": [
+      "T033"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Diet",
+    "pipeline_class": "RiskFactor",
+    "cui": "C3668949",
+    "umls_name": "Diet (animal life circumstance)",
+    "semtypes": [
+      "T168"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "ClinicalOutcome",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "Blindness",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C0456909",
+    "umls_name": "Blindness",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Endophthalmitis",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C0014236",
+    "umls_name": "Endophthalmitis",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Hypotony",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C4760932",
+    "umls_name": "Hypotony maculopathy",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Hemorrhage",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C0019080",
+    "umls_name": "Hemorrhage",
+    "semtypes": [
+      "T046"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Edema",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C1717255",
+    "umls_name": "Edema:Find:Pt:^Patient:Ord",
+    "semtypes": [
+      "T201"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "Scarring",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C2004491",
+    "umls_name": "Cicatrix",
+    "semtypes": [
+      "T046"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Depression",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C0011570",
+    "umls_name": "Mental Depression",
+    "semtypes": [
+      "T048"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Dependence",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C0439857",
+    "umls_name": "Dependence",
+    "semtypes": [
+      "T048"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "PED",
+    "pipeline_class": "ClinicalOutcome",
+    "cui": "C1417925",
+    "umls_name": "OCA2 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "MolecularTarget",
+    "pipeline_class": "MolecularTarget",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "VEGF",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0078058",
+    "umls_name": "endothelial growth factor A, vascular",
+    "semtypes": [
+      "T116",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Inflammation",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0021368",
+    "umls_name": "Inflammation",
+    "semtypes": [
+      "T046"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "VEGF-A",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0078058",
+    "umls_name": "endothelial growth factor A, vascular",
+    "semtypes": [
+      "T116",
+      "T121"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "VEGF-B",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0388176",
+    "umls_name": "Vascular Endothelial Growth Factor B",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "VEGF-C",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0388911",
+    "umls_name": "Vascular Endothelial Growth Factor C",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "CNTF",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0207071",
+    "umls_name": "Ciliary Neurotrophic Factor",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Ab",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0580927",
+    "umls_name": "AB hearing assessment list",
+    "semtypes": [
+      "T170"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "S1P",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C1423502",
+    "umls_name": "MBTPS1 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "PDGF",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0032200",
+    "umls_name": "Platelet-Derived Growth Factor",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "bFGF",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C0380603",
+    "umls_name": "Fibroblast Growth Factor 2",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "VEGFR",
+    "pipeline_class": "MolecularTarget",
+    "cui": "C1705712",
+    "umls_name": "KDR wt Allele",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "AMD",
+    "pipeline_class": "AMD",
+    "cui": "C0017921",
+    "umls_name": "Glycogen storage disease type II",
+    "semtypes": [
+      "T047"
+    ],
+    "mapped_classes": [
+      "Disease"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "DryAMD",
+    "pipeline_class": "DryAMD",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "WetAMD",
+    "pipeline_class": "WetAMD",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "GeographicAtrophy",
+    "pipeline_class": "GeographicAtrophy",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "ChoroidalNeovascularization",
+    "pipeline_class": "ChoroidalNeovascularization",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "AntiVEGFTherapy",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": null,
+    "umls_name": null,
+    "semtypes": [],
+    "mapped_classes": [],
+    "verdict": "NOT_FOUND"
+  },
+  {
+    "name": "Ranibizumab",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C1566537",
+    "umls_name": "ranibizumab",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Aflibercept",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C1134659",
+    "umls_name": "aflibercept",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Bevacizumab",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C0796392",
+    "umls_name": "bevacizumab",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Lucentis",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C1721374",
+    "umls_name": "Lucentis",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Eylea",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C3248025",
+    "umls_name": "Eylea",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Conbercept",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C5201155",
+    "umls_name": "Conbercept",
+    "semtypes": [
+      "T116",
+      "T123"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MISMATCH"
+  },
+  {
+    "name": "Avastin",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cui": "C1135130",
+    "umls_name": "Avastin",
+    "semtypes": [
+      "T116",
+      "T121",
+      "T129"
+    ],
+    "mapped_classes": [
+      "Biomarker",
+      "Treatment"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "Gene",
+    "pipeline_class": "Gene",
+    "cui": "C0017337",
+    "umls_name": "Genes",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "ApoE",
+    "pipeline_class": "Gene",
+    "cui": "C1412481",
+    "umls_name": "APOE gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "CX3CR1",
+    "pipeline_class": "Gene",
+    "cui": "C1439296",
+    "umls_name": "CX3CR1 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "C2",
+    "pipeline_class": "Gene",
+    "cui": "C1412938",
+    "umls_name": "C2 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "BF",
+    "pipeline_class": "Gene",
+    "cui": "C1824728",
+    "umls_name": "CFB gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "LOC",
+    "pipeline_class": "Gene",
+    "cui": "C0021783",
+    "umls_name": "Internal-External Control",
+    "semtypes": [
+      "T078"
+    ],
+    "mapped_classes": [],
+    "verdict": "UMLS_UNMAPPED"
+  },
+  {
+    "name": "TAS2R38",
+    "pipeline_class": "Gene",
+    "cui": "C1419055",
+    "umls_name": "TAS2R38 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "LOC387715",
+    "pipeline_class": "Gene",
+    "cui": "C1824219",
+    "umls_name": "ARMS2 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "CFB",
+    "pipeline_class": "Gene",
+    "cui": "C1824728",
+    "umls_name": "CFB gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  },
+  {
+    "name": "PLEKHA1",
+    "pipeline_class": "Gene",
+    "cui": "C1422573",
+    "umls_name": "PLEKHA1 gene",
+    "semtypes": [
+      "T028"
+    ],
+    "mapped_classes": [
+      "Biomarker"
+    ],
+    "verdict": "MATCH"
+  }
+]

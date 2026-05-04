@@ -1,0 +1,40 @@
+```json
+{
+  "classes": {
+    "Disease": { "description": "Top-level disease category", "subclasses": ["AMD"] },
+    "AMD": { "description": "Age-related macular degeneration", "subclasses": ["WetAMD", "DryAMD", "GeographicAtrophy"] },
+    "WetAMD": { "description": "Neovascular AMD with abnormal blood vessel growth", "subclasses": [] },
+    "DryAMD": { "description": "Atrophic AMD with drusen and RPE degeneration", "subclasses": [] },
+    "GeographicAtrophy": { "description": "Advanced dry AMD with retinal cell death", "subclasses": [] },
+    "PathologicalFeature": { "description": "Characteristics of AMD", "subclasses": ["Drusen", "ChoroidalNeovascularization", "RetinalPigmentEpitheliumDysfunction"] },
+    "Drusen": { "description": "Yellow deposits under retina", "subclasses": [] },
+    "ChoroidalNeovascularization": { "description": "Abnormal vessel growth beneath retina", "subclasses": [] },
+    "RetinalPigmentEpitheliumDysfunction": { "description": "RPE cell dysfunction", "subclasses": [] },
+    "Treatment": { "description": "AMD therapeutic interventions", "subclasses": ["AntiVEGFTherapy", "PhotodynamicTherapy", "AREDSupplement", "LaserTherapy"] },
+    "AntiVEGFTherapy": { "description": "Anti-VEGF intravitreal agents", "subclasses": [] },
+    "PhotodynamicTherapy": { "description": "Therapy using light and Verteporfin", "subclasses": [] },
+    "AREDSupplement": { "description": "Dietary supplements for AMD", "subclasses": [] },
+    "LaserTherapy": { "description": "Laser-based treatments for AMD", "subclasses": [] },
+    "GeneticMarker": { "description": "AMD risk genes and variants", "subclasses": [] },
+    "Biomarker": { "description": "Indicators of AMD progression", "subclasses": [] },
+    "DiagnosticMethod": { "description": "Methods for diagnosing AMD", "subclasses": [] },
+    "Outcome": { "description": "Results of AMD progression or treatment", "subclasses": ["VisionLoss"] },
+    "VisionLoss": { "description": "Decrease in visual acuity", "subclasses": [] }
+  },
+  "properties": {
+    "treats": { "domain": "Treatment", "range": "AMD", "description": "Therapeutic intervention for AMD" },
+    "associatedWith": { "domain": "GeneticMarker", "range": "AMD", "description": "Gene variant increases AMD risk" },
+    "diagnosedBy": { "domain": "AMD", "range": "DiagnosticMethod", "description": "AMD diagnosed by imaging or testing method" },
+    "hasFeature": { "domain": "AMD", "range": "PathologicalFeature", "description": "AMD characterized by pathological feature" },
+    "leadsTo": { "domain": "AMD", "range": "Outcome", "description": "AMD progression results in outcome" }
+  },
+  "individuals": {
+    "AntiVEGFTherapy": ["Ranibizumab", "Aflibercept", "Bevacizumab"],
+    "GeneticMarker": ["CFH", "C3", "C2", "CFB", "ARMS2", "HTRA1"],
+    "Biomarker": ["VEGF"],
+    "DiagnosticMethod": ["OCT", "FundusPhotography", "FluoresceinAngiography", "VisualAcuityTests"],
+    "Treatment": ["Verteporfin", "AREDS2 supplements"],
+    "PathologicalFeature": ["Drusen", "ChoroidalNeovascularization", "RetinalPigmentEpitheliumDysfunction"]
+  }
+}
+```

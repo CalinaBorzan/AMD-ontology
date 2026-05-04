@@ -1,0 +1,128 @@
+{
+    "classes": [
+        {
+            "name": "Disease",
+            "description": "A broad category of medical conditions"
+        },
+        {
+            "name": "AMD",
+            "description": "Age-related Macular Degeneration",
+            "subtypes": [
+                {
+                    "name": "WetAMD",
+                    "description": "Wet form of Age-related Macular Degeneration with choroidal neovascularization",
+                    "synonyms": [
+                        "ExudativeAMD"
+                    ]
+                },
+                {
+                    "name": "DryAMD",
+                    "description": "Dry form of Age-related Macular Degeneration"
+                },
+                {
+                    "name": "GeographicAtrophy",
+                    "description": "A subtype of DryAMD"
+                }
+            ]
+        },
+        {
+            "name": "Treatment",
+            "description": "A method or approach to managing a disease"
+        },
+        {
+            "name": "AntiVEGFTherapy",
+            "description": "A treatment approach targeting vascular endothelial growth factor",
+            "subtypes": []
+        },
+        {
+            "name": "AntiTNFalphaTherapy",
+            "description": "A treatment approach targeting tumor necrosis factor-alpha"
+        },
+        {
+            "name": "GeneticMarker",
+            "description": "A genetic variation associated with disease risk"
+        },
+        {
+            "name": "DiagnosticMethod",
+            "description": "A method used to diagnose a disease"
+        }
+    ],
+    "individuals": [
+        {
+            "name": "Avastin",
+            "description": "A drug used for anti-VEGF therapy",
+            "class": "AntiVEGFTherapy"
+        },
+        {
+            "name": "Lucentis",
+            "description": "A drug used for anti-VEGF therapy",
+            "class": "AntiVEGFTherapy"
+        },
+        {
+            "name": "CFH",
+            "description": "A genetic marker associated with AMD risk",
+            "class": "GeneticMarker"
+        },
+        {
+            "name": "OCT",
+            "description": "Optical Coherence Tomography, a diagnostic method",
+            "class": "DiagnosticMethod"
+        },
+        {
+            "name": "Infliximab",
+            "description": "A drug used for anti-TNF\u03b1 therapy",
+            "class": "AntiTNFalphaTherapy"
+        },
+        {
+            "name": "Remicade",
+            "description": "Brand name for Infliximab",
+            "class": "AntiTNFalphaTherapy"
+        },
+        {
+            "name": "TNFalpha",
+            "description": "Tumor necrosis factor-alpha involved in inflammatory processes"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "is_a",
+            "domain": "WetAMD",
+            "range": "AMD"
+        },
+        {
+            "type": "is_a",
+            "domain": "DryAMD",
+            "range": "AMD"
+        },
+        {
+            "type": "is_a",
+            "domain": "GeographicAtrophy",
+            "range": "DryAMD"
+        },
+        {
+            "type": "treats",
+            "domain": "AntiVEGFTherapy",
+            "range": "WetAMD"
+        },
+        {
+            "type": "treats",
+            "domain": "AntiTNFalphaTherapy",
+            "range": "WetAMD"
+        },
+        {
+            "type": "associated_with",
+            "domain": "CFH",
+            "range": "AMD"
+        },
+        {
+            "type": "diagnoses",
+            "domain": "OCT",
+            "range": "retinal changes"
+        },
+        {
+            "type": "involved_in",
+            "domain": "TNFalpha",
+            "range": "AMD"
+        }
+    ]
+}

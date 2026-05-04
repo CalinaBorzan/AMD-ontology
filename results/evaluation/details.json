@@ -1,0 +1,956 @@
+{
+  "per_class": {
+    "Disease": {
+      "tp": 4,
+      "fp": 4,
+      "fn": 9
+    },
+    "ClinicalOutcome": {
+      "tp": 3,
+      "fp": 5,
+      "fn": 10
+    },
+    "Biomarker": {
+      "tp": 7,
+      "fp": 13,
+      "fn": 13
+    },
+    "Treatment": {
+      "tp": 14,
+      "fp": 8,
+      "fn": 16
+    },
+    "DiagnosticMethod": {
+      "tp": 0,
+      "fp": 8,
+      "fn": 1
+    },
+    "MolecularTarget": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 0
+    },
+    "RiskFactor": {
+      "tp": 0,
+      "fp": 5,
+      "fn": 2
+    }
+  },
+  "per_pred": {
+    "hasSymptom": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 4
+    },
+    "causesOrIncreases": {
+      "tp": 0,
+      "fp": 8,
+      "fn": 14
+    },
+    "inhibits": {
+      "tp": 0,
+      "fp": 5,
+      "fn": 2
+    },
+    "treats": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 24
+    },
+    "associatedWith": {
+      "tp": 0,
+      "fp": 8,
+      "fn": 0
+    },
+    "indicates": {
+      "tp": 0,
+      "fp": 3,
+      "fn": 0
+    }
+  },
+  "fn_entities": [
+    [
+      "vision loss",
+      "ClinicalOutcome",
+      0
+    ],
+    [
+      "choroidal neovascular membrane formation (CNVM)",
+      "Biomarker",
+      0
+    ],
+    [
+      "laser photocoagulation",
+      "Treatment",
+      0
+    ],
+    [
+      "fundus autofluorescence changes",
+      "DiagnosticMethod",
+      1
+    ],
+    [
+      "Lutein [wrong class: got Biomarker]",
+      "Treatment",
+      3
+    ],
+    [
+      "vitamin C",
+      "Treatment",
+      3
+    ],
+    [
+      "vitamin E",
+      "Treatment",
+      3
+    ],
+    [
+      "beta-carotene",
+      "Treatment",
+      3
+    ],
+    [
+      "photodynamic therapy to transpupillary thermotherapy",
+      "Treatment",
+      4
+    ],
+    [
+      "choroidal neovascularization",
+      "ClinicalOutcome",
+      4
+    ],
+    [
+      "Photodynamic therapy ( PDT)",
+      "Treatment",
+      4
+    ],
+    [
+      "Transpupillary thermotherapy ( TTT)",
+      "Treatment",
+      4
+    ],
+    [
+      "polymorphisms (small gene variances)",
+      "Biomarker",
+      5
+    ],
+    [
+      "visual impairment",
+      "ClinicalOutcome",
+      6
+    ],
+    [
+      "recurrent subfoveal CNV",
+      "Disease",
+      8
+    ],
+    [
+      "CNV",
+      "Disease",
+      8
+    ],
+    [
+      "submacular surgery",
+      "Treatment",
+      8
+    ],
+    [
+      "breakdown of the macular pigment (MP)",
+      "Biomarker",
+      10
+    ],
+    [
+      "fluocinolone implant",
+      "Treatment",
+      12
+    ],
+    [
+      "CNVM",
+      "Disease",
+      12
+    ],
+    [
+      "choroidal neovascular membrane (CNVM)",
+      "Biomarker",
+      13
+    ],
+    [
+      "alterations in choroidal blood flow",
+      "Biomarker",
+      14
+    ],
+    [
+      "ocular rigidity",
+      "Biomarker",
+      14
+    ],
+    [
+      "celecoxib",
+      "Treatment",
+      16
+    ],
+    [
+      "pigmentary abnormalities in the macula",
+      "Biomarker",
+      17
+    ],
+    [
+      "serous",
+      "Biomarker",
+      17
+    ],
+    [
+      "choroidal neovascularization",
+      "Biomarker",
+      17
+    ],
+    [
+      "severe visual impairment",
+      "ClinicalOutcome",
+      17
+    ],
+    [
+      "destroys the macula",
+      "ClinicalOutcome",
+      21
+    ],
+    [
+      "geographic atrophy GA",
+      "Disease",
+      22
+    ],
+    [
+      "impairment of central visual acuity",
+      "ClinicalOutcome",
+      22
+    ],
+    [
+      "geographic atrophy",
+      "ClinicalOutcome",
+      23
+    ],
+    [
+      "neovascularization",
+      "ClinicalOutcome",
+      23
+    ],
+    [
+      "choroidal neovascularization (CNV)",
+      "Disease",
+      23
+    ],
+    [
+      "stabilization of vision",
+      "ClinicalOutcome",
+      23
+    ],
+    [
+      "improvement in vision",
+      "ClinicalOutcome",
+      23
+    ],
+    [
+      "anti-VEGF antibody treatment [wrong class: got MolecularTarget]",
+      "Treatment",
+      24
+    ],
+    [
+      "anti-VEGF drug [wrong class: got MolecularTarget]",
+      "Treatment",
+      24
+    ],
+    [
+      "deterioration of the central retinal function",
+      "Biomarker",
+      25
+    ],
+    [
+      "wet form of ARMD",
+      "Disease",
+      25
+    ],
+    [
+      "wet ARMD",
+      "Disease",
+      25
+    ],
+    [
+      "people 60 years or older",
+      "RiskFactor",
+      26
+    ],
+    [
+      "advanced ARMD",
+      "Disease",
+      27
+    ],
+    [
+      "irreversible loss of vision",
+      "RiskFactor",
+      27
+    ],
+    [
+      "inflammatory cells",
+      "Biomarker",
+      27
+    ],
+    [
+      "inflammatory factors (complement H)",
+      "Biomarker",
+      27
+    ],
+    [
+      "anti-TNF-alpha",
+      "Treatment",
+      27
+    ],
+    [
+      "Low Fluence Photodynamic Therapy(rPDT)",
+      "Treatment",
+      30
+    ],
+    [
+      "Triamcinolone Acetonide (Kenalog)(Triple Therapy)",
+      "Treatment",
+      30
+    ],
+    [
+      "Dry Age Related Macular Degeneration [wrong class: got RiskFactor]",
+      "Disease",
+      31
+    ],
+    [
+      "amyloid deposits",
+      "Biomarker",
+      31
+    ]
+  ],
+  "fp_entities": [
+    [
+      "Glaucoma",
+      "Disease",
+      -1
+    ],
+    [
+      "Cataract",
+      "Disease",
+      -1
+    ],
+    [
+      "Retinopathy",
+      "Disease",
+      -1
+    ],
+    [
+      "Uveitis",
+      "Disease",
+      -1
+    ],
+    [
+      "Verteporfin",
+      "Treatment",
+      -1
+    ],
+    [
+      "Macuvite",
+      "Treatment",
+      -1
+    ],
+    [
+      "Tropicamide",
+      "Treatment",
+      -1
+    ],
+    [
+      "Copaxone",
+      "Treatment",
+      -1
+    ],
+    [
+      "iSONEP",
+      "Treatment",
+      -1
+    ],
+    [
+      "Sonepcizumab",
+      "Treatment",
+      -1
+    ],
+    [
+      "Remicade",
+      "Treatment",
+      -1
+    ],
+    [
+      "Drusen",
+      "Biomarker",
+      -1
+    ],
+    [
+      "C2",
+      "Biomarker",
+      -1
+    ],
+    [
+      "Photoreceptors",
+      "Biomarker",
+      -1
+    ],
+    [
+      "Zeaxanthin",
+      "Biomarker",
+      -1
+    ],
+    [
+      "Monocytes",
+      "Biomarker",
+      -1
+    ],
+    [
+      "Lipofuscin",
+      "Biomarker",
+      -1
+    ],
+    [
+      "Microglia",
+      "Biomarker",
+      -1
+    ],
+    [
+      "PRLs",
+      "Biomarker",
+      -1
+    ],
+    [
+      "rs11200638",
+      "Biomarker",
+      -1
+    ],
+    [
+      "rs1061170",
+      "Biomarker",
+      -1
+    ],
+    [
+      "OCT",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "Maculometer",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "MOS SF-36",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "NEI VFQ-25",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "ICG",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "ETDRS",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "NEI-CFQ-25",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "Ultrasound",
+      "DiagnosticMethod",
+      -1
+    ],
+    [
+      "Smoking",
+      "RiskFactor",
+      -1
+    ],
+    [
+      "Sunlight",
+      "RiskFactor",
+      -1
+    ],
+    [
+      "Occupation",
+      "RiskFactor",
+      -1
+    ],
+    [
+      "Age",
+      "RiskFactor",
+      -1
+    ],
+    [
+      "Edema",
+      "ClinicalOutcome",
+      -1
+    ],
+    [
+      "Hemorrhage",
+      "ClinicalOutcome",
+      -1
+    ],
+    [
+      "Scarring",
+      "ClinicalOutcome",
+      -1
+    ],
+    [
+      "PED",
+      "ClinicalOutcome",
+      -1
+    ],
+    [
+      "Endophthalmitis",
+      "ClinicalOutcome",
+      -1
+    ],
+    [
+      "VEGF",
+      "Biomarker",
+      -1
+    ],
+    [
+      "S1P",
+      "Biomarker",
+      -1
+    ],
+    [
+      "Ranibizumab",
+      "Treatment",
+      -1
+    ]
+  ],
+  "fn_triples": [
+    [
+      "choroidal neovascular membrane formation (CNVM)",
+      "causesOrIncreases",
+      "vision loss",
+      0
+    ],
+    [
+      "corticosteroid injection around the eye",
+      "inhibits",
+      "severe vision loss",
+      0
+    ],
+    [
+      "age-related macular degeneration",
+      "hasSymptom",
+      "severe vision loss",
+      0
+    ],
+    [
+      "hereditary",
+      "causesOrIncreases",
+      "Age-related macular degeneration (AMD)",
+      2
+    ],
+    [
+      "environmental",
+      "causesOrIncreases",
+      "Age-related macular degeneration (AMD)",
+      2
+    ],
+    [
+      "Lutein",
+      "treats",
+      "age-related macular degeneration",
+      3
+    ],
+    [
+      "vitamin C",
+      "treats",
+      "age-related macular degeneration",
+      3
+    ],
+    [
+      "vitamin E",
+      "treats",
+      "age-related macular degeneration",
+      3
+    ],
+    [
+      "beta-carotene",
+      "treats",
+      "age-related macular degeneration",
+      3
+    ],
+    [
+      "photodynamic therapy to transpupillary thermotherapy",
+      "treats",
+      "choroidal neovascularization",
+      4
+    ],
+    [
+      "Photodynamic therapy ( PDT)",
+      "treats",
+      "neovascular membranes",
+      4
+    ],
+    [
+      "Transpupillary thermotherapy ( TTT)",
+      "treats",
+      "choroidal neovascularization",
+      4
+    ],
+    [
+      "significant genetic component",
+      "causesOrIncreases",
+      "AMD",
+      5
+    ],
+    [
+      "Age-related macular degeneration (AMD)",
+      "hasSymptom",
+      "visual impairment",
+      6
+    ],
+    [
+      "potential environmental influences",
+      "causesOrIncreases",
+      "AMD",
+      6
+    ],
+    [
+      "AMD",
+      "causesOrIncreases",
+      "Amish individuals",
+      6
+    ],
+    [
+      "laser treatment",
+      "treats",
+      "recurrent subfoveal CNV",
+      8
+    ],
+    [
+      "photodynamic therapy with verteporfin",
+      "treats",
+      "moderate and server loss of vision",
+      8
+    ],
+    [
+      "submacular surgery",
+      "treats",
+      "CNV",
+      8
+    ],
+    [
+      "photodynamic therapy",
+      "treats",
+      "age-related macular degeneration (AMD)",
+      9
+    ],
+    [
+      "Age-related macular degeneration (AMD)",
+      "causesOrIncreases",
+      "breakdown of the macular pigment (MP)",
+      10
+    ],
+    [
+      "fluocinolone implant",
+      "treats",
+      "age-related macular degeneration",
+      12
+    ],
+    [
+      "intraocular corticosteroids",
+      "inhibits",
+      "CNVM",
+      12
+    ],
+    [
+      "choroidal neovascular membrane (CNVM)",
+      "causesOrIncreases",
+      "vision loss",
+      13
+    ],
+    [
+      "laser photocoagulation",
+      "treats",
+      "well-formed CNVM",
+      13
+    ],
+    [
+      "dry AMD",
+      "hasSymptom",
+      "minimal visual impairment",
+      17
+    ],
+    [
+      "exudative AMD",
+      "hasSymptom",
+      "severe loss of vision",
+      17
+    ],
+    [
+      "rs11200638 on HTRA1",
+      "causesOrIncreases",
+      "AMD",
+      18
+    ],
+    [
+      "rs1061170 on CFH",
+      "causesOrIncreases",
+      "AMD",
+      18
+    ],
+    [
+      "Age-related macular degeneration (AMD)",
+      "causesOrIncreases",
+      "destroys the macula",
+      21
+    ],
+    [
+      "neovascular AMD",
+      "causesOrIncreases",
+      "90% of blindness",
+      23
+    ],
+    [
+      "continued intravitreal therapy with Lucentis (ranibizumab)",
+      "treats",
+      "subfoveal CNV",
+      23
+    ],
+    [
+      "anti-VEGF antibody treatment",
+      "treats",
+      "Neovascular Age-related Macular Degeneration (nAMD)",
+      24
+    ],
+    [
+      "Age-related macular degeneration (ARMD)",
+      "causesOrIncreases",
+      "deterioration of the central retinal function",
+      25
+    ],
+    [
+      "Lucentis",
+      "treats",
+      "wet ARMD",
+      25
+    ],
+    [
+      "Avastin",
+      "treats",
+      "wet ARMD",
+      25
+    ],
+    [
+      "advanced ARMD",
+      "causesOrIncreases",
+      "irreversible loss of vision",
+      27
+    ],
+    [
+      "anti-TNF-alpha",
+      "treats",
+      "ARMD",
+      27
+    ],
+    [
+      "Adjunctive Avastin",
+      "treats",
+      "Age-Related Macular Degeneration",
+      30
+    ],
+    [
+      "Triamcinolone Acetonide (Kenalog)(Triple Therapy)",
+      "treats",
+      "Age-Related Macular Degeneration",
+      30
+    ],
+    [
+      "rPDT With Adjunctive Avastin (Double Therapy)",
+      "treats",
+      "Age-Related Macular Degeneration",
+      30
+    ],
+    [
+      "Monotherapy With Avastin",
+      "treats",
+      "Age-Related Macular Degeneration",
+      30
+    ],
+    [
+      "Subcutaneous Copaxone",
+      "treats",
+      "Dry Age Related Macular Degeneration",
+      31
+    ],
+    [
+      "immunomodulatory substance named copaxone",
+      "treats",
+      "Dry Age Related Macular Degeneration",
+      31
+    ]
+  ],
+  "fp_triples": [
+    [
+      "Smoking",
+      "causesOrIncreases",
+      "ARMD",
+      -1
+    ],
+    [
+      "rs11200638",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "Bevacizumab",
+      "inhibits",
+      "VEGF",
+      -1
+    ],
+    [
+      "Avastin",
+      "causesOrIncreases",
+      "Endophthalmitis",
+      -1
+    ],
+    [
+      "Occupation",
+      "causesOrIncreases",
+      "ARMD",
+      -1
+    ],
+    [
+      "Macuvite",
+      "treats",
+      "ARMD",
+      -1
+    ],
+    [
+      "iSONEP",
+      "inhibits",
+      "S1P",
+      -1
+    ],
+    [
+      "Lutein",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "Lutein",
+      "indicates",
+      "ARMD",
+      -1
+    ],
+    [
+      "CFH",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "Zeaxanthin",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "HTRA1",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "rs1061170",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "Age",
+      "causesOrIncreases",
+      "ARMD",
+      -1
+    ],
+    [
+      "Age",
+      "causesOrIncreases",
+      "Retinopathy",
+      -1
+    ],
+    [
+      "Lipofuscin",
+      "indicates",
+      "ARMD",
+      -1
+    ],
+    [
+      "C2",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "Zeaxanthin",
+      "indicates",
+      "ARMD",
+      -1
+    ],
+    [
+      "Avastin",
+      "inhibits",
+      "VEGF",
+      -1
+    ],
+    [
+      "Ranibizumab",
+      "inhibits",
+      "VEGF",
+      -1
+    ],
+    [
+      "Photoreceptors",
+      "associatedWith",
+      "ARMD",
+      -1
+    ],
+    [
+      "Age",
+      "causesOrIncreases",
+      "Cataract",
+      -1
+    ],
+    [
+      "Sunlight",
+      "causesOrIncreases",
+      "ARMD",
+      -1
+    ],
+    [
+      "Lucentis",
+      "inhibits",
+      "VEGF",
+      -1
+    ],
+    [
+      "Age",
+      "causesOrIncreases",
+      "Glaucoma",
+      -1
+    ]
+  ],
+  "n_refs": 32,
+  "skipped_phrases": 23,
+  "skipped_triples_phrase": 17
+}

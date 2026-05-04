@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:amd="http://example.org/amd#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/amd#Age">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Age</rdfs:label>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#AMD"/>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#Retinopathy"/>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#DryAMD"/>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Aflibercept">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Aflibercept</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Bevacizumab">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Bevacizumab</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Sirolimus">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Sirolimus</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#Inflammation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Inflammation">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Inflammation</rdfs:label>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#AMD"/>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+    <amd:associatedWith rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Sunlight">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Sunlight</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Perfluoropropane">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Perfluoropropane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#CFB">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>CFB</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#NEI_VFQ-25">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>NEI VFQ-25</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#LOC387715">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>LOC387715</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Treatment">
+    <owl:disjointWith rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <owl:disjointWith rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Treatment</rdfs:label>
+    <rdfs:comment>A medical intervention used to manage or cure a disease</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#diagnosedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>diagnosedBy</rdfs:label>
+    <rdfs:comment>A disease diagnosed via a method</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Disease"/>
+    <rdfs:range rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#inhibits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>inhibits</rdfs:label>
+    <rdfs:comment>A treatment that inhibits a molecular target</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Treatment"/>
+    <rdfs:range rdf:resource="http://example.org/amd#MolecularTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Pazopanib">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Pazopanib</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#AntiVEGFTherapy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#Treatment"/>
+    <rdfs:label>AntiVEGFTherapy</rdfs:label>
+    <rdfs:comment>Therapy that targets VEGF</rdfs:comment>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Monocytes">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Monocytes</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#RiskFactor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RiskFactor</rdfs:label>
+    <rdfs:comment>A factor that increases the likelihood of developing a disease</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Vitrectomy">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Vitrectomy</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#AMD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#Disease"/>
+    <rdfs:label>AMD</rdfs:label>
+    <rdfs:comment>Age-Related Macular Degeneration</rdfs:comment>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#ETDRS"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#Refractometer"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#ERG"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#Electroretinography"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#OCT"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#PAECT"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Blindness"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Depression"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Dependence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#LOC">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>LOC</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Avastin">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Avastin</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#BF">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>BF</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Zinc">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Zinc</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#PAECT">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>PAECT</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Ranibizumab">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Ranibizumab</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:treats rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+    <amd:treats rdf:resource="http://example.org/amd#AMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF-A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#OT-551">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>OT-551</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Conbercept">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Conbercept</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF-A"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF-B"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF-C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#S1P">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>S1P</rdfs:label>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#WetAMD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#AMD"/>
+    <rdfs:label>WetAMD</rdfs:label>
+    <rdfs:comment>Wet Age-Related Macular Degeneration</rdfs:comment>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#OCT"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Blindness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Dependence">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Dependence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Corticosteroid">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Corticosteroid</rdfs:label>
+    <amd:inhibits rdf:resource="http://example.org/amd#Inflammation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#rs1061170">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>rs1061170</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Lutein">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Lutein</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+    <amd:measuredBy rdf:resource="http://example.org/amd#Maculometer"/>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Eylea">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Eylea</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Biomarker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Biomarker</rdfs:label>
+    <rdfs:comment>A measurable indicator of a biological state or condition</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#CX3CR1">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>CX3CR1</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ChoroidalNeovascularization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#WetAMD"/>
+    <rdfs:label>ChoroidalNeovascularization</rdfs:label>
+    <rdfs:comment>Abnormal vessel growth</rdfs:comment>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#OCT"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Edema"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Scarring"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Blindness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#PED">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>PED</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#VEGF">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>VEGF</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#associatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>associatedWith</rdfs:label>
+    <rdfs:comment>A biomarker (typically a gene) associated with a disease</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdfs:range rdf:resource="http://example.org/amd#Disease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Aspirin">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Aspirin</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Hypoxia">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Hypoxia</rdfs:label>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#GeographicAtrophy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#DryAMD"/>
+    <rdfs:label>GeographicAtrophy</rdfs:label>
+    <rdfs:comment>Retinal cell death areas</rdfs:comment>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#OCT"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Blindness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Macuvite">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Macuvite</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#AMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Diet">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Diet</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Smoking">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Smoking</rdfs:label>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#WetAMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#VEGF-C">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>VEGF-C</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#MOS_SF-36">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>MOS SF-36</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Oxygen">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Oxygen</rdfs:label>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#DiagnosticMethod">
+    <owl:disjointWith rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>DiagnosticMethod</rdfs:label>
+    <rdfs:comment>A procedure or test used to diagnose a disease</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#PDGF">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>PDGF</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Photocoagulation">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Photocoagulation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Angiography">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Angiography</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#DryAMD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#AMD"/>
+    <rdfs:label>DryAMD</rdfs:label>
+    <rdfs:comment>Dry Age-Related Macular Degeneration</rdfs:comment>
+    <amd:causesOrIncreases rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#OCT"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#ETDRS"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Blindness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#CNTF">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>CNTF</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Photoreceptor">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Photoreceptor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Tropicamide">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Tropicamide</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Acetazolamide">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Acetazolamide</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#Glaucoma"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ICG">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ICG</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#indicates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>indicates</rdfs:label>
+    <rdfs:comment>A biomarker that indicates a disease</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdfs:range rdf:resource="http://example.org/amd#Disease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#MAIA">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>MAIA</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ARMS2">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ARMS2</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ERG">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ERG</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#measuredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>measuredBy</rdfs:label>
+    <rdfs:comment>A biomarker measured by a method</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdfs:range rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Retinopathy">
+    <rdf:type rdf:resource="http://example.org/amd#Disease"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Retinopathy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#CFH">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>CFH</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#PLEKHA1">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>PLEKHA1</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#OCT">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>OCT</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#hasSymptom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasSymptom</rdfs:label>
+    <rdfs:comment>A disease has a clinical symptom</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Disease"/>
+    <rdfs:range rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Endophthalmitis">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Endophthalmitis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#iSONEP">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>iSONEP</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#S1P"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Disease">
+    <owl:disjointWith rdf:resource="http://example.org/amd#Treatment"/>
+    <owl:disjointWith rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <owl:disjointWith rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Disease</rdfs:label>
+    <rdfs:comment>A medical condition affecting the human body</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Scarring">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Scarring</rdfs:label>
+    <amd:assessedBy rdf:resource="http://example.org/amd#ICG"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Cataract">
+    <rdf:type rdf:resource="http://example.org/amd#Disease"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Cataract</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Lipofuscin">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Lipofuscin</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+    <amd:indicates rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Rheopheresis">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Rheopheresis</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#DryAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#Inflammation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#C3">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>C3</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ETDRS">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ETDRS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Pyrosequencing">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Pyrosequencing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#AMD_Ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Age-Related Macular Degeneration Ontology</rdfs:label>
+    <rdfs:comment>AMD ontology auto-generated from research abstracts using SCHEMA-MINERpro and Agentic AI</rdfs:comment>
+    <owl:versionInfo>1.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Ultrasound">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Ultrasound</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#rs11200638">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>rs11200638</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#assessedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>assessedBy</rdfs:label>
+    <rdfs:comment>A clinical outcome assessed by a method</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdfs:range rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Hemorrhage">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Hemorrhage</rdfs:label>
+    <amd:assessedBy rdf:resource="http://example.org/amd#OCT"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#HTRA1">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>HTRA1</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#treats">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>treats</rdfs:label>
+    <rdfs:comment>A treatment that manages a disease</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#Treatment"/>
+    <rdfs:range rdf:resource="http://example.org/amd#Disease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Gene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdfs:label>Gene</rdfs:label>
+    <rdfs:comment>A class for genes</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ClinicalOutcome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ClinicalOutcome</rdfs:label>
+    <rdfs:comment>A measurable result of a treatment or disease progression, including visual impairments (blindness, vision loss, visual acuity decline), adverse events, and disease progressions</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Microglia">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Microglia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Glaucoma">
+    <rdf:type rdf:resource="http://example.org/amd#Disease"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Glaucoma</rdfs:label>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#Ultrasound"/>
+    <amd:diagnosedBy rdf:resource="http://example.org/amd#OCT"/>
+    <amd:hasSymptom rdf:resource="http://example.org/amd#Blindness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#VEGF-A">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>VEGF-A</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Dexamethasone">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Dexamethasone</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#ApoE">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ApoE</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#TAS2R38">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>TAS2R38</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Celecoxib">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Celecoxib</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Verteporfin">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Verteporfin</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:treats rdf:resource="http://example.org/amd#AMD"/>
+    <amd:treats rdf:resource="http://example.org/amd#ChoroidalNeovascularization"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Hypotony">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Hypotony</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#bFGF">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>bFGF</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Electroretinography">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Electroretinography</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Zeaxanthin">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Zeaxanthin</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#C2">
+    <rdf:type rdf:resource="http://example.org/amd#Gene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>C2</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Drusen">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Drusen</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#DryAMD"/>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+    <amd:indicates rdf:resource="http://example.org/amd#GeographicAtrophy"/>
+    <amd:measuredBy rdf:resource="http://example.org/amd#OCT"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Copper">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Copper</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Blindness">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Blindness</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Fibroblasts">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Fibroblasts</rdfs:label>
+    <amd:indicates rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Refractometer">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Refractometer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#PDT">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>PDT</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Copaxone">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Copaxone</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#DryAMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Plasma">
+    <rdf:type rdf:resource="http://example.org/amd#Biomarker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Plasma</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#causesOrIncreases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>causesOrIncreases</rdfs:label>
+    <rdfs:comment>A risk factor that causes or increases a disease</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdfs:range rdf:resource="http://example.org/amd#Disease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#VEGFR">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>VEGFR</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Lucentis">
+    <rdf:type rdf:resource="http://example.org/amd#AntiVEGFTherapy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Lucentis</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#WetAMD"/>
+    <amd:inhibits rdf:resource="http://example.org/amd#VEGF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#IReST">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>IReST</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#VEGF-B">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>VEGF-B</rdfs:label>
+    <amd:associatedWith rdf:resource="http://example.org/amd#AMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Uveitis">
+    <rdf:type rdf:resource="http://example.org/amd#Disease"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Uveitis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Saffron">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Saffron</rdfs:label>
+    <amd:treats rdf:resource="http://example.org/amd#DryAMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Maculometer">
+    <rdf:type rdf:resource="http://example.org/amd#DiagnosticMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Maculometer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Occupation">
+    <rdf:type rdf:resource="http://example.org/amd#RiskFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Occupation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Sonepcizumab">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Sonepcizumab</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Ab">
+    <rdf:type rdf:resource="http://example.org/amd#MolecularTarget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Ab</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Edema">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Edema</rdfs:label>
+    <amd:assessedBy rdf:resource="http://example.org/amd#OCT"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Phenylephrine">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Phenylephrine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Depression">
+    <rdf:type rdf:resource="http://example.org/amd#ClinicalOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Depression</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#MolecularTarget">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>MolecularTarget</rdfs:label>
+    <rdfs:comment>A molecular entity (protein, receptor, pathway component) that a treatment inhibits or modulates (e.g., VEGF, VEGFR, complement C3, S1P)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/amd#Rheohemapheresis">
+    <rdf:type rdf:resource="http://example.org/amd#Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Rheohemapheresis</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

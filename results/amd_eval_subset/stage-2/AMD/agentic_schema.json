@@ -6,25 +6,16 @@
                 "AMD"
             ],
             "instances": [
-                "Glaucoma",
-                "Neovascularization",
-                "ARMD",
-                "Cataract",
-                "Retinopathy"
+                "Glaucoma"
             ]
         },
         "Treatment": {
             "description": "A medical intervention used to manage or cure a disease",
             "subclasses": [
-                "ReadingRehabilitation"
+                "AntiVEGFTherapy"
             ],
             "instances": [
-                "Ranibizumab",
-                "Aflibercept",
-                "Bevacizumab",
                 "Verteporfin",
-                "Macuvite",
-                "Tropicamide",
                 "Corticosteroid",
                 "Celecoxib"
             ]
@@ -42,17 +33,9 @@
                 "HTRA1",
                 "Lutein",
                 "Zeaxanthin",
-                "Cholesterol",
-                "Triglycerides",
                 "ApoE",
-                "BF",
                 "CX3CR1",
-                "AMRS2",
-                "Choriocapillaries",
-                "Monocyte",
-                "Lipofuscin",
-                "rs11200638",
-                "rs1061170"
+                "BF"
             ]
         },
         "DiagnosticMethod": {
@@ -61,21 +44,15 @@
             "instances": [
                 "OCT",
                 "Maculometer",
-                "MOS SF-36",
-                "NEI VFQ-25",
-                "ETDRS",
                 "ICG",
-                "Ultrasound",
-                "Questionnaire"
+                "ETDRS"
             ]
         },
         "RiskFactor": {
             "description": "A factor that increases the likelihood of developing a disease",
             "subclasses": [],
             "instances": [
-                "Occupation",
-                "Sunlight",
-                "Smoking"
+                "Age"
             ]
         },
         "ClinicalOutcome": {
@@ -83,44 +60,58 @@
             "subclasses": [],
             "instances": [
                 "Blindness",
-                "Inflammation",
                 "Endophthalmitis",
-                "Hypotony",
-                "Hemorrhage",
-                "Haemorrhage",
-                "Edema",
-                "Scarring"
+                "Hypotony"
             ]
         },
         "MolecularTarget": {
             "description": "A molecular entity (protein, receptor, pathway component) that a treatment inhibits or modulates (e.g., VEGF, VEGFR, complement C3, S1P)",
             "subclasses": [],
             "instances": [
-                "VEGF"
+                "VEGF",
+                "Inflammation"
             ]
         },
         "AMD": {
             "description": "Age-Related Macular Degeneration",
             "subclasses": [
-                "WetAMD",
-                "DryAMD"
+                "DryAMD",
+                "WetAMD"
+            ],
+            "instances": []
+        },
+        "DryAMD": {
+            "description": "Dry Age-Related Macular Degeneration",
+            "subclasses": [
+                "GeographicAtrophy"
             ],
             "instances": []
         },
         "WetAMD": {
-            "description": "Neovascular Age-Related Macular Degeneration",
+            "description": "Wet Age-Related Macular Degeneration",
+            "subclasses": [
+                "ChoroidalNeovascularization"
+            ],
+            "instances": []
+        },
+        "GeographicAtrophy": {
+            "description": "Retinal cell death areas",
             "subclasses": [],
             "instances": []
         },
-        "DryAMD": {
-            "description": "Geographic Atrophy Age-Related Macular Degeneration",
+        "ChoroidalNeovascularization": {
+            "description": "Abnormal blood vessel growth beneath retina",
             "subclasses": [],
             "instances": []
         },
-        "ReadingRehabilitation": {
-            "description": "A treatment for patients with macular disease",
+        "AntiVEGFTherapy": {
+            "description": "Treatment that targets VEGF",
             "subclasses": [],
-            "instances": []
+            "instances": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab"
+            ]
         }
     },
     "properties": {
@@ -130,29 +121,24 @@
             "description": "A treatment that manages a disease",
             "examples": [
                 [
-                    "Macuvite",
+                    "Ranibizumab",
                     "treats",
-                    "AMD"
+                    "WetAMD"
                 ],
                 [
-                    "Tropicamide",
+                    "Aflibercept",
                     "treats",
-                    "AMD"
+                    "WetAMD"
                 ],
                 [
-                    "Celecoxib",
+                    "Bevacizumab",
                     "treats",
-                    "AMD"
+                    "WetAMD"
                 ],
                 [
                     "Verteporfin",
                     "treats",
-                    "AMD"
-                ],
-                [
-                    "ReadingRehabilitation",
-                    "treats",
-                    "AMD"
+                    "ChoroidalNeovascularization"
                 ]
             ]
         },
@@ -162,14 +148,34 @@
             "description": "A treatment that inhibits a molecular target",
             "examples": [
                 [
-                    "Corticosteroid",
+                    "Ranibizumab",
                     "inhibits",
-                    "Inflammation"
+                    "VEGF"
+                ],
+                [
+                    "Aflibercept",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Bevacizumab",
+                    "inhibits",
+                    "VEGF"
                 ],
                 [
                     "Verteporfin",
                     "inhibits",
                     "VEGF"
+                ],
+                [
+                    "Inflammation",
+                    "inhibits",
+                    "AMD"
+                ],
+                [
+                    "Verteporfin",
+                    "inhibits",
+                    "ChoroidalNeovascularization"
                 ]
             ]
         },
@@ -179,7 +185,7 @@
             "description": "A risk factor that causes or increases a disease",
             "examples": [
                 [
-                    "Inflammation",
+                    "Age",
                     "causesOrIncreases",
                     "AMD"
                 ]
@@ -189,7 +195,23 @@
             "domain": "Biomarker",
             "range": "Disease",
             "description": "A biomarker that indicates a disease",
-            "examples": []
+            "examples": [
+                [
+                    "Drusen",
+                    "indicates",
+                    "DryAMD"
+                ],
+                [
+                    "Lutein",
+                    "indicates",
+                    "AMD"
+                ],
+                [
+                    "Zeaxanthin",
+                    "indicates",
+                    "AMD"
+                ]
+            ]
         },
         "diagnosedBy": {
             "domain": "Disease",
@@ -197,12 +219,12 @@
             "description": "A disease diagnosed via a method",
             "examples": [
                 [
-                    "Glaucoma",
+                    "DryAMD",
                     "diagnosedBy",
-                    "Ultrasound"
+                    "OCT"
                 ],
                 [
-                    "AMD",
+                    "WetAMD",
                     "diagnosedBy",
                     "OCT"
                 ]
@@ -214,12 +236,12 @@
             "description": "A disease has a clinical symptom",
             "examples": [
                 [
-                    "AMD",
+                    "ChoroidalNeovascularization",
                     "hasSymptom",
                     "Blindness"
                 ],
                 [
-                    "ARMD",
+                    "AMD",
                     "hasSymptom",
                     "Blindness"
                 ]
@@ -237,37 +259,12 @@
             "description": "A biomarker (typically a gene) associated with a disease",
             "examples": [
                 [
-                    "AMD",
-                    "associatedWith",
-                    "Drusen"
-                ],
-                [
-                    "AMD",
-                    "associatedWith",
-                    "CFH"
-                ],
-                [
-                    "AMD",
-                    "associatedWith",
-                    "ARMS2"
-                ],
-                [
-                    "Lutein",
-                    "associatedWith",
-                    "AMD"
-                ],
-                [
-                    "Zeaxanthin",
-                    "associatedWith",
-                    "AMD"
-                ],
-                [
-                    "ApoE",
-                    "associatedWith",
-                    "AMD"
-                ],
-                [
                     "CFH",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C3",
                     "associatedWith",
                     "AMD"
                 ],
@@ -277,17 +274,12 @@
                     "AMD"
                 ],
                 [
-                    "BF",
+                    "CFB",
                     "associatedWith",
                     "AMD"
                 ],
                 [
-                    "CX3CR1",
-                    "associatedWith",
-                    "AMD"
-                ],
-                [
-                    "AMRS2",
+                    "ARMS2",
                     "associatedWith",
                     "AMD"
                 ],
@@ -297,22 +289,27 @@
                     "AMD"
                 ],
                 [
-                    "Monocyte",
+                    "Lutein",
                     "associatedWith",
                     "AMD"
                 ],
                 [
-                    "Lipofuscin",
+                    "ApoE",
                     "associatedWith",
                     "AMD"
                 ],
                 [
-                    "rs11200638",
+                    "CX3CR1",
                     "associatedWith",
                     "AMD"
                 ],
                 [
-                    "rs1061170",
+                    "BF",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ChoroidalNeovascularization",
                     "associatedWith",
                     "AMD"
                 ]
