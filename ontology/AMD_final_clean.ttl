@@ -544,18 +544,17 @@ amd:Inflammation a amd:MolecularTarget,
     amd:causesOrIncreases amd:AMD,
         amd:GeographicAtrophy .
 
-amd:Blindness a amd:ClinicalOutcome,
+amd:DryAMD a amd:AMD,
         owl:NamedIndividual ;
-    rdfs:label "Blindness" .
-
-amd:DryAMD a owl:Class ;
     rdfs:label "DryAMD" ;
     amd:causesOrIncreases amd:WetAMD ;
     amd:diagnosedBy amd:ETDRS,
         amd:OCT ;
-    amd:hasSymptom amd:Blindness ;
-    rdfs:comment "Dry Age-Related Macular Degeneration" ;
-    rdfs:subClassOf amd:AMD .
+    amd:hasSymptom amd:Blindness .
+
+amd:Blindness a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Blindness" .
 
 amd:AntiVEGFTherapy a owl:Class ;
     rdfs:label "AntiVEGFTherapy" ;
@@ -570,15 +569,13 @@ amd:ChoroidalNeovascularization a owl:Class ;
     amd:hasSymptom amd:Blindness,
         amd:Edema,
         amd:Scarring ;
-    rdfs:comment "Abnormal vessel growth" ;
-    rdfs:subClassOf amd:WetAMD .
+    rdfs:comment "Abnormal vessel growth" .
 
-amd:GeographicAtrophy a owl:Class ;
+amd:GeographicAtrophy a amd:AMD,
+        owl:NamedIndividual ;
     rdfs:label "GeographicAtrophy" ;
     amd:diagnosedBy amd:OCT ;
-    amd:hasSymptom amd:Blindness ;
-    rdfs:comment "Retinal cell death areas" ;
-    rdfs:subClassOf amd:DryAMD .
+    amd:hasSymptom amd:Blindness .
 
 amd:RiskFactor a owl:Class ;
     rdfs:label "RiskFactor" ;
@@ -608,12 +605,11 @@ amd:MolecularTarget a owl:Class ;
     rdfs:label "MolecularTarget" ;
     rdfs:comment "A molecular entity (protein, receptor, pathway component) that a treatment inhibits or modulates (e.g., VEGF, VEGFR, complement C3, S1P)" .
 
-amd:WetAMD a owl:Class ;
+amd:WetAMD a amd:AMD,
+        owl:NamedIndividual ;
     rdfs:label "WetAMD" ;
     amd:diagnosedBy amd:OCT ;
-    amd:hasSymptom amd:Blindness ;
-    rdfs:comment "Wet Age-Related Macular Degeneration" ;
-    rdfs:subClassOf amd:AMD .
+    amd:hasSymptom amd:Blindness .
 
 amd:ClinicalOutcome a owl:Class ;
     rdfs:label "ClinicalOutcome" ;
