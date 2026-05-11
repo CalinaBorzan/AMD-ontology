@@ -336,15 +336,29 @@ def resolve_entity(name: str, pipeline_class: str, api_key: str,
             return {**base, "tui_result": empty_tui, "semgroup_result": empty_grp}
         return {**base, **(empty_grp if method == "semgroup" else empty_tui)}
 
-    best = results[0]
-    cui = best.get("ui")
-    umls_name = best.get("name")
+
+    candidates = sorted(
+        [r for r in results if r.get("ui") and r.get("ui") != "NONE"],
+        key=lambda r: r.get("ui", "")
+    )
+
+    all_cuis: list[str] = []
+    all_umls_names: list[str] = []
+    tuis_set: set[str] = set()
+    for cand in candidates:
+        cand_cui = cand.get("ui")
+        all_cuis.append(cand_cui)
+        all_umls_names.append(cand.get("name", ""))
+        tuis_set.update(get_semantic_types(cand_cui, api_key))
+
+    tuis = sorted(tuis_set)
+
+    cui = ",".join(all_cuis) if len(all_cuis) > 1 else (all_cuis[0] if all_cuis else None)
+    umls_name = " | ".join(all_umls_names) if len(all_umls_names) > 1 else (all_umls_names[0] if all_umls_names else None)
 
     base = {"name": name, "pipeline_class": pipeline_class,
-            "cui": cui, "umls_name": umls_name}
-
-    # Fetch TUIs once — both methods use them
-    tuis = get_semantic_types(cui, api_key)
+            "cui": cui, "umls_name": umls_name,
+            "candidate_cuis": all_cuis}
 
     def _tui_verdict():
         mapped = sorted({SEMTYPE_TO_CLASS[t] for t in tuis if t in SEMTYPE_TO_CLASS})
