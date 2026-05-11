@@ -47,6 +47,8 @@ SCHEMA = {
     ],
 }
 
+LAST_REJECTED: list[str] = []
+
 CURRENT_ABSTRACT = ""
 
 # Queue for classes proposed with one child; promoted when a second child arrives later.
@@ -452,10 +454,12 @@ def propose_delta(
             results["rejected"].append(f"instance name too short: '{name}'")
             continue
 
-        # Hallucination guard — must be in the abstract text
-        if CURRENT_ABSTRACT and name.lower() not in CURRENT_ABSTRACT.lower():
-            results["rejected"].append(f"instance '{name}' not in abstract text")
-            continue
+        if CURRENT_ABSTRACT:
+            name_norm = "".join(c for c in name.lower() if c.isalnum())
+            abstract_norm = "".join(c for c in CURRENT_ABSTRACT.lower() if c.isalnum())
+            if name_norm not in abstract_norm:
+                results["rejected"].append(f"instance '{name}' not in abstract text")
+                continue
 
         # Block obvious person names
         lc = name.lower()
@@ -547,6 +551,9 @@ def propose_delta(
             continue
         examples.append(triple)
         results["triples_added"].append(f"{subj_c} {pred} {obj_c}")
+
+    global LAST_REJECTED
+    LAST_REJECTED.extend(results["rejected"])
 
     logger.info(f"  Delta applied: "
                 f"+{len(results['classes_added'])} classes, "
@@ -657,6 +664,132 @@ def create_executor(llm, prompt, max_iter: int = 3):
         handle_parsing_errors=True,
         max_iterations=max_iter, max_execution_time=600,
     )
+
+
+def process_single_abstract(abstract: str, model: str = "qwen2.5:32b",
+                              provider: str = "ollama",
+                              base_ontology: dict | None = None) -> dict:
+
+    global SCHEMA, CURRENT_ABSTRACT, LAST_REJECTED
+
+    LAST_REJECTED = []
+
+    if base_ontology is None:
+        final_path = RESULTS_DIR / "final" / "amd_ontology_final.json"
+        if final_path.exists():
+            base_ontology = json.loads(final_path.read_text(encoding="utf-8"))
+        else:
+            base_ontology = {"classes": {}, "properties": {}, "disjoint_groups": [
+                ["Disease", "Treatment", "DiagnosticMethod", "ClinicalOutcome"],
+            ]}
+
+    SCHEMA.clear()
+    SCHEMA.update(json.loads(json.dumps(base_ontology)))
+    _ensure_properties()
+    _ensure_root_classes()
+
+    before_instances = {
+        (cls, inst)
+        for cls, info in SCHEMA["classes"].items() if isinstance(info, dict)
+        for inst in info.get("instances", [])
+    }
+    before_triples = {
+        (subj, pred, obj)
+        for pred, pinfo in SCHEMA["properties"].items() if isinstance(pinfo, dict)
+        for ex in pinfo.get("examples", []) if len(ex) >= 3
+        for subj, _, obj in [ex[:3]]
+    }
+
+    CURRENT_ABSTRACT = abstract
+
+    llm = create_llm(model, provider)
+    summary = compact_summary()
+    prompt = _build_abstract_prompt(summary, "Manual Upload")
+    executor = create_executor(llm, prompt, max_iter=5)
+
+    raw_output = ""
+    try:
+        result = executor.invoke({"input": f"Abstract:\n\n{abstract}"})
+        raw_output = result.get("output", "")
+    except Exception as e:
+        raw_output = f"ERROR: {e}"
+
+    after_instances = {
+        (cls, inst)
+        for cls, info in SCHEMA["classes"].items() if isinstance(info, dict)
+        for inst in info.get("instances", [])
+    }
+    after_triples = {
+        (subj, pred, obj)
+        for pred, pinfo in SCHEMA["properties"].items() if isinstance(pinfo, dict)
+        for ex in pinfo.get("examples", []) if len(ex) >= 3
+        for subj, _, obj in [ex[:3]]
+    }
+
+    new_instances = after_instances - before_instances
+    new_triples = after_triples - before_triples
+
+    return {
+        "entities": [
+            {"id": inst, "label": inst, "type": cls}
+            for cls, inst in sorted(new_instances)
+        ],
+        "relations": [
+            {"subject": s, "predicate": p, "object": o}
+            for s, p, o in sorted(new_triples)
+        ],
+        "rejected": list(LAST_REJECTED),
+        "raw_llm_output": raw_output,
+    }
+
+
+def run_full_pipeline(model: str, provider: str = "ollama",
+                       stages: list[int] | None = None,
+                       max_abstracts: int | None = None,
+                       resume_from: dict | None = None,
+                       on_progress=None) -> dict:
+    global SCHEMA
+
+    if stages is None:
+        stages = [1, 2, 3]
+
+    SCHEMA.clear()
+    SCHEMA.update({
+        "classes": {}, "properties": {},
+        "disjoint_groups": [["Disease", "Treatment", "DiagnosticMethod", "ClinicalOutcome"]],
+    })
+
+    if resume_from:
+        SCHEMA.update(json.loads(json.dumps(resume_from)))
+        _ensure_properties()
+        _ensure_root_classes()
+
+    def emit(stage, msg):
+        if on_progress:
+            on_progress(stage, msg)
+        logger.info(msg)
+
+    llm = create_llm(model, provider)
+
+    if 1 in stages:
+        emit("stage1", "Starting Stage 1 — schema seeding")
+        run_stage1(llm, hitl=False)
+        emit("stage1", f"Stage 1 done: {compact_summary()[:200]}")
+
+    if 2 in stages:
+        emit("stage2", f"Starting Stage 2 on {STAGE2_ABSTRACTS_DIR.name}")
+        run_stage_abstracts(llm, "Stage 2", STAGE2_ABSTRACTS_DIR,
+                             max_abstracts, provider, hitl=False)
+        emit("stage2", f"Stage 2 done: {compact_summary()[:200]}")
+
+    if 3 in stages:
+        emit("stage3", f"Starting Stage 3 on {STAGE3_ABSTRACTS_DIR.name}")
+        run_stage_abstracts(llm, "Stage 3", STAGE3_ABSTRACTS_DIR,
+                             max_abstracts, provider, hitl=False)
+        emit("stage3", f"Stage 3 done: {compact_summary()[:200]}")
+
+    save_schema("final")
+    return dict(SCHEMA)
 
 
 def human_checkpoint(stage_label: str):

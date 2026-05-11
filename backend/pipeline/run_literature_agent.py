@@ -207,6 +207,70 @@ def present_proposals_to_human(proposals: list[dict]):
     print(f"\n  {accepted}/{len(proposals)} abstracts saved to {ABSTRACTS_DIR}")
 
 
+def discover_abstracts(model: str, provider: str, days: int,
+                         auto_save: bool = True) -> dict:
+    global SEARCH_DAYS, PROPOSED_ABSTRACTS
+    SEARCH_DAYS = days
+    PROPOSED_ABSTRACTS = []
+
+    if provider == "groq":
+        from dotenv import load_dotenv
+        load_dotenv()
+        llm = ChatGroq(model=model, api_key=os.getenv("GROQ_API_KEY"), temperature=0)
+    else:
+        llm = ChatOllama(model=model, base_url=EnvConfig.OLLAMA_base_url, temperature=0)
+
+    tools = [search_pubmed, fetch_abstract, propose_abstract]
+    agent = create_react_agent(llm, tools, AGENT_PROMPT)
+    agent_executor = AgentExecutor(
+        agent=agent, tools=tools, verbose=False,
+        handle_parsing_errors=True,
+        max_iterations=60, max_execution_time=600,
+    )
+
+    if provider == "groq":
+        from langchain.callbacks.base import BaseCallbackHandler
+
+        class RateLimitHandler(BaseCallbackHandler):
+            def on_agent_action(self, action, **kwargs):
+                time.sleep(5)
+
+        agent_executor.callbacks = [RateLimitHandler()]
+
+    error = None
+    try:
+        agent_executor.invoke({"input": f"Run the workflow with a {days}-day search window."})
+    except Exception as e:
+        error = str(e)
+
+    saved: list[str] = []
+    if auto_save:
+        ABSTRACTS_DIR.mkdir(parents=True, exist_ok=True)
+        processed = _load_processed_pmids()
+        for prop in PROPOSED_ABSTRACTS:
+            pmid = str(prop.get("pmid", "")).strip()
+            text = prop.get("abstract_text")
+            if not pmid or not text:
+                continue
+            relevance = str(prop.get("relevance", "")).upper()
+            if relevance not in {"HIGH", "MEDIUM"}:
+                continue
+            filepath = ABSTRACTS_DIR / f"abstract_PMID{pmid}.txt"
+            filepath.write_text(text, encoding="utf-8")
+            processed.add(pmid)
+            saved.append(pmid)
+        PROCESSED_FILE.write_text(json.dumps(sorted(processed), indent=2))
+
+    return {
+        "proposals": [
+            {k: v for k, v in p.items() if k != "abstract_text"}
+            for p in PROPOSED_ABSTRACTS
+        ],
+        "saved": saved,
+        "error": error,
+    }
+
+
 def run(model: str, provider: str, days: int):
     global SEARCH_DAYS, PROPOSED_ABSTRACTS
     SEARCH_DAYS = days

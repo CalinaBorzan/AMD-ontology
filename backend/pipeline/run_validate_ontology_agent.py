@@ -718,6 +718,66 @@ def present_fixes_to_human(schema: dict, fixes: list[dict], output_path: Path):
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
+def collect_proposed_fixes(model: str, ontology: dict,
+                            provider: str = "ollama",
+                            max_passes: int = 3) -> list[dict]:
+
+    global SCHEMA, PROPOSED_FIXES
+
+    SCHEMA = json.loads(json.dumps(ontology))
+    PROPOSED_FIXES = []
+
+    tools = [
+        inspect_hierarchy, inspect_relationships, list_triples,
+        inspect_instances, check_punning, check_dual_parents,
+        check_self_referential, find_spelling_duplicates,
+        check_biomarker_semantics, check_domain_range_violations,
+        query_mesh, propose_fix,
+    ]
+
+    if provider == "groq":
+        import os
+        from dotenv import load_dotenv
+        from langchain_groq import ChatGroq
+        load_dotenv()
+        llm = ChatGroq(model=model, api_key=os.getenv("GROQ_API_KEY"), temperature=0)
+    else:
+        llm = ChatOllama(model=model, base_url=EnvConfig.OLLAMA_base_url, temperature=0)
+
+    agent = create_react_agent(llm, tools, AGENT_PROMPT)
+    agent_executor = AgentExecutor(
+        agent=agent, tools=tools, verbose=False,
+        handle_parsing_errors=True,
+        max_iterations=25, max_execution_time=600,
+    )
+
+    for pass_num in range(1, max_passes + 1):
+        before = len(PROPOSED_FIXES)
+        try:
+            agent_executor.invoke({
+                "input": (
+                    "Validate the AMD ontology. Find DIFFERENT issues from the ones already "
+                    "proposed (propose_fix rejects duplicates). Use ALL inspection tools."
+                )
+            })
+        except Exception:
+            continue
+        if len(PROPOSED_FIXES) == before:
+            break
+
+    return [
+        {**fix, "id": str(idx)}
+        for idx, fix in enumerate(PROPOSED_FIXES)
+    ]
+
+
+def apply_single_fix(ontology: dict, fix: dict) -> tuple[dict, bool, str]:
+    """Apply ONE fix to a copy of the ontology. Returns (new_ontology, ok, message)."""
+    new_ont = json.loads(json.dumps(ontology))
+    ok, msg = _apply_fix(new_ont, fix)
+    return new_ont, ok, msg
+
+
 def run(model: str, input_path: str, output_path: str, provider: str = "ollama",
         max_passes: int = 5):
     global SCHEMA, PROPOSED_FIXES

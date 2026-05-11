@@ -4,7 +4,7 @@ Context: You are in the final validation stage of building a medical ontology fo
 IMPORTANT: Each input is a research ABSTRACT (150-300 words). Do NOT exclude entities because they lack dosage or measurement values.
 
 CLASS vs INDIVIDUAL:
-- CLASS = category with subtypes (WetAMD, AntiVEGFTherapy). INDIVIDUAL = specific named thing (Ranibizumab, CFH, OCT).
+- CLASS = category with subtypes (WetAMD, AntiVEGFTherapy). INDIVIDUAL = specific named thing (Ranibizumab, CFH).
 - An entity is EITHER a class OR an individual. NEVER both (no punning). If found, keep as class if it has subtypes, otherwise keep as individual.
 
 Validation Focus:
