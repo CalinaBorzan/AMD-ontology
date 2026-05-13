@@ -1,0 +1,97 @@
+{
+    "Lutein": {
+        "parent": "Biomarker",
+        "desc": "a hydroxycarotenoid",
+        "children": []
+    },
+    "Zeaxanthin": {
+        "parent": "Biomarker",
+        "desc": "a hydroxycarotenoid",
+        "children": []
+    },
+    "MacularPigment": {
+        "parent": "Biomarker",
+        "desc": "an accumulation in the retina of two hydroxycarotenoids, lutein and zeaxanthin",
+        "children": []
+    },
+    "SubfovealCNV": {
+        "parent": "Disease",
+        "desc": "Subfoveal choroidal neovascularization",
+        "children": []
+    },
+    "Corticosteroid": {
+        "parent": "Treatment",
+        "desc": "a type of treatment for AMD",
+        "children": []
+    },
+    "LuteinSupplementation": {
+        "parent": "Treatment",
+        "desc": "Lutein supplementation for treating age-related macular degeneration",
+        "children": []
+    },
+    "FluocinoloneAcetonide": {
+        "parent": "Treatment",
+        "desc": "a type of corticosteroid",
+        "children": []
+    },
+    "ChoroidalNeovascularization": {
+        "parent": "Disease",
+        "desc": "A disease characterized by the growth of new blood vessels in the choroid layer of the eye",
+        "children": []
+    },
+    "SingleNucleotidePolymorphism": {
+        "parent": "Biomarker",
+        "desc": "A small gene variance",
+        "children": []
+    },
+    "NeovascularAMD": {
+        "parent": "AMD",
+        "desc": "A subtype of AMD characterized by the growth of new blood vessels",
+        "children": []
+    },
+    "GeographicAtrophy": {
+        "parent": "Disease",
+        "desc": "A type of Age-Related Macular Degeneration",
+        "children": []
+    },
+    "Neovascularization": {
+        "parent": "Disease",
+        "desc": "A type of Age-Related Macular Degeneration",
+        "children": []
+    },
+    "OcularTumor": {
+        "parent": "Disease",
+        "desc": "Tumors of the iris and ciliary body",
+        "children": []
+    },
+    "GeneticEpidemiologyStudy": {
+        "parent": "Study",
+        "desc": "A study that examines the genetic factors of a disease",
+        "children": []
+    },
+    "AgeRelatedMaculopathy": {
+        "parent": "Disease",
+        "desc": "degeneration or atrophy of the macula",
+        "children": []
+    },
+    "SkinFibroblast": {
+        "parent": "Biomarker",
+        "desc": "skin fibroblast cells",
+        "children": []
+    },
+    "AtrophicAMD": {
+        "parent": "AMD",
+        "desc": "a subtype of Age-Related Macular Degeneration",
+        "children": []
+    },
+    "ChoroidalNeovascularisation": {
+        "parent": "AMD",
+        "desc": "A subtype of AMD characterized by the growth of new blood vessels in the choroid",
+        "children": []
+    },
+    "LaserInterferometry": {
+        "parent": "DiagnosticMethod",
+        "desc": "A method for measuring ocular fundus pulsation",
+        "children": []
+    }
+}

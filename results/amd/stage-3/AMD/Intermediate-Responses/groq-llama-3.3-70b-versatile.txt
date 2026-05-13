@@ -1,0 +1,70 @@
+```json
+{
+  'classes': [
+    'Disease', 
+    'AMD', 
+    'WetAMD', 
+    'DryAMD', 
+    'GeographicAtrophy', 
+    'Treatment', 
+    'AntiVEGFTherapy', 
+    'GeneticMarker', 
+    'DiagnosticMethod', 
+    'Radiotherapy', 
+    'NutritionalSupplement', 
+    'VisionTest', 
+    'Carotenoid', 
+    'MacularPigment', 
+    'LaserOphthalmoscope', 
+    'HeterochromaticFlickerPhotometry', 
+    'FundusAutofluorescence', 
+    'DietarySupplement'
+  ], 
+  'individuals': [
+    {'name': 'Ranibizumab', 'type': 'AntiVEGFTherapy'}, 
+    {'name': 'CFH', 'type': 'GeneticMarker'}, 
+    {'name': 'OCT', 'type': 'DiagnosticMethod'}, 
+    {'name': 'Fluorescein Angiography', 'type': 'DiagnosticMethod'}, 
+    {'name': 'Stereotactic Radiotherapy', 'type': 'Radiotherapy'}, 
+    {'name': 'Lutein', 'type': 'Carotenoid'}, 
+    {'name': 'Zeaxanthin', 'type': 'Carotenoid'}, 
+    {'name': 'Meso-zeaxanthin', 'type': 'Carotenoid'}, 
+    {'name': 'Vitamin C', 'type': 'NutritionalSupplement'}, 
+    {'name': 'Vitamin E', 'type': 'NutritionalSupplement'}, 
+    {'name': 'Zinc', 'type': 'NutritionalSupplement'}, 
+    {'name': 'Copper', 'type': 'NutritionalSupplement'}, 
+    {'name': 'Maculometer', 'type': 'HeterochromaticFlickerPhotometry'}, 
+    {'name': 'Tropicamide', 'type': 'DietarySupplement'}, 
+    {'name': 'Macuvite', 'type': 'DietarySupplement'}
+  ], 
+  'properties': [
+    {'name': 'treats', 'domain': 'Treatment', 'range': 'Disease'}, 
+    {'name': 'associated_with', 'domain': 'GeneticMarker', 'range': 'Disease'}, 
+    {'name': 'diagnoses', 'domain': 'DiagnosticMethod', 'range': 'Disease'}, 
+    {'name': 'contains', 'domain': 'NutritionalSupplement', 'range': 'Carotenoid'}, 
+    {'name': 'assesses', 'domain': 'VisionTest', 'range': 'Disease'}, 
+    {'name': 'measures', 'domain': 'HeterochromaticFlickerPhotometry', 'range': 'MacularPigment'}, 
+    {'name': 'scans', 'domain': 'LaserOphthalmoscope', 'range': 'RetinalChanges'}, 
+    {'name': 'examines', 'domain': 'FundusAutofluorescence', 'range': 'RetinalChanges'}
+  ], 
+  'relationships': [
+    {'subject': 'Disease', 'predicate': 'has_subtype', 'object': 'AMD'}, 
+    {'subject': 'AMD', 'predicate': 'has_subtype', 'object': 'WetAMD'}, 
+    {'subject': 'AMD', 'predicate': 'has_subtype', 'object': 'DryAMD'}, 
+    {'subject': 'AMD', 'predicate': 'has_subtype', 'object': 'GeographicAtrophy'}, 
+    {'subject': 'Ranibizumab', 'predicate': 'treats', 'object': 'WetAMD'}, 
+    {'subject': 'CFH', 'predicate': 'associated_with', 'object': 'AMD'}, 
+    {'subject': 'OCT', 'predicate': 'diagnoses', 'object': 'RetinalChanges'}, 
+    {'subject': 'Fluorescein Angiography', 'predicate': 'diagnoses', 'object': 'RetinalChanges'}, 
+    {'subject': 'Stereotactic Radiotherapy', 'predicate': 'treats', 'object': 'WetAMD'}, 
+    {'subject': 'Lutein', 'predicate': 'contains', 'object': 'MacularPigment'}, 
+    {'subject': 'Zeaxanthin', 'predicate': 'contains', 'object': 'MacularPigment'}, 
+    {'subject': 'Meso-zeaxanthin', 'predicate': 'contains', 'object': 'MacularPigment'}, 
+    {'subject': 'Maculometer', 'predicate': 'measures', 'object': 'MacularPigment'}, 
+    {'subject': 'LaserOphthalmoscope', 'predicate': 'scans', 'object': 'RetinalChanges'}, 
+    {'subject': 'FundusAutofluorescence', 'predicate': 'examines', 'object': 'RetinalChanges'}, 
+    {'subject': 'Macuvite', 'predicate': 'contains', 'object': 'Lutein'}, 
+    {'subject': 'Macuvite', 'predicate': 'contains', 'object': 'Zeaxanthin'}
+  ]
+}
+```

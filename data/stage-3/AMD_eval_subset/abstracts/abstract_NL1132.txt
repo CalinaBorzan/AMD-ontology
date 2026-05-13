@@ -1,0 +1,18 @@
+Avastin-Injections in Age Related Macular Degeneration:
+  Prospective Study for Optimal Frequency and Follow-up Determination.
+   Rationale: 
+  Age-related macular degeneration (ARMD) results in a deterioration of the central retinal function, and is the leading cause of blindness in people over 50 years of age in Europe and the USA. The wet form of ARMD, with choroidal neovascularization, is more aggressive and may progress more rapidly to blindness. Recently, Lucentis® has been registered for treatment of wet ARMD, but is (as yet) not reimbursed by health care insurance. Avastin® appears to be a cost-effective alternative for Lucentis®, but an optimal injection schedule has not been determined so far. A reduction of the number of injections, without loss of treatment efficacy, would have a number of beneficial effects: a decrease of the risk associated with intravitreal injection (such as endophthalmitis), cost-effectiveness and reduced ophthalmic work-load.
+  
+  Objective: 
+  To determine the optimal patient observation and Avastin injection schedule.
+  Study design: Prospective, open-label, randomized.
+  
+  Study population: 
+  Patients with exudative ARMD 
+  
+  Intervention: 
+  Intravitreal Avastin injection.
+  
+  Main study parameters/endpoints:  
+  Visual acuity at 12 months.
+  Nature and extent of the burden and risks associated with participation, benefit and group relatedness: Avastin appears to be a promising off-label treatment for exudative ARMD and would provide a cheap alternative to Lucentis. It is FDA and EMEA approved for colorectal tumor treatment adjuvans, and has been shown to be safe for intravitreal use in short term animal and human trials. Repeated injections pose a (cumulative) risk of endophthalmitis, but prognosis for untreated exudative ARMD is very poor.

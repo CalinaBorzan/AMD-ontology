@@ -1,37 +1,45 @@
-FROM nvcr.io/nvidia/pytorch:23.10-py3
+# =============================================================================
+# Stage 1 — build the Vue frontend
+# =============================================================================
+FROM node:20-alpine AS frontend-build
+WORKDIR /app/frontend
 
-ENV DEBIAN_FRONTEND=noninteractive
+COPY frontend/package.json frontend/package-lock.json* ./
+RUN npm ci --no-audit --no-fund 2>/dev/null || npm install --no-audit --no-fund
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    curl \
-    wget \
-    git \
+COPY frontend/ ./
+# Build with VITE_API_URL="" so axios uses relative paths (same origin as backend)
+ENV VITE_API_URL=""
+RUN npm run build
+
+# =============================================================================
+# Stage 2 — Python backend + serve the built frontend
+# =============================================================================
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# System deps (curl for health-check; build-essential for rdflib if needed)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
-# NOTE: torch is NOT listed here — it comes from the base image
-RUN pip install \
-    langchain_community==0.3.14 \
-    langchain_core==0.3.29 \
-    langchain_ollama==0.2.2 \
-    langchain_openai==0.3.0 \
-    langchain-huggingface==0.1.2 \
-    pandas==2.2.3 \
-    python-dotenv==1.0.1 \
-    PyYAML==6.0.2 \
-    transformers==4.50.0 \
-    evaluate==0.4.3 \
-    accelerate \
-    rdflib==7.1.4 \
-    faiss-cpu==1.10.0
+# Python deps
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install Ollama
-RUN curl -fsSL https://ollama.com/install.sh | sh
+# Application source (excluded via .dockerignore: .venv, node_modules, backups)
+COPY backend/        ./backend/
+COPY data/           ./data/
+COPY results/        ./results/
+COPY ontology/       ./ontology/
+COPY evaluation/     ./evaluation/
 
-# Set Ollama models directory to QNAP (mounted at runtime)
-ENV OLLAMA_MODELS=/mnt/QNAP/annbor/ollama_models
+# Built frontend from stage 1
+COPY --from=frontend-build /app/frontend/dist ./frontend/dist
 
-WORKDIR /workspace
+# Hugging Face Spaces runs on port 7860 by default
+ENV PORT=7860
+EXPOSE 7860
 
-CMD ["/bin/bash"]
+CMD ["uvicorn", "backend.api.main:app", "--host", "0.0.0.0", "--port", "7860"]

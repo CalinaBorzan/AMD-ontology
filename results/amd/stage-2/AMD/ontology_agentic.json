@@ -1,0 +1,1657 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "A disorder of the body",
+            "subclasses": [
+                "AMD"
+            ],
+            "instances": [
+                "Subfoveal Choroidal Neovascularization",
+                "Ocular Histoplasmosis Syndrome",
+                "Choroidal Neovascular Membrane Formation",
+                "Choroidal Neovascularization",
+                "Geographic atrophic",
+                "Retinal pigment epithelial detachment",
+                "Neovascular/exudative disease",
+                "Drusen",
+                "Choroidal Neovascular Membrane",
+                "Occult Neovascularization",
+                "Well-Formed Neovascularization",
+                "Endophthalmitis",
+                "Hypotony",
+                "Retinal Detachment",
+                "Hemorrhage",
+                "Retrobulbar Hemorrhage",
+                "Glaucoma",
+                "Cataract Formation",
+                "Choroidal Feeder Vessels",
+                "Neovascular Component",
+                "Choriocapillaris",
+                "Pigment-Epithelial Detachment",
+                "Neovascular Fibrosis",
+                "Age-related Macular Degeneration",
+                "Leaking Blood Vessels",
+                "CNVM",
+                "Neovascular Age-Related Macular Degeneration",
+                "Minimally Classic Choroidal Neovascularization",
+                "Subretinal Neovascular Membranes",
+                "Classic Choroidal Neovascularization",
+                "emmetropes",
+                "presbyopes",
+                "ocular tumors",
+                "anterior melanoma",
+                "visual impairment",
+                "Age-related maculopathy",
+                "Retinopathy",
+                "Nuclear cataract",
+                "Cortical cataract",
+                "Posterior subcapsular cataract",
+                "Exudative macular degeneration",
+                "Intraocular pressure",
+                "Cup-disc ratio",
+                "Ocular refraction",
+                "Large soft indistinct drusen",
+                "Increased retinal pigment",
+                "Disciform Scar",
+                "Atrophic Age-Related Macular Degeneration",
+                "macular disease",
+                "Unilateral Choroidal Neovascularisation",
+                "Neovascular Maculopathy",
+                "Unilateral CNV",
+                "soft confluent drusen",
+                "bilateral advanced AMD"
+            ]
+        },
+        "Treatment": {
+            "description": "A medical intervention",
+            "subclasses": [
+                "AntiVEGFTherapy",
+                "SurgicalTherapy",
+                "DietarySupplement"
+            ],
+            "instances": [
+                "Macuvite",
+                "Tropicamide",
+                "Photodynamic Therapy",
+                "Verteporfin",
+                "Laser Photocoagulation",
+                "Submacular Surgery",
+                "Corticosteroid",
+                "Corticosteroid Injection",
+                "Fluocinolone Acetonide",
+                "Fluocinolone",
+                "Sustained-Release Fluocinolone Acetonide Implant",
+                "Intraocular Corticosteroids",
+                "Laser Beam Treatment",
+                "Pulse-Diode Laser Photocoagulation",
+                "Numbing Drops",
+                "Celecoxib",
+                "Cyclooxygenase-2 Inhibition",
+                "Laser Treatment",
+                "Visudyne",
+                "Triamcinolone Acetonide",
+                "Preservative-Free Triamcinolone Acetonide",
+                "Transpupillary Thermotherapy",
+                "anti-glaucoma drugs",
+                "antioxidant supplementation",
+                "reading practice",
+                "retinal cell transplantation",
+                "gene therapy",
+                "retinal prosthetics",
+                "vision rehabilitation",
+                "reading rehabilitation",
+                "oculomotor training"
+            ]
+        },
+        "GeneticBiomarker": {
+            "description": "A gene associated with a disease",
+            "subclasses": [],
+            "instances": [
+                "CFH",
+                "ARMS2",
+                "HTRA1",
+                "CFB",
+                "Macular Pigment",
+                "ApoE",
+                "AMRS2",
+                "CX3CR1",
+                "C2/BF",
+                "candidate genes",
+                "rs11200638",
+                "rs1061170"
+            ]
+        },
+        "MolecularTarget": {
+            "description": "A molecule involved in a disease",
+            "subclasses": [],
+            "instances": [
+                "VEGF",
+                "Cyclooxygenase-2",
+                "DNA repair",
+                "oxidative stress",
+                "inflammation",
+                "chaperone proteins",
+                "Single Nucleotide Polymorphism",
+                "Inflammatory Response",
+                "Anti-Angiogenic Properties",
+                "Wound Repair",
+                "Cell Injury",
+                "Cell Death",
+                "Gene Expression Patterns",
+                "Lipofuscin",
+                "Lipofuscin accumulation",
+                "RPE-lipofuscin accumulation",
+                "Autofluorescent lipofuscin granules",
+                "Phagocytosis of membranous disks",
+                "Constant phagocytosis",
+                "Membranous disks",
+                "Predictive factors",
+                "reactive oxygen species",
+                "carotenoids",
+                "Angiogenesis"
+            ]
+        },
+        "DiagnosticMethod": {
+            "description": "A method for diagnosing a disease",
+            "subclasses": [],
+            "instances": [
+                "OCT",
+                "Fluorescein Angiography",
+                "Fundus Photography",
+                "Heterochromatic Flicker Photometry",
+                "Fundus Autofluorescence",
+                "Maculometer",
+                "Medical Outcomes Survey Short Form-36",
+                "Hospital Anxiety and Depression Scale",
+                "National Eye Institute Visual Function Questionnaire",
+                "Macular Photocoagulation Study",
+                "Pelli-Robson charts",
+                "ETDRS charts",
+                "Fluorescein Angiograms",
+                "Stereoscopic Color Fundus Photographs",
+                "Lens Photographs",
+                "Visual field study",
+                "Flicker photometry",
+                "Age-Related Eye Disease Study",
+                "NEI VFQ",
+                "Indocyanine Green Angiography",
+                "Phi-motion ICG",
+                "Retinal Histopathology",
+                "Optical Coherence Tomography",
+                "genome wide association study",
+                "candidate gene association",
+                "linkage disequilibrium",
+                "ICG",
+                "ETDRS",
+                "NEI-CFQ-25",
+                "high-frequency spectral assays",
+                "choroidal thickness profiles",
+                "morphologic vascular analysis",
+                "parametric methods",
+                "non-parametric methods",
+                "accommodative function",
+                "ultrasound scattering structure",
+                "dilated eye exam",
+                "digital images of the macula",
+                "digital stereo images",
+                "AREDS AMD classification scheme",
+                "Beaver Dam Eye Study",
+                "Framingham Eye Study",
+                "Framingham Heart Study",
+                "Linkage analysis",
+                "Association analysis",
+                "Polymerase Chain Reaction",
+                "Northern Blot Analysis",
+                "Differential Display",
+                "Microarray Technology",
+                "Skin Biopsy",
+                "Blood Draw",
+                "Fundus Autofluorescence Imaging",
+                "Confocal Scanning Laser Ophthalmoscopy",
+                "Fundus Perimetry",
+                "Fundus autofluorescence alterations",
+                "visual awareness",
+                "eccentric viewing",
+                "MNRead Acuity Charts",
+                "View Sentences Test",
+                "Veterans Administration Low Vision Visual Functioning Questionnaire",
+                "CES-D",
+                "Short Form-36",
+                "Adaptation to Vision Loss Scale",
+                "Laser Doppler Flowmetry",
+                "Laser Interferometry",
+                "visual acuity measurement",
+                "slit lamp exam",
+                "indirect ophthalmoscopy",
+                "fundus photos",
+                "spectral domain optical coherence tomography",
+                "fluoroscein angiography"
+            ]
+        },
+        "RiskFactor": {
+            "description": "A factor that increases the risk of a disease",
+            "subclasses": [],
+            "instances": [
+                "Reparative Response",
+                "smoking",
+                "sunlight",
+                "occupation",
+                "environmental influences",
+                "Genetic component",
+                "Familial aggregation",
+                "Age",
+                "Ageing changes",
+                "Industrialized world",
+                "blue light",
+                "low dietary intake",
+                "low blood levels"
+            ]
+        },
+        "ClinicalOutcome": {
+            "description": "A result of a medical intervention",
+            "subclasses": [],
+            "instances": [
+                "Macular Pigment Optical Density",
+                "Vision Loss",
+                "Visual Acuity",
+                "Best Corrected Visual Acuity",
+                "Central Vision",
+                "Vascular Remodeling",
+                "Choroidal New Vessel Formation",
+                "Moderate Vision Loss",
+                "Severe Vision Loss",
+                "accommodative loss",
+                "tumor growth",
+                "tumor volume",
+                "Impaired vision",
+                "Severely impaired vision",
+                "Retinal Sensitivity",
+                "Legal blindness",
+                "Disease progression",
+                "central vision loss",
+                "contrast sensitivity",
+                "Hemorrhagic Detachment of Retinal Pigment Epithelium",
+                "20/200 or worse",
+                "Visual Prognosis",
+                "Natural History"
+            ]
+        },
+        "AMD": {
+            "description": "Age-Related Macular Degeneration",
+            "subclasses": [
+                "DryAMD",
+                "WetAMD"
+            ],
+            "instances": []
+        },
+        "DryAMD": {
+            "description": "Dry Age-Related Macular Degeneration",
+            "subclasses": [
+                "GeographicAtrophy"
+            ],
+            "instances": []
+        },
+        "WetAMD": {
+            "description": "Wet Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeographicAtrophy": {
+            "description": "A form of dry AMD",
+            "subclasses": [],
+            "instances": []
+        },
+        "AntiVEGFTherapy": {
+            "description": "A treatment that targets VEGF",
+            "subclasses": [],
+            "instances": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab"
+            ]
+        },
+        "SurgicalTherapy": {
+            "description": "A surgical treatment",
+            "subclasses": [],
+            "instances": []
+        },
+        "DietarySupplement": {
+            "description": "A supplement used to treat a disease",
+            "subclasses": [],
+            "instances": [
+                "Lutein",
+                "Zeaxanthin",
+                "Vitamin C",
+                "Vitamin E",
+                "AREDS",
+                "Marigold flowers",
+                "Microalgae",
+                "Beta-carotene",
+                "green tea polyphenols"
+            ]
+        },
+        "Ill-Defined Choroidal Neovascularization": {
+            "description": "A type of choroidal neovascularization",
+            "subclasses": [],
+            "instances": []
+        },
+        "AnatomicalStructure": {
+            "description": "Parts of the human body",
+            "subclasses": [],
+            "instances": [
+                "Macula",
+                "Retina",
+                "Choroid",
+                "mitochondria",
+                "Choroidal Melanocytes",
+                "RPE",
+                "Neurosensory Retina",
+                "Endothelium",
+                "choriocapillaries",
+                "choroid vascular density",
+                "peri-macular region",
+                "ciliary muscle",
+                "ciliary body",
+                "anterior segment",
+                "iris",
+                "optic disc",
+                "Monocytes",
+                "Circulating Monocytes",
+                "Skin Fibroblasts",
+                "Retinal Pigment Epithelium",
+                "Photoreceptor Outer Segments",
+                "Lysosomal compartment",
+                "Postmitotic RPE cells",
+                "Human donor eyes",
+                "macular pigments",
+                "preferred retinal locations",
+                "PRLs",
+                "scotoma",
+                "Choroidal Blood Flow",
+                "Ocular Blood Flow",
+                "Fellow Eye"
+            ]
+        },
+        "DiagnosticTool": {
+            "description": "Instruments used for diagnosis",
+            "subclasses": [],
+            "instances": [
+                "Slit Lamp Microscope",
+                "Ophthalmoscope",
+                "Tonometer"
+            ]
+        },
+        "MedicalDevice": {
+            "description": "Equipment used for medical purposes",
+            "subclasses": [],
+            "instances": [
+                "Contact Lens",
+                "Thermal Diode Laser"
+            ]
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "A treatment for a disease",
+            "examples": [
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Aflibercept",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Bevacizumab",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Lutein",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Zeaxanthin",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Vitamin C",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Vitamin E",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "AREDS",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Macuvite",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Submacular Surgery",
+                    "treats",
+                    "Subfoveal Choroidal Neovascularization"
+                ],
+                [
+                    "Photodynamic Therapy",
+                    "treats",
+                    "Subfoveal Choroidal Neovascularization"
+                ],
+                [
+                    "Laser Photocoagulation",
+                    "treats",
+                    "Subfoveal Choroidal Neovascularization"
+                ],
+                [
+                    "Verteporfin",
+                    "treats",
+                    "Subfoveal Choroidal Neovascularization"
+                ],
+                [
+                    "Corticosteroid",
+                    "treats",
+                    "Ill-Defined Choroidal Neovascularization"
+                ],
+                [
+                    "Laser Photocoagulation",
+                    "treats",
+                    "Well-Defined Choroidal Neovascularization"
+                ],
+                [
+                    "Lutein",
+                    "treats",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Vitamin C",
+                    "treats",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Vitamin E",
+                    "treats",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Beta-carotene",
+                    "treats",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Fluocinolone Acetonide",
+                    "treats",
+                    "Choroidal Neovascularization"
+                ],
+                [
+                    "Fluocinolone Acetonide",
+                    "treats",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Laser Photocoagulation",
+                    "treats",
+                    "Choroidal Neovascularization"
+                ],
+                [
+                    "Photodynamic Therapy",
+                    "treats",
+                    "Choroidal Neovascularization"
+                ],
+                [
+                    "Intraocular Corticosteroids",
+                    "treats",
+                    "Choroidal Neovascularization"
+                ],
+                [
+                    "Laser Beam Treatment",
+                    "treats",
+                    "Choroidal Neovascularization"
+                ],
+                [
+                    "Pulse-Diode Laser Photocoagulation",
+                    "treats",
+                    "Choroidal Feeder Vessels"
+                ],
+                [
+                    "Celecoxib",
+                    "treats",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Photodynamic Therapy",
+                    "treats",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Verteporfin",
+                    "treats",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Cyclooxygenase-2 Inhibition",
+                    "treats",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Laser Treatment",
+                    "treats",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Triamcinolone Acetonide",
+                    "treats",
+                    "Neovascular Age-Related Macular Degeneration"
+                ],
+                [
+                    "Photodynamic Therapy",
+                    "treats",
+                    "Neovascular Age-Related Macular Degeneration"
+                ],
+                [
+                    "Verteporfin",
+                    "treats",
+                    "Neovascular Age-Related Macular Degeneration"
+                ],
+                [
+                    "Photodynamic Therapy",
+                    "treats",
+                    "Occult Choroidal Neovascularization"
+                ],
+                [
+                    "Photodynamic Therapy",
+                    "treats",
+                    "Minimally Classic Choroidal Neovascularization"
+                ],
+                [
+                    "Transpupillary Thermotherapy",
+                    "treats",
+                    "Occult Choroidal Neovascularization"
+                ],
+                [
+                    "Transpupillary Thermotherapy",
+                    "treats",
+                    "Minimally Classic Choroidal Neovascularization"
+                ],
+                [
+                    "anti-glaucoma drugs",
+                    "treats",
+                    "Glaucoma"
+                ],
+                [
+                    "antioxidant supplementation",
+                    "treats",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Age-related macular degeneration",
+                    "treats",
+                    "macular pigments"
+                ],
+                [
+                    "Age-related macular degeneration",
+                    "treats",
+                    "green tea polyphenols"
+                ],
+                [
+                    "Age-related macular degeneration",
+                    "treats",
+                    "lutein"
+                ],
+                [
+                    "Age-related macular degeneration",
+                    "treats",
+                    "zeaxanthin"
+                ],
+                [
+                    "reading practice",
+                    "treats",
+                    "macular disease"
+                ],
+                [
+                    "retinal cell transplantation",
+                    "treats",
+                    "macular disease"
+                ],
+                [
+                    "gene therapy",
+                    "treats",
+                    "macular disease"
+                ],
+                [
+                    "retinal prosthetics",
+                    "treats",
+                    "macular disease"
+                ],
+                [
+                    "vision rehabilitation",
+                    "treats",
+                    "macular disease"
+                ],
+                [
+                    "reading rehabilitation",
+                    "treats",
+                    "macular disease"
+                ],
+                [
+                    "oculomotor training",
+                    "treats",
+                    "macular disease"
+                ]
+            ]
+        },
+        "inhibits": {
+            "domain": "MolecularTarget",
+            "range": "MolecularTarget",
+            "description": "A molecule that inhibits another molecule",
+            "examples": [
+                [
+                    "VEGF",
+                    "inhibits",
+                    "Ranibizumab"
+                ],
+                [
+                    "Choroidal Neovascularization",
+                    "inhibits",
+                    "Cyclooxygenase-2"
+                ],
+                [
+                    "Cyclooxygenase-2",
+                    "inhibits",
+                    "Celecoxib"
+                ],
+                [
+                    "Verteporfin",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "green tea polyphenols",
+                    "inhibits",
+                    "reactive oxygen species"
+                ],
+                [
+                    "reactive oxygen species",
+                    "inhibits",
+                    "macular pigments"
+                ],
+                [
+                    "blue light",
+                    "inhibits",
+                    "macular pigments"
+                ],
+                [
+                    "macular pigments",
+                    "inhibits",
+                    "reactive oxygen species"
+                ],
+                [
+                    "reactive oxygen species",
+                    "inhibits",
+                    "green tea polyphenols"
+                ],
+                [
+                    "Angiogenesis",
+                    "inhibits",
+                    "Choroidal Neovascularization"
+                ]
+            ]
+        },
+        "causesOrIncreases": {
+            "domain": "RiskFactor",
+            "range": "Disease",
+            "description": "A factor that causes or increases a disease",
+            "examples": [
+                [
+                    "smoking",
+                    "causesOrIncreases",
+                    "AMD"
+                ],
+                [
+                    "sunlight",
+                    "causesOrIncreases",
+                    "AMD"
+                ],
+                [
+                    "occupation",
+                    "causesOrIncreases",
+                    "AMD"
+                ],
+                [
+                    "Vision loss",
+                    "causesOrIncreases",
+                    "Age"
+                ],
+                [
+                    "Vision loss",
+                    "causesOrIncreases",
+                    "Genetic component"
+                ],
+                [
+                    "Vision loss",
+                    "causesOrIncreases",
+                    "Familial aggregation"
+                ],
+                [
+                    "Impaired vision",
+                    "causesOrIncreases",
+                    "Age"
+                ],
+                [
+                    "Impaired vision",
+                    "causesOrIncreases",
+                    "Genetic component"
+                ],
+                [
+                    "Impaired vision",
+                    "causesOrIncreases",
+                    "Familial aggregation"
+                ],
+                [
+                    "Severely impaired vision",
+                    "causesOrIncreases",
+                    "Age"
+                ],
+                [
+                    "Severely impaired vision",
+                    "causesOrIncreases",
+                    "Genetic component"
+                ],
+                [
+                    "Severely impaired vision",
+                    "causesOrIncreases",
+                    "Familial aggregation"
+                ],
+                [
+                    "Ageing changes",
+                    "causesOrIncreases",
+                    "Atrophic Age-Related Macular Degeneration"
+                ],
+                [
+                    "Fifty years of age",
+                    "causesOrIncreases",
+                    "Atrophic Age-Related Macular Degeneration"
+                ],
+                [
+                    "blue light",
+                    "causesOrIncreases",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Age-related macular degeneration",
+                    "causesOrIncreases",
+                    "reactive oxygen species"
+                ],
+                [
+                    "low dietary intake",
+                    "causesOrIncreases",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "low blood levels",
+                    "causesOrIncreases",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Choroidal Neovascularisation",
+                    "causesOrIncreases",
+                    "Visual Impairment"
+                ]
+            ]
+        },
+        "indicates": {
+            "domain": "DiagnosticMethod",
+            "range": "Disease",
+            "description": "A diagnostic method that indicates a disease",
+            "examples": []
+        },
+        "diagnosedBy": {
+            "domain": "Disease",
+            "range": "DiagnosticMethod",
+            "description": "A diagnostic method used to diagnose a disease",
+            "examples": [
+                [
+                    "OCT",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Fluorescein Angiography",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Fundus Photography",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Heterochromatic Flicker Photometry",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Fundus Autofluorescence",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Medical Outcomes Survey Short Form-36",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Hospital Anxiety and Depression Scale",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "National Eye Institute Visual Function Questionnaire",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Macular Photocoagulation Study",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Pelli-Robson charts",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "ETDRS charts",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Fluorescein Angiograms",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Stereoscopic Color Fundus Photographs",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Lens Photographs",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Fluorescein Angiography",
+                    "diagnosedBy",
+                    "Choroidal Neovascularization"
+                ],
+                [
+                    "Visual field study",
+                    "diagnosedBy",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Flicker photometry",
+                    "diagnosedBy",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Age-Related Eye Disease Study",
+                    "diagnosedBy",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "NEI VFQ",
+                    "diagnosedBy",
+                    "Visual Acuity"
+                ],
+                [
+                    "Choroidal Neovascularization",
+                    "diagnosedBy",
+                    "Indocyanine Green Angiography"
+                ],
+                [
+                    "Choroidal Neovascularization",
+                    "diagnosedBy",
+                    "Fluorescein Angiography"
+                ],
+                [
+                    "Optical Coherence Tomography",
+                    "diagnosedBy",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Fluorescein Angiography",
+                    "diagnosedBy",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Indocyanine Green Angiography",
+                    "diagnosedBy",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Choroidal Neovascularization",
+                    "diagnosedBy",
+                    "Optical Coherence Tomography"
+                ],
+                [
+                    "genome wide association study",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "candidate gene association",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "linkage disequilibrium",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Neovascular Age-Related Macular Degeneration",
+                    "diagnosedBy",
+                    "Fluorescein Angiography"
+                ],
+                [
+                    "Neovascular Age-Related Macular Degeneration",
+                    "diagnosedBy",
+                    "Optical Coherence Tomography"
+                ],
+                [
+                    "Choroidal Neovascularization",
+                    "diagnosedBy",
+                    "ICG"
+                ],
+                [
+                    "Age-related Macular Degeneration",
+                    "diagnosedBy",
+                    "ETDRS"
+                ],
+                [
+                    "Age-related Macular Degeneration",
+                    "diagnosedBy",
+                    "NEI-CFQ-25"
+                ],
+                [
+                    "20-30 MHz ultrasound",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Age-related Macular Degeneration",
+                    "diagnosedBy",
+                    "high-frequency spectral assays"
+                ],
+                [
+                    "retinal thickness profiles",
+                    "diagnosedBy",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Age-related Macular Degeneration",
+                    "diagnosedBy",
+                    "choroidal thickness profiles"
+                ],
+                [
+                    "Age-related Macular Degeneration",
+                    "diagnosedBy",
+                    "morphologic vascular analysis"
+                ],
+                [
+                    "Glaucoma",
+                    "diagnosedBy",
+                    "accommodative function"
+                ],
+                [
+                    "ocular tumors",
+                    "diagnosedBy",
+                    "ultrasound scattering structure"
+                ],
+                [
+                    "dilated eye exam",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "digital images of the macula",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "digital stereo images",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "AREDS AMD classification scheme",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Age-related maculopathy",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Retinopathy",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Nuclear cataract",
+                    "diagnosedBy",
+                    "Slit Lamp Microscope"
+                ],
+                [
+                    "Cortical cataract",
+                    "diagnosedBy",
+                    "Slit Lamp Microscope"
+                ],
+                [
+                    "Posterior subcapsular cataract",
+                    "diagnosedBy",
+                    "Slit Lamp Microscope"
+                ],
+                [
+                    "Exudative macular degeneration",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Large soft indistinct drusen",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Retinal pigment epithelial depigmentation",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Increased retinal pigment",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Polymerase Chain Reaction",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Northern Blot Analysis",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Differential Display",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Microarray Technology",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Skin Biopsy",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Blood Draw",
+                    "diagnosedBy",
+                    "AMD"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "diagnosedBy",
+                    "Fundus Autofluorescence Imaging"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "diagnosedBy",
+                    "Fundus autofluorescence alterations"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "diagnosedBy",
+                    "Confocal Scanning Laser Ophthalmoscopy"
+                ],
+                [
+                    "macular pigments",
+                    "diagnosedBy",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "Unilateral Choroidal Neovascularisation",
+                    "diagnosedBy",
+                    "Ocular Blood Flow"
+                ],
+                [
+                    "soft confluent drusen",
+                    "diagnosedBy",
+                    "visual acuity measurement"
+                ],
+                [
+                    "soft confluent drusen",
+                    "diagnosedBy",
+                    "slit lamp exam"
+                ],
+                [
+                    "soft confluent drusen",
+                    "diagnosedBy",
+                    "indirect ophthalmoscopy"
+                ],
+                [
+                    "soft confluent drusen",
+                    "diagnosedBy",
+                    "fundus photos"
+                ],
+                [
+                    "soft confluent drusen",
+                    "diagnosedBy",
+                    "spectral domain optical coherence tomography"
+                ],
+                [
+                    "soft confluent drusen",
+                    "diagnosedBy",
+                    "fluoroscein angiography"
+                ]
+            ]
+        },
+        "associatedWith": {
+            "domain": "GeneticBiomarker",
+            "range": "Disease",
+            "description": "A gene associated with a disease",
+            "examples": [
+                [
+                    "CFH",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ARMS2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "HTRA1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C3",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "CFB",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ApoE",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "AMRS2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "CX3CR1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C2/BF",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "DNA repair",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "oxidative stress",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "inflammation",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "mitochondria",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "chaperone proteins",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Single Nucleotide Polymorphism",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Glaucoma",
+                    "associatedWith",
+                    "anterior segment"
+                ],
+                [
+                    "candidate genes",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Wound Repair",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Cell Injury",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Cell Death",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Lipofuscin accumulation",
+                    "associatedWith",
+                    "Atrophic Age-Related Macular Degeneration"
+                ],
+                [
+                    "RPE-lipofuscin accumulation",
+                    "associatedWith",
+                    "Atrophic Age-Related Macular Degeneration"
+                ],
+                [
+                    "Autofluorescent lipofuscin granules",
+                    "associatedWith",
+                    "Atrophic Age-Related Macular Degeneration"
+                ],
+                [
+                    "Postmitotic RPE cells",
+                    "associatedWith",
+                    "Lipofuscin accumulation"
+                ],
+                [
+                    "Constant phagocytosis",
+                    "associatedWith",
+                    "Lipofuscin accumulation"
+                ],
+                [
+                    "Membranous disks",
+                    "associatedWith",
+                    "Lipofuscin accumulation"
+                ],
+                [
+                    "Retinal pigment epithelium changes",
+                    "associatedWith",
+                    "Lipofuscin accumulation"
+                ],
+                [
+                    "Predictive factors",
+                    "associatedWith",
+                    "Lipofuscin accumulation"
+                ],
+                [
+                    "macular pigments",
+                    "associatedWith",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "macular pigments",
+                    "associatedWith",
+                    "lutein"
+                ],
+                [
+                    "macular pigments",
+                    "associatedWith",
+                    "zeaxanthin"
+                ],
+                [
+                    "carotenoids",
+                    "associatedWith",
+                    "macular pigments"
+                ],
+                [
+                    "rs11200638",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "rs1061170",
+                    "associatedWith",
+                    "AMD"
+                ]
+            ]
+        },
+        "measuredBy": {
+            "domain": "MolecularTarget",
+            "range": "DiagnosticMethod",
+            "description": "A diagnostic method used to measure a molecule",
+            "examples": [
+                [
+                    "Maculometer",
+                    "measuredBy",
+                    "Macular Pigment"
+                ],
+                [
+                    "Heterochromatic Flicker Photometry",
+                    "measuredBy",
+                    "Macular Pigment"
+                ],
+                [
+                    "Fundus Autofluorescence",
+                    "measuredBy",
+                    "Macular Pigment"
+                ],
+                [
+                    "Intraocular pressure",
+                    "measuredBy",
+                    "Tonometer"
+                ],
+                [
+                    "Cup-disc ratio",
+                    "measuredBy",
+                    "Ophthalmoscope"
+                ],
+                [
+                    "Ocular refraction",
+                    "measuredBy",
+                    "Ophthalmoscope"
+                ],
+                [
+                    "OCT",
+                    "measuredBy",
+                    "macular pigments"
+                ],
+                [
+                    "macular pigment optical density",
+                    "measuredBy",
+                    "macular pigments"
+                ],
+                [
+                    "Laser Doppler Flowmetry",
+                    "measuredBy",
+                    "Choroidal Blood Flow"
+                ],
+                [
+                    "Laser Interferometry",
+                    "measuredBy",
+                    "Choroidal Blood Flow"
+                ]
+            ]
+        },
+        "hasSymptom": {
+            "domain": "Disease",
+            "range": "ClinicalOutcome",
+            "description": "A symptom of a disease",
+            "examples": [
+                [
+                    "Choroidal Neovascularization",
+                    "hasSymptom",
+                    "Vision Loss"
+                ],
+                [
+                    "Geographic atrophic",
+                    "hasSymptom",
+                    "Vision loss"
+                ],
+                [
+                    "Retinal pigment epithelial detachment",
+                    "hasSymptom",
+                    "Vision loss"
+                ],
+                [
+                    "Neovascular/exudative disease",
+                    "hasSymptom",
+                    "Vision loss"
+                ],
+                [
+                    "Drusen",
+                    "hasSymptom",
+                    "Vision loss"
+                ],
+                [
+                    "Visual Acuity",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Best Corrected Visual Acuity",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Choroidal Neovascularization",
+                    "hasSymptom",
+                    "Visual Acuity Loss"
+                ],
+                [
+                    "Visual Acuity Loss",
+                    "hasSymptom",
+                    "Age-related Macular Degeneration"
+                ],
+                [
+                    "Central Vision Loss",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Visual Acuity Improvement",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Stabilization of Vision",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Lesion Size",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Vascular Remodeling",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Choroidal New Vessel Formation",
+                    "hasSymptom",
+                    "Age-Related Macular Degeneration"
+                ],
+                [
+                    "Neovascular Age-Related Macular Degeneration",
+                    "hasSymptom",
+                    "Moderate Vision Loss"
+                ],
+                [
+                    "Neovascular Age-Related Macular Degeneration",
+                    "hasSymptom",
+                    "Severe Vision Loss"
+                ],
+                [
+                    "emmetropes",
+                    "hasSymptom",
+                    "accommodative loss"
+                ],
+                [
+                    "presbyopes",
+                    "hasSymptom",
+                    "accommodative loss"
+                ],
+                [
+                    "anterior melanoma",
+                    "hasSymptom",
+                    "tumor growth"
+                ],
+                [
+                    "anterior melanoma",
+                    "hasSymptom",
+                    "tumor volume"
+                ],
+                [
+                    "Age-related maculopathy",
+                    "hasSymptom",
+                    "Impaired vision"
+                ],
+                [
+                    "Age-related maculopathy",
+                    "hasSymptom",
+                    "Severely impaired vision"
+                ],
+                [
+                    "Retinopathy",
+                    "hasSymptom",
+                    "Impaired vision"
+                ],
+                [
+                    "Retinopathy",
+                    "hasSymptom",
+                    "Severely impaired vision"
+                ],
+                [
+                    "Nuclear cataract",
+                    "hasSymptom",
+                    "Impaired vision"
+                ],
+                [
+                    "Nuclear cataract",
+                    "hasSymptom",
+                    "Severely impaired vision"
+                ],
+                [
+                    "Cortical cataract",
+                    "hasSymptom",
+                    "Impaired vision"
+                ],
+                [
+                    "Cortical cataract",
+                    "hasSymptom",
+                    "Severely impaired vision"
+                ],
+                [
+                    "Posterior subcapsular cataract",
+                    "hasSymptom",
+                    "Impaired vision"
+                ],
+                [
+                    "Posterior subcapsular cataract",
+                    "hasSymptom",
+                    "Severely impaired vision"
+                ],
+                [
+                    "Exudative macular degeneration",
+                    "hasSymptom",
+                    "Impaired vision"
+                ],
+                [
+                    "Exudative macular degeneration",
+                    "hasSymptom",
+                    "Severely impaired vision"
+                ],
+                [
+                    "Disciform Scar",
+                    "hasSymptom",
+                    "Vision Loss"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "hasSymptom",
+                    "Retinal Sensitivity"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "hasSymptom",
+                    "Retinal sensitivity"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "hasSymptom",
+                    "Legal blindness"
+                ],
+                [
+                    "Atrophic Age-Related Macular Degeneration",
+                    "hasSymptom",
+                    "Disease progression"
+                ],
+                [
+                    "Age-related macular degeneration",
+                    "hasSymptom",
+                    "blue light"
+                ],
+                [
+                    "reactive oxygen species",
+                    "hasSymptom",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "macular pigments",
+                    "hasSymptom",
+                    "Age-related macular degeneration"
+                ],
+                [
+                    "macular disease",
+                    "hasSymptom",
+                    "central vision loss"
+                ],
+                [
+                    "age-related macular degeneration",
+                    "hasSymptom",
+                    "central vision loss"
+                ],
+                [
+                    "Neovascular Maculopathy",
+                    "hasSymptom",
+                    "Serous Detachment of Retinal Pigment Epithelium"
+                ],
+                [
+                    "Neovascular Maculopathy",
+                    "hasSymptom",
+                    "Hemorrhagic Detachment of Retinal Pigment Epithelium"
+                ]
+            ]
+        },
+        "assessedBy": {
+            "domain": "Disease",
+            "range": "DiagnosticMethod",
+            "description": "A diagnostic method used to assess a disease",
+            "examples": []
+        }
+    },
+    "individuals": {}
+}

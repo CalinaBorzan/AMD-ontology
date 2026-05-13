@@ -11,6 +11,7 @@ env/
 # IDE files
 .idea/
 .vscode/
+.claude/
 
 # Build artifacts
 build/
@@ -27,3 +28,26 @@ dist/
 # Large generated data (reproducible via prepare_amd_simple.py)
 data/stage-2/AMD/abstracts/
 data/stage-3/AMD/abstracts/
+
+# Local backups (not pushed)
+backups/
+
+docs/
+
+# DL-Learner tool (extracted locally — not part of source code)
+dllearner-1.5.0/
+
+# DL-Learner sweep results (regenerable from param_sweep.py)
+evaluation/dl-learner/sweep_results/
+
+# Test caches
+  .pytest_cache/
+
+  # Jupyter checkpoints
+  .ipynb_checkpoints/
+
+  # OS junk
+  .DS_Store
+  Thumbs.db
+  desktop.ini
+

@@ -1,0 +1,1773 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "A medical condition affecting the human body",
+            "subclasses": [
+                "AMD",
+                "SubfovealChoroidalNeovascularization",
+                "OcularHistoplasmosisSyndrome",
+                "IdiopathicChoroidalNeovascularization",
+                "FeederVessels",
+                "ChoroidalNeovascularization",
+                "OcularTumor",
+                "AccommodationDisease",
+                "UnilateralChoroidalNeovascularisation",
+                "NeovascularMaculopathy",
+                "SerousDetachment",
+                "ExudativeMaculopathy",
+                "RubeosisIridis",
+                "NeovascularGlaucoma",
+                "ProliferativeDiabeticRetinopathy",
+                "MacularDisease",
+                "ImmunologicalMechanism",
+                "VisualImpairment",
+                "LowVision",
+                "GeneticEpidemiology",
+                "AgeRelatedMaculopathy",
+                "NeurodegenerativeDisease",
+                "PigmentEpithelialDetachment",
+                "MacularEdema",
+                "LowVisionDepression",
+                "CoronaryArteryDisease",
+                "CerebrovascularEvent",
+                "SubfovealNeovascularMembrane",
+                "GeographicAtrophyProgression",
+                "AMDPhenotype",
+                "SubmacularHaemorrhage"
+            ],
+            "instances": [
+                "Glaucoma",
+                "Cataract",
+                "Retinopathy"
+            ]
+        },
+        "Treatment": {
+            "description": "A medical intervention used to manage or cure a disease",
+            "subclasses": [
+                "AntiVEGFTherapy",
+                "SubmacularSurgery",
+                "CorticosteroidTreatment",
+                "FluocinoloneAcetonide",
+                "Cyclooxygenase2Inhibition",
+                "Antioxidant",
+                "OculomotorTraining",
+                "SaffronSupplementation",
+                "VisualRehabilitation",
+                "ReadingTraining",
+                "LaserTreatment",
+                "StereotacticRadiotherapy",
+                "LowLevelNightTimeLightTherapy",
+                "RetinalRejuvenation",
+                "IntraocularLens",
+                "LuteinSupplementation",
+                "PhotodynamicTherapy",
+                "TriamcinoloneAcetonide",
+                "ReadingRehabilitation",
+                "TranspupillaryThermotherapy",
+                "CombinationTherapy",
+                "CNTFImplant",
+                "Rheopheresis",
+                "ImmunomodulatorySubstance",
+                "IntravitrealComplementInhibitor",
+                "AntioxidantSupplement",
+                "ZincSupplement",
+                "Sonepcizumab",
+                "IntravitrealDexamethasone",
+                "SqualamineLactate",
+                "LuteinAndZeaxanthinSupplement",
+                "OculomotorControlExercises"
+            ],
+            "instances": [
+                "Verteporfin",
+                "Macuvite",
+                "Pazopanib",
+                "Aspirin",
+                "Acetazolamide",
+                "Photocoagulation",
+                "Rheohemapheresis",
+                "Sirolimus",
+                "iSONEP",
+                "Phenylephrine",
+                "Perfluoropropane"
+            ]
+        },
+        "Biomarker": {
+            "description": "A measurable indicator of a biological state or condition",
+            "subclasses": [
+                "Lutein",
+                "Zeaxanthin",
+                "MacularPigment",
+                "Carotenoid",
+                "SkinFibroblast",
+                "PulsatileOcularBloodFlow",
+                "OcularFundusPulsation",
+                "OcularRigidity",
+                "AMDGenotype",
+                "ImagingBiomarker",
+                "VisualFunctionBiomarker",
+                "AmyloidBeta",
+                "GeneticPolymorphism",
+                "ReticularPseudodrusen",
+                "GutMetagenome"
+            ],
+            "instances": [
+                "VEGF",
+                "Monocyte",
+                "CNTF",
+                "S1P",
+                "rs11200638",
+                "rs1061170",
+                "Lipofuscin"
+            ]
+        },
+        "DiagnosticMethod": {
+            "description": "A procedure or test used to diagnose a disease",
+            "subclasses": [
+                "MultifocalObjectivePupilPerimetry",
+                "HighResolutionUltrasoundImaging",
+                "FundusAutofluorescenceImaging",
+                "PatternElectroretinography",
+                "Electroretinography",
+                "DarkAdaptation",
+                "GeneticAssessment",
+                "WebBasedPlatform",
+                "ThreeDimensionalImaging"
+            ],
+            "instances": [
+                "OCT",
+                "MOS SF-36",
+                "NEI VFQ-25",
+                "ETDRS",
+                "ICG",
+                "Ultrasound",
+                "IReST"
+            ]
+        },
+        "RiskFactor": {
+            "description": "A factor that increases the likelihood of developing a disease",
+            "subclasses": [
+                "GeneticRiskFactor",
+                "GeneticRiskFactorForAMD",
+                "GeneticRiskFactorForARM",
+                "ArterialHypertension",
+                "ArterialHypotension",
+                "Nutrition"
+            ],
+            "instances": []
+        },
+        "ClinicalOutcome": {
+            "description": "A measurable result of a treatment or disease progression",
+            "subclasses": [
+                "IntraocularPressure",
+                "ArterialThromboembolicEvent",
+                "SystemicHemodynamicParameters"
+            ],
+            "instances": []
+        },
+        "AMD": {
+            "description": "Age-Related Macular Degeneration",
+            "subclasses": [
+                "DryAMD",
+                "WetAMD",
+                "NeovascularAgeRelatedMacularDegeneration",
+                "GeographicAtrophy",
+                "NeovascularAMD",
+                "AtrophicAgeRelatedMacularDegeneration",
+                "AdvancedAMD",
+                "AtrophicMacularDegeneration",
+                "ExudativeARMD"
+            ],
+            "instances": []
+        },
+        "DryAMD": {
+            "description": "Dry Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "WetAMD": {
+            "description": "Wet Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "AntiVEGFTherapy": {
+            "description": "Anti-Vascular Endothelial Growth Factor therapy",
+            "subclasses": [
+                "Conbercept"
+            ],
+            "instances": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab",
+                "Lucentis",
+                "Eylea",
+                "Conbercept",
+                "Avastin"
+            ]
+        },
+        "Gene": {
+            "description": "A genetic entity",
+            "subclasses": [
+                "TAS2R38Gene"
+            ],
+            "instances": [
+                "CFH",
+                "C3",
+                "C2",
+                "CFB",
+                "ARMS2",
+                "HTRA1",
+                "ApoE",
+                "BF",
+                "CX3CR1",
+                "AMRS2",
+                "LOC387715",
+                "CFI",
+                "PLEKHA1",
+                "VEGFR"
+            ]
+        },
+        "Lutein": {
+            "description": "A hydroxycarotenoid found in the diet",
+            "subclasses": [],
+            "instances": []
+        },
+        "Zeaxanthin": {
+            "description": "A hydroxycarotenoid found in the diet",
+            "subclasses": [],
+            "instances": []
+        },
+        "MacularPigment": {
+            "description": "An accumulation of lutein and zeaxanthin in the retina",
+            "subclasses": [],
+            "instances": []
+        },
+        "SubfovealChoroidalNeovascularization": {
+            "description": "A type of choroidal neovascularization that affects the subfoveal region of the eye",
+            "subclasses": [],
+            "instances": []
+        },
+        "OcularHistoplasmosisSyndrome": {
+            "description": "A disease caused by the histoplasmosis fungus that affects the eyes",
+            "subclasses": [],
+            "instances": []
+        },
+        "IdiopathicChoroidalNeovascularization": {
+            "description": "A type of choroidal neovascularization with no known cause",
+            "subclasses": [],
+            "instances": []
+        },
+        "SubmacularSurgery": {
+            "description": "A surgical procedure to remove subfoveal choroidal neovascularization",
+            "subclasses": [],
+            "instances": []
+        },
+        "CorticosteroidTreatment": {
+            "description": "A treatment using corticosteroids to reduce inflammation",
+            "subclasses": [],
+            "instances": []
+        },
+        "Carotenoid": {
+            "description": "A class of biomarkers that include lutein, vitamin C, vitamin E, and beta-carotene",
+            "subclasses": [],
+            "instances": []
+        },
+        "FluocinoloneAcetonide": {
+            "description": "A type of corticosteroid used to treat age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "FeederVessels": {
+            "description": "Abnormal blood vessels that feed choroidal neovascularization",
+            "subclasses": [],
+            "instances": []
+        },
+        "Cyclooxygenase2Inhibition": {
+            "description": "A type of treatment that inhibits cyclooxygenase-2",
+            "subclasses": [],
+            "instances": [
+                "Celecoxib"
+            ]
+        },
+        "ChoroidalNeovascularization": {
+            "description": "A disease characterized by the growth of new blood vessels in the choroid",
+            "subclasses": [
+                "IllDefinedChoroidalNeovascularization"
+            ],
+            "instances": []
+        },
+        "GeneticRiskFactor": {
+            "description": "A genetic factor that increases the risk of developing a disease",
+            "subclasses": [],
+            "instances": []
+        },
+        "NeovascularAgeRelatedMacularDegeneration": {
+            "description": "A type of age-related macular degeneration characterized by the growth of new blood vessels",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeographicAtrophy": {
+            "description": "A type of AMD characterized by dryness in the macula",
+            "subclasses": [],
+            "instances": []
+        },
+        "NeovascularAMD": {
+            "description": "A type of AMD characterized by the growth of new blood vessels in the macula",
+            "subclasses": [],
+            "instances": []
+        },
+        "OcularTumor": {
+            "description": "Tumors of the iris and ciliary body",
+            "subclasses": [],
+            "instances": []
+        },
+        "AccommodationDisease": {
+            "description": "Diseases related to accommodation",
+            "subclasses": [],
+            "instances": []
+        },
+        "AmishCommunity": {
+            "description": "A population isolate in the Lancaster and Franklin counties area in Pennsylvania",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "Population"
+        },
+        "NuclearCataract": {
+            "description": "A type of cataract",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "Cataract"
+        },
+        "CorticalCataract": {
+            "description": "A type of cataract",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "Cataract"
+        },
+        "PosteriorSubcapsularCataract": {
+            "description": "A type of cataract",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "Cataract"
+        },
+        "EarlyARM": {
+            "description": "An early stage of age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "LateARM": {
+            "description": "A late stage of age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "SkinFibroblast": {
+            "description": "A type of cell found in skin tissue",
+            "subclasses": [],
+            "instances": []
+        },
+        "AtrophicAgeRelatedMacularDegeneration": {
+            "description": "A type of Age-Related Macular Degeneration characterized by atrophy",
+            "subclasses": [],
+            "instances": []
+        },
+        "Antioxidant": {
+            "description": "A substance that prevents or reduces cell damage caused by reactive oxygen species",
+            "subclasses": [],
+            "instances": []
+        },
+        "OculomotorTraining": {
+            "description": "A type of training for patients with macular disease",
+            "subclasses": [],
+            "instances": []
+        },
+        "UnilateralChoroidalNeovascularisation": {
+            "description": "A condition where choroidal neovascularisation occurs in one eye.",
+            "subclasses": [],
+            "instances": []
+        },
+        "NeovascularMaculopathy": {
+            "description": "A condition characterised by the growth of new blood vessels in the macula.",
+            "subclasses": [],
+            "instances": []
+        },
+        "SerousDetachment": {
+            "description": "A condition where fluid accumulates under the retina.",
+            "subclasses": [],
+            "instances": []
+        },
+        "PulsatileOcularBloodFlow": {
+            "description": "A type of blood flow in the eye",
+            "subclasses": [],
+            "instances": []
+        },
+        "AdvancedAMD": {
+            "description": "Advanced Age-related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "ExudativeMaculopathy": {
+            "description": "A condition characterized by the accumulation of fluid and proteins in the macula",
+            "subclasses": [
+                "PolypoidalChoroidalVasculopathy"
+            ],
+            "instances": []
+        },
+        "RubeosisIridis": {
+            "description": "A complication of ocular neovascularization",
+            "subclasses": [],
+            "instances": []
+        },
+        "NeovascularGlaucoma": {
+            "description": "A type of glaucoma caused by neovascularization",
+            "subclasses": [],
+            "instances": []
+        },
+        "ProliferativeDiabeticRetinopathy": {
+            "description": "A complication of diabetic retinopathy",
+            "subclasses": [],
+            "instances": []
+        },
+        "SaffronSupplementation": {
+            "description": "Saffron supplementation as a treatment for dry AMD",
+            "subclasses": [],
+            "instances": [
+                "Saffron"
+            ]
+        },
+        "MultifocalObjectivePupilPerimetry": {
+            "description": "A novel tool for visual testing",
+            "subclasses": [],
+            "instances": []
+        },
+        "MacularDisease": {
+            "description": "A disease affecting the macula",
+            "subclasses": [],
+            "instances": []
+        },
+        "ImmunologicalMechanism": {
+            "description": "Immunological mechanism in age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "VisualImpairment": {
+            "description": "A condition where a person has a reduced ability to see",
+            "subclasses": [
+                "VisualImpairmentDueToAMD",
+                "VisualImpairmentDueToCentralVisionLoss"
+            ],
+            "instances": []
+        },
+        "LowVision": {
+            "description": "A condition where a person has a significant reduction in vision",
+            "subclasses": [],
+            "instances": []
+        },
+        "VisualRehabilitation": {
+            "description": "A treatment to help improve vision in people with visual impairment",
+            "subclasses": [
+                "EccentricViewingTraining",
+                "ClosedCircuitTelevisionTraining"
+            ],
+            "instances": []
+        },
+        "ReadingTraining": {
+            "description": "A treatment to help improve reading ability in people with visual impairment",
+            "subclasses": [],
+            "instances": []
+        },
+        "PolypoidalChoroidalVasculopathy": {
+            "description": "A subtype of exudative age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "LaserTreatment": {
+            "description": "A type of treatment that uses laser to target pigment granules in the layer of cells that supports the light-sensitive retina",
+            "subclasses": [],
+            "instances": []
+        },
+        "StereotacticRadiotherapy": {
+            "description": "A type of radiation therapy used to treat wet Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "LowLevelNightTimeLightTherapy": {
+            "description": "A treatment for age-related macular degeneration using low-level night-time light therapy",
+            "subclasses": [],
+            "instances": []
+        },
+        "Conbercept": {
+            "description": "An anti-VEGF drug that blocks all the different forms of VEGF-A, VEGF-B, VEGF-C and placenta growth factor (PlGF)",
+            "subclasses": [],
+            "instances": []
+        },
+        "IntraocularPressure": {
+            "description": "The pressure inside the eye",
+            "subclasses": [],
+            "instances": []
+        },
+        "RetinalRejuvenation": {
+            "description": "A treatment for age-related maculopathy",
+            "subclasses": [],
+            "instances": []
+        },
+        "IntraocularLens": {
+            "description": "A type of lens implant used to improve vision in patients with age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "IllDefinedChoroidalNeovascularization": {
+            "description": "A type of choroidal neovascularization that cannot be well demarcated on fluorescein angiography",
+            "subclasses": [],
+            "instances": []
+        },
+        "LuteinSupplementation": {
+            "description": "Lutein supplementation for age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "PhotodynamicTherapy": {
+            "description": "A type of treatment that uses light to destroy abnormal blood vessels",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeneticRiskFactorForAMD": {
+            "description": "Genetic risk factors for Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "TriamcinoloneAcetonide": {
+            "description": "A steroid with anti-inflammatory and anti-angiogenic properties",
+            "subclasses": [],
+            "instances": []
+        },
+        "ReadingRehabilitation": {
+            "description": "Treatment for improving reading skills in patients with age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "TranspupillaryThermotherapy": {
+            "description": "A thermic treatment of choroidal neovascularization in AMD",
+            "subclasses": [],
+            "instances": []
+        },
+        "HighResolutionUltrasoundImaging": {
+            "description": "A high-frequency ultrasound imaging technique for diagnosing age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeneticEpidemiology": {
+            "description": "Study of genetic factors in disease development",
+            "subclasses": [
+                "Pharmacogenetics"
+            ],
+            "instances": []
+        },
+        "AgeRelatedMaculopathy": {
+            "description": "degeneration or atrophy of the macula - the center part of the retina responsible for fine vision",
+            "subclasses": [
+                "EarlyARM",
+                "LateARM",
+                "NonExsudativeAgeRelatedMacularDegeneration"
+            ],
+            "instances": []
+        },
+        "WoundRepair": {
+            "description": "The process of wound repair",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "BiologicalProcess"
+        },
+        "CellInjury": {
+            "description": "The process of cell injury",
+            "subclasses": [
+                "OxidativeDamage"
+            ],
+            "instances": [],
+            "_pending_parent": "BiologicalProcess"
+        },
+        "CellDeath": {
+            "description": "The process of cell death",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "BiologicalProcess"
+        },
+        "CombinationTherapy": {
+            "description": "A therapy that combines multiple treatments",
+            "subclasses": [],
+            "instances": []
+        },
+        "FundusAutofluorescenceImaging": {
+            "description": "A diagnostic method used to visualize lipofuscin accumulation in the retinal pigment epithelium",
+            "subclasses": [],
+            "instances": []
+        },
+        "NonExsudativeAgeRelatedMacularDegeneration": {
+            "description": "A form of age-related macular degeneration characterized by the absence of exudation",
+            "subclasses": [],
+            "instances": []
+        },
+        "AtrophicMacularDegeneration": {
+            "description": "A type of age-related macular degeneration where healthy cells die",
+            "subclasses": [],
+            "instances": []
+        },
+        "CNTFImplant": {
+            "description": "An implant that releases ciliary neurotrophic factor",
+            "subclasses": [],
+            "instances": []
+        },
+        "Rheopheresis": {
+            "description": "A therapeutic apheresis treatment for dry AMD",
+            "subclasses": [],
+            "instances": []
+        },
+        "ImmunomodulatorySubstance": {
+            "description": "A substance that modulates the immune system",
+            "subclasses": [],
+            "instances": [
+                "Copaxone"
+            ]
+        },
+        "NeurodegenerativeDisease": {
+            "description": "A disease that affects the nervous system",
+            "subclasses": [],
+            "instances": []
+        },
+        "Pharmacogenetics": {
+            "description": "The study of how genes affect a person's response to drugs",
+            "subclasses": [],
+            "instances": []
+        },
+        "IntravitrealComplementInhibitor": {
+            "description": "A type of treatment that inhibits complement activation in the eye",
+            "subclasses": [],
+            "instances": []
+        },
+        "OxidativeDamage": {
+            "description": "Damage caused by oxidative stress",
+            "subclasses": [],
+            "instances": []
+        },
+        "PatternElectroretinography": {
+            "description": "A diagnostic method used to assess retinal function",
+            "subclasses": [],
+            "instances": []
+        },
+        "VisualImpairmentDueToAMD": {
+            "description": "Visual impairment caused by Age-related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "Electroretinography": {
+            "description": "A method to record the functional changes of the retina",
+            "subclasses": [],
+            "instances": []
+        },
+        "PigmentEpithelialDetachment": {
+            "description": "A condition where the pigment epithelium detaches from the retina",
+            "subclasses": [],
+            "instances": []
+        },
+        "MacularEdema": {
+            "description": "A condition characterized by the accumulation of fluid in the macula",
+            "subclasses": [],
+            "instances": []
+        },
+        "AntioxidantSupplement": {
+            "description": "Antioxidant supplements used in AREDS",
+            "subclasses": [
+                "VitaminC",
+                "VitaminE",
+                "BetaCarotene"
+            ],
+            "instances": []
+        },
+        "VitaminC": {
+            "description": "Vitamin C supplement",
+            "subclasses": [],
+            "instances": []
+        },
+        "VitaminE": {
+            "description": "Vitamin E supplement",
+            "subclasses": [],
+            "instances": []
+        },
+        "BetaCarotene": {
+            "description": "Beta carotene supplement",
+            "subclasses": [],
+            "instances": []
+        },
+        "ZincSupplement": {
+            "description": "Zinc supplement",
+            "subclasses": [],
+            "instances": []
+        },
+        "Sonepcizumab": {
+            "description": "a humanized monoclonal antibody against sphingosine 1-phosphate",
+            "subclasses": [],
+            "instances": []
+        },
+        "LowVisionDepression": {
+            "description": "Depression related to low vision",
+            "subclasses": [],
+            "instances": []
+        },
+        "VisualImpairmentDueToCentralVisionLoss": {
+            "description": "Visual impairment caused by central vision loss",
+            "subclasses": [],
+            "instances": []
+        },
+        "EccentricViewingTraining": {
+            "description": "A type of visual rehabilitation training that teaches patients to use their remaining side vision.",
+            "subclasses": [],
+            "instances": []
+        },
+        "ClosedCircuitTelevisionTraining": {
+            "description": "A type of visual rehabilitation training that uses electronic magnification to compensate for loss of detail vision.",
+            "subclasses": [],
+            "instances": []
+        },
+        "OcularFundusPulsation": {
+            "description": "A measure of the ocular volume pulse",
+            "subclasses": [],
+            "instances": []
+        },
+        "OcularRigidity": {
+            "description": "The mechanical properties of the eye coats",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeneticRiskFactorForARM": {
+            "description": "Genetic risk factors for Age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "ExudativeAgeRelatedMacularDegeneration": {
+            "description": "A subtype of AgeRelatedMacularDegeneration characterized by the growth of new, fragile blood vessels under the macula",
+            "subclasses": [
+                "ExudativeAgeRelatedMacularDegenerationWithPosteriorVMA"
+            ],
+            "instances": [],
+            "_pending_parent": "AgeRelatedMacularDegeneration"
+        },
+        "IntravitrealDexamethasone": {
+            "description": "A type of steroid treatment for AMD",
+            "subclasses": [],
+            "instances": [
+                "Dexamethasone"
+            ]
+        },
+        "ExudativeAgeRelatedMacularDegenerationWithPosteriorVMA": {
+            "description": "A subtype of exudative age-related macular degeneration with posterior vitreomacular adhesion",
+            "subclasses": [],
+            "instances": []
+        },
+        "ArterialThromboembolicEvent": {
+            "description": "A condition where a blood clot forms in an artery, causing a blockage.",
+            "subclasses": [],
+            "instances": []
+        },
+        "CoronaryArteryDisease": {
+            "description": "A condition where the coronary arteries become damaged or diseased.",
+            "subclasses": [],
+            "instances": []
+        },
+        "CerebrovascularEvent": {
+            "description": "A condition where the blood vessels in the brain become damaged or diseased.",
+            "subclasses": [],
+            "instances": []
+        },
+        "ArterialHypertension": {
+            "description": "A condition of elevated arterial blood pressure",
+            "subclasses": [],
+            "instances": []
+        },
+        "ArterialHypotension": {
+            "description": "A condition of decreased arterial blood pressure",
+            "subclasses": [],
+            "instances": []
+        },
+        "SystemicHemodynamicParameters": {
+            "description": "Parameters related to blood flow and pressure in the body",
+            "subclasses": [],
+            "instances": []
+        },
+        "DarkAdaptation": {
+            "description": "A method to measure how the eye adjusts to the dark",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeneticAssessment": {
+            "description": "A method of assessing genetic factors related to AMD",
+            "subclasses": [],
+            "instances": []
+        },
+        "PreferredRetinalLocus": {
+            "description": "The part of the retina that patients naturally start using after central vision is lost",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "AnatomicalStructure"
+        },
+        "TrainedRetinalLocus": {
+            "description": "A retinal area that is thought to be better suited for everyday visual tasks",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "AnatomicalStructure"
+        },
+        "SubfovealNeovascularMembrane": {
+            "description": "A type of neovascular membrane related to age",
+            "subclasses": [],
+            "instances": []
+        },
+        "SqualamineLactate": {
+            "description": "A topical ophthalmic formulation for treating neovascular age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeographicAtrophyProgression": {
+            "description": "The progression of geographic atrophy in patients with age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "NonExudativeAgeRelatedMacularDegeneration": {
+            "description": "A type of age-related macular degeneration characterized by the absence of exudation",
+            "subclasses": [],
+            "instances": [],
+            "_pending_parent": "AgeRelatedMacularDegeneration"
+        },
+        "LuteinAndZeaxanthinSupplement": {
+            "description": "Supplement containing lutein and zeaxanthin to increase macular pigment levels",
+            "subclasses": [],
+            "instances": []
+        },
+        "TAS2R38Gene": {
+            "description": "Gene that confers the ability to taste 6-n-propylthiouracil and phenylthiocarbamide",
+            "subclasses": [],
+            "instances": []
+        },
+        "AMDPhenotype": {
+            "description": "A phenotype of Age-related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "AMDGenotype": {
+            "description": "A genotype associated with Age-related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "ImagingBiomarker": {
+            "description": "A biomarker used for imaging in Age-related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "VisualFunctionBiomarker": {
+            "description": "A biomarker used for visual function in Age-related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "SubmacularHaemorrhage": {
+            "description": "A complication of wet age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "OculomotorControlExercises": {
+            "description": "Exercises that improve eye movement control",
+            "subclasses": [],
+            "instances": []
+        },
+        "WebBasedPlatform": {
+            "description": "A platform for administering training exercises",
+            "subclasses": [],
+            "instances": [
+                "PAECT"
+            ]
+        },
+        "AmyloidBeta": {
+            "description": "A protein associated with Alzheimer's disease and age-related macular degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "GeneticPolymorphism": {
+            "description": "A genetic variation that can be associated with AgeRelatedMacularDegeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "ThreeDimensionalImaging": {
+            "description": "A type of imaging that provides three-dimensional views",
+            "subclasses": [],
+            "instances": []
+        },
+        "ReticularPseudodrusen": {
+            "description": "A phenotypic characteristic observed in patients with AMD",
+            "subclasses": [],
+            "instances": []
+        },
+        "GutMetagenome": {
+            "description": "The composition and function of the gut microbiome",
+            "subclasses": [],
+            "instances": []
+        },
+        "Nutrition": {
+            "description": "The role of diet in disease development",
+            "subclasses": [],
+            "instances": []
+        },
+        "ExudativeARMD": {
+            "description": "A type of Age-related Macular Degeneration characterized by choroidal neovascularization",
+            "subclasses": [],
+            "instances": []
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "A treatment that manages a disease",
+            "examples": [
+                [
+                    "AntiVEGFTherapy",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Macuvite",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "SubmacularSurgery",
+                    "treats",
+                    "SubfovealChoroidalNeovascularization"
+                ],
+                [
+                    "Celecoxib",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "Antioxidant",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Bevacizumab",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Verteporfin",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Pazopanib",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Bevacizumab",
+                    "treats",
+                    "ExudativeMaculopathy"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "ExudativeMaculopathy"
+                ],
+                [
+                    "Aflibercept",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "RubeosisIridis"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "NeovascularGlaucoma"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "ProliferativeDiabeticRetinopathy"
+                ],
+                [
+                    "SaffronSupplementation",
+                    "treats",
+                    "DryAMD"
+                ],
+                [
+                    "Aspirin",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Aflibercept",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Lucentis",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Eylea",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "VisualRehabilitation",
+                    "treats",
+                    "VisualImpairment"
+                ],
+                [
+                    "ReadingTraining",
+                    "treats",
+                    "VisualImpairment"
+                ],
+                [
+                    "Conbercept",
+                    "treats",
+                    "PolypoidalChoroidalVasculopathy"
+                ],
+                [
+                    "StereotacticRadiotherapy",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "MacularPigment",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "LowLevelNightTimeLightTherapy",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Conbercept",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Acetazolamide",
+                    "treats",
+                    "Glaucoma"
+                ],
+                [
+                    "IntraocularLens",
+                    "treats",
+                    "DryAMD"
+                ],
+                [
+                    "SubmacularSurgery",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "LaserTreatment",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "FluocinoloneAcetonide",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "PhotodynamicTherapy",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "PhotodynamicTherapy",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "TriamcinoloneAcetonide",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "PhotodynamicTherapy",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "TranspupillaryThermotherapy",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "Avastin",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "Rheohemapheresis",
+                    "treats",
+                    "NonExsudativeAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Lutein",
+                    "treats",
+                    "NonExsudativeAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "CNTFImplant",
+                    "treats",
+                    "AtrophicMacularDegeneration"
+                ],
+                [
+                    "Rheopheresis",
+                    "treats",
+                    "DryAMD"
+                ],
+                [
+                    "Copaxone",
+                    "treats",
+                    "DryAMD"
+                ],
+                [
+                    "Lucentis",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "Lucentis",
+                    "treats",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "AntioxidantSupplement",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "ReadingRehabilitation",
+                    "treats",
+                    "MacularDisease"
+                ],
+                [
+                    "Sirolimus",
+                    "treats",
+                    "GeographicAtrophy"
+                ],
+                [
+                    "iSONEP",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "LuteinSupplementation",
+                    "treats",
+                    "AgeRelatedMaculopathy"
+                ],
+                [
+                    "Bevacizumab",
+                    "treats",
+                    "ExudativeAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "ExudativeAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "IntravitrealDexamethasone",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "Phenylephrine",
+                    "treats",
+                    "ArterialHypotension"
+                ],
+                [
+                    "EccentricViewingTraining",
+                    "treats",
+                    "LowVision"
+                ],
+                [
+                    "Lucentis",
+                    "treats",
+                    "SubfovealNeovascularMembrane"
+                ],
+                [
+                    "SqualamineLactate",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "AntiVEGFTherapy",
+                    "treats",
+                    "NeovascularAMD"
+                ],
+                [
+                    "PhotodynamicTherapy",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Perfluoropropane",
+                    "treats",
+                    "SubmacularHaemorrhage"
+                ],
+                [
+                    "OculomotorControlExercises",
+                    "treats",
+                    "AMD"
+                ],
+                [
+                    "Bevacizumab",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Avastin",
+                    "treats",
+                    "ExudativeARMD"
+                ],
+                [
+                    "Lucentis",
+                    "treats",
+                    "ExudativeARMD"
+                ]
+            ]
+        },
+        "inhibits": {
+            "domain": "Treatment",
+            "range": "MolecularTarget",
+            "description": "A treatment that inhibits a molecular target",
+            "examples": [
+                [
+                    "Conbercept",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Ranibizumab",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Avastin",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "PhotodynamicTherapy",
+                    "inhibits",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "iSONEP",
+                    "inhibits",
+                    "S1P"
+                ],
+                [
+                    "Bevacizumab",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "SqualamineLactate",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Aflibercept",
+                    "inhibits",
+                    "VEGF"
+                ]
+            ]
+        },
+        "causesOrIncreases": {
+            "domain": "RiskFactor",
+            "range": "Disease",
+            "description": "A risk factor that causes or increases a disease",
+            "examples": [
+                [
+                    "VEGF",
+                    "causesOrIncreases",
+                    "WetAMD"
+                ],
+                [
+                    "GeneticRiskFactor",
+                    "causesOrIncreases",
+                    "AMD"
+                ],
+                [
+                    "ChoroidalNeovascularization",
+                    "causesOrIncreases",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "IllDefinedChoroidalNeovascularization",
+                    "causesOrIncreases",
+                    "VisualImpairment"
+                ],
+                [
+                    "GeneticRiskFactorForAMD",
+                    "causesOrIncreases",
+                    "AMD"
+                ],
+                [
+                    "GeneticRiskFactor",
+                    "causesOrIncreases",
+                    "NeovascularAMD"
+                ],
+                [
+                    "OxidativeDamage",
+                    "causesOrIncreases",
+                    "GeographicAtrophy"
+                ],
+                [
+                    "ChoroidalNeovascularization",
+                    "causesOrIncreases",
+                    "VisualImpairment"
+                ],
+                [
+                    "CoronaryArteryDisease",
+                    "causesOrIncreases",
+                    "ArterialThromboembolicEvent"
+                ],
+                [
+                    "CerebrovascularEvent",
+                    "causesOrIncreases",
+                    "ArterialThromboembolicEvent"
+                ],
+                [
+                    "ArterialHypertension",
+                    "causesOrIncreases",
+                    "Glaucoma"
+                ],
+                [
+                    "ArterialHypertension",
+                    "causesOrIncreases",
+                    "AMD"
+                ],
+                [
+                    "AMD",
+                    "causesOrIncreases",
+                    "LowVision"
+                ],
+                [
+                    "WetAMD",
+                    "causesOrIncreases",
+                    "SubmacularHaemorrhage"
+                ],
+                [
+                    "ReticularPseudodrusen",
+                    "causesOrIncreases",
+                    "GeographicAtrophy"
+                ],
+                [
+                    "GutMetagenome",
+                    "causesOrIncreases",
+                    "AMD"
+                ]
+            ]
+        },
+        "indicates": {
+            "domain": "Biomarker",
+            "range": "Disease",
+            "description": "A biomarker that indicates a disease",
+            "examples": [
+                [
+                    "MacularPigment",
+                    "indicates",
+                    "AMD"
+                ]
+            ]
+        },
+        "diagnosedBy": {
+            "domain": "Disease",
+            "range": "DiagnosticMethod",
+            "description": "A disease diagnosed via a method",
+            "examples": [
+                [
+                    "AMD",
+                    "diagnosedBy",
+                    "DiagnosticMethod"
+                ],
+                [
+                    "NeovascularAMD",
+                    "diagnosedBy",
+                    "ICG"
+                ],
+                [
+                    "NeovascularAMD",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "NeovascularAMD",
+                    "diagnosedBy",
+                    "ETDRS"
+                ],
+                [
+                    "Glaucoma",
+                    "diagnosedBy",
+                    "Ultrasound"
+                ],
+                [
+                    "Cataract",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "ExudativeMaculopathy",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "WetAMD",
+                    "diagnosedBy",
+                    "MultifocalObjectivePupilPerimetry"
+                ],
+                [
+                    "PolypoidalChoroidalVasculopathy",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "AMD",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Glaucoma",
+                    "diagnosedBy",
+                    "IntraocularPressure"
+                ],
+                [
+                    "ChoroidalNeovascularization",
+                    "diagnosedBy",
+                    "MOS SF-36"
+                ],
+                [
+                    "ChoroidalNeovascularization",
+                    "diagnosedBy",
+                    "NEI VFQ-25"
+                ],
+                [
+                    "OcularTumor",
+                    "diagnosedBy",
+                    "Ultrasound"
+                ],
+                [
+                    "AccommodationDisease",
+                    "diagnosedBy",
+                    "Ultrasound"
+                ],
+                [
+                    "AtrophicAgeRelatedMacularDegeneration",
+                    "diagnosedBy",
+                    "FundusAutofluorescenceImaging"
+                ],
+                [
+                    "NonExsudativeAgeRelatedMacularDegeneration",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "NonExsudativeAgeRelatedMacularDegeneration",
+                    "diagnosedBy",
+                    "ETDRS"
+                ],
+                [
+                    "NeovascularAMD",
+                    "diagnosedBy",
+                    "PatternElectroretinography"
+                ],
+                [
+                    "ExudativeAgeRelatedMacularDegeneration",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "Glaucoma",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "SubfovealNeovascularMembrane",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "GeographicAtrophy",
+                    "diagnosedBy",
+                    "FundusAutofluorescenceImaging"
+                ],
+                [
+                    "NonExudativeAgeRelatedMacularDegeneration",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "AMD",
+                    "diagnosedBy",
+                    "ImagingBiomarker"
+                ],
+                [
+                    "AMD",
+                    "diagnosedBy",
+                    "VisualFunctionBiomarker"
+                ]
+            ]
+        },
+        "hasSymptom": {
+            "domain": "Disease",
+            "range": "ClinicalOutcome",
+            "description": "A disease has a clinical symptom",
+            "examples": []
+        },
+        "measuredBy": {
+            "domain": "Biomarker",
+            "range": "DiagnosticMethod",
+            "description": "A biomarker measured by a method",
+            "examples": [
+                [
+                    "MacularPigment",
+                    "measuredBy",
+                    "DiagnosticMethod"
+                ],
+                [
+                    "VisualFunctionBiomarker",
+                    "measuredBy",
+                    "DiagnosticMethod"
+                ]
+            ]
+        },
+        "associatedWith": {
+            "domain": "GeneticBiomarker",
+            "range": "Disease",
+            "description": "A gene associated with a disease",
+            "examples": [
+                [
+                    "AMD",
+                    "associatedWith",
+                    "Biomarker"
+                ],
+                [
+                    "Lutein",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Zeaxanthin",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ApoE",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "CFH",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "BF",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "CX3CR1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "AMRS2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "HTRA1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Aspirin",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "MacularPigment",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Glaucoma",
+                    "associatedWith",
+                    "IntraocularPressure"
+                ],
+                [
+                    "NeovascularAMD",
+                    "associatedWith",
+                    "GeographicAtrophy"
+                ],
+                [
+                    "GeneticRiskFactor",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "VEGF",
+                    "associatedWith",
+                    "ChoroidalNeovascularization"
+                ],
+                [
+                    "Rheopheresis",
+                    "associatedWith",
+                    "VisualImpairment"
+                ],
+                [
+                    "AMD",
+                    "associatedWith",
+                    "VisualImpairment"
+                ],
+                [
+                    "PigmentEpithelialDetachment",
+                    "associatedWith",
+                    "NeovascularAgeRelatedMacularDegeneration"
+                ],
+                [
+                    "MacularEdema",
+                    "associatedWith",
+                    "WetAMD"
+                ],
+                [
+                    "ZincSupplement",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Lutein",
+                    "associatedWith",
+                    "MacularPigment"
+                ],
+                [
+                    "CFH",
+                    "associatedWith",
+                    "AgeRelatedMaculopathy"
+                ],
+                [
+                    "HTRA1",
+                    "associatedWith",
+                    "AgeRelatedMaculopathy"
+                ],
+                [
+                    "ARMS2",
+                    "associatedWith",
+                    "AgeRelatedMaculopathy"
+                ],
+                [
+                    "VEGF",
+                    "associatedWith",
+                    "NeovascularAMD"
+                ],
+                [
+                    "HTRA1",
+                    "associatedWith",
+                    "NeovascularAMD"
+                ],
+                [
+                    "Lipofuscin",
+                    "associatedWith",
+                    "GeographicAtrophy"
+                ],
+                [
+                    "TAS2R38Gene",
+                    "associatedWith",
+                    "MacularPigment"
+                ],
+                [
+                    "ApoE",
+                    "associatedWith",
+                    "MacularPigment"
+                ],
+                [
+                    "AMDGenotype",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "GeographicAtrophy",
+                    "associatedWith",
+                    "VisualImpairment"
+                ],
+                [
+                    "ReticularPseudodrusen",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ARMS2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C3",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "PLEKHA1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "VEGFR",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ExudativeARMD",
+                    "associatedWith",
+                    "ChoroidalNeovascularization"
+                ]
+            ]
+        },
+        "assessedBy": {
+            "domain": "ClinicalOutcome",
+            "range": "DiagnosticMethod",
+            "description": "A clinical outcome assessed by a method",
+            "examples": []
+        }
+    }
+}

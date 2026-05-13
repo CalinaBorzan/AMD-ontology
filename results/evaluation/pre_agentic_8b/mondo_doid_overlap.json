@@ -1,0 +1,2430 @@
+[
+  {
+    "name": "Disease",
+    "pipeline_class": "Disease",
+    "cuis": [
+      "C0012634"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D004194"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "AMD",
+    "pipeline_class": "AMD",
+    "cuis": [
+      "C0017921",
+      "C0242383",
+      "C1412379",
+      "C1412381",
+      "C3539530"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D006009",
+        "D008268"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "GeographicAtrophy",
+    "pipeline_class": "GeographicAtrophy",
+    "cuis": [
+      "C1536085",
+      "C4013150",
+      "C5543262",
+      "C5775462",
+      "C5936206"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0031609"
+      ],
+      "MSH": [
+        "D057092"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "PolypoidalChoroidalVasculopathy",
+    "pipeline_class": "PolypoidalChoroidalVasculopathy",
+    "cuis": [
+      "C0730364",
+      "C1504336",
+      "C4313747"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0025569"
+      ],
+      "MSH": [
+        "D000092342"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ReticularPseudodrusen",
+    "pipeline_class": "ReticularPseudodrusen",
+    "cuis": [
+      "C2609282"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Treatment",
+    "pipeline_class": "Treatment",
+    "cuis": [
+      "C0039798",
+      "C0087111",
+      "C1522326",
+      "C1533734",
+      "C1705169"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "Q000628",
+        "D013812"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "AntiVEGFTherapy",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C4727874"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Ranibizumab",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C1566537"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D000069579"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Aflibercept",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C1134659"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C533178"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Bevacizumab",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C0796392"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D000068258"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Brolucizumab",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C4550124"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C000622091"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Verteporfin",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C0387288"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D000077362"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Conbercept",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C5201155"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C527363"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Lucentis",
+    "pipeline_class": "AntiVEGFTherapy",
+    "cuis": [
+      "C1721374"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D000069579"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "SurgicalTherapy",
+    "pipeline_class": "SurgicalTherapy",
+    "cuis": [
+      "C2193755",
+      "C4018825",
+      "C5205395",
+      "C5695222",
+      "C6068238"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "PhotodynamicTherapy",
+    "pipeline_class": "SurgicalTherapy",
+    "cuis": [
+      "C0031740",
+      "C0750653",
+      "C2181625",
+      "C3642488",
+      "C3875647"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D010778"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "LaserPhotocoagulation",
+    "pipeline_class": "SurgicalTherapy",
+    "cuis": [
+      "C0185070",
+      "C0185071",
+      "C0185073",
+      "C0441510",
+      "C1548874"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "PulseDiodeLaserPhotocoagulation",
+    "pipeline_class": "SurgicalTherapy",
+    "cuis": [
+      "C5968533",
+      "C5969744",
+      "C5969745",
+      "C5969746"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "TranspupillaryThermotherapy",
+    "pipeline_class": "SurgicalTherapy",
+    "cuis": [
+      "C2183000",
+      "C4733464"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Supplements",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C0242295",
+      "C0556112",
+      "C0770246",
+      "C3540037",
+      "C3541971"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D019587"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "AREDS",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C1170342",
+      "C3710135",
+      "C5416914",
+      "C5540032",
+      "C5540033"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Lutein",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C0043328"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D014975"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Zeaxanthin",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C0078752"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D065146"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Omega3",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C5918271",
+      "C5918283",
+      "C6005513",
+      "C6005522",
+      "C6005527"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Macuvite",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C2979419",
+      "C3231345",
+      "C3231346",
+      "C4489986",
+      "C4489987"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Saffron",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C0162753",
+      "C0376238",
+      "C2348128",
+      "C3696061"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D027622"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "GreenTeaPolyphenols",
+    "pipeline_class": "Supplements",
+    "cuis": [
+      "C1704263",
+      "C3273462"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "EmergingTherapies",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0013969",
+      "C0420199",
+      "C4027708",
+      "C5213912",
+      "C5783942"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D004638"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "GeneTherapy",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0017296",
+      "C0037645",
+      "C1304648",
+      "C1517496",
+      "C5575704"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D015316",
+        "D000098623"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ComplementInhibitors",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0056197",
+      "C1564892",
+      "C2917210",
+      "C5671141",
+      "C5979827"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C041833",
+        "D051056"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "StemCellTherapy",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0524864",
+      "C0872278",
+      "C4720866",
+      "C5552627",
+      "C5577691"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D019650"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Copaxone",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0528175"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D000068717"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "POT-4",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C5943207"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "OT-551",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C2934726"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C550190"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Sirolimus",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0072980",
+      "C0944729",
+      "C1618097"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D020123"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "iSONEP",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C5227753"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C000619670"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "SqualamineLactate",
+    "pipeline_class": "EmergingTherapies",
+    "cuis": [
+      "C0678046",
+      "C0935911",
+      "C6053447"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C488568"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CorticosteroidTherapy",
+    "pipeline_class": "CorticosteroidTherapy",
+    "cuis": [
+      "C0149783",
+      "C4050091",
+      "C4053960",
+      "C4054599",
+      "C4054701"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "FluocinoloneAcetonideImplant",
+    "pipeline_class": "CorticosteroidTherapy",
+    "cuis": [
+      "C1743167",
+      "C5840237",
+      "C5840256",
+      "C5841863",
+      "C5843839"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "TriamcinoloneAcetonide",
+    "pipeline_class": "CorticosteroidTherapy",
+    "cuis": [
+      "C0040866",
+      "C0723867",
+      "C0980817",
+      "C5781590",
+      "C5843809"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D014222"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Dexamethasone",
+    "pipeline_class": "CorticosteroidTherapy",
+    "cuis": [
+      "C0011777"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D003907"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Radiosurgery",
+    "pipeline_class": "Radiosurgery",
+    "cuis": [
+      "C0085203"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D016634"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "StereotacticRadiosurgery",
+    "pipeline_class": "Radiosurgery",
+    "cuis": [
+      "C2366803",
+      "C2367749",
+      "C2531324",
+      "C3805163",
+      "C3846112"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D016634"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CellTherapy",
+    "pipeline_class": "CellTherapy",
+    "cuis": [
+      "C0302189",
+      "C0872278",
+      "C1511764",
+      "C3661503",
+      "C5848865"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D064987",
+        "D014023"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "LowVisionRehabilitation",
+    "pipeline_class": "LowVisionRehabilitation",
+    "cuis": [
+      "C1555951",
+      "C5959102",
+      "C5959176"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "GeneticBiomarker",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C4331240",
+      "C4684828",
+      "C4687812"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "CFH",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0122577",
+      "C1538440"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C493495"
+      ],
+      "MONDO": [
+        "4883",
+        "397525",
+        "MONDO_1012614"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ARMS2",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C1824219"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [
+        "32685"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH"
+    }
+  },
+  {
+    "name": "HTRA1",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C1258300",
+      "C1825552"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C474012"
+      ],
+      "MONDO": [
+        "9476",
+        "MONDO_0018832"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "C3",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0009506",
+      "C0446413",
+      "C1305853",
+      "C1332656",
+      "C1571455"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D003176",
+        "C038245"
+      ],
+      "MONDO": [
+        "1318",
+        "476728",
+        "MONDO_0013892",
+        "MONDO_0013043"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CFB",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0009002",
+      "C1824728",
+      "C5552910"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D002994",
+        "C000731486"
+      ],
+      "MONDO": [
+        "1037"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "C2",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0009505",
+      "C1305857",
+      "C1412938",
+      "C3810846",
+      "C4284454"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D003175"
+      ],
+      "MONDO": [
+        "1248",
+        "MONDO_0011873",
+        "GO_1990720"
+      ],
+      "DOID": [
+        "DOID_0070114"
+      ]
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "DOID_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ApoE",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0003595",
+      "C1412481",
+      "C4308468"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D001057",
+        "C000612345"
+      ],
+      "MONDO": [
+        "613",
+        "100009337",
+        "MONDO_1012776"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CX3CR1",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C1143767",
+      "C1439296"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C095235"
+      ],
+      "MONDO": [
+        "2558"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "rs11200638",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C6066128"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "rs1061170",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C3149258"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "rs1410996",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C3149261"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "PLEKHA1",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C1422573"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [
+        "14335"
+      ],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MONDO_class_match": "MISMATCH"
+    }
+  },
+  {
+    "name": "VEGF-A",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0078058",
+      "C1171892",
+      "C1823619",
+      "C2349086"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D042461",
+        "C467484"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "VEGF-B",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0388176",
+      "C3542928"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D042561"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "VEGFR",
+    "pipeline_class": "GeneticBiomarker",
+    "cuis": [
+      "C0148199",
+      "C1334306",
+      "C1568520",
+      "C1705712"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D040262",
+        "C501162"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ImmunologicalBiomarker",
+    "pipeline_class": "ImmunologicalBiomarker",
+    "cuis": [
+      "C5702226"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "TNF-alpha",
+    "pipeline_class": "ImmunologicalBiomarker",
+    "cuis": [
+      "C0812246",
+      "C1448177",
+      "C1456820",
+      "C1522669",
+      "C1710304"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C439524",
+        "D014409"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "MolecularTarget",
+    "pipeline_class": "MolecularTarget",
+    "cuis": [
+      "C1513403",
+      "C1513404",
+      "C1579409",
+      "C5419559",
+      "C5984809"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "VEGF",
+    "pipeline_class": "MolecularTarget",
+    "cuis": [
+      "C0078058",
+      "C1823619",
+      "C2349086"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D042461"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "PDGF",
+    "pipeline_class": "MolecularTarget",
+    "cuis": [
+      "C0032200",
+      "C1323362"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D010982"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ComplementPathwayProteins",
+    "pipeline_class": "MolecularTarget",
+    "cuis": [
+      "C0963602"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "C419106"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "S1P",
+    "pipeline_class": "MolecularTarget",
+    "cuis": [
+      "C1423502"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "bFGF",
+    "pipeline_class": "MolecularTarget",
+    "cuis": [
+      "C0380603",
+      "C0919506",
+      "C1522505",
+      "C1708015",
+      "C3887569"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D016222"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ImagingBiomarker",
+    "pipeline_class": "ImagingBiomarker",
+    "cuis": [
+      "C1881135",
+      "C2827062",
+      "C5944813",
+      "C5944814",
+      "C6050911"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Drusen",
+    "pipeline_class": "StructuralBiomarker",
+    "cuis": [
+      "C1260959"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0011510"
+      ],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH"
+    }
+  },
+  {
+    "name": "RetinalThickness",
+    "pipeline_class": "StructuralBiomarker",
+    "cuis": [
+      "C4483691",
+      "C4483692",
+      "C4483748",
+      "C4483760",
+      "C5400500"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "SubretinalFluid",
+    "pipeline_class": "StructuralBiomarker",
+    "cuis": [
+      "C0344274",
+      "C0395576",
+      "C0444165",
+      "C1720732",
+      "C1959691"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0031526"
+      ],
+      "MSH": [
+        "D058471"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CNVM",
+    "pipeline_class": "StructuralBiomarker",
+    "cuis": [
+      "C0271066",
+      "C1282040",
+      "C1282041",
+      "C1282042",
+      "C1282044"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "FunctionalBiomarker",
+    "pipeline_class": "FunctionalBiomarker",
+    "cuis": [
+      "C2724329",
+      "C2921602",
+      "C5222689"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "VisualAcuity",
+    "pipeline_class": "FunctionalBiomarker",
+    "cuis": [
+      "C0042812",
+      "C0200150",
+      "C0234631",
+      "C0234632",
+      "C0580104"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0007663"
+      ],
+      "MSH": [
+        "D014792"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ContrastSensitivity",
+    "pipeline_class": "FunctionalBiomarker",
+    "cuis": [
+      "C0009928",
+      "C0429490",
+      "C0474738",
+      "C0846621",
+      "C2881416"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D015350"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ReadingSpeed",
+    "pipeline_class": "FunctionalBiomarker",
+    "cuis": [
+      "C0589429",
+      "C0871221",
+      "C1950454",
+      "C5557500"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "MacularPigmentOpticalDensity",
+    "pipeline_class": "FunctionalBiomarker",
+    "cuis": [
+      "C4732642"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "DarkAdaptation",
+    "pipeline_class": "FunctionalBiomarker",
+    "cuis": [
+      "C0010985",
+      "C0155019",
+      "C0200161",
+      "C0234689",
+      "C0444692"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D003623"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "DiagnosticMethod",
+    "pipeline_class": "DiagnosticMethod",
+    "cuis": [
+      "C0430022",
+      "C0679542",
+      "C5444993",
+      "C5447856",
+      "C5786889"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "ImagingMethod",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C1275506",
+      "C6024199",
+      "C6024200",
+      "C6024202",
+      "C6024204"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "OCT",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C0029279",
+      "C1418661"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D009954"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "FluoresceinAngiography",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C0016313",
+      "C0861126",
+      "C2061994",
+      "C2061995",
+      "C5574908"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D005451"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "FundusPhotography",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C0200189"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "FundusAutofluorescence",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C4073073",
+      "C4227351",
+      "C4324300",
+      "C5200843",
+      "C6013294"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0030602"
+      ],
+      "MSH": [
+        "D061848"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Ultrasound",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C0041618",
+      "C0041621",
+      "C0220934",
+      "C1315081",
+      "C1875843"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D014463",
+        "D019220",
+        "Q000000981"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "OCT3",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C1418768",
+      "C1420138",
+      "C1882262",
+      "C3811688",
+      "C3812262"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D000099254"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "HRT",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C0282402",
+      "C5848651",
+      "C5848652"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D020249"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "LaserDopplerFlowmetry",
+    "pipeline_class": "ImagingMethod",
+    "cuis": [
+      "C0162520",
+      "C3825268"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D017078"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "FunctionalMethod",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C0199493",
+      "C0199494",
+      "C1562632",
+      "C1563065",
+      "C2080730"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "VisualFieldTesting",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C0042825",
+      "C4015382",
+      "C5206575",
+      "C5696774",
+      "C5696776"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D058609"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Electroretinography",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C0013867"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D004596"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "FlickerPhotometry",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C4732642",
+      "C4737973"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "HeterochromaticFlickerPhotometry",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C4732642",
+      "C4737973"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "ETDRS",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C1275992",
+      "C3174563",
+      "C3899277",
+      "C5939077",
+      "C5942789"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "MultifocalERG",
+    "pipeline_class": "FunctionalMethod",
+    "cuis": [
+      "C1627756",
+      "C4015384",
+      "C4072958",
+      "C4072979",
+      "C4732397"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0030468",
+        "HP:0030489"
+      ],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH"
+    }
+  },
+  {
+    "name": "RiskFactor",
+    "pipeline_class": "RiskFactor",
+    "cuis": [
+      "C0035648",
+      "C0686731",
+      "C0686732",
+      "C0850664",
+      "C3538984"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D012307"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Age",
+    "pipeline_class": "NonModifiableRiskFactor",
+    "cuis": [
+      "C0001779",
+      "C0162574",
+      "C1114365"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D017127"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Genetics",
+    "pipeline_class": "NonModifiableRiskFactor",
+    "cuis": [
+      "C0017398",
+      "C0017399",
+      "C0314603",
+      "C1948182"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D005823",
+        "Q000235"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "FamilyHistory",
+    "pipeline_class": "NonModifiableRiskFactor",
+    "cuis": [
+      "C0241889",
+      "C0260515",
+      "C0559474",
+      "C2073778",
+      "C2135565"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0032316",
+        "HP:0032317"
+      ],
+      "MSH": [
+        "D008487"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Gender",
+    "pipeline_class": "NonModifiableRiskFactor",
+    "cuis": [
+      "C0079399",
+      "C3854125"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D005783"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CoronaryArteryDisease",
+    "pipeline_class": "NonModifiableRiskFactor",
+    "cuis": [
+      "C0010054",
+      "C0343692",
+      "C1867743",
+      "C1956346",
+      "C3669032"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0001677",
+        "HP:0005181"
+      ],
+      "MSH": [
+        "D003324"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "CerebrovascularDisease",
+    "pipeline_class": "NonModifiableRiskFactor",
+    "cuis": [
+      "C0007820",
+      "C0155732",
+      "C0393949",
+      "C0393970",
+      "C0553766"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D002561"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ModifiableRiskFactor",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0814292",
+      "C4710207",
+      "C4717889"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "Smoking",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0037369",
+      "C0453996",
+      "C1548578"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D012907",
+        "D000073869"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Diet",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0012155",
+      "C0012159",
+      "C1549512",
+      "C3668949"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D004032",
+        "D004035"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "BMI",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0578022",
+      "C1305855",
+      "C1542867"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D015992"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "SunExposure",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0241303",
+      "C1277580",
+      "C1456711",
+      "C2938994",
+      "C5910020"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "CardiovascularDisease",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0007222",
+      "C0264656",
+      "C0455404",
+      "C3665365",
+      "C4072686"
+    ],
+    "external_codes": {
+      "HPO": [
+        "HP:0001626"
+      ],
+      "MSH": [
+        "D002318"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "HPO_class_match": "MISMATCH",
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "Aspirin",
+    "pipeline_class": "ModifiableRiskFactor",
+    "cuis": [
+      "C0004057"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [
+        "D001241"
+      ],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": true,
+    "class_match": {
+      "MSH_present": "MATCH"
+    }
+  },
+  {
+    "name": "ClinicalOutcome",
+    "pipeline_class": "ClinicalOutcome",
+    "cuis": [
+      "C1333602",
+      "C1519790",
+      "C4553328",
+      "C4684667",
+      "C4744956"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "PrimaryOutcome",
+    "pipeline_class": "PrimaryOutcome",
+    "cuis": [
+      "C2986291",
+      "C3274433",
+      "C4743557",
+      "C5974169",
+      "C6066898"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "VisualAcuityChange",
+    "pipeline_class": "PrimaryOutcome",
+    "cuis": [
+      "C4283822",
+      "C4284228",
+      "C4284290",
+      "C4284294",
+      "C4284298"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "PreventionOfVisionLoss",
+    "pipeline_class": "PrimaryOutcome",
+    "cuis": [
+      "C2012303"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "DarkAdaptationChange",
+    "pipeline_class": "PrimaryOutcome",
+    "cuis": [
+      "C1839366"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "SecondaryOutcome",
+    "pipeline_class": "SecondaryOutcome",
+    "cuis": [
+      "C3274440",
+      "C4743558"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "LesionSizeChange",
+    "pipeline_class": "SecondaryOutcome",
+    "cuis": [
+      "C2168373"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  },
+  {
+    "name": "QualityOfLifeChange",
+    "pipeline_class": "SecondaryOutcome",
+    "cuis": [
+      "C2058097",
+      "C4068028",
+      "C4070167",
+      "C4070172",
+      "C4086679"
+    ],
+    "external_codes": {
+      "HPO": [],
+      "MSH": [],
+      "MONDO": [],
+      "DOID": []
+    },
+    "in_external_kg": false,
+    "class_match": {}
+  }
+]

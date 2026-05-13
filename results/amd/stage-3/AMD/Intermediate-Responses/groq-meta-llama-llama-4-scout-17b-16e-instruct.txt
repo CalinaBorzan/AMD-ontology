@@ -1,0 +1,65 @@
+### Validated and Extended AMD Ontology Schema
+
+The provided abstract discusses a trial of Anti-TNFα Chimeric Monoclonal Antibody (Infliximab, Remicade®) in Exudative Age-Related Macular Degeneration (ARMD), also known as Wet AMD. It highlights the involvement of tumor necrosis factor-alpha (TNF-alpha) in inflammatory processes and its potential role in the generation of ARMD. 
+
+#### Validation and Extension Steps:
+
+1. **Punning Violations**: No punning violations found in the existing schema.
+
+2. **Hierarchy**: The hierarchy seems correct with `Disease` → `AMD` → subtypes (`WetAMD`, `DryAMD`, `GeographicAtrophy`).
+
+3. **New Entities**: 
+   - `TNFalpha` as a genetic or molecular entity involved in inflammatory processes.
+   - `AntiTNFalphaTherapy` as a treatment approach.
+   - `Infliximab` and `Remicade` as specific drugs under `AntiTNFalphaTherapy`.
+   - `ExudativeAMD` could be considered a synonym or subtype of `WetAMD`.
+
+4. **New Relationships**:
+   - `TNFalpha` is involved in the generation of ARMD (or `AMD`).
+   - `AntiTNFalphaTherapy` treats `WetAMD` (or `ExudativeAMD`).
+
+5. **Medical Accuracy**:
+   - Ensure `anti-VEGF agents` are correctly linked to `WetAMD`, which is maintained.
+   - `CFH` is associated with AMD risk.
+   - `OCT` diagnoses retinal changes.
+
+### Extended Schema
+
+```json
+{
+  "classes": [
+    {"name": "Disease", "description": "A broad category of medical conditions"},
+    {"name": "AMD", "description": "Age-related Macular Degeneration", "subtypes": [
+      {"name": "WetAMD", "description": "Wet form of Age-related Macular Degeneration with choroidal neovascularization", "synonyms": ["ExudativeAMD"]},
+      {"name": "DryAMD", "description": "Dry form of Age-related Macular Degeneration"},
+      {"name": "GeographicAtrophy", "description": "A subtype of DryAMD"}
+    ]},
+    {"name": "Treatment", "description": "A method or approach to managing a disease"},
+    {"name": "AntiVEGFTherapy", "description": "A treatment approach targeting vascular endothelial growth factor", "subtypes": []},
+    {"name": "AntiTNFalphaTherapy", "description": "A treatment approach targeting tumor necrosis factor-alpha"},
+    {"name": "GeneticMarker", "description": "A genetic variation associated with disease risk"},
+    {"name": "DiagnosticMethod", "description": "A method used to diagnose a disease"}
+  ],
+  "individuals": [
+    {"name": "Avastin", "description": "A drug used for anti-VEGF therapy", "class": "AntiVEGFTherapy"},
+    {"name": "Lucentis", "description": "A drug used for anti-VEGF therapy", "class": "AntiVEGFTherapy"},
+    {"name": "CFH", "description": "A genetic marker associated with AMD risk", "class": "GeneticMarker"},
+    {"name": "OCT", "description": "Optical Coherence Tomography, a diagnostic method", "class": "DiagnosticMethod"},
+    {"name": "Infliximab", "description": "A drug used for anti-TNFα therapy", "class": "AntiTNFalphaTherapy"},
+    {"name": "Remicade", "description": "Brand name for Infliximab", "class": "AntiTNFalphaTherapy"},
+    {"name": "TNFalpha", "description": "Tumor necrosis factor-alpha involved in inflammatory processes"}
+  ],
+  "relationships": [
+    {"type": "is_a", "domain": "WetAMD", "range": "AMD"},
+    {"type": "is_a", "domain": "DryAMD", "range": "AMD"},
+    {"type": "is_a", "domain": "GeographicAtrophy", "range": "DryAMD"},
+    {"type": "treats", "domain": "AntiVEGFTherapy", "range": "WetAMD"},
+    {"type": "treats", "domain": "AntiTNFalphaTherapy", "range": "WetAMD"},
+    {"type": "associated_with", "domain": "CFH", "range": "AMD"},
+    {"type": "diagnoses", "domain": "OCT", "range": "retinal changes"},
+    {"type": "involved_in", "domain": "TNFalpha", "range": "AMD"}
+  ]
+}
+```
+
+This schema extends the existing ontology by incorporating new treatment approaches (`AntiTNFalphaTherapy`), specific drugs (`Infliximab`, `Remicade`), and their relationships to `WetAMD`. It maintains the hierarchy and existing entities while ensuring that the new additions align with the information provided in the abstract.

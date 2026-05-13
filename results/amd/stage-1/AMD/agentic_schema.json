@@ -1,0 +1,156 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "A medical condition affecting the human body",
+            "subclasses": [
+                "AMD"
+            ],
+            "instances": []
+        },
+        "Treatment": {
+            "description": "A medical intervention used to manage or cure a disease",
+            "subclasses": [],
+            "instances": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab",
+                "Verteporfin"
+            ]
+        },
+        "Biomarker": {
+            "description": "A measurable indicator of a biological state or condition",
+            "subclasses": [],
+            "instances": [
+                "Drusen",
+                "CFH",
+                "C3",
+                "C2",
+                "CFB",
+                "ARMS2",
+                "HTRA1"
+            ]
+        },
+        "DiagnosticMethod": {
+            "description": "A procedure or test used to diagnose a disease",
+            "subclasses": [],
+            "instances": [
+                "OCT"
+            ]
+        },
+        "RiskFactor": {
+            "description": "A factor that increases the likelihood of developing a disease",
+            "subclasses": [],
+            "instances": []
+        },
+        "ClinicalOutcome": {
+            "description": "A measurable result of a treatment or disease progression, including visual impairments (blindness, vision loss, visual acuity decline), adverse events, and disease progressions",
+            "subclasses": [],
+            "instances": []
+        },
+        "MolecularTarget": {
+            "description": "A molecular entity (protein, receptor, pathway component) that a treatment inhibits or modulates (e.g., VEGF, VEGFR, complement C3, S1P)",
+            "subclasses": [],
+            "instances": [
+                "VEGF"
+            ]
+        },
+        "AMD": {
+            "description": "Age-Related Macular Degeneration",
+            "subclasses": [
+                "WetAMD",
+                "DryAMD"
+            ],
+            "instances": []
+        },
+        "WetAMD": {
+            "description": "Neovascular Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        },
+        "DryAMD": {
+            "description": "Geographic Atrophy Age-Related Macular Degeneration",
+            "subclasses": [],
+            "instances": []
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "A treatment that manages a disease",
+            "examples": []
+        },
+        "inhibits": {
+            "domain": "Treatment",
+            "range": "MolecularTarget",
+            "description": "A treatment that inhibits a molecular target",
+            "examples": []
+        },
+        "causesOrIncreases": {
+            "domain": "RiskFactor",
+            "range": "Disease",
+            "description": "A risk factor that causes or increases a disease",
+            "examples": []
+        },
+        "indicates": {
+            "domain": "Biomarker",
+            "range": "Disease",
+            "description": "A biomarker that indicates a disease",
+            "examples": []
+        },
+        "diagnosedBy": {
+            "domain": "Disease",
+            "range": "DiagnosticMethod",
+            "description": "A disease diagnosed via a method",
+            "examples": []
+        },
+        "hasSymptom": {
+            "domain": "Disease",
+            "range": "ClinicalOutcome",
+            "description": "A disease has a clinical symptom",
+            "examples": []
+        },
+        "measuredBy": {
+            "domain": "Biomarker",
+            "range": "DiagnosticMethod",
+            "description": "A biomarker measured by a method",
+            "examples": []
+        },
+        "associatedWith": {
+            "domain": "Biomarker",
+            "range": "Disease",
+            "description": "A biomarker (typically a gene) associated with a disease",
+            "examples": [
+                [
+                    "AMD",
+                    "associatedWith",
+                    "Drusen"
+                ],
+                [
+                    "AMD",
+                    "associatedWith",
+                    "CFH"
+                ],
+                [
+                    "AMD",
+                    "associatedWith",
+                    "ARMS2"
+                ]
+            ]
+        },
+        "assessedBy": {
+            "domain": "ClinicalOutcome",
+            "range": "DiagnosticMethod",
+            "description": "A clinical outcome assessed by a method",
+            "examples": []
+        }
+    },
+    "disjoint_groups": [
+        [
+            "Disease",
+            "Treatment",
+            "DiagnosticMethod",
+            "ClinicalOutcome"
+        ]
+    ]
+}

@@ -1,0 +1,165 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "Top-level disease",
+            "subclasses": [
+                "AMD"
+            ]
+        },
+        "AMD": {
+            "description": "Age-related macular degeneration",
+            "subclasses": [
+                "WetAMD",
+                "DryAMD",
+                "GeographicAtrophy"
+            ]
+        },
+        "WetAMD": {
+            "description": "Neovascular AMD with abnormal blood vessel growth",
+            "subclasses": []
+        },
+        "DryAMD": {
+            "description": "Atrophic AMD with drusen and RPE degeneration",
+            "subclasses": [
+                "GeographicAtrophy"
+            ]
+        },
+        "GeographicAtrophy": {
+            "description": "Retinal cell death areas",
+            "subclasses": []
+        },
+        "Treatment": {
+            "description": "AMD therapeutic interventions",
+            "subclasses": [
+                "AntiVEGFTherapy",
+                "PhotodynamicTherapy",
+                "Supplementation",
+                "LaserTherapy"
+            ]
+        },
+        "AntiVEGFTherapy": {
+            "description": "Anti-VEGF intravitreal agents",
+            "subclasses": []
+        },
+        "PhotodynamicTherapy": {
+            "description": "Photodynamic therapy for AMD",
+            "subclasses": []
+        },
+        "Supplementation": {
+            "description": "Dietary supplements for AMD",
+            "subclasses": []
+        },
+        "LaserTherapy": {
+            "description": "Laser treatment for AMD",
+            "subclasses": []
+        },
+        "GeneticMarker": {
+            "description": "AMD risk genes and variants",
+            "subclasses": []
+        },
+        "Biomarker": {
+            "description": "Molecules indicating AMD presence or progression",
+            "subclasses": []
+        },
+        "DiagnosticMethod": {
+            "description": "Methods for diagnosing AMD",
+            "subclasses": []
+        },
+        "RiskFactor": {
+            "description": "Factors increasing AMD risk",
+            "subclasses": []
+        },
+        "Outcome": {
+            "description": "Consequences of AMD progression",
+            "subclasses": []
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "AMD",
+            "description": "Treatment for AMD"
+        },
+        "hasSubtype": {
+            "domain": "AMD",
+            "range": [
+                "WetAMD",
+                "DryAMD",
+                "GeographicAtrophy"
+            ],
+            "description": "AMD subtypes"
+        },
+        "involves": {
+            "domain": "WetAMD",
+            "range": "ChoroidalNeovascularization",
+            "description": "Wet AMD involves choroidal neovascularization"
+        },
+        "characterizedBy": {
+            "domain": "DryAMD",
+            "range": [
+                "Drusen",
+                "GeographicAtrophy"
+            ],
+            "description": "Dry AMD characteristics"
+        },
+        "associatedWith": {
+            "domain": "GeneticMarker",
+            "range": "AMD",
+            "description": "Genetic markers associated with AMD"
+        },
+        "indicatedBy": {
+            "domain": "Biomarker",
+            "range": "AMD",
+            "description": "Biomarkers indicating AMD presence or progression"
+        },
+        "diagnosedBy": {
+            "domain": "AMD",
+            "range": "DiagnosticMethod",
+            "description": "AMD diagnosed by diagnostic methods"
+        },
+        "increasesRiskOf": {
+            "domain": "RiskFactor",
+            "range": "AMD",
+            "description": "Risk factors increasing AMD risk"
+        },
+        "leadsTo": {
+            "domain": "AMD",
+            "range": "Outcome",
+            "description": "Consequences of AMD progression"
+        }
+    },
+    "individuals": {
+        "AntiVEGFTherapy": [
+            "Ranibizumab",
+            "Aflibercept",
+            "Bevacizumab"
+        ],
+        "PhotodynamicTherapy": [
+            "Verteporfin"
+        ],
+        "Supplementation": [
+            "AREDS",
+            "AREDS2"
+        ],
+        "LaserTherapy": [
+            "LaserPhotocoagulation"
+        ],
+        "GeneticMarker": [
+            "CFH",
+            "C3",
+            "C2",
+            "CFB",
+            "ARMS2",
+            "HTRA1"
+        ],
+        "Biomarker": [
+            "VEGF"
+        ],
+        "DiagnosticMethod": [
+            "OCT",
+            "FundusPhotography",
+            "FluoresceinAngiography",
+            "VisualAcuityTests"
+        ]
+    }
+}

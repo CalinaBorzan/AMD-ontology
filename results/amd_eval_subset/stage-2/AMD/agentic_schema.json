@@ -1,0 +1,333 @@
+{
+    "classes": {
+        "Disease": {
+            "description": "A medical condition affecting the human body",
+            "subclasses": [
+                "AMD"
+            ],
+            "instances": [
+                "Glaucoma"
+            ]
+        },
+        "Treatment": {
+            "description": "A medical intervention used to manage or cure a disease",
+            "subclasses": [
+                "AntiVEGFTherapy"
+            ],
+            "instances": [
+                "Verteporfin",
+                "Corticosteroid",
+                "Celecoxib"
+            ]
+        },
+        "Biomarker": {
+            "description": "A measurable indicator of a biological state or condition",
+            "subclasses": [],
+            "instances": [
+                "Drusen",
+                "CFH",
+                "C3",
+                "C2",
+                "CFB",
+                "ARMS2",
+                "HTRA1",
+                "Lutein",
+                "Zeaxanthin",
+                "ApoE",
+                "CX3CR1",
+                "BF"
+            ]
+        },
+        "DiagnosticMethod": {
+            "description": "A procedure or test used to diagnose a disease",
+            "subclasses": [],
+            "instances": [
+                "OCT",
+                "Maculometer",
+                "ICG",
+                "ETDRS"
+            ]
+        },
+        "RiskFactor": {
+            "description": "A factor that increases the likelihood of developing a disease",
+            "subclasses": [],
+            "instances": [
+                "Age"
+            ]
+        },
+        "ClinicalOutcome": {
+            "description": "A measurable result of a treatment or disease progression, including visual impairments (blindness, vision loss, visual acuity decline), adverse events, and disease progressions",
+            "subclasses": [],
+            "instances": [
+                "Blindness",
+                "Endophthalmitis",
+                "Hypotony"
+            ]
+        },
+        "MolecularTarget": {
+            "description": "A molecular entity (protein, receptor, pathway component) that a treatment inhibits or modulates (e.g., VEGF, VEGFR, complement C3, S1P)",
+            "subclasses": [],
+            "instances": [
+                "VEGF",
+                "Inflammation"
+            ]
+        },
+        "AMD": {
+            "description": "Age-Related Macular Degeneration",
+            "subclasses": [
+                "DryAMD",
+                "WetAMD"
+            ],
+            "instances": []
+        },
+        "DryAMD": {
+            "description": "Dry Age-Related Macular Degeneration",
+            "subclasses": [
+                "GeographicAtrophy"
+            ],
+            "instances": []
+        },
+        "WetAMD": {
+            "description": "Wet Age-Related Macular Degeneration",
+            "subclasses": [
+                "ChoroidalNeovascularization"
+            ],
+            "instances": []
+        },
+        "GeographicAtrophy": {
+            "description": "Retinal cell death areas",
+            "subclasses": [],
+            "instances": []
+        },
+        "ChoroidalNeovascularization": {
+            "description": "Abnormal blood vessel growth beneath retina",
+            "subclasses": [],
+            "instances": []
+        },
+        "AntiVEGFTherapy": {
+            "description": "Treatment that targets VEGF",
+            "subclasses": [],
+            "instances": [
+                "Ranibizumab",
+                "Aflibercept",
+                "Bevacizumab"
+            ]
+        }
+    },
+    "properties": {
+        "treats": {
+            "domain": "Treatment",
+            "range": "Disease",
+            "description": "A treatment that manages a disease",
+            "examples": [
+                [
+                    "Ranibizumab",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Aflibercept",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Bevacizumab",
+                    "treats",
+                    "WetAMD"
+                ],
+                [
+                    "Verteporfin",
+                    "treats",
+                    "ChoroidalNeovascularization"
+                ]
+            ]
+        },
+        "inhibits": {
+            "domain": "Treatment",
+            "range": "MolecularTarget",
+            "description": "A treatment that inhibits a molecular target",
+            "examples": [
+                [
+                    "Ranibizumab",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Aflibercept",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Bevacizumab",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Verteporfin",
+                    "inhibits",
+                    "VEGF"
+                ],
+                [
+                    "Inflammation",
+                    "inhibits",
+                    "AMD"
+                ],
+                [
+                    "Verteporfin",
+                    "inhibits",
+                    "ChoroidalNeovascularization"
+                ]
+            ]
+        },
+        "causesOrIncreases": {
+            "domain": "RiskFactor",
+            "range": "Disease",
+            "description": "A risk factor that causes or increases a disease",
+            "examples": [
+                [
+                    "Age",
+                    "causesOrIncreases",
+                    "AMD"
+                ]
+            ]
+        },
+        "indicates": {
+            "domain": "Biomarker",
+            "range": "Disease",
+            "description": "A biomarker that indicates a disease",
+            "examples": [
+                [
+                    "Drusen",
+                    "indicates",
+                    "DryAMD"
+                ],
+                [
+                    "Lutein",
+                    "indicates",
+                    "AMD"
+                ],
+                [
+                    "Zeaxanthin",
+                    "indicates",
+                    "AMD"
+                ]
+            ]
+        },
+        "diagnosedBy": {
+            "domain": "Disease",
+            "range": "DiagnosticMethod",
+            "description": "A disease diagnosed via a method",
+            "examples": [
+                [
+                    "DryAMD",
+                    "diagnosedBy",
+                    "OCT"
+                ],
+                [
+                    "WetAMD",
+                    "diagnosedBy",
+                    "OCT"
+                ]
+            ]
+        },
+        "hasSymptom": {
+            "domain": "Disease",
+            "range": "ClinicalOutcome",
+            "description": "A disease has a clinical symptom",
+            "examples": [
+                [
+                    "ChoroidalNeovascularization",
+                    "hasSymptom",
+                    "Blindness"
+                ],
+                [
+                    "AMD",
+                    "hasSymptom",
+                    "Blindness"
+                ]
+            ]
+        },
+        "measuredBy": {
+            "domain": "Biomarker",
+            "range": "DiagnosticMethod",
+            "description": "A biomarker measured by a method",
+            "examples": []
+        },
+        "associatedWith": {
+            "domain": "Biomarker",
+            "range": "Disease",
+            "description": "A biomarker (typically a gene) associated with a disease",
+            "examples": [
+                [
+                    "CFH",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C3",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "C2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "CFB",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ARMS2",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "HTRA1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "Lutein",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ApoE",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "CX3CR1",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "BF",
+                    "associatedWith",
+                    "AMD"
+                ],
+                [
+                    "ChoroidalNeovascularization",
+                    "associatedWith",
+                    "AMD"
+                ]
+            ]
+        },
+        "assessedBy": {
+            "domain": "ClinicalOutcome",
+            "range": "DiagnosticMethod",
+            "description": "A clinical outcome assessed by a method",
+            "examples": []
+        }
+    },
+    "disjoint_groups": [
+        [
+            "Disease",
+            "Treatment",
+            "DiagnosticMethod",
+            "ClinicalOutcome"
+        ]
+    ]
+}

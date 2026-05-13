@@ -1,0 +1,646 @@
+@prefix amd: <http://example.org/amd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+amd:AMD_Ontology a owl:Ontology ;
+    rdfs:label "Age-Related Macular Degeneration Ontology" ;
+    rdfs:comment "AMD ontology auto-generated from research abstracts using SCHEMA-MINERpro and Agentic AI" ;
+    owl:versionInfo "1.0" .
+
+amd:ARMS2 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "ARMS2" ;
+    amd:associatedWith amd:AMD .
+
+amd:Ab a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "Ab" .
+
+amd:Acetazolamide a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Acetazolamide" ;
+    amd:treats amd:Glaucoma .
+
+amd:Aflibercept a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Aflibercept" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:WetAMD .
+
+amd:Age a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Age" ;
+    amd:causesOrIncreases amd:AMD,
+        amd:DryAMD,
+        amd:GeographicAtrophy,
+        amd:Retinopathy,
+        amd:WetAMD .
+
+amd:Angiography a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Angiography" .
+
+amd:ApoE a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "ApoE" ;
+    amd:associatedWith amd:AMD .
+
+amd:Aspirin a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Aspirin" ;
+    amd:treats amd:AMD .
+
+amd:Avastin a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Avastin" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:BF a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "BF" ;
+    amd:associatedWith amd:AMD .
+
+amd:Bevacizumab a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Bevacizumab" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:WetAMD .
+
+amd:C2 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "C2" ;
+    amd:associatedWith amd:AMD .
+
+amd:C3 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "C3" ;
+    amd:associatedWith amd:AMD .
+
+amd:CFB a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "CFB" ;
+    amd:associatedWith amd:AMD .
+
+amd:CFH a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "CFH" ;
+    amd:associatedWith amd:AMD .
+
+amd:CNTF a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "CNTF" .
+
+amd:CX3CR1 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "CX3CR1" ;
+    amd:associatedWith amd:AMD .
+
+amd:Cataract a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Cataract" .
+
+amd:Celecoxib a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Celecoxib" ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:Conbercept a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Conbercept" ;
+    amd:inhibits amd:VEGF,
+        amd:VEGF-A,
+        amd:VEGF-B,
+        amd:VEGF-C ;
+    amd:treats amd:WetAMD .
+
+amd:Copaxone a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Copaxone" ;
+    amd:treats amd:DryAMD .
+
+amd:Copper a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Copper" .
+
+amd:Corticosteroid a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Corticosteroid" ;
+    amd:inhibits amd:Inflammation .
+
+amd:Dexamethasone a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Dexamethasone" ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:Diet a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Diet" .
+
+amd:Drusen a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Drusen" ;
+    amd:indicates amd:AMD,
+        amd:DryAMD,
+        amd:GeographicAtrophy ;
+    amd:measuredBy amd:OCT .
+
+amd:Endophthalmitis a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Endophthalmitis" .
+
+amd:Eylea a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Eylea" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:WetAMD .
+
+amd:Fibroblasts a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Fibroblasts" ;
+    amd:indicates amd:AMD .
+
+amd:HTRA1 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "HTRA1" ;
+    amd:associatedWith amd:AMD .
+
+amd:Hemorrhage a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Hemorrhage" ;
+    amd:assessedBy amd:OCT .
+
+amd:Hypotony a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Hypotony" .
+
+amd:Hypoxia a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Hypoxia" ;
+    amd:causesOrIncreases amd:AMD .
+
+amd:IReST a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "IReST" .
+
+amd:LOC a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "LOC" .
+
+amd:LOC387715 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "LOC387715" ;
+    amd:associatedWith amd:AMD .
+
+amd:Lipofuscin a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Lipofuscin" ;
+    amd:indicates amd:AMD,
+        amd:GeographicAtrophy .
+
+amd:Lucentis a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Lucentis" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:WetAMD .
+
+amd:Lutein a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Lutein" ;
+    amd:associatedWith amd:AMD ;
+    amd:indicates amd:AMD ;
+    amd:measuredBy amd:Maculometer .
+
+amd:MAIA a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "MAIA" .
+
+amd:MOS_SF-36 a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "MOS SF-36" .
+
+amd:Macuvite a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Macuvite" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:AMD .
+
+amd:Microglia a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Microglia" .
+
+amd:Monocytes a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Monocytes" ;
+    amd:indicates amd:AMD .
+
+amd:NEI_VFQ-25 a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "NEI VFQ-25" .
+
+amd:OT-551 a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "OT-551" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:GeographicAtrophy .
+
+amd:Occupation a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Occupation" .
+
+amd:Oxygen a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Oxygen" ;
+    amd:causesOrIncreases amd:AMD .
+
+amd:PDGF a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "PDGF" .
+
+amd:PDT a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "PDT" .
+
+amd:PED a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "PED" .
+
+amd:PLEKHA1 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "PLEKHA1" ;
+    amd:associatedWith amd:AMD .
+
+amd:Pazopanib a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Pazopanib" .
+
+amd:Perfluoropropane a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Perfluoropropane" .
+
+amd:Phenylephrine a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Phenylephrine" .
+
+amd:Photocoagulation a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Photocoagulation" .
+
+amd:Photoreceptor a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Photoreceptor" .
+
+amd:Plasma a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Plasma" .
+
+amd:Pyrosequencing a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Pyrosequencing" .
+
+amd:Ranibizumab a amd:AntiVEGFTherapy,
+        owl:NamedIndividual ;
+    rdfs:label "Ranibizumab" ;
+    amd:inhibits amd:VEGF,
+        amd:VEGF-A ;
+    amd:treats amd:AMD,
+        amd:ChoroidalNeovascularization,
+        amd:WetAMD .
+
+amd:Rheohemapheresis a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Rheohemapheresis" .
+
+amd:Rheopheresis a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Rheopheresis" ;
+    amd:inhibits amd:Inflammation ;
+    amd:treats amd:DryAMD .
+
+amd:Saffron a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Saffron" ;
+    amd:treats amd:DryAMD .
+
+amd:Sirolimus a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Sirolimus" ;
+    amd:inhibits amd:Inflammation ;
+    amd:treats amd:GeographicAtrophy .
+
+amd:Smoking a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Smoking" ;
+    amd:causesOrIncreases amd:WetAMD .
+
+amd:Sonepcizumab a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Sonepcizumab" .
+
+amd:Sunlight a amd:RiskFactor,
+        owl:NamedIndividual ;
+    rdfs:label "Sunlight" .
+
+amd:TAS2R38 a amd:Gene,
+        owl:NamedIndividual ;
+    rdfs:label "TAS2R38" .
+
+amd:Tropicamide a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Tropicamide" .
+
+amd:Uveitis a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Uveitis" .
+
+amd:VEGFR a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "VEGFR" ;
+    amd:associatedWith amd:AMD .
+
+amd:Verteporfin a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Verteporfin" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:AMD,
+        amd:ChoroidalNeovascularization,
+        amd:WetAMD .
+
+amd:Vitrectomy a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Vitrectomy" ;
+    amd:treats amd:WetAMD .
+
+amd:Zeaxanthin a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "Zeaxanthin" ;
+    amd:associatedWith amd:AMD ;
+    amd:indicates amd:AMD .
+
+amd:Zinc a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "Zinc" .
+
+amd:assessedBy a owl:ObjectProperty ;
+    rdfs:label "assessedBy" ;
+    rdfs:comment "A clinical outcome assessed by a method" ;
+    rdfs:domain amd:ClinicalOutcome ;
+    rdfs:range amd:DiagnosticMethod .
+
+amd:associatedWith a owl:ObjectProperty ;
+    rdfs:label "associatedWith" ;
+    rdfs:comment "A biomarker (typically a gene) associated with a disease" ;
+    rdfs:domain amd:Biomarker ;
+    rdfs:range amd:Disease .
+
+amd:bFGF a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "bFGF" .
+
+amd:causesOrIncreases a owl:ObjectProperty ;
+    rdfs:label "causesOrIncreases" ;
+    rdfs:comment "A risk factor that causes or increases a disease" ;
+    rdfs:domain amd:RiskFactor ;
+    rdfs:range amd:Disease .
+
+amd:diagnosedBy a owl:ObjectProperty ;
+    rdfs:label "diagnosedBy" ;
+    rdfs:comment "A disease diagnosed via a method" ;
+    rdfs:domain amd:Disease ;
+    rdfs:range amd:DiagnosticMethod .
+
+amd:hasSymptom a owl:ObjectProperty ;
+    rdfs:label "hasSymptom" ;
+    rdfs:comment "A disease has a clinical symptom" ;
+    rdfs:domain amd:Disease ;
+    rdfs:range amd:ClinicalOutcome .
+
+amd:iSONEP a amd:Treatment,
+        owl:NamedIndividual ;
+    rdfs:label "iSONEP" ;
+    amd:inhibits amd:S1P ;
+    amd:treats amd:ChoroidalNeovascularization .
+
+amd:indicates a owl:ObjectProperty ;
+    rdfs:label "indicates" ;
+    rdfs:comment "A biomarker that indicates a disease" ;
+    rdfs:domain amd:Biomarker ;
+    rdfs:range amd:Disease .
+
+amd:inhibits a owl:ObjectProperty ;
+    rdfs:label "inhibits" ;
+    rdfs:comment "A treatment that inhibits a molecular target" ;
+    rdfs:domain amd:Treatment ;
+    rdfs:range amd:MolecularTarget .
+
+amd:measuredBy a owl:ObjectProperty ;
+    rdfs:label "measuredBy" ;
+    rdfs:comment "A biomarker measured by a method" ;
+    rdfs:domain amd:Biomarker ;
+    rdfs:range amd:DiagnosticMethod .
+
+amd:rs1061170 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "rs1061170" ;
+    amd:associatedWith amd:AMD ;
+    amd:indicates amd:AMD .
+
+amd:rs11200638 a amd:Biomarker,
+        owl:NamedIndividual ;
+    rdfs:label "rs11200638" ;
+    amd:associatedWith amd:AMD ;
+    amd:indicates amd:AMD .
+
+amd:treats a owl:ObjectProperty ;
+    rdfs:label "treats" ;
+    rdfs:comment "A treatment that manages a disease" ;
+    rdfs:domain amd:Treatment ;
+    rdfs:range amd:Disease .
+
+amd:Dependence a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Dependence" .
+
+amd:Depression a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Depression" .
+
+amd:ERG a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "ERG" .
+
+amd:Edema a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Edema" ;
+    amd:assessedBy amd:OCT .
+
+amd:Electroretinography a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Electroretinography" .
+
+amd:Glaucoma a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Glaucoma" ;
+    amd:diagnosedBy amd:OCT,
+        amd:Ultrasound ;
+    amd:hasSymptom amd:Blindness .
+
+amd:ICG a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "ICG" .
+
+amd:Maculometer a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Maculometer" .
+
+amd:PAECT a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "PAECT" .
+
+amd:Refractometer a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Refractometer" .
+
+amd:Retinopathy a amd:Disease,
+        owl:NamedIndividual ;
+    rdfs:label "Retinopathy" .
+
+amd:S1P a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "S1P" ;
+    amd:causesOrIncreases amd:ChoroidalNeovascularization .
+
+amd:Scarring a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Scarring" ;
+    amd:assessedBy amd:ICG .
+
+amd:Ultrasound a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "Ultrasound" .
+
+amd:VEGF-B a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "VEGF-B" ;
+    amd:associatedWith amd:AMD .
+
+amd:VEGF-C a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "VEGF-C" .
+
+amd:ETDRS a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "ETDRS" .
+
+amd:VEGF-A a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "VEGF-A" ;
+    amd:associatedWith amd:AMD .
+
+amd:Inflammation a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "Inflammation" ;
+    amd:associatedWith amd:GeographicAtrophy ;
+    amd:causesOrIncreases amd:AMD,
+        amd:GeographicAtrophy .
+
+amd:DryAMD a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "DryAMD" ;
+    amd:causesOrIncreases amd:WetAMD ;
+    amd:diagnosedBy amd:ETDRS,
+        amd:OCT ;
+    amd:hasSymptom amd:Blindness .
+
+amd:Blindness a amd:ClinicalOutcome,
+        owl:NamedIndividual ;
+    rdfs:label "Blindness" .
+
+amd:AntiVEGFTherapy a owl:Class ;
+    rdfs:label "AntiVEGFTherapy" ;
+    amd:inhibits amd:VEGF ;
+    amd:treats amd:WetAMD ;
+    rdfs:comment "Therapy that targets VEGF" ;
+    rdfs:subClassOf amd:Treatment .
+
+amd:ChoroidalNeovascularization a owl:Class ;
+    rdfs:label "ChoroidalNeovascularization" ;
+    amd:diagnosedBy amd:OCT ;
+    amd:hasSymptom amd:Blindness,
+        amd:Edema,
+        amd:Scarring ;
+    rdfs:comment "Abnormal vessel growth" .
+
+amd:GeographicAtrophy a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "GeographicAtrophy" ;
+    amd:diagnosedBy amd:OCT ;
+    amd:hasSymptom amd:Blindness .
+
+amd:RiskFactor a owl:Class ;
+    rdfs:label "RiskFactor" ;
+    rdfs:comment "A factor that increases the likelihood of developing a disease" .
+
+amd:Gene a owl:Class ;
+    rdfs:label "Gene" ;
+    rdfs:comment "A class for genes" ;
+    rdfs:subClassOf amd:Biomarker .
+
+amd:OCT a amd:DiagnosticMethod,
+        owl:NamedIndividual ;
+    rdfs:label "OCT" .
+
+amd:Disease a owl:Class ;
+    rdfs:label "Disease" ;
+    rdfs:comment "A medical condition affecting the human body" ;
+    owl:disjointWith amd:ClinicalOutcome,
+        amd:DiagnosticMethod,
+        amd:Treatment .
+
+amd:VEGF a amd:MolecularTarget,
+        owl:NamedIndividual ;
+    rdfs:label "VEGF" .
+
+amd:MolecularTarget a owl:Class ;
+    rdfs:label "MolecularTarget" ;
+    rdfs:comment "A molecular entity (protein, receptor, pathway component) that a treatment inhibits or modulates (e.g., VEGF, VEGFR, complement C3, S1P)" .
+
+amd:WetAMD a amd:AMD,
+        owl:NamedIndividual ;
+    rdfs:label "WetAMD" ;
+    amd:diagnosedBy amd:OCT ;
+    amd:hasSymptom amd:Blindness .
+
+amd:ClinicalOutcome a owl:Class ;
+    rdfs:label "ClinicalOutcome" ;
+    rdfs:comment "A measurable result of a treatment or disease progression, including visual impairments (blindness, vision loss, visual acuity decline), adverse events, and disease progressions" .
+
+amd:Biomarker a owl:Class ;
+    rdfs:label "Biomarker" ;
+    rdfs:comment "A measurable indicator of a biological state or condition" .
+
+amd:DiagnosticMethod a owl:Class ;
+    rdfs:label "DiagnosticMethod" ;
+    rdfs:comment "A procedure or test used to diagnose a disease" ;
+    owl:disjointWith amd:ClinicalOutcome .
+
+amd:Treatment a owl:Class ;
+    rdfs:label "Treatment" ;
+    rdfs:comment "A medical intervention used to manage or cure a disease" ;
+    owl:disjointWith amd:ClinicalOutcome,
+        amd:DiagnosticMethod .
+
+amd:AMD a owl:Class ;
+    rdfs:label "AMD" ;
+    amd:diagnosedBy amd:ERG,
+        amd:ETDRS,
+        amd:Electroretinography,
+        amd:OCT,
+        amd:PAECT,
+        amd:Refractometer ;
+    amd:hasSymptom amd:Blindness,
+        amd:Dependence,
+        amd:Depression ;
+    rdfs:comment "Age-Related Macular Degeneration" ;
+    rdfs:subClassOf amd:Disease .
+

@@ -1,0 +1,30 @@
+Macular pigment response to supplemental lutein and zeaxanthin: a twin heritability study Background and aims
+Age-related macular degeneration (AMD)  the breakdown of the macular pigment (MP) in the retina of the eye  is the most common cause of blindness in the developed world. MP is an accumulation in the retina of two hydroxycarotenoids, lutein (L) and zeaxanthin (Z), which human beings can only derive from their diet. Previous studies suggest that an increase in L/Z decreases AMD risk, and various formulations of L and Z supplement are already being marketed as improving eye health. However, studies investigating the effects of dietary change and supplements on MP density have shown a range of responses, with some subjects MP density increasing up to 40% and others remaining unchanged. The aim of this study was to investigate the effects of a high-dose L and Z supplement on MP levels in twins.  By studying identical and non-identical twins, we also hope to determine whether MP change in response to supplementation is genetically passed on.
+
+Who can participate?
+Participants were female, aged 16-50, and enrolled on the TwinsUK adult registry  we needed to recruit both identical and non-identical twin pairs. We looked for healthy volunteers rather than participants with a certain condition.       
+
+What does the study involve?
+Macular pigment optical density (the amount of macular pigment) was measured using two methods: heterochromatic flicker photometry (HFP) and two-wavelength fundus autofluorescence (AF).
+The HFP measurement was carried out using a compact, portable instrument called a Maculometer.  This was placed on a tabletop, and participants were asked to rest their forehead against a guide and look through an opening at a target, which was a flickering light.  They were then asked to turn a dial controlling the amount of flicker until the light stopped flickering (or until the amount of flicker was at its lowest).  They were given a couple of chances to practise, and the test was then repeated five times.  The target then changed to a dim red spot surrounded by a ring of flickering light, and the test was again repeated five times. They were then asked to repeat the entire process using the other eye.
+Once they had completed the HFP test, an eye drop (tropicamide 1%) was given to dilate their eyes for the AF test, which took place in a darkened room.  They had to wait 20-30 minutes for the tropicamide to take effect before the AF test could begin. The right eye was then scanned twice using a laser ophthalmoscope.
+In addition to the two eye tests, particpants were asked to complete two questionnaires, one on their zygosity (whether they are an identical or a non-identical twin) and one on their food consumption over the last three months. We also took a blood sample to measure levels of lutein and zeaxanthin.
+Participants were then asked to take a dietary supplement called Macuvite (Springfield®) every day with food for a period of six months. Macuvite contains 18 mg lutein and 2.4 mg zeaxanthin (derived from marigold flowers and microalgae). Their normal diet was continued while taking the supplement.
+They were then asked to return to the hospital for two more visits, three months and six months after starting to take the dietary supplement. The HFP and AF tests were repeated on each visit, and another blood sample was taken on their three-month visit. They were asked to bring their Macuvite pills with them on their three- and six-month visits so a pill count could be carried out.
+All participants received the same treatment.
+
+What are the possible benefits and risks of participating?
+It is possible that taking the dietary supplement could lead to an increase in your macular pigment optical density, but we cannot say this for certain until we have completed this and further research studies. There are no known risks to participants.
+
+Where is the study run from?
+It was organised by King's College Londons Department of Twin Research, based at the St Thomas Hospital campus, UK.
+
+When is the study starting and how long is it expected to run for?
+March 2004 to August 2005
+
+Who is funding the study?
+Wellcome Trust (UK)
+
+Who is the main contact?
+Professor Chris Hammond
+chris.hammond@kcl.ac.uk
