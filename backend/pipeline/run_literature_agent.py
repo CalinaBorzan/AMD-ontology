@@ -233,7 +233,7 @@ def discover_abstracts(model: str, provider: str, days: int,
 
         class RateLimitHandler(BaseCallbackHandler):
             def on_agent_action(self, action, **kwargs):
-                time.sleep(5)
+                time.sleep(1)
 
         agent_executor.callbacks = [RateLimitHandler()]
 
@@ -262,10 +262,7 @@ def discover_abstracts(model: str, provider: str, days: int,
         PROCESSED_FILE.write_text(json.dumps(sorted(processed), indent=2))
 
     return {
-        "proposals": [
-            {k: v for k, v in p.items() if k != "abstract_text"}
-            for p in PROPOSED_ABSTRACTS
-        ],
+        "proposals": list(PROPOSED_ABSTRACTS),
         "saved": saved,
         "error": error,
     }
@@ -309,7 +306,7 @@ def run(model: str, provider: str, days: int):
 
         class RateLimitHandler(BaseCallbackHandler):
             def on_agent_action(self, action, **kwargs):
-                time.sleep(5)
+                time.sleep(1)
 
         agent_executor.callbacks = [RateLimitHandler()]
 

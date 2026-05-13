@@ -747,7 +747,8 @@ def run_full_pipeline(model: str, provider: str = "ollama",
                        stages: list[int] | None = None,
                        max_abstracts: int | None = None,
                        resume_from: dict | None = None,
-                       on_progress=None) -> dict:
+                       on_progress=None,
+                       stage3_dir_override: Path | None = None) -> dict:
     global SCHEMA
 
     if stages is None:
@@ -783,8 +784,9 @@ def run_full_pipeline(model: str, provider: str = "ollama",
         emit("stage2", f"Stage 2 done: {compact_summary()[:200]}")
 
     if 3 in stages:
-        emit("stage3", f"Starting Stage 3 on {STAGE3_ABSTRACTS_DIR.name}")
-        run_stage_abstracts(llm, "Stage 3", STAGE3_ABSTRACTS_DIR,
+        stage3_dir = stage3_dir_override or STAGE3_ABSTRACTS_DIR
+        emit("stage3", f"Starting Stage 3 on {stage3_dir.name}")
+        run_stage_abstracts(llm, "Stage 3", stage3_dir,
                              max_abstracts, provider, hitl=False)
         emit("stage3", f"Stage 3 done: {compact_summary()[:200]}")
 
