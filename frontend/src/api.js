@@ -1,6 +1,17 @@
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+// In production (HF Spaces, etc.) the frontend is served from the same origin
+// as the backend, so we use relative URLs. Locally we hit the FastAPI dev
+// server explicitly on port 8000.
+const isLocalDev =
+  typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1') &&
+  window.location.port !== '8000'
+
+const API_URL =
+  import.meta.env.VITE_API_URL ??
+  (isLocalDev ? 'http://localhost:8000' : '')
 
 export const http = axios.create({
   baseURL: API_URL,
