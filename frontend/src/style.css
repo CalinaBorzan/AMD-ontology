@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Surfaces — cool, clinical */
+  --bg: #f7f8fb;
+  --bg-tint: #eef1f6;
+  --surface: #ffffff;
+  --surface-hover: #fafbfd;
+  --surface-elevated: #ffffff;
+
+  /* Text */
+  --text: #0b1320;
+  --text-soft: #3d4a5c;
+  --text-muted: #6b7785;
+  --text-faint: #97a0ad;
+
+  /* Borders */
+  --border: #e4e8ee;
+  --border-strong: #d4dae3;
+  --border-focus: #2b6cb0;
+
+  /* Brand — medical blue */
+  --brand: #2b6cb0;
+  --brand-hover: #1f5490;
+  --brand-deep: #173f6e;
+  --brand-soft: #eaf2fb;
+  --brand-tint: #f4f8fd;
+
+  /* Status */
+  --success: #16a34a;
+  --success-soft: #e7f7ec;
+  --warning: #d97706;
+  --warning-soft: #fdf2e0;
+  --danger: #dc2626;
+  --danger-soft: #fdecec;
+
+  /* Accent — used sparingly */
+  --accent: #0ea5e9;
+  --accent-soft: #e0f2fe;
+
+  /* Type */
+  --font: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', 'JetBrains Mono', 'Consolas', monospace;
+
+  --t-xs: 12px;
+  --t-sm: 13px;
+  --t-base: 15px;
+  --t-md: 17px;
+  --t-lg: 20px;
+  --t-xl: 28px;
+  --t-2xl: 40px;
+  --t-3xl: 56px;
+  --t-hero: clamp(44px, 6.5vw, 72px);
+
+  /* Spacing */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --speed-fast: 140ms;
+  --speed: 220ms;
+  --speed-slow: 380ms;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(11, 19, 32, 0.04);
+  --shadow-sm: 0 2px 4px rgba(11, 19, 32, 0.04), 0 1px 2px rgba(11, 19, 32, 0.03);
+  --shadow-md: 0 8px 24px -8px rgba(11, 19, 32, 0.12), 0 2px 4px rgba(11, 19, 32, 0.04);
+  --shadow-lg: 0 24px 48px -16px rgba(11, 19, 32, 0.18), 0 6px 12px rgba(11, 19, 32, 0.05);
+  --shadow-focus: 0 0 0 3px rgba(43, 108, 176, 0.18);
+
+  /* Layout */
+  --header-h: 64px;
+  --container: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--t-base);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv11' 1, 'ss01' 1, 'kern' 1;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color var(--speed) var(--ease);
+}
+
+a:hover {
+  color: var(--brand-hover);
+}
+
+::selection {
+  background: var(--brand-soft);
+  color: var(--brand-deep);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--r-pill);
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

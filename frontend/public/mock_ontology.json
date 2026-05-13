@@ -1,0 +1,67 @@
+{
+  "classes": {
+    "Disease": {
+      "subclasses": ["AMD"],
+      "instances": ["Glaucoma", "Cataract", "DiabeticRetinopathy"]
+    },
+    "AMD": {
+      "subclasses": ["WetAMD", "DryAMD"],
+      "instances": []
+    },
+    "WetAMD": {
+      "subclasses": [],
+      "instances": ["NeovascularAMD"]
+    },
+    "DryAMD": {
+      "subclasses": [],
+      "instances": ["GeographicAtrophy"]
+    },
+    "Treatment": {
+      "subclasses": ["AntiVEGF"],
+      "instances": ["PhotodynamicTherapy"]
+    },
+    "AntiVEGF": {
+      "subclasses": [],
+      "instances": ["Ranibizumab", "Aflibercept", "Bevacizumab"]
+    },
+    "Biomarker": {
+      "subclasses": [],
+      "instances": ["CFH", "ARMS2", "HTRA1", "VEGF"]
+    },
+    "RiskFactor": {
+      "subclasses": [],
+      "instances": ["Smoking", "Age", "Hypertension"]
+    }
+  },
+  "properties": {
+    "treats": {
+      "examples": [
+        ["Ranibizumab", "treats", "WetAMD"],
+        ["Aflibercept", "treats", "WetAMD"],
+        ["Bevacizumab", "treats", "NeovascularAMD"],
+        ["PhotodynamicTherapy", "treats", "WetAMD"]
+      ]
+    },
+    "associatedWith": {
+      "examples": [
+        ["CFH", "associatedWith", "AMD"],
+        ["ARMS2", "associatedWith", "AMD"],
+        ["HTRA1", "associatedWith", "AMD"],
+        ["VEGF", "associatedWith", "WetAMD"]
+      ]
+    },
+    "increasesRiskOf": {
+      "examples": [
+        ["Smoking", "increasesRiskOf", "AMD"],
+        ["Age", "increasesRiskOf", "AMD"],
+        ["Hypertension", "increasesRiskOf", "AMD"]
+      ]
+    },
+    "inhibits": {
+      "examples": [
+        ["Ranibizumab", "inhibits", "VEGF"],
+        ["Aflibercept", "inhibits", "VEGF"]
+      ]
+    }
+  }
+}
