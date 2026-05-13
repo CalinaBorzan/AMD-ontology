@@ -1,0 +1,341 @@
+Question category: general question:
+1. I am a patient with age-related macular degeneration (AMD): what is AMD?
+2. I am a patient with age-related macular degeneration (AMD): what are the risk factors
+for AMD?
+3. I am a patient with age-related macular degeneration (AMD): what is early AMD?
+4. I am a patient with age-related macular degeneration (AMD): what is intermediate AMD?
+5. I am a patient with age-related macular degeneration (AMD): what is neovascular AMD?
+6. I am a patient with age-related macular degeneration (AMD): what is geographic atrophy?
+7. I am a patient with age-related macular degeneration (AMD): can you get AMD in
+only one eye, or does it occur in both?
+8. I am a patient with age-related macular degeneration (AMD): is AMD always caused
+by age?
+9. I am a patient with age-related macular degeneration: what is photodynamic therapy?
+10. I am a patient with age-related macular degeneration (AMD): is AMD contagious
+at all?
+11. I am a patient with early age-related macular degeneration (AMD) in the right eye:
+why did I get early AMD?
+12. I am a patient with intermediate age-related macular degeneration (iAMD) in the
+right eye: why did I get iAMD?
+13. I am a patient with neovascular age-related macular degeneration (nAMD) in the
+right eye: why did I get nAMD?
+14. I am a patient with geographic atrophy (GA) in the right eye: why did I get GA?
+15. I am a patient with neovascular age-related macular degeneration in the right eye:
+how did my age-related macular degeneration progress to this point?
+16. I am a patient with neovascular age-related macular degeneration in both eyes: can
+my siblings and children develop age-related macular degeneration as well?
+Question category: about diet and lifestyle:
+17. I am a patient with non-age-related macular degeneration (non-AMD): can I do
+anything to reduce my risk of developing AMD?
+18. I am a patient with neovascular age-related macular degeneration in both eyes:
+what can my siblings and children do to reduce their risk of developing age-related
+macular degeneration?
+19. I am a patient with early age-related macular degeneration in the right eye: what can
+I do to reduce my risk of progression?
+20. I am a patient with intermediate age-related macular degeneration in the right eye:
+what can I do to reduce my risk of progression?
+21. I am a patient with neovascular age-related macular degeneration in the right eye:
+what can I do to reduce my risk of progression?
+22. I am a patient with geographic atrophy in the right eye: what can I do to reduce my
+risk of progression?
+23. I am a patient with non-age-related macular degeneration (non-AMD): What can I do
+at home to help prevent developing AMD?
+24. I am a patient with early age-related macular degeneration in the right eye: what can
+I do at home to help?
+25. I am a patient with intermediate age-related macular degeneration in the right eye:
+what can I do at home to help?
+26. I am a patient with neovascular age-related macular degeneration in the right eye:
+what can I do at home to help?
+27. I am a patient with geographic atrophy in the right eye: what can I do at home to help?
+28. I am a patient with non-age-related macular degeneration: should I change my diet?
+29. I am a patient with early age-related macular degeneration in the right eye: should I
+change my diet?
+30. I am a patient with intermediate age-related macular degeneration in the right eye:
+should I change my diet?
+Diagnostics 2024, 14, 1468 22 of 27
+31. I am a patient with neovascular age-related macular degeneration in the right eye:
+should I change my diet?
+32. I am a patient with geographic atrophy in the right eye: should I change my diet?
+33. I am a patient with non-age-related macular degeneration: should I take a dietary
+supplement? If so, which one?
+34. I am a patient with early age-related macular degeneration in the right eye: should I
+take a dietary supplement? If so, which one?
+35. I am a patient with intermediate age-related macular degeneration in the right eye:
+should I take a dietary supplement? If so, which one?
+36. I am a patient with neovascular age-related macular degeneration in the right eye:
+should I take a dietary supplement? If so, which one?
+37. I am a patient with geographic atrophy in the right eye: should I take a dietary
+supplement? If so, which one?
+38. I am a patient with non-age-related macular degeneration: are there lifestyle changes
+that I should make?
+39. I am a patient with early age-related macular degeneration in the right eye: are there
+lifestyle changes that I should make?
+40. I am a patient with intermediate age-related macular degeneration in the right eye:
+are there lifestyle changes that I should make?
+41. I am a patient with neovascular age-related macular degeneration in the right eye: are
+there lifestyle changes that I should make?
+42. I am a patient with geographic atrophy in the right eye: are there lifestyle changes
+that I should make?
+43. I am a patient with neovascular age-related macular degeneration in the right eye,
+taking the following medication: aspirin, carvedilol and dutasteride. Do my current
+medications affect disease progression?
+44. I am a patient with neovascular age-related macular degeneration in the right eye: taking the following medication: levothyroxine, minoxidil. Do my current medications
+affect disease progression?
+45. I am a patient with neovascular age-related macular degeneration in the right eye:
+taking the following medication: levodopa, atorvastatin. Do my current medications
+affect disease progression?
+46. I am a patient with neovascular age-related macular degeneration in the right eye:
+taking the following medication: omeprazole, metformin. Do my current medications
+affect disease progression?
+47. I am a patient with age-related macular degeneration: will vitamin supplementation
+interfere with medications, or vice versa?
+48. I am a patient with age-related macular degeneration: can I alter my diet to have the
+same amount of antioxidants and zinc as the AREDS formula?
+49. I am a patient with age-related macular degeneration: does a daily multivitamin alone
+provide the same vision benefits as the AREDS formula?
+50. I am a patient with age-related macular degeneration (AMD): should I continue
+smoking or smoking can affect the evolution of AMD?
+51. I am a patient with age-related macular degeneration (AMD): can taking the AREDS
+supplements prevent AMD?
+52. I am a patient with age-related macular degeneration: what are omega-3s?
+53. I am a patient with age-related macular degeneration: what are lutein, zeaxanthin,
+and beta-carotene?
+Question category: about changes in vision:
+54. I am a patient with non-age-related macular degeneration (non-AMD): how will I
+know if I have AMD?
+55. I am a patient with non-age-related macular degeneration (non-AMD) who fears
+developing early or intermediate AMD: what symptoms should I look for?
+Diagnostics 2024, 14, 1468 23 of 27
+56. I am a patient with early or intermediate age-related macular degeneration (AMD)
+who fears progressing to neovascular AMD: What symptoms should I look for?
+57. I am a patient with early or intermediate age-related macular degeneration who fears
+progressing to geographic atrophy: what symptoms should I look for?
+58. I am a patient with age-related macular degeneration: what is an Amsler grid? How
+do I use it?
+59. I am a patient with early age-related macular degeneration in the right eye: how often
+should I perform a test with the Amsler grid at home?
+60. I am a patient with intermediate age-related macular degeneration in the right eye:
+how often should I perform a test with the Amsler grid at home?
+61. I am a patient with neovascular age-related macular degeneration in the right eye:
+how often should I perform a test with the Amsler grid at home?
+62. I am a patient with geographic atrophy in the right eye: how often should I perform a
+test with the Amsler grid at home?
+63. I am a patient with early age-related macular degeneration in the right eye: what
+should I do if my sight changes?
+64. I am a patient with intermediate age-related macular degeneration in the right eye:
+what should I do if my sight changes?
+65. I am a patient with neovascular age-related macular degeneration in the right eye:
+what should I do if my sight changes?
+66. I am a patient with geographic atrophy in the right eye: what should I do if my
+sight changes?
+67. I am a patient with early age-related macular degeneration in the right eye: am I going
+to experience any pain?
+68. I am a patient with intermediate age-related macular degeneration in the right eye:
+am I going to experience any pain?
+69. I am a patient with neovascular age-related macular degeneration in the right eye: am
+I going to experience any pain?
+70. I am a patient with geographic atrophy in the right eye: am I going to experience
+any pain?
+71. I am a patient with early age-related macular degeneration (AMD) in the right eye:
+how will my AMD affect my vision now and in the future?
+72. I am a patient with intermediate (iAMD) in the right eye: how will my AMD affect
+my vision now and in the future?
+73. I am a patient with neovascular AMD (nAMD) in the right eye: how will my AMD
+affect my vision now and in the future?
+74. I am a patient with geographic atrophy in the right eye: how will my AMD affect my
+vision now and in the future?
+75. I am a patient with early age-related macular degeneration (AMD) in the right eye:
+can AMD be treated? What kind of treatment is available?
+76. I am a patient with intermediate age-related macular degeneration (iAMD) in the
+right eye: can iAMD be treated? What kind of treatment is available?
+77. I am a patient with neovascular age-related macular degeneration (nAMD) in the
+right eye: can nAMD be treated? What kind of treatment is available?
+78. I am a patient with geographic atrophy (GA) in the right eye: can GA be treated?
+What kind of treatment is available?
+79. I am a patient with early AMD in the right eye with 20/20 vision: what is my risk of
+losing reading vision in the next 5 years?
+80. I am a patient with intermediate age-related macular degeneration in the right eye
+with 20/20 vision: what is my risk of losing reading vision in the next 5 years?
+81. I am a patient with neovascular age-related macular degeneration in the right eye
+with 20/200 vision: what is my risk of losing reading vision in the next 5 years?
+82. I am a patient with geographic atrophy in the right eye with 20/200 vision: what is
+my risk of losing reading vision in the next 5 years?
+Diagnostics 2024, 14, 1468 24 of 27
+83. I am a patient recently diagnosed with neovascular age-related macular degeneration
+(nAMD) in the right eye with 20/200 vision and I haven’t had prior treatment. I
+received the recommendation to start anti-VEGF injections and I don’t have signs of
+AMD in the left eye. Can AMD affect my left eye as well?
+84. I am a patient with early age-related macular degeneration in the right eye: am I going
+to become blind?
+85. I am a patient with intermediate age-related macular degeneration in the right eye:
+am I going to become blind?
+86. I am a patient with neovascular age-related macular degeneration in the right eye: am
+I going to become blind?
+87. I am a patient with geographic atrophy in the right eye: am I going to become blind?
+88. I am a patient with neovascular age-related macular degeneration in the right eye,
+with 20/200 vision and with moderately dense cataract: would cataract surgery help
+me see better?
+89. I am a patient with geographic atrophy in the right eye, with 20/200 vision and with
+moderately dense cataract: would cataract surgery help me see better?
+90. I am a patient with neovascular age-related macular degeneration in the right eye
+with 20/200 vision and geographic atrophy in the left eye with 20/2000 vision: should
+I be driving?
+91. I am a patient with neovascular age-related macular degeneration in the right eye
+with 20/50 vision and geographic atrophy in the left eye with 20/200 vision: should I
+be driving?
+Question category: about treatment for wet AMD:
+92. I am a patient with neovascular age-related macular degeneration (nAMD) in the
+right eye who had sudden loss of vision two weeks ago, without prior treatment with
+20/60 vision: can my nAMD be treated?
+93. I am a patient with neovascular age-related macular degeneration (nAMD) in the right
+eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: can my nAMD be treated?
+94. I am a patient with neovascular age-related macular degeneration (nAMD) in the
+right eye who had sudden loss of vision two weeks ago, without prior treatment with
+20/60 vision: what are my treatment options?
+95. I am a patient with neovascular age-related macular degeneration (nAMD) in the right
+eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: what are my treatment options?
+96. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+when will treatment start and what does it involve?
+97. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: when will treatment start and what does it involve?
+98. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+where will I have my treatment?
+99. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: where will I have my treatment?
+100. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+how many treatments will be needed?
+Diagnostics 2024, 14, 1468 25 of 27
+101. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: how many treatments will be needed?
+102. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+how exactly does the anti-VEGF shot process go?
+103. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: how exactly does the anti-VEGF shot process go?
+104. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+what are the benefits and how successful is the treatment?
+105. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: what are the benefits and how successful is the treatment?
+106. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+are there any risks or side effects of intravitreal anti-VEGF treatment?
+107. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: are there any risks or side effects of intravitreal
+anti-VEGF treatment?
+108. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment, with 20/60 vision,
+taking 75 mg Plavix daily: should I discontinue the Plavix medication prior to my
+intravitreal anti-VEGF injection?
+109. I am a patient with neovascular age-related macular degeneration in the right eye, who
+had sudden loss of vision two weeks ago, without prior treatment, with 20/60 vision,
+taking 5 mg Coumadin daily: should I discontinue the Coumadin medication prior to
+my intravitreal anti-VEGF injection?
+110. I am a patient with neovascular age-related macular degeneration in the right eye, who
+had sudden loss of vision two weeks ago, without prior treatment, with 20/60 vision,
+taking 5 mg Eliquis twice daily: should I discontinue the Eliquis medication prior to
+my intravitreal anti-VEGF injection?
+111. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+what is the cost (in time and money) of the intravitreal anti-VEGF treatment?
+112. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: what is the cost (in time and money) of the intravitreal
+anti-VEGF treatment?
+113. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+will I need assistance to get home after the intravitreal anti-VEGF treatment?
+114. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: will I need assistance to get home after the intravitreal
+anti-VEGF treatment?
+115. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+what is the goal of the anti-VEGF treatment?
+116. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: what is the goal of the anti-VEGF treatment?
+117. I am a patient with neovascular age-related macular degeneration in the right eye,
+treated with aflibercept every 2 months in the past two years: is it possible to get
+intravitreal injections less often?
+118. I am a patient with neovascular age-related macular degeneration in the right eye who
+had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision:
+what are the success rates of the treatment?
+119. I am a patient with neovascular age-related macular degeneration in the right eye,
+with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a
+macular disciform scar with sign of disease activity on Ocular Coherence Tomography
+and hand motion vision: what are the success rates of the treatment?
+120. I am a patient with neovascular age-related macular degeneration (nAMD) in the
+right eye: are there any experimental treatments for nAMD?
+Question category: about support services for vision loss:
+121. I am a patient with early age-related macular degeneration in the right eye: when
+should I next see my optometrist for new glasses?
+122. I am a patient with intermediate age-related macular degeneration in the right eye:
+when should I next see my optometrist for new glasses?
+123. I am a patient with neovascular age-related macular degeneration in the right eye:
+when should I next see my optometrist for new glasses?
+124. I am a patient with geographic atrophy in the right eye: when should I next see my
+optometrist for new glasses?
+125. I am a patient with early age-related macular degeneration in the right eye: what do I
+do if I have problems with visual activities such as reading, etc?
+126. I am a patient with intermediate age-related macular degeneration in the right eye:
+what do I do if I have problems with visual activities such as reading, etc?
+127. I am a patient with neovascular age-related macular degeneration in the right eye:
+what do I do if I have problems with visual activities such as reading, etc?
+128. I am a patient with geographic atrophy in the right eye: what do I do if I have problems
+with visual activities such as reading, etc?
+129. I am a patient with neovascular age-related macular degeneration and 20/50 vision in
+both eyes: should I see a low vision specialist?
+130. I am a patient with neovascular age-related macular degeneration and 20/200 vision
+in both eyes: should I see a low vision specialist?
+131. I am a patient with neovascular age-related macular degeneration and 20/2000 vision
+in both eyes: should I see a low vision specialist?
+132. I am a patient with neovascular age-related macular degeneration in the right eye:
+I have recently changed my reading glasses but I still can’t read. Are there any
+other solutions?
+133. I am a patient with neovascular age-related macular degeneration in the right eye:
+can you recommend any support groups?
+Question category: contacting your eye health professional:
+134. I am a patient with non-age-related macular degeneration: how often should I have
+my eyes checked?
+135. I am a patient with early age-related macular degeneration in the right eye: how often
+should I have my eyes checked?
+Diagnostics 2024, 14, 1468 27 of 27
+136. I am a patient with intermediate age-related macular degeneration in the right eye:
+how often should I have my eyes checked?
+137. I am a patient with neovascular age-related macular degeneration in the right eye:
+how often should I have my eyes checked?
+138. I am a patient with geographic atrophy in the right eye: how often should I have my
+eyes checked?
+139. I am a patient with early age-related macular degeneration in the right eye: when
+should I contact you as a matter of urgency?
+140. I am a patient with intermediate age-related macular degeneration in the right eye:
+when should I contact you as a matter of urgency?
+141. I am a patient with neovascular age-related macular degeneration in the right eye:
+when should I contact you as a matter of urgency?
+142. I am a patient with geographic atrophy in the right eye: when should I contact you as
+a matter of urgency?
+143. I am a patient with neovascular age-related macular degeneration in the right eye
+who had an intravitreal anti-VEGF injection: when should I contact you as a matter
+of urgency
