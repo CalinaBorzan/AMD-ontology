@@ -1,3 +1,14 @@
+---
+title: AMD Ontology
+emoji: 👁️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+short_description: Agentic ontology engineering for Age-Related Macular Degeneration
+---
 
 # AMD Ontology — Agentic Schema Mining + DL-Learner
 
