@@ -31,6 +31,22 @@ SEARCH_DAYS: int = 0
 
 ABSTRACT_CACHE: dict[str, dict[str, str]] = {}
 
+_LOG_CALLBACK = None
+
+
+def set_log_callback(cb):
+    """Register a callable that receives one log line per tool action."""
+    global _LOG_CALLBACK
+    _LOG_CALLBACK = cb
+
+
+def _log(msg: str) -> None:
+    if _LOG_CALLBACK is not None:
+        try:
+            _LOG_CALLBACK(msg)
+        except Exception:
+            pass
+
 
 def _load_processed_pmids() -> set[str]:
     """PMIDs already saved in earlier runs (used to skip duplicates at search time)."""
@@ -52,6 +68,7 @@ def _all_seen_pmids() -> set[str]:
 @tool
 def search_pubmed(query: str) -> str:
     """Search PubMed with a plain keyword query. """
+    _log(f"[search] PubMed query='{query}' window={SEARCH_DAYS}d")
     try:
         resp = requests.get(
             NCBI_ESEARCH,
@@ -72,6 +89,7 @@ def search_pubmed(query: str) -> str:
         count = result.get("count", "0")
 
         if not ids:
+            _log(f"[search] 0 results for '{query}'")
             return f"No results found for: {query}"
 
         seen = _all_seen_pmids()
@@ -79,14 +97,18 @@ def search_pubmed(query: str) -> str:
         skipped = len(ids) - len(new_ids)
 
         if not new_ids:
+            _log(f"[search] {len(ids)} hits, all already processed")
             return f"No new results for '{query}': all {len(ids)} top PMIDs were already processed."
 
+        _log(f"[search] {count} total, {len(new_ids)} new ({skipped} skipped): "
+              f"{', '.join(new_ids[:5])}{'...' if len(new_ids) > 5 else ''}")
         msg = f"{count} total results, {len(new_ids)} new: {', '.join(new_ids)}"
         if skipped:
             msg += f" ({skipped} already processed)"
         return msg
 
     except Exception as e:
+        _log(f"[search] ERROR: {e}")
         return f"PubMed search error: {e}"
 
 
@@ -94,6 +116,7 @@ def search_pubmed(query: str) -> str:
 def fetch_abstract(pmid: str) -> str:
     """Fetch the full abstract text for a PubMed ID (PMID)."""
     pmid = pmid.strip()
+    _log(f"[fetch] PMID {pmid}")
     try:
         resp = requests.get(
             NCBI_EFETCH,
@@ -111,6 +134,7 @@ def fetch_abstract(pmid: str) -> str:
         root = ET.fromstring(resp.text)
         article = root.find(".//PubmedArticle")
         if article is None:
+            _log(f"[fetch] PMID {pmid} not found")
             return f"PMID {pmid}: Article not found"
 
         title_el = article.find(".//ArticleTitle")
@@ -128,10 +152,13 @@ def fetch_abstract(pmid: str) -> str:
         abstract = " ".join(abstract_parts) if abstract_parts else "No abstract available"
 
         ABSTRACT_CACHE[pmid] = {"title": title, "text": abstract}
+        _log(f"[fetch] PMID {pmid} -> \"{title[:70]}{'...' if len(title) > 70 else ''}\" "
+              f"({len(abstract)} chars)")
 
         return f"PMID: {pmid}\nTitle: {title}\nAbstract: {abstract[:1500]}"
 
     except Exception as e:
+        _log(f"[fetch] ERROR PMID {pmid}: {e}")
         return f"Fetch error for PMID {pmid}: {e}"
 
 
@@ -154,14 +181,18 @@ def propose_abstract(proposal_json: str) -> str:
                 f"for this PMID before proposing it.")
 
     cached = ABSTRACT_CACHE[pmid]
+    relevance = str(proposal.get("relevance", "unknown")).strip().upper()
+    reason = str(proposal.get("reason", "")).strip()
     record = {
         "pmid": pmid,
         "title": cached["title"],
         "abstract_text": cached["text"],
-        "relevance": str(proposal.get("relevance", "unknown")).strip().upper(),
-        "reason": str(proposal.get("reason", "")).strip(),
+        "relevance": relevance,
+        "reason": reason,
     }
     PROPOSED_ABSTRACTS.append(record)
+    _log(f"[propose] PMID {pmid} -> {relevance} ({reason[:80]}"
+          f"{'...' if len(reason) > 80 else ''})")
     return f"Abstract PMID {pmid} recorded for human review."
 
 

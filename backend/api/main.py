@@ -28,7 +28,7 @@ from pipeline.run_validate_ontology_agent import (
     collect_proposed_fixes,
     apply_single_fix,
 )
-from pipeline.run_literature_agent import discover_abstracts
+from pipeline.run_literature_agent import discover_abstracts, set_log_callback as set_lit_log_callback
 from pipeline.run_dllearner import list_experiments, run_experiment
 
 from .jobs import manager, Job
@@ -167,11 +167,101 @@ def _load_current_ontology() -> dict:
     return json.loads(ONTOLOGY_PATH.read_text(encoding="utf-8"))
 
 
+SNAPSHOTS_DIR = PROJECT_ROOT / "results" / "amd" / "snapshots"
+
+
+def _ontology_stats(data: dict) -> dict:
+    classes = data.get("classes", {})
+    n_classes = len(classes)
+    n_instances = sum(
+        len(c.get("instances", []))
+        for c in classes.values() if isinstance(c, dict)
+    )
+    n_triples = sum(
+        len(p.get("examples", []))
+        for p in data.get("properties", {}).values() if isinstance(p, dict)
+    )
+    return {"classes": n_classes, "instances": n_instances, "triples": n_triples}
+
+
+def _snapshot_current_ontology(label: str = "") -> dict:
+    """Write a timestamped copy of the current ontology to the snapshots
+    folder. Returns the snapshot metadata. Called before destructive
+    operations (mining, validation apply) so the user can roll back."""
+    from datetime import datetime
+    SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
+    if not ONTOLOGY_PATH.exists():
+        return {}
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    label_part = f"_{label.replace(' ', '-')}" if label else ""
+    snap_name = f"snapshot_{ts}{label_part}.json"
+    snap_path = SNAPSHOTS_DIR / snap_name
+    data = json.loads(ONTOLOGY_PATH.read_text(encoding="utf-8"))
+    snap_path.write_text(json.dumps(data, indent=2, ensure_ascii=False),
+                          encoding="utf-8")
+    stats = _ontology_stats(data)
+    return {
+        "name": snap_name,
+        "timestamp": ts,
+        "label": label,
+        "size_kb": round(snap_path.stat().st_size / 1024, 1),
+        **stats,
+    }
+
+
 # ── Health / utility ─────────────────────────────────────────────────────────
 
 @app.get("/api")
 def api_root():
     return {"name": "AMD Ontology API", "version": app.version, "docs": "/docs"}
+
+
+# ── Ontology snapshots ──────────────────────────────────────────────────────
+
+class SnapshotRestoreRequest(BaseModel):
+    name: str = Field(..., description="snapshot file name to restore")
+
+
+@app.get("/api/ontology/snapshots")
+def list_snapshots():
+    """Return all saved ontology snapshots, newest first."""
+    if not SNAPSHOTS_DIR.exists():
+        return {"snapshots": []}
+    snaps = []
+    for p in sorted(SNAPSHOTS_DIR.glob("snapshot_*.json"), reverse=True):
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+            stats = _ontology_stats(data)
+        except Exception:
+            stats = {"classes": 0, "instances": 0, "triples": 0}
+        snaps.append({
+            "name": p.name,
+            "timestamp": p.name.replace("snapshot_", "").replace(".json", ""),
+            "size_kb": round(p.stat().st_size / 1024, 1),
+            **stats,
+        })
+    return {"snapshots": snaps}
+
+
+@app.post("/api/ontology/snapshots")
+def create_snapshot(label: str = ""):
+    """Manually create a snapshot of the current ontology."""
+    return _snapshot_current_ontology(label=label)
+
+
+@app.post("/api/ontology/snapshots/restore")
+def restore_snapshot(req: SnapshotRestoreRequest):
+    """Replace the current ontology with the given snapshot."""
+    snap_path = SNAPSHOTS_DIR / req.name
+    if not snap_path.exists():
+        raise HTTPException(status_code=404,
+                              detail=f"snapshot '{req.name}' not found")
+    # Backup current before overwriting so this restore is itself undoable
+    _snapshot_current_ontology(label="pre-restore")
+    ONTOLOGY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ONTOLOGY_PATH.write_text(snap_path.read_text(encoding="utf-8"),
+                               encoding="utf-8")
+    return {"restored": req.name, "to": str(ONTOLOGY_PATH)}
 
 
 @app.get("/api/models", response_model=list[ModelInfo])
@@ -511,14 +601,18 @@ def start_literature_fetch(req: LiteratureFetchRequest):
     def _target(j: Job):
         j.append_log(f"Searching PubMed (last {req.days} days, model={req.model})")
         j.stage = "literature"
-        result = discover_abstracts(
-            model=req.model,
-            provider=req.provider,
-            days=req.days,
-            auto_save=False,
-        )
-        j.append_log(f"Proposals: {len(result['proposals'])}, "
-                      f"saved to disk: {len(result['saved'])}")
+        set_lit_log_callback(j.append_log)
+        try:
+            result = discover_abstracts(
+                model=req.model,
+                provider=req.provider,
+                days=req.days,
+                auto_save=False,
+            )
+        finally:
+            set_lit_log_callback(None)
+        j.append_log(f"DONE — {len(result['proposals'])} proposals "
+                      f"(saved to disk: {len(result['saved'])})")
         if result.get("error"):
             j.append_log(f"Agent error: {result['error']}")
         return result
@@ -671,6 +765,11 @@ def process_approved_literature(req: LiteratureProcessRequest):
     job = manager.create("pipeline", req.model_dump())
 
     def _target(j: Job):
+        snap = _snapshot_current_ontology(label="pre-mining")
+        if snap:
+            j.append_log(f"Snapshot saved: {snap['name']} "
+                          f"({snap['classes']}c / {snap['instances']}i / "
+                          f"{snap['triples']}t)")
         j.append_log(f"Processing {len(req.pmids)} user-approved abstracts "
                       f"from {APPROVED_LIT_DIR.name}")
         j.stage = "stage3"
