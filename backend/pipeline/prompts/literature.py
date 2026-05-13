@@ -14,13 +14,12 @@ B. Build a worklist: collect EVERY new PMID returned across the 3 searches (dedu
 
 C. For each PMID in the worklist (one by one, in order):
    1. fetch_abstract for that PMID
-   2. Read the abstract and apply STRICT criteria:
+   2. Read the abstract and apply these criteria:
       - RELEVANT: AMD is the main subject (its pathology, treatment, diagnosis, biomarkers, or genetics)
-      - BORDERLINE: AMD is a substantial focus alongside 1-2 related ocular topics, OR a closely-related condition (e.g. nAMD vs PEHCR) where findings transfer to AMD
-      - NOT_RELEVANT: AMD is mentioned only in passing as one example among many, the focus is on a different disease (DR, glaucoma, generic ocular health, autophagy reviews), or AMD is incidental
-      When in doubt, prefer NOT_RELEVANT.
-   3. If RELEVANT or BORDERLINE: call propose_abstract with SHORT JSON {{"pmid": "...", "relevance": "RELEVANT|BORDERLINE", "reason": "one sentence"}}. The title and abstract text are looked up automatically — do NOT include them in the JSON.
-   4. If NOT_RELEVANT: state your reasoning in Thought and move to the next PMID (do not call propose_abstract).
+      - BORDERLINE: AMD is a substantial focus alongside 1-2 related ocular topics, OR a closely-related condition (e.g. nAMD vs PEHCR) where findings transfer to AMD, OR the abstract touches AMD but in a non-central way
+      - NOT_RELEVANT: AMD is mentioned only in passing, focus is on a different disease (DR, glaucoma, generic ocular health, autophagy reviews), or AMD is incidental
+      When in doubt between BORDERLINE and NOT_RELEVANT, prefer BORDERLINE so the human reviewer can decide.
+   3. Call propose_abstract for EVERY PMID with SHORT JSON {{"pmid": "...", "relevance": "RELEVANT|BORDERLINE|NOT_RELEVANT", "reason": "one sentence"}}. The title and abstract text are looked up automatically — do NOT include them in the JSON. The reviewer will see all three categories and decide which to mine; nothing is silently dropped.
 
 D. Track progress in your Thought lines: "Processed K of N PMIDs". Do NOT emit Final Answer until K == N.
 
