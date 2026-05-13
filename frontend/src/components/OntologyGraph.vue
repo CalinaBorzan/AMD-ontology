@@ -9,6 +9,9 @@ const errorMessage = ref('')
 const source = ref('backend')
 const stats = ref({ classes: 0, instances: 0, triples: 0 })
 const selectedNode = ref(null)
+const snapshots = ref([])
+const snapBusy = ref(false)
+const snapMsg = ref('')
 
 const filters = ref({
   showClasses: true,
@@ -16,13 +19,15 @@ const filters = ref({
   showTriples: true,
 })
 const searchQuery = ref('')
+const classFilter = ref('all')
+const predicateFilter = ref('all')
 
 let network = null
 let nodesDS = null
 let edgesDS = null
 let allNodes = []
 let allEdges = []
-let ontologyRaw = null
+const ontologyRaw = ref(null)
 
 const NODE_STYLES = {
   class: {
@@ -138,21 +143,52 @@ function buildGraph(ontology) {
   return { nodes: nodeArr, edges }
 }
 
+const allClassNames = computed(() => {
+  if (!ontologyRaw.value?.classes) return []
+  return Object.keys(ontologyRaw.value.classes).sort()
+})
+
+const allPredicates = computed(() => {
+  if (!ontologyRaw.value?.properties) return []
+  return Object.keys(ontologyRaw.value.properties).sort()
+})
+
+// Set of node IDs related to the selected class:
+// the class itself, its (transitive) subclasses, and their instances.
+const focusedNodeIds = computed(() => {
+  if (classFilter.value === 'all' || !ontologyRaw.value?.classes) return null
+  const classes = ontologyRaw.value.classes
+  const focus = new Set()
+  const visit = (className) => {
+    if (focus.has(className)) return
+    focus.add(className)
+    const def = classes[className]
+    if (!def) return
+    for (const sub of def.subclasses || []) visit(sub)
+    for (const inst of def.instances || []) focus.add(inst)
+  }
+  visit(classFilter.value)
+  return focus
+})
+
 const visibleNodeIds = computed(() => {
   const q = searchQuery.value.trim().toLowerCase()
+  const focus = focusedNodeIds.value
   const ids = new Set()
   for (const n of allNodes) {
     if (n.group === 'class' && !filters.value.showClasses) continue
     if (n.group === 'instance' && !filters.value.showInstances) continue
     if (q && !n.label.toLowerCase().includes(q)) continue
+    if (focus && !focus.has(n.id)) continue
     ids.add(n.id)
   }
   return ids
 })
 
 function applyView() {
-  if (!nodesDS || !edgesDS) return
+  if (!nodesDS || !edgesDS || !network) return
   const visible = visibleNodeIds.value
+  const pred = predicateFilter.value
 
   nodesDS.clear()
   nodesDS.add(allNodes.filter((n) => visible.has(n.id)))
@@ -161,20 +197,28 @@ function applyView() {
   const filteredEdges = allEdges.filter((e) => {
     if (!visible.has(e.from) || !visible.has(e.to)) return false
     if (e.kind === 'triple' && !filters.value.showTriples) return false
+    if (e.kind === 'triple' && pred !== 'all' && e.label !== pred) return false
     return true
   })
   edgesDS.add(filteredEdges)
+
+  network.setOptions({ physics: { enabled: true } })
+  network.stabilize(150)
+  network.once('stabilizationIterationsDone', () => {
+    network.fit({ animation: { duration: 300, easingFunction: 'easeInOutQuad' } })
+    network.setOptions({ physics: false })
+  })
 }
 
-watch([filters, searchQuery], applyView, { deep: true })
+watch([filters, searchQuery, classFilter, predicateFilter], applyView, { deep: true })
 
 function inspectNode(nodeId) {
-  if (!nodeId || !ontologyRaw) {
+  if (!nodeId || !ontologyRaw.value) {
     selectedNode.value = null
     return
   }
-  const classes = ontologyRaw.classes || {}
-  const properties = ontologyRaw.properties || {}
+  const classes = ontologyRaw.value.classes || {}
+  const properties = ontologyRaw.value.properties || {}
 
   const isClass = !!classes[nodeId]
   const description = isClass ? classes[nodeId].description : null
@@ -221,7 +265,7 @@ async function loadOntology() {
     status.value = 'loading'
     const { data, source: src } = await fetchOntology()
     source.value = src
-    ontologyRaw = data
+    ontologyRaw.value = data
     const { nodes, edges } = buildGraph(data)
     allNodes = nodes
     allEdges = edges
@@ -235,17 +279,16 @@ async function loadOntology() {
       container.value,
       { nodes: nodesDS, edges: edgesDS },
       {
-        layout: { improvedLayout: true },
         physics: {
           solver: 'barnesHut',
           barnesHut: {
-            gravitationalConstant: -14000,
-            springLength: 160,
-            springConstant: 0.04,
-            damping: 0.5,
-            avoidOverlap: 0.4,
+            gravitationalConstant: -12000,
+            springLength: 180,
+            springConstant: 0.03,
+            damping: 0.9,
+            avoidOverlap: 0.8,
           },
-          stabilization: { iterations: 240 },
+          stabilization: { enabled: true, iterations: 300, fit: true },
         },
         edges: {
           smooth: { type: 'continuous', roundness: 0.3 },
@@ -266,7 +309,10 @@ async function loadOntology() {
       inspectNode(params.nodes.length > 0 ? params.nodes[0] : null)
     })
 
-    network.once('stabilizationIterationsDone', () => network.fit())
+    network.once('stabilizationIterationsDone', () => {
+      network.fit({ animation: false })
+      network.setOptions({ physics: false })
+    })
 
     status.value = 'ready'
   } catch (err) {
@@ -290,7 +336,51 @@ async function reload() {
   await loadOntology()
 }
 
-onMounted(loadOntology)
+async function loadSnapshots() {
+  try {
+    const data = await api.listSnapshots()
+    snapshots.value = data.snapshots || []
+  } catch {
+    snapshots.value = []
+  }
+}
+
+async function saveSnapshot() {
+  snapBusy.value = true
+  snapMsg.value = ''
+  try {
+    await api.createSnapshot('manual')
+    await loadSnapshots()
+    snapMsg.value = 'Snapshot saved.'
+  } catch (e) {
+    snapMsg.value = 'Failed: ' + e.message
+  } finally {
+    snapBusy.value = false
+  }
+}
+
+async function restoreSnap(name) {
+  if (!confirm(`Restore snapshot "${name}"? Current ontology will be overwritten.`)) return
+  snapBusy.value = true
+  snapMsg.value = ''
+  try {
+    await api.restoreSnapshot(name)
+    snapMsg.value = 'Restored. Reloading graph...'
+    await reload()
+    await loadSnapshots()
+    snapMsg.value = 'Restored.'
+  } catch (e) {
+    snapMsg.value = 'Failed: ' + e.message
+  } finally {
+    snapBusy.value = false
+  }
+}
+
+function snapLabel(name) {
+  return name.replace('snapshot_', '').replace('.json', '').replace(/_/g, ' ')
+}
+
+onMounted(() => { loadOntology(); loadSnapshots() })
 
 onBeforeUnmount(() => {
   if (network) {
@@ -348,15 +438,55 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="block">
-        <span class="block-title">Search</span>
+        <span class="block-title">Focus on class</span>
+        <select v-model="classFilter" class="filter-select">
+          <option value="all">All classes</option>
+          <option v-for="c in allClassNames" :key="c" :value="c">{{ c }}</option>
+        </select>
+        <p v-if="classFilter !== 'all'" class="filter-hint">
+          Showing only <strong>{{ classFilter }}</strong>, its subclasses and instances.
+        </p>
+      </div>
+
+      <div class="block">
+        <span class="block-title">Filter by relation</span>
+        <select v-model="predicateFilter" class="filter-select">
+          <option value="all">All relations</option>
+          <option v-for="p in allPredicates" :key="p" :value="p">{{ p }}</option>
+        </select>
+      </div>
+
+      <div class="block">
+        <span class="block-title">Search by name</span>
         <div class="search-wrap">
           <svg class="search-icon" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="7" cy="7" r="5" />
             <path d="M11 11l3 3" />
           </svg>
-          <input v-model="searchQuery" type="search" placeholder="Filter nodes…" />
+          <input v-model="searchQuery" type="search" placeholder="e.g. CFH, Ranibizumab…" />
           <button v-if="searchQuery" class="clear" @click="searchQuery = ''" aria-label="Clear">×</button>
         </div>
+      </div>
+
+      <div class="block">
+        <span class="block-title">Snapshots</span>
+        <div class="snap-actions">
+          <button class="btn ghost snap-save" :disabled="snapBusy" @click="saveSnapshot">
+            Save snapshot
+          </button>
+          <button class="btn ghost" :disabled="snapBusy" @click="loadSnapshots">Refresh</button>
+        </div>
+        <p v-if="snapMsg" class="snap-msg">{{ snapMsg }}</p>
+        <div v-if="snapshots.length === 0" class="snap-empty">No snapshots yet</div>
+        <ul v-else class="snap-list">
+          <li v-for="s in snapshots" :key="s.name" class="snap-item">
+            <span class="snap-label">{{ snapLabel(s.name) }}</span>
+            <span class="snap-size">{{ s.size_kb }}KB</span>
+            <button class="snap-restore" :disabled="snapBusy" @click="restoreSnap(s.name)">
+              Restore
+            </button>
+          </li>
+        </ul>
       </div>
 
       <div class="actions">
@@ -610,6 +740,36 @@ onBeforeUnmount(() => {
   border-color: var(--border-focus);
   box-shadow: var(--shadow-focus);
   background: var(--surface);
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px var(--s-3);
+  font-family: var(--font);
+  font-size: var(--t-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--speed) var(--ease);
+}
+
+.filter-select:focus {
+  border-color: var(--border-focus);
+  background: var(--surface);
+}
+
+.filter-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.filter-hint strong {
+  color: var(--brand);
+  font-weight: 600;
 }
 
 .clear {
@@ -870,6 +1030,84 @@ onBeforeUnmount(() => {
   border-radius: 50%;
   display: inline-block;
   animation: spin 800ms linear infinite;
+}
+
+.snap-actions {
+  display: flex;
+  gap: var(--s-2);
+  margin-bottom: var(--s-2);
+}
+
+.snap-save {
+  flex: 1;
+}
+
+.snap-msg {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: var(--s-2);
+}
+
+.snap-empty {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.snap-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.snap-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 5px var(--s-2);
+  background: var(--bg-tint);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+}
+
+.snap-label {
+  flex: 1;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.snap-size {
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.snap-restore {
+  font-size: 11px;
+  padding: 2px var(--s-2);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.snap-restore:hover:not(:disabled) {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.snap-restore:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 @media (max-width: 900px) {

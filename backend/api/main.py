@@ -27,6 +27,7 @@ from pipeline.run_schema_miner_agentic import (
 from pipeline.run_validate_ontology_agent import (
     collect_proposed_fixes,
     apply_single_fix,
+    set_log_callback as set_val_log_callback,
 )
 from pipeline.run_literature_agent import discover_abstracts, set_log_callback as set_lit_log_callback
 from pipeline.run_dllearner import list_experiments, run_experiment
@@ -185,18 +186,24 @@ def _ontology_stats(data: dict) -> dict:
 
 
 def _snapshot_current_ontology(label: str = "") -> dict:
-    """Write a timestamped copy of the current ontology to the snapshots
-    folder. Returns the snapshot metadata. Called before destructive
-    operations (mining, validation apply) so the user can roll back."""
     from datetime import datetime
     SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
     if not ONTOLOGY_PATH.exists():
         return {}
+    current_text = ONTOLOGY_PATH.read_text(encoding="utf-8")
+    existing = sorted(SNAPSHOTS_DIR.glob("snapshot_*.json"), reverse=True)
+    if existing:
+        try:
+            if existing[0].read_text(encoding="utf-8") == current_text:
+                s = existing[0]
+                return {"name": s.name, "skipped": True}
+        except Exception:
+            pass
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     label_part = f"_{label.replace(' ', '-')}" if label else ""
     snap_name = f"snapshot_{ts}{label_part}.json"
     snap_path = SNAPSHOTS_DIR / snap_name
-    data = json.loads(ONTOLOGY_PATH.read_text(encoding="utf-8"))
+    data = json.loads(current_text)
     snap_path.write_text(json.dumps(data, indent=2, ensure_ascii=False),
                           encoding="utf-8")
     stats = _ontology_stats(data)
@@ -256,8 +263,6 @@ def restore_snapshot(req: SnapshotRestoreRequest):
     if not snap_path.exists():
         raise HTTPException(status_code=404,
                               detail=f"snapshot '{req.name}' not found")
-    # Backup current before overwriting so this restore is itself undoable
-    _snapshot_current_ontology(label="pre-restore")
     ONTOLOGY_PATH.parent.mkdir(parents=True, exist_ok=True)
     ONTOLOGY_PATH.write_text(snap_path.read_text(encoding="utf-8"),
                                encoding="utf-8")
@@ -543,12 +548,16 @@ def start_validation(req: ValidateRequest):
     def _target(j: Job):
         j.append_log(f"Validation starting (model={req.model} provider={req.provider})")
         j.stage = "validation"
-        fixes = collect_proposed_fixes(
-            model=req.model,
-            ontology=ontology,
-            provider=req.provider,
-            max_passes=req.max_passes,
-        )
+        set_val_log_callback(j.append_log)
+        try:
+            fixes = collect_proposed_fixes(
+                model=req.model,
+                ontology=ontology,
+                provider=req.provider,
+                max_passes=req.max_passes,
+            )
+        finally:
+            set_val_log_callback(None)
         VALIDATION_FIXES[j.id] = fixes
         j.append_log(f"Found {len(fixes)} proposed fixes")
         return {"fix_count": len(fixes)}

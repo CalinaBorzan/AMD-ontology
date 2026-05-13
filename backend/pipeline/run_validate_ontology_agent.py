@@ -19,6 +19,22 @@ DEFAULT_INPUT = PROJECT_ROOT / "results" / "amd" / "final" / "amd_ontology_final
 SCHEMA = {}
 PROPOSED_FIXES = []
 
+_LOG_CALLBACK = None
+
+
+def set_log_callback(cb):
+    global _LOG_CALLBACK
+    _LOG_CALLBACK = cb
+
+
+def _log(msg: str):
+    if _LOG_CALLBACK:
+        try:
+            _LOG_CALLBACK(msg)
+        except Exception:
+            pass
+
+
 NCBI_ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 NCBI_EMAIL = os.getenv("NCBI_EMAIL", "your.email@example.com")
 
@@ -28,6 +44,7 @@ NCBI_EMAIL = os.getenv("NCBI_EMAIL", "your.email@example.com")
 def inspect_hierarchy(query: str = "none") -> str:
     """Inspect the class hierarchy of the ontology. Shows ALL classes with their subclasses and descriptions. Use this FIRST to understand the ontology structure."""
     classes = SCHEMA.get("classes", {})
+    _log(f"Inspecting class hierarchy ({len(classes)} classes)")
     lines = [f"TOTAL CLASSES: {len(classes)}"]
     for class_name, data in classes.items():
         if not isinstance(data, dict):
@@ -48,6 +65,7 @@ def inspect_hierarchy(query: str = "none") -> str:
 def inspect_relationships(query: str = "none") -> str:
     """Inspect all property definitions WITHOUT triples. Shows property name, domain, range, description, and the COUNT of triples for each. To see actual triples for a specific property, use list_triples."""
     props = SCHEMA.get("properties", {})
+    _log(f"Inspecting properties ({len(props)} predicates)")
     if not props:
         return "No properties found."
     lines = [f"TOTAL PROPERTIES: {len(props)}"]
@@ -66,6 +84,7 @@ def inspect_relationships(query: str = "none") -> str:
 def list_triples(property_name: str) -> str:
     """List ALL triples (subject-predicate-object examples) for a specific property. Use this to scan for reversed-direction errors (e.g., 'Disease treats Drug' should be 'Drug treats Disease'), or wrong-domain entities. Input: the property name (e.g., 'treats', 'diagnosedBy')."""
     property_name = property_name.strip()
+    _log(f"Listing triples for predicate '{property_name}'")
     props = SCHEMA.get("properties", {})
     if property_name not in props:
         return f"Property '{property_name}' not found. Available: {list(props.keys())}"
@@ -86,6 +105,8 @@ def list_triples(property_name: str) -> str:
 def inspect_instances(query: str = "none") -> str:
     """Inspect all class-instance assignments — shows EVERY instance under EVERY class (no truncation). Use to find misclassified entities or instances under wrong parent."""
     classes = SCHEMA.get("classes", {})
+    total = sum(len(d.get("instances", [])) for d in classes.values() if isinstance(d, dict))
+    _log(f"Inspecting instances ({total} across {len(classes)} classes)")
     lines = []
     for class_name, data in classes.items():
         if not isinstance(data, dict):
@@ -99,6 +120,7 @@ def inspect_instances(query: str = "none") -> str:
 @tool
 def check_punning(query: str = "none") -> str:
     """Check for punning violations — entities that are BOTH a class AND an individual. This is an OWL violation."""
+    _log("Checking for punning violations (class/individual overlap)")
     classes = SCHEMA.get("classes", {})
     all_individuals = set()
 
@@ -121,6 +143,7 @@ def check_punning(query: str = "none") -> str:
 @tool
 def check_dual_parents(query: str = "none") -> str:
     """Check for entities that are subclass of multiple parents. This can cause logical conflicts in OWL."""
+    _log("Checking for dual-parent subclass conflicts")
     classes = SCHEMA.get("classes", {})
     child_to_parents = {}
 
@@ -141,6 +164,7 @@ def check_dual_parents(query: str = "none") -> str:
 @tool
 def check_self_referential(query: str = "none") -> str:
     """Check for self-referential property examples where subject equals object (e.g., 'X causesOrIncreases X')"""
+    _log("Checking for self-referential triples (subject == object)")
     issues = []
     for prop_name, prop_data in SCHEMA.get("properties", {}).items():
         if not isinstance(prop_data, dict):
@@ -183,6 +207,7 @@ def find_spelling_duplicates(query: str = "none") -> str:
     """Detect near-duplicate instance names within the SAME class that differ
     only by spelling (e.g., 'Hemorrhage' vs 'Haemorrhage').
     Uses edit distance ≤ 2 on normalized names. """
+    _log("Checking for near-duplicate instance names (edit distance <= 2)")
     pairs = []
     for cls_name, cls_info in SCHEMA.get("classes", {}).items():
         if not isinstance(cls_info, dict):
@@ -239,6 +264,7 @@ def check_biomarker_semantics(query: str = "none") -> str:
     cell types (Monocytes, Fibroblasts, Microglia), anatomical structures
     (Photoreceptor, Plasma, Retina), or supplements (Zinc, Copper, Saffron).
     A biomarker should be a measurable quantity or genetic variant."""
+    _log("Checking Biomarker class semantics (cell types, anatomy, supplements)")
     biomarker = SCHEMA.get("classes", {}).get("Biomarker", {})
     if not isinstance(biomarker, dict):
         return "No Biomarker class in schema."
@@ -270,6 +296,7 @@ def check_domain_range_violations(query: str = "none") -> str:
     declared domain and range. E.g. 'Ranibizumab causesOrIncreases Glaucoma'
     violates because causesOrIncreases requires a RiskFactor subject, not a
     Treatment."""
+    _log("Scanning all triples for domain/range violations")
     classes = SCHEMA.get("classes", {})
     props = SCHEMA.get("properties", {})
 
@@ -387,6 +414,7 @@ def check_domain_range_violations(query: str = "none") -> str:
 @tool
 def query_mesh(term: str) -> str:
     """Query MeSH (Medical Subject Headings) to verify if a biomedical concept exists in the standard terminology. Use this to check if a class or instance name is a real biomedical entity."""
+    _log(f"MeSH lookup: '{term}'")
     try:
         resp = requests.get(
             NCBI_ESEARCH,
@@ -539,6 +567,7 @@ def propose_fix(fix_spec: str) -> str:
         "reason": reason,
     }
     PROPOSED_FIXES.append(fix)
+    _log(f"Proposed fix #{len(PROPOSED_FIXES)}: {action} {target_type} '{target}'")
     return (f"Fix #{len(PROPOSED_FIXES)} recorded: {action} {target_type} '{target}'. "
             f"Now find a DIFFERENT issue.")
 
@@ -753,6 +782,7 @@ def collect_proposed_fixes(model: str, ontology: dict,
 
     for pass_num in range(1, max_passes + 1):
         before = len(PROPOSED_FIXES)
+        _log(f"--- Pass {pass_num}/{max_passes} (fixes so far: {before}) ---")
         try:
             agent_executor.invoke({
                 "input": (
@@ -760,9 +790,13 @@ def collect_proposed_fixes(model: str, ontology: dict,
                     "proposed (propose_fix rejects duplicates). Use ALL inspection tools."
                 )
             })
-        except Exception:
+        except Exception as e:
+            _log(f"Pass {pass_num} error: {e}")
             continue
+        new_count = len(PROPOSED_FIXES) - before
+        _log(f"Pass {pass_num} done -- {new_count} new fix(es), total {len(PROPOSED_FIXES)}")
         if len(PROPOSED_FIXES) == before:
+            _log(f"Convergence reached after pass {pass_num}; stopping")
             break
 
     return [
