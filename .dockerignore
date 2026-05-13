@@ -1,0 +1,31 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Frontend node_modules (will be rebuilt in container)
+frontend/node_modules/
+frontend/dist/
+
+# Local data not needed in container (DL-Learner is huge ~600MB)
+dllearner-1.5.0/
+backups/
+log/
+logs/
+*.log
+
+# Dev artifacts
+.git/
+.idea/
+.vscode/
+*.DS_Store
+
+# Large evaluation outputs (regenerated)
+evaluation/dl-learner/sweep_results/configs/
+evaluation/dl-learner/sweep_results/logs/
+
+# Archive / one-off OWL exports (keep ontology/AMD_final_clean.owl)
+archive/
+inferred.owl
