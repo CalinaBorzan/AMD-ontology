@@ -169,8 +169,8 @@ def _load_current_ontology() -> dict:
 
 # ── Health / utility ─────────────────────────────────────────────────────────
 
-@app.get("/")
-def root():
+@app.get("/api")
+def api_root():
     return {"name": "AMD Ontology API", "version": app.version, "docs": "/docs"}
 
 
