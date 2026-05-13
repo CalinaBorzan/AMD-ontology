@@ -34,6 +34,12 @@ backups/
 
 docs/
 
+# DL-Learner tool (extracted locally — not part of source code)
+dllearner-1.5.0/
+
+# DL-Learner sweep results (regenerable from param_sweep.py)
+evaluation/dl-learner/sweep_results/
+
 # Test caches
   .pytest_cache/
 

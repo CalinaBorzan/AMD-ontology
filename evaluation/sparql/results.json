@@ -1,0 +1,2174 @@
+[
+  {
+    "id": 1,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): what is AMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { :AMD rdf:type ?t }",
+    "raw_results": [
+      [
+        "Class"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?c WHERE { :AMD rdfs:comment ?c }\nANSWER: Age-related macular degeneration (AMD) is a disease that affects the macula, the part of the eye that provides sharp, central vision. The ontology describes AMD as \"Age-Related Macular Degeneration\". It is classified as a class in the ontology."
+  },
+  {
+    "id": 2,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): what are the risk factors for AMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD . }",
+    "raw_results": [
+      [
+        "Inflammation"
+      ],
+      [
+        "Age"
+      ],
+      [
+        "Hypoxia"
+      ],
+      [
+        "Oxygen"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD . }\nANSWER: The risk factors for age-related macular degeneration (AMD) include inflammation, age, hypoxia, and oxygen. These factors can contribute to the development or progression of AMD. It is essential for patients with AMD to be aware of these risk factors and discuss them with their healthcare provider to manage their condition effectively."
+  },
+  {
+    "id": 3,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): what is early AMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?c WHERE { :AMD :hasSymptom ?o . ?o rdfs:comment ?c . FILTER regex(str(?c), \"early\", \"i\") }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?c WHERE { :AMD rdfs:comment ?c . FILTER regex(str(?c), \"early\", \"i\") }\nANSWER: Early age-related macular degeneration (AMD) refers to the initial stages of the disease. While the exact definition of early AMD is not provided in the ontology, it is generally characterized by the presence of drusen and/or pigmentary abnormalities in the retina. Further information on early AMD can be found by querying the ontology for related concepts, such as dry AMD or the symptoms associated with AMD."
+  },
+  {
+    "id": 4,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): what is intermediate AMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :IntermediateAMD rdf:type ?t }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?c WHERE { :IntermediateAMD rdfs:comment ?c }\nANSWER: Intermediate AMD is a stage of age-related macular degeneration (AMD) characterized by the presence of large drusen and/or pigmentary changes in the retina. The ontology does not provide a direct definition or comment for intermediate AMD, but it can be inferred that it is a transitional phase between early and advanced AMD. Further information on intermediate AMD can be found by querying the ontology for related concepts, such as drusen or pigmentary changes."
+  },
+  {
+    "id": 5,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): what is neovascular AMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?c WHERE { :WetAMD rdfs:comment ?c }\nANSWER: Neovascular AMD, also known as wet AMD, is a type of age-related macular degeneration characterized by the growth of new, fragile blood vessels under the macula, which can cause blindness. It can be diagnosed using optical coherence tomography (OCT) and has symptoms such as blindness."
+  },
+  {
+    "id": 6,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): what is geographic atrophy?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { :GeographicAtrophy rdf:type ?t }",
+    "raw_results": [
+      [
+        "AMD"
+      ],
+      [
+        "NamedIndividual"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { :GeographicAtrophy rdf:type ?t }\nANSWER: Geographic atrophy is a type of age-related macular degeneration (AMD) and is an instance of a named individual in the ontology. It is a condition where there is a gradual degeneration of the macula, the part of the retina responsible for central vision, leading to vision loss."
+  },
+  {
+    "id": 7,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): can you get AMD in only one eye, or does it occur in both?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :AMD :associatedWith ?o . FILTER regex(str(?o), \"unilateral\" , \"i\") } UNION SELECT ?o WHERE { :AMD :associatedWith ?o . FILTER regex(str(?o), \"bilateral\" , \"i\") }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o . FILTER regex(str(?o), \"unilateral\" , \"i\") } \nANSWER: Age-related macular degeneration (AMD) can occur in one eye or both eyes. While some people may experience AMD in only one eye, it is possible for the disease to affect both eyes. However, the progression and severity of AMD can vary between eyes."
+  },
+  {
+    "id": 8,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): is AMD always caused by age?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?c WHERE { :AMD rdfs:comment ?c . }",
+    "raw_results": [
+      [
+        "Age-Related Macular Degeneration"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD . }\nANSWER: Age-related macular degeneration (AMD) is not always caused by age, as other factors such as inflammation, hypoxia, and oxygen can also contribute to the disease. According to the ontology, age is one of the risk factors for AMD, but it is not the only cause. The ontology provides a comment that describes AMD as Age-Related Macular Degeneration."
+  },
+  {
+    "id": 9,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration: what is photodynamic therapy?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :PhotodynamicTherapy rdf:type ?t }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?c WHERE { :PhotodynamicTherapy rdfs:comment ?c }\nANSWER: Photodynamic therapy, also known as PDT, is a treatment that may be used for certain cases of age-related macular degeneration. It involves the use of a light-sensitive medication and a low-intensity laser to destroy abnormal blood vessels in the eye. However, the exact details of photodynamic therapy, including its specific application and effects, could not be determined from the available ontology data."
+  },
+  {
+    "id": 10,
+    "category": "general question",
+    "question": "I am a patient with age-related macular degeneration (AMD): is AMD contagious at all?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :AMD :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ],
+      [
+        "Depression"
+      ],
+      [
+        "Dependence"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD . }\nANSWER: AMD is not contagious, and its causes or risk factors include Inflammation, Age, Hypoxia, and Oxygen."
+  },
+  {
+    "id": 11,
+    "category": "general question",
+    "question": "I am a patient with early age-related macular degeneration (AMD) in the right eye: why did I get early AMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD }",
+    "raw_results": [
+      [
+        "DryAMD"
+      ],
+      [
+        "Age"
+      ],
+      [
+        "Smoking"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD }\nANSWER: Early age-related macular degeneration (AMD) may be caused or increased by several risk factors, including Age, Inflammation, Hypoxia, and Oxygen. Additionally, Smoking is a risk factor for WetAMD, a type of AMD. However, the exact cause of early AMD in a specific patient's case may depend on various individual factors, and a healthcare professional should be consulted for personalized advice."
+  },
+  {
+    "id": 12,
+    "category": "general question",
+    "question": "I am a patient with intermediate age-related macular degeneration (iAMD) in the right eye: why did I get iAMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?rf WHERE { ?rf :associatedWith :IntermediateAMD }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD }\nANSWER: The patient's intermediate age-related macular degeneration (iAMD) may be caused or increased by several risk factors, including inflammation, age, hypoxia, and oxygen. Additionally, various genes and biomarkers such as VEGF-A, C3, CFB, VEGFR, VEGF-B, HTRA1, LOC387715, ApoE, ARMS2, rs11200638, Lutein, BF, CFH, PLEKHA1, rs1061170, CX3CR1, and Zeaxanthin are associated with AMD. However, the exact cause of iAMD in this patient's right eye is not fully determined by the provided SPARQL queries."
+  },
+  {
+    "id": 13,
+    "category": "general question",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye: why did I get nAMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD . }",
+    "raw_results": [
+      [
+        "DryAMD"
+      ],
+      [
+        "Age"
+      ],
+      [
+        "Smoking"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD . }\nANSWER: You may have developed neovascular age-related macular degeneration (nAMD) due to various risk factors, including having dry age-related macular degeneration (DryAMD), being of advanced age (Age), or having a history of smoking (Smoking). These factors can contribute to the development of nAMD. It is essential to consult with your doctor to determine the specific cause of your condition and discuss appropriate treatment options."
+  },
+  {
+    "id": 14,
+    "category": "general question",
+    "question": "I am a patient with geographic atrophy (GA) in the right eye: why did I get GA?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :GeographicAtrophy }",
+    "raw_results": [
+      [
+        "Inflammation"
+      ],
+      [
+        "Age"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :GeographicAtrophy }\nANSWER: Geographic atrophy (GA) is associated with several risk factors, including inflammation and age. These factors can contribute to the development of GA. It is essential to consult with a healthcare professional for personalized advice and treatment options."
+  },
+  {
+    "id": 15,
+    "category": "general question",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: how did my age-related macular degeneration progress to this point?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD . }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD . }\nANSWER: The patient's neovascular age-related macular degeneration may have progressed due to various risk factors such as dry age-related macular degeneration, age, and smoking. Symptoms of the disease include blindness. The disease can be diagnosed using optical coherence tomography (OCT) and treated with various therapies, including anti-VEGF therapy, aflibercept, lucentis, verteporfin, vitrectomy, conbercept, ranibizumab, eylea, and bevacizumab."
+  },
+  {
+    "id": 16,
+    "category": "general question",
+    "question": "I am a patient with neovascular age-related macular degeneration in both eyes: can my siblings and children develop age-related macular degeneration as well?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?g WHERE { :AMD :associatedWith ?g . ?g rdf:type :Gene . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD . }\nANSWER: Age-related macular degeneration (AMD) can be caused or increased by several risk factors, including inflammation, age, and hypoxia, and oxygen. While there is a genetic component to AMD, with certain genes associated with an increased risk of developing the disease, the question of whether siblings and children of a patient with neovascular age-related macular degeneration can develop AMD as well is complex and depends on various factors, including their genetic predisposition and environmental factors."
+  },
+  {
+    "id": 17,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with non-age-related macular degeneration (non-AMD): can I do anything to reduce my risk of developing AMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm ?t WHERE { :AMD :diagnosedBy ?dm . ?t :treats :AMD . }",
+    "raw_results": [
+      [
+        "ETDRS",
+        "Verteporfin"
+      ],
+      [
+        "Refractometer",
+        "Verteporfin"
+      ],
+      [
+        "ERG",
+        "Verteporfin"
+      ],
+      [
+        "Electroretinography",
+        "Verteporfin"
+      ],
+      [
+        "OCT",
+        "Verteporfin"
+      ],
+      [
+        "PAECT",
+        "Verteporfin"
+      ],
+      [
+        "ETDRS",
+        "Ranibizumab"
+      ],
+      [
+        "Refractometer",
+        "Ranibizumab"
+      ],
+      [
+        "ERG",
+        "Ranibizumab"
+      ],
+      [
+        "Electroretinography",
+        "Ranibizumab"
+      ],
+      [
+        "OCT",
+        "Ranibizumab"
+      ],
+      [
+        "PAECT",
+        "Ranibizumab"
+      ],
+      [
+        "ETDRS",
+        "Macuvite"
+      ],
+      [
+        "Refractometer",
+        "Macuvite"
+      ],
+      [
+        "ERG",
+        "Macuvite"
+      ],
+      [
+        "Electroretinography",
+        "Macuvite"
+      ],
+      [
+        "OCT",
+        "Macuvite"
+      ],
+      [
+        "PAECT",
+        "Macuvite"
+      ],
+      [
+        "ETDRS",
+        "Aspirin"
+      ],
+      [
+        "Refractometer",
+        "Aspirin"
+      ],
+      [
+        "ERG",
+        "Aspirin"
+      ],
+      [
+        "Electroretinography",
+        "Aspirin"
+      ],
+      [
+        "OCT",
+        "Aspirin"
+      ],
+      [
+        "PAECT",
+        "Aspirin"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf ?t WHERE { ?rf :causesOrIncreases :AMD . ?t :treats :AMD . }\nANSWER: While there isn't a direct way to prevent AMD, managing risk factors such as inflammation and hypoxia through treatments like Verteporfin, Ranibizumab, Macuvite, and Aspirin may help reduce the risk of developing AMD. Regular diagnosis using methods like ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT can also help monitor the condition. However, more research is needed to determine the effectiveness of these methods in preventing AMD."
+  },
+  {
+    "id": 18,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in both eyes: what can my siblings and children do to reduce their risk of developing age-related macular degeneration?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :AMD :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ],
+      [
+        "Depression"
+      ],
+      [
+        "Dependence"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf ?t WHERE { ?rf :causesOrIncreases :AMD . ?t :treats :AMD . }\nANSWER: Siblings and children of a patient with neovascular age-related macular degeneration can reduce their risk by avoiding factors that cause or increase the risk of AMD, such as inflammation, age, and hypoxia. They can also consider treatments like Verteporfin, Ranibizumab, and Macuvite, and be aware of associated biomarkers like VEGF-A, C3, and ApoE. Regular diagnosis using methods like ETDRS, Refractometer, and OCT can also help."
+  },
+  {
+    "id": 19,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: what can I do to reduce my risk of progression?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :AMD :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "ETDRS"
+      ],
+      [
+        "Refractometer"
+      ],
+      [
+        "ERG"
+      ],
+      [
+        "Electroretinography"
+      ],
+      [
+        "OCT"
+      ],
+      [
+        "PAECT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD }\nANSWER: To reduce the risk of progression of early age-related macular degeneration in the right eye, it is essential to manage risk factors such as inflammation, age, and hypoxia, and ensure adequate oxygen supply. Regular monitoring and diagnosis using methods like ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT can help track the disease's progression. However, more specific guidance on reducing progression risk requires further information."
+  },
+  {
+    "id": 20,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: what can I do to reduce my risk of progression?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?dm WHERE { :IntermediateAMD :diagnosedBy ?dm }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :IntermediateAMD :treats ?t . ?t rdfs:comment ?c }\nANSWER: To reduce the risk of progression of intermediate age-related macular degeneration, patients can consider treatments such as Anti-VEGF therapy. Additionally, patients can be aware of the risk factors that cause or increase the risk of intermediate AMD, such as smoking and genetics. Regular diagnosis and monitoring through methods like optical coherence tomography (OCT) and visual acuity tests can also help track the progression of the disease."
+  },
+  {
+    "id": 21,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: what can I do to reduce my risk of progression?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t . }\nANSWER: To reduce the risk of progression of neovascular age-related macular degeneration, patients can consider treatments such as Anti-VEGF therapy. Additionally, managing risk factors like smoking and age can help. Regular diagnosis and monitoring using methods like OCT are also important."
+  },
+  {
+    "id": 22,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with geographic atrophy in the right eye: what can I do to reduce my risk of progression?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :GeographicAtrophy }\nANSWER: To reduce the risk of progression of geographic atrophy in your right eye, it's essential to understand that factors such as inflammation and age can contribute to its progression. While there are no direct treatments for geographic atrophy, managing associated conditions and risk factors may help slow its progression. Regular monitoring with diagnostic methods like OCT is crucial for tracking changes and adjusting management strategies as needed."
+  },
+  {
+    "id": 23,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with non-age-related macular degeneration (non-AMD): What can I do at home to help prevent developing AMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t ?c WHERE { :AMD :associatedWith ?t . ?t rdfs:comment ?c . FILTER (regex(str(?c), \"lutein\")) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :AMD :associatedWith ?t . ?t rdfs:comment ?c . FILTER (regex(str(?c), \"lutein\")) }\nANSWER: While there isn't a direct link to non-AMD, patients can still take preventative measures to reduce the risk of developing AMD, such as eating a healthy diet rich in lutein and zeaxanthin, not smoking, and exercising regularly. However, more specific information on non-AMD prevention is not available in the provided ontology."
+  },
+  {
+    "id": 24,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: what can I do at home to help?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :DryAMD :hasSymptom ?o .}",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :DryAMD :treats ?t . ?t rdfs:comment ?c .} SELECT ?b WHERE { :DryAMD :associatedWith ?b .} SELECT ?dm WHERE { :DryAMD :diagnosedBy ?dm .} SELECT ?o WHERE { :DryAMD :hasSymptom ?o .}\nANSWER: Patients with early age-related macular degeneration can use home devices like OCT and ETDRS to monitor their condition. They should be aware of potential symptoms like blindness. However, it is essential to consult a doctor for proper diagnosis and treatment, as some treatments like Anti-VEGF therapy may be necessary."
+  },
+  {
+    "id": 25,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: what can I do at home to help?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :DryAMD :hasSymptom ?o }",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :DryAMD :treats ?t . ?t rdfs:comment ?c }\nANSWER: Patients with intermediate age-related macular degeneration can help at home by maintaining a healthy lifestyle and following doctor's recommendations. They can also use assistive devices to help with daily tasks. Regular monitoring and follow-up appointments with an eye doctor are crucial to track the progression of the disease and adjust treatment plans as needed."
+  },
+  {
+    "id": 26,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: what can I do at home to help?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o .}",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :WetAMD :treats ?t . ?t rdfs:comment ?c .} SELECT ?b WHERE { :WetAMD :associatedWith ?b .} SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm .} SELECT ?o WHERE { :WetAMD :hasSymptom ?o .}\nANSWER: Patients with neovascular age-related macular degeneration can use home-based treatments such as Anti-VEGF therapy, and are associated with risk factors like Smoking and genes such as ARMS2 and CFH. They can also use diagnostic methods like Optical Coherence Tomography (OCT) to monitor their condition, and be aware of symptoms like Blindness."
+  },
+  {
+    "id": 27,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with geographic atrophy in the right eye: what can I do at home to help?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :GeographicAtrophy :treats ?t . }\nANSWER: Geographic atrophy is associated with blindness and can be diagnosed by OCT. However, there are no specific treatments for geographic atrophy that can be done at home. It is recommended to consult with a healthcare professional for proper diagnosis and treatment."
+  },
+  {
+    "id": 28,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with non-age-related macular degeneration: should I change my diet?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t ?c WHERE { :NonExudativeAMD :diagnosedBy ?t . ?t rdfs:comment ?c . FILTER regex(str(?c), \"diet\", \"i\") }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is purely conversational and lifestyle-related, and there is no relevant SPARQL data that can answer the question. Non-age-related macular degeneration is not a recognized medical term in the provided ontology, and the queries did not return any relevant results."
+  },
+  {
+    "id": 29,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: should I change my diet?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :DryAMD :associatedWith ?t . FILTER (?t = :Diet) } UNION { :WetAMD :associatedWith ?t . FILTER (?t = :Diet) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :Diet :associatedWith :AMD }\nANSWER: While there is no direct association between diet and age-related macular degeneration in the ontology, patients with early age-related macular degeneration may consider changing their diet as part of a broader approach to managing their condition, although the specific impact of diet on AMD is not well-represented in the ontology. A healthy diet rich in fruits, vegetables, and omega-3 fatty acids may help support overall eye health. However, it's essential to consult with a healthcare professional or a registered dietitian for personalized dietary advice."
+  },
+  {
+    "id": 30,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: should I change my diet?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :AMD :associatedWith ?t . FILTER (?t = :Diet) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :Diet :associatedWith :AMD }\nANSWER: The patient with intermediate age-related macular degeneration in the right eye may consider changing their diet, as diet is associated with age-related macular degeneration. However, the exact relationship between diet and AMD is not fully understood and more research is needed to determine the best dietary changes for patients with AMD. A healthcare professional can provide personalized advice on dietary changes that may help manage the condition."
+  },
+  {
+    "id": 31,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: should I change my diet?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :WetAMD :treats ?t . ?t rdf:type :Treatment }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t . ?t rdf:type :Diet }\nANSWER: While there isn't a direct link between diet and treating neovascular age-related macular degeneration, certain biomarkers and risk factors associated with the disease may be influenced by dietary choices. Patients may want to discuss potential dietary changes with their healthcare provider to see if they can help manage their condition. However, more research is needed to fully understand the relationship between diet and neovascular age-related macular degeneration."
+  },
+  {
+    "id": 32,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with geographic atrophy in the right eye: should I change my diet?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm . ?dm rdf:type :DiagnosticMethod . }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm . ?dm rdf:type :DiagnosticMethod . }\nANSWER: Geographic atrophy is diagnosed by Optical Coherence Tomography (OCT), but the query results do not provide information on dietary changes for patients with geographic atrophy. However, it is known that a healthy diet rich in fruits, vegetables, and omega-3 fatty acids may help reduce the risk of progression of age-related macular degeneration, which includes geographic atrophy. Patients should consult their doctor or a registered dietitian for personalized dietary advice."
+  },
+  {
+    "id": 33,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with non-age-related macular degeneration: should I take a dietary supplement? If so, which one?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :MacularDegeneration :treats ?t . FILTER (?t = :Lutein || ?t = :Zeaxanthin) }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is out of scope as it is asking for a recommendation on taking dietary supplements, which is a lifestyle decision that cannot be answered by the provided SPARQL queries. However, patients with non-age-related macular degeneration may consider taking dietary supplements such as lutein and zeaxanthin, which are sometimes recommended for patients with macular degeneration. It is essential to consult a healthcare professional before taking any supplements."
+  },
+  {
+    "id": 34,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: should I take a dietary supplement? If so, which one?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :AMD :treats ?t . FILTER (?t = :Lutein || ?t = :Zeaxanthin) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :AMD :treats ?t . FILTER (?t = :Lutein || ?t = :Zeaxanthin) }\nANSWER: While the query did not return specific results, patients with age-related macular degeneration are often advised to consider taking dietary supplements such as lutein and zeaxanthin, which are known to support eye health. However, it's essential to consult with an eye care professional or a healthcare provider to determine the best course of treatment for individual cases. They can provide personalized recommendations based on the specific condition and needs of the patient."
+  },
+  {
+    "id": 35,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: should I take a dietary supplement? If so, which one?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :WetAMD :treats ?t .}",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?b WHERE { :DryAMD :associatedWith ?b . FILTER (?b = :Lutein || ?b = :Zeaxanthin) .}\nANSWER: Patients with intermediate age-related macular degeneration may consider taking dietary supplements such as lutein and zeaxanthin, which are associated with dry AMD. However, it is essential to consult with a healthcare professional before starting any supplements. The AREDS supplement, which typically contains lutein and zeaxanthin, has been shown to be beneficial for patients with AMD."
+  },
+  {
+    "id": 36,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: should I take a dietary supplement? If so, which one?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b WHERE { :WetAMD :associatedWith ?b . ?b rdf:type :Treatment . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t . ?t rdf:type :Treatment . }\nANSWER: While there isn't a direct answer to the question of which dietary supplement to take for neovascular age-related macular degeneration, the ontology does provide information on treatments and biomarkers associated with the condition. Patients may consider discussing the use of AREDS supplements, which contain ingredients like lutein and zeaxanthin, with their doctor, as these have been shown to be beneficial for certain types of age-related macular degeneration. However, it's essential to consult a healthcare professional before starting any new supplements."
+  },
+  {
+    "id": 37,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with geographic atrophy in the right eye: should I take a dietary supplement? If so, which one?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy . FILTER (?t = :Lutein || ?t = :Zeaxanthin) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { ?t :treats :GeographicAtrophy . FILTER (?t = :Lutein || ?t = :Zeaxanthin) }\nANSWER: While there isn't a direct answer to the question of which dietary supplement to take for geographic atrophy, patients with dry AMD or geographic atrophy may consider taking lutein or zeaxanthin supplements as they are sometimes associated with treating dry AMD. However, it's essential to consult with a healthcare professional before starting any new supplements."
+  },
+  {
+    "id": 38,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with non-age-related macular degeneration: are there lifestyle changes that I should make?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b WHERE { :NonExudativeAMD :associatedWith ?b . }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: Non-age-related macular degeneration is not a concept in the provided ontology, and thus no relevant SPARQL queries could be formulated to provide lifestyle changes for this condition."
+  },
+  {
+    "id": 39,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: are there lifestyle changes that I should make?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?c WHERE { :AMD rdfs:comment ?c . }",
+    "raw_results": [
+      [
+        "Age-Related Macular Degeneration"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD . }\nANSWER: Patients with early age-related macular degeneration in one eye may consider lifestyle changes to reduce their risk of progression, such as managing inflammation, maintaining a healthy age, and avoiding hypoxia. Additionally, they may consider treatments like Verteporfin, Ranibizumab, or Macuvite, and diagnostic methods like ETDRS or Refractometer. However, it is essential to consult with a healthcare professional for personalized advice."
+  },
+  {
+    "id": 40,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: are there lifestyle changes that I should make?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :AMD :hasSymptom ?o }",
+    "raw_results": [
+      [
+        "Blindness"
+      ],
+      [
+        "Depression"
+      ],
+      [
+        "Dependence"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { ?rf :causesOrIncreases :AMD }\nANSWER: Patients with intermediate age-related macular degeneration may consider lifestyle changes to reduce risk factors such as inflammation, age, and hypoxia, and increase oxygen intake. Additionally, they may consider treatments like verteporfin, ranibizumab, macuvite, and aspirin, and diagnostic methods like ETDRS, refractometer, ERG, electroretinography, OCT, and PAECT. However, it is essential to consult a healthcare professional for personalized advice."
+  },
+  {
+    "id": 41,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: are there lifestyle changes that I should make?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?dm ?c WHERE { :WetAMD :diagnosedBy ?dm . ?dm rdfs:comment ?c . FILTER (regex(?c, \"lifestyle\", \"i\")) }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: Lifestyle changes for neovascular age-related macular degeneration are not explicitly stated in the ontology, and the provided SPARQL queries did not return any relevant results. However, it is generally recommended that patients with neovascular age-related macular degeneration make lifestyle changes such as quitting smoking, exercising regularly, and eating a healthy diet rich in fruits and vegetables to help manage their condition."
+  },
+  {
+    "id": 42,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with geographic atrophy in the right eye: are there lifestyle changes that I should make?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?l WHERE { :GeographicAtrophy :causesOrIncreases ?l . ?l rdf:type :RiskFactor .}",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: Geographic atrophy is a condition where the macula, the part of the retina responsible for central vision, deteriorates, and there are no specific lifestyle changes that can reverse or stop the progression of geographic atrophy. However, a healthy diet rich in fruits, vegetables, and omega-3 fatty acids, as well as not smoking and protecting the eyes from UV light, may help reduce the risk of further vision loss. Regular eye exams are also crucial to monitor the condition and adjust treatment plans as needed."
+  },
+  {
+    "id": 43,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, taking the following medication: aspirin, carvedilol and dutasteride. Do my current medications affect disease progression?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?med ?effect WHERE { ?med :treats ?condition . ?condition :hasSymptom ?wetamd . ?med :associatedWith ?effect . FILTER (?med = :Aspirin || ?med = :Carvedilol || ?med = :Dutasteride) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?med ?effect WHERE { ?med :treats :WetAMD . ?med :associatedWith ?effect . }\nANSWER: The patient's current medications, including aspirin, carvedilol, and dutasteride, may have varying effects on the progression of neovascular age-related macular degeneration. However, the exact impact of these medications on the disease is not fully understood and requires further research. It is essential for the patient to consult their doctor to discuss the potential effects of their medications on their condition."
+  },
+  {
+    "id": 44,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: taking the following medication: levothyroxine, minoxidil. Do my current medications affect disease progression?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?med ?effect WHERE { ?med :associatedWith ?effect . ?effect :causesOrIncreases :WetAMD . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?med ?effect WHERE { ?med :treats :WetAMD . ?med :associatedWith ?effect . }\nANSWER: The patient's current medications, levothyroxine and minoxidil, do not have a direct effect on the progression of neovascular age-related macular degeneration. However, it is essential to consult with a healthcare professional to discuss potential interactions and optimal treatment plans. The query results did not provide a direct link between the medications and the disease progression, but it is crucial to monitor the patient's condition and adjust the treatment plan as needed."
+  },
+  {
+    "id": 45,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: taking the following medication: levodopa, atorvastatin. Do my current medications affect disease progression?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?med ?effect WHERE { ?med :treats :WetAMD . ?med :associatedWith ?effect . FILTER (?med = :Levodopa || ?med = :Atorvastatin) . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?med ?effect WHERE { ?med :treats :WetAMD . ?med :associatedWith ?effect . }\nANSWER: The patient's current medications, levodopa and atorvastatin, may have an effect on the disease progression of neovascular age-related macular degeneration. However, the exact effect is not specified in the ontology. Further research is needed to determine the relationship between these medications and the disease progression. The patient should consult their doctor for more information."
+  },
+  {
+    "id": 46,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: taking the following medication: omeprazole, metformin. Do my current medications affect disease progression?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?med ?effect WHERE { :Metformin :associatedWith ?effect . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?med ?effect WHERE { ?med :treats :WetAMD . ?med :associatedWith ?effect . }\nANSWER: The patient's current medications, omeprazole and metformin, do not have a direct association with the progression of neovascular age-related macular degeneration in the ontology. However, the query results do not provide a definitive answer, and further investigation is needed to determine the potential effects of these medications on the disease."
+  },
+  {
+    "id": 47,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration: will vitamin supplementation interfere with medications, or vice versa?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t ?s WHERE { :VitaminSupplementation :treats :AMD . ?m :treats :AMD . ?m :inhibits ?s . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?s WHERE { :VitaminSupplementation :treats ?d . ?m :treats ?d . ?m :inhibits ?s . }\nANSWER: The query results did not provide a direct answer to the question of whether vitamin supplementation interferes with medications for age-related macular degeneration. However, the queries attempted to explore potential interactions between vitamin supplementation and treatments for AMD, including inhibition and association relationships. Further refinement or exploration of the ontology may be necessary to provide a more comprehensive answer."
+  },
+  {
+    "id": 48,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration: can I alter my diet to have the same amount of antioxidants and zinc as the AREDS formula?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b ?c WHERE { :AREDS :associatedWith ?b . ?b rdfs:comment ?c . FILTER (regex(str(?b), \"Zinc\")) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :AREDS rdfs:comment ?c . ?t rdf:type :Treatment . ?t :associatedWith :AREDS }\nANSWER: The AREDS formula is associated with certain treatments and antioxidants, but the exact composition and amount of antioxidants and zinc in the AREDS formula is not specified in the ontology. However, the ontology does provide information on the association between AREDS and certain treatments, as well as the presence of antioxidants and zinc in the formula. To determine if you can alter your diet to have the same amount of antioxidants and zinc as the AREDS formula, you would need to consult a healthcare professional or a registered dietitian who can provide personalized advice based on your specific needs and health status."
+  },
+  {
+    "id": 49,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration: does a daily multivitamin alone provide the same vision benefits as the AREDS formula?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :AREDS :treats :AMD . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :AREDS :treats :AMD . }\nANSWER: The AREDS formula has been shown to provide vision benefits for patients with age-related macular degeneration, but it is unclear if a daily multivitamin alone provides the same benefits. The AREDS formula typically includes a combination of vitamins and minerals such as vitamin C, vitamin E, beta-carotene, zinc, and copper. A daily multivitamin may not contain the same levels or combination of these ingredients, and therefore may not provide the same vision benefits."
+  },
+  {
+    "id": 50,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration (AMD): should I continue smoking or smoking can affect the evolution of AMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "?rf :causesOrIncreases :AMD . ?rf rdf:type ?t . FILTER(regex(str(?t), \"RiskFactor\"))",
+    "raw_results": [],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?rf ?c WHERE { ?rf :causesOrIncreases :AMD . ?rf rdfs:comment ?c . FILTER(regex(str(?rf), \"Smoking\")) }\nANSWER: Smoking can affect the evolution of age-related macular degeneration (AMD) as it is a risk factor that can cause or increase the disease. It is recommended for patients with AMD to quit smoking to slow down the progression of the disease. The query results show that smoking is associated with an increased risk of AMD."
+  },
+  {
+    "id": 51,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration (AMD): can taking the AREDS supplements prevent AMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :AMD . FILTER (?t = :AREDS) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :AREDS rdfs:comment ?c . ?t :treats :AMD }\nANSWER: The AREDS supplements may have a role in treating age-related macular degeneration (AMD), but the ontology does not provide a direct answer to whether they can prevent AMD. Factors that contribute to the risk of AMD include inflammation, hypoxia, and oxygen. Further queries are needed to fully address the question."
+  },
+  {
+    "id": 52,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration: what are omega-3s?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :AMD . FILTER (?t = :Omega_3) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?c WHERE { :Omega_3 rdfs:comment ?c }\nANSWER: Omega-3s are not directly mentioned in the ontology, but they may be related to age-related macular degeneration as a potential treatment or associated factor. However, the ontology does not provide a direct comment or type information for omega-3s. Further queries are needed to determine their association with AMD."
+  },
+  {
+    "id": 53,
+    "category": "about diet and lifestyle",
+    "question": "I am a patient with age-related macular degeneration: what are lutein, zeaxanthin, and beta-carotene?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?c WHERE { :BetaCarotene rdfs:comment ?c . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?c WHERE { :Lutein rdfs:comment ?c . } SELECT ?c WHERE { :Zeaxanthin rdfs:comment ?c . } SELECT ?c WHERE { :BetaCarotene rdfs:comment ?c . }\nANSWER: Lutein and zeaxanthin are carotenoids found in the eye, and they are believed to protect the macula from damage. Beta-carotene is another carotenoid that can be converted to vitamin A in the body, which is important for eye health. These nutrients are often recommended as part of a healthy diet for people with age-related macular degeneration."
+  },
+  {
+    "id": 54,
+    "category": "about changes in vision",
+    "question": "I am a patient with non-age-related macular degeneration (non-AMD): how will I know if I have AMD?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :AMD :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "ETDRS"
+      ],
+      [
+        "Refractometer"
+      ],
+      [
+        "ERG"
+      ],
+      [
+        "Electroretinography"
+      ],
+      [
+        "OCT"
+      ],
+      [
+        "PAECT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o } SELECT ?dm WHERE { :AMD :diagnosedBy ?dm }\nANSWER: To determine if you have Age-Related Macular Degeneration (AMD), you should be aware of symptoms such as Blindness, Depression, and Dependence, and diagnostic methods like ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT. However, since you mentioned non-age-related macular degeneration, it's essential to consult a medical professional for an accurate diagnosis and to discuss your specific condition."
+  },
+  {
+    "id": 55,
+    "category": "about changes in vision",
+    "question": "I am a patient with non-age-related macular degeneration (non-AMD) who fears developing early or intermediate AMD: what symptoms should I look for?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :EarlyAMD :hasSymptom ?o . } UNION { :IntermediateAMD :hasSymptom ?o . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o . }\nANSWER: Symptoms of AMD include blindness, depression, and dependence. However, it's essential to note that the provided query only returns symptoms associated with AMD in general, and not specifically with early or intermediate AMD. A more detailed query would be needed to get a comprehensive list of symptoms for these specific conditions."
+  },
+  {
+    "id": 56,
+    "category": "about changes in vision",
+    "question": "I am a patient with early or intermediate age-related macular degeneration (AMD) who fears progressing to neovascular AMD: What symptoms should I look for?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :ChoroidalNeovascularization :hasSymptom ?o }",
+    "raw_results": [
+      [
+        "Edema"
+      ],
+      [
+        "Scarring"
+      ],
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o } SELECT ?o WHERE { :ChoroidalNeovascularization :hasSymptom ?o }\nANSWER: Patients with early or intermediate age-related macular degeneration (AMD) who fear progressing to neovascular AMD should look for symptoms such as blindness, edema, and scarring. These symptoms are associated with neovascular AMD and choroidal neovascularization. Regular monitoring and check-ups with an eye care professional are crucial to detect any changes in the condition."
+  },
+  {
+    "id": 57,
+    "category": "about changes in vision",
+    "question": "I am a patient with early or intermediate age-related macular degeneration who fears progressing to geographic atrophy: what symptoms should I look for?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :AMD :hasSymptom ?o }",
+    "raw_results": [
+      [
+        "Blindness"
+      ],
+      [
+        "Depression"
+      ],
+      [
+        "Dependence"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o }\nANSWER: Patients with geographic atrophy, a form of age-related macular degeneration, should look out for symptoms such as blindness. Additionally, symptoms like depression and dependence may also be associated with AMD."
+  },
+  {
+    "id": 58,
+    "category": "about changes in vision",
+    "question": "I am a patient with age-related macular degeneration: what is an Amsler grid? How do I use it?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :AmslerGrid :hasSymptom ?o }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?c WHERE { :AmslerGrid rdfs:comment ?c }\nANSWER: An Amsler grid is a tool used to detect vision problems resulting from age-related macular degeneration. It is used by patients to self-monitor their vision and can help identify any changes or distortions in their field of vision. However, the exact usage and instructions for the Amsler grid are not specified in the provided SPARQL query results."
+  },
+  {
+    "id": 59,
+    "category": "about changes in vision",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: how often should I perform a test with the Amsler grid at home?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the frequency of performing a test with the Amsler grid at home, which is a lifestyle and quantitative question that does not have a direct SPARQL query to answer it. However, the Amsler grid is used to diagnose and monitor Age-Related Macular Degeneration."
+  },
+  {
+    "id": 60,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: how often should I perform a test with the Amsler grid at home?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the frequency of performing a test with the Amsler grid at home, which is a lifestyle and quantitative question that does not have a direct SPARQL query to answer it. The Amsler grid is a tool used to detect vision problems, but the frequency of its use is not related to a specific medical concept in the ontology."
+  },
+  {
+    "id": 61,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: how often should I perform a test with the Amsler grid at home?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . ?o rdfs:comment ?c . FILTER regex(?c, \"vision\", \"i\") }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the frequency of performing a test with the Amsler grid at home for a patient with neovascular age-related macular degeneration, which is a lifestyle/conversational question that cannot be answered using SPARQL queries against the provided ontology."
+  },
+  {
+    "id": 62,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye: how often should I perform a test with the Amsler grid at home?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about how often to perform a test with the Amsler grid at home for a patient with geographic atrophy in the right eye is outside the scope of the provided ontology, as it deals with the frequency of a specific diagnostic method, which is not addressed by the available SPARQL queries. However, the Amsler grid is typically used for diagnosing and monitoring geographic atrophy, and patients are often advised to use it regularly, such as daily or weekly, to monitor any changes in their vision. It's best to consult with an eye care professional for personalized advice on using the Amsler grid."
+  },
+  {
+    "id": 63,
+    "category": "about changes in vision",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: what should I do if my sight changes?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :AMD }",
+    "raw_results": [
+      [
+        "Verteporfin"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Macuvite"
+      ],
+      [
+        "Aspirin"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :AMD :diagnosedBy ?dm } \nSELECT ?o WHERE { :AMD :hasSymptom ?o } \nSELECT ?t WHERE { ?t :treats :AMD }\nANSWER: If you have early age-related macular degeneration in the right eye and your sight changes, you should consult a doctor for proper diagnosis and treatment. The diagnosis of AMD can be done using methods such as ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT. Symptoms of AMD include blindness, depression, and dependence. Treatment options for AMD include Verteporfin, Ranibizumab, Macuvite, and Aspirin."
+  },
+  {
+    "id": 64,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: what should I do if my sight changes?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :AMD :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ],
+      [
+        "Depression"
+      ],
+      [
+        "Dependence"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :AMD :diagnosedBy ?dm . }\nANSWER: If you have intermediate age-related macular degeneration and your sight changes, you should consult a doctor for proper diagnosis and treatment. Diagnostic methods for AMD include ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT. Symptoms of AMD can include blindness, depression, and dependence."
+  },
+  {
+    "id": 65,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: what should I do if my sight changes?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD . }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t ?o WHERE { :WetAMD :hasSymptom ?o . ?t :treats :WetAMD . }\nANSWER: If you have neovascular age-related macular degeneration in the right eye and your sight changes, you should seek medical attention immediately. Treatments for wet AMD include Anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. Diagnostic methods for wet AMD include OCT. Risk factors for wet AMD include dry AMD, age, and smoking."
+  },
+  {
+    "id": 66,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye: what should I do if my sight changes?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy }",
+    "raw_results": [
+      [
+        "Sirolimus"
+      ],
+      [
+        "OT-551"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm }, SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o }, SELECT ?t WHERE { ?t :treats :GeographicAtrophy }\nANSWER: If you have geographic atrophy in your right eye and your sight changes, you should consult a doctor who can use diagnostic methods such as OCT to assess your condition. Geographic atrophy can lead to symptoms like blindness. There are potential treatments like Sirolimus and OT-551, but it's essential to consult a doctor for proper evaluation and guidance."
+  },
+  {
+    "id": 67,
+    "category": "about changes in vision",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: am I going to experience any pain?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . FILTER regex(str(?o), \"pain\") }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o . FILTER regex(str(?o), \"pain\") }\nANSWER: Age-related macular degeneration (AMD) itself is typically a painless condition, but some symptoms like dryness or irritation might be uncomfortable. However, the SPARQL query did not return any specific information about pain. Further queries would be needed to determine if there are any related conditions or symptoms that could cause pain."
+  },
+  {
+    "id": 68,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: am I going to experience any pain?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . FILTER regex(str(?o), \"pain\") }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o . FILTER regex(str(?o), \"pain\") }\nANSWER: Age-related macular degeneration (AMD) itself is typically a painless condition. However, some symptoms like dryness or irritation might be uncomfortable, but they are not typically described as painful. Intermediate age-related macular degeneration may progress to more advanced stages, which could potentially cause discomfort or pain due to related complications, but this is not a direct effect of the condition."
+  },
+  {
+    "id": 69,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: am I going to experience any pain?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . FILTER regex(str(?o), \"blindness\") }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o . FILTER regex(str(?o), \"vision loss\") }\nANSWER: Neovascular age-related macular degeneration may cause symptoms such as vision loss and potentially lead to blindness, but the ontology does not provide information on pain specifically. Patients may experience discomfort or vision disturbances, but the exact nature of these symptoms is not specified in the ontology. Further queries would be needed to determine the full range of potential symptoms."
+  },
+  {
+    "id": 70,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye: am I going to experience any pain?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o . FILTER(regex(str(?o), \"asymptomatic\")) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o . FILTER(regex(str(?o), \"pain\")) }\nANSWER: Geographic atrophy is often asymptomatic, but some patients may experience discomfort or vision loss. The SPARQL query did not return any specific information about pain, but it is known that geographic atrophy can cause asymptomatic vision loss. Patients with geographic atrophy should consult their doctor for more information about their specific condition."
+  },
+  {
+    "id": 71,
+    "category": "about changes in vision",
+    "question": "I am a patient with early age-related macular degeneration (AMD) in the right eye: how will my AMD affect my vision now and in the future?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :AMD }",
+    "raw_results": [
+      [
+        "Verteporfin"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Macuvite"
+      ],
+      [
+        "Aspirin"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o }\nANSWER: Age-related macular degeneration (AMD) can cause symptoms such as blindness, depression, and dependence. It can be diagnosed using methods like ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT. Risk factors for AMD include inflammation, age, hypoxia, and oxygen. Treatments for AMD include Verteporfin, Ranibizumab, Macuvite, and Aspirin."
+  },
+  {
+    "id": 72,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate (iAMD) in the right eye: how will my AMD affect my vision now and in the future?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :IntermediateAMD }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :IntermediateAMD :hasSymptom ?o }\nANSWER: Intermediate age-related macular degeneration (iAMD) may cause symptoms such as blurred vision, blind spots, and distorted vision. The disease can progress to advanced stages, including geographic atrophy or neovascular AMD, which can significantly impact vision. Treatment options may be available to slow disease progression, but the effectiveness of these treatments can vary depending on the individual and the stage of the disease."
+  },
+  {
+    "id": 73,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular AMD (nAMD) in the right eye: how will my AMD affect my vision now and in the future?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o }, SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD }, SELECT ?t WHERE { ?t :treats :WetAMD }\nANSWER: Neovascular AMD (nAMD) can lead to symptoms such as blindness. Risk factors for nAMD include dry AMD, age, and smoking. Treatment options for nAMD include anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab."
+  },
+  {
+    "id": 74,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye: how will my AMD affect my vision now and in the future?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy }",
+    "raw_results": [
+      [
+        "Sirolimus"
+      ],
+      [
+        "OT-551"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o }\nANSWER: Geographic atrophy, a form of dry AMD, may lead to blindness and can be diagnosed using OCT. Inflammation and age are risk factors for geographic atrophy, and potential treatments include Sirolimus and OT-551."
+  },
+  {
+    "id": 75,
+    "category": "about changes in vision",
+    "question": "I am a patient with early age-related macular degeneration (AMD) in the right eye: can AMD be treated? What kind of treatment is available?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :DryAMD } UNION { ?t :treats :WetAMD }",
+    "raw_results": [],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :AMD }\nANSWER: Age-related macular degeneration (AMD) can be treated with various options, including Verteporfin, Ranibizumab, Macuvite, and Aspirin. These treatments may help manage the condition, particularly for patients with early AMD. It is essential to consult with a healthcare professional to determine the best course of treatment for individual cases."
+  },
+  {
+    "id": 76,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate age-related macular degeneration (iAMD) in the right eye: can iAMD be treated? What kind of treatment is available?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :AMD }\nANSWER: Intermediate age-related macular degeneration (iAMD) can be treated with various options, including Anti-VEGF therapy, vitamins, and minerals such as lutein and zeaxanthin. Treatments like ranibizumab, aflibercept, and bevacizumab are available for iAMD. Additionally, other treatments such as verteporfin, macuvite, and aspirin may also be considered."
+  },
+  {
+    "id": 77,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye: can nAMD be treated? What kind of treatment is available?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD }\nANSWER: Neovascular age-related macular degeneration (nAMD) can be treated with various options, including Anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. These treatments aim to slow down disease progression and preserve vision. It is essential to consult with a healthcare professional to determine the most suitable treatment plan for individual cases."
+  },
+  {
+    "id": 78,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy (GA) in the right eye: can GA be treated? What kind of treatment is available?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy }",
+    "raw_results": [
+      [
+        "Sirolimus"
+      ],
+      [
+        "OT-551"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :GeographicAtrophy }\nANSWER: Geographic atrophy (GA) can be treated with various options, including Sirolimus and OT-551, which are available treatments for this condition. These treatments may help manage the symptoms and slow down the progression of GA. It is essential to consult with a healthcare professional to determine the best course of treatment for your specific case."
+  },
+  {
+    "id": 79,
+    "category": "about changes in vision",
+    "question": "I am a patient with early AMD in the right eye with 20/20 vision: what is my risk of losing reading vision in the next 5 years?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :AMD :diagnosedBy ?dm .}",
+    "raw_results": [
+      [
+        "ETDRS"
+      ],
+      [
+        "Refractometer"
+      ],
+      [
+        "ERG"
+      ],
+      [
+        "Electroretinography"
+      ],
+      [
+        "OCT"
+      ],
+      [
+        "PAECT"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about the risk of losing reading vision in the next 5 years is outside the scope of the provided ontology, as it requires quantitative and probabilistic information that is not available in the ontology. The ontology can provide information on the causes, treatments, and diagnostic methods for AMD, but it does not contain data on the probability of vision loss over a specific time period."
+  },
+  {
+    "id": 80,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye with 20/20 vision: what is my risk of losing reading vision in the next 5 years?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b WHERE { :IntermediateAMD :associatedWith ?b . ?b rdfs:comment ?c . FILTER regex(?c, \"reading vision\", \"i\")}",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is asking for a quantitative risk assessment, which is not directly answerable through the provided SPARQL queries. The queries attempted to find risk factors, treatments, or associations related to intermediate age-related macular degeneration and reading vision, but the results were empty. This type of question requires a more nuanced understanding of the disease progression and individual patient factors, which is not available through the provided ontology."
+  },
+  {
+    "id": 81,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye with 20/200 vision: what is my risk of losing reading vision in the next 5 years?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . ?dm rdfs:comment ?c . FILTER regex(str(?c), \"OCT\" , \"i\")}",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is asking for a quantitative risk assessment, which is outside the scope of the provided ontology. The ontology can provide information on the causes, symptoms, diagnosis, and treatment of neovascular age-related macular degeneration, but it does not contain data on specific risk probabilities or timeframes."
+  },
+  {
+    "id": 82,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye with 20/200 vision: what is my risk of losing reading vision in the next 5 years?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?rf WHERE { :GeographicAtrophy :causesOrIncreases ?rf . ?rf rdf:type :RiskFactor . ?rf rdfs:comment ?c . FILTER regex(str(?c), \"reading vision\")}",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is asking for a quantitative prediction of the risk of losing reading vision in the next 5 years, which is not answerable through the provided SPARQL queries. The queries attempted to find risk factors or symptoms associated with geographic atrophy, but did not provide a direct answer to the question. This type of question is considered out of scope as it requires a more complex analysis of medical data and statistics."
+  },
+  {
+    "id": 83,
+    "category": "about changes in vision",
+    "question": "I am a patient recently diagnosed with neovascular age-related macular degeneration (nAMD) in the right eye with 20/200 vision and I haven’t had prior treatment. I received the recommendation to start anti-VEGF injections and I don’t have signs of AMD in the left eye. Can AMD affect my left eye as well?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b WHERE { :AMD :associatedWith ?b . ?b rdf:type :RiskFactor }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?b WHERE { :WetAMD :associatedWith ?b . ?b :causesOrIncreases :AMD }\nANSWER: Although the patient has been diagnosed with neovascular age-related macular degeneration (nAMD) in the right eye, it is possible for AMD to affect the left eye as well, as AMD is a bilateral disease. The patient should be monitored for signs of AMD in the left eye. Anti-VEGF injections are a common treatment for nAMD, and the patient should follow the recommended treatment plan to slow disease progression."
+  },
+  {
+    "id": 84,
+    "category": "about changes in vision",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: am I going to become blind?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :AMD }",
+    "raw_results": [
+      [
+        "Verteporfin"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Macuvite"
+      ],
+      [
+        "Aspirin"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :AMD :hasSymptom ?o . FILTER (regex(str(?o), \"blind\", \"i\")) }\nANSWER: Age-related macular degeneration (AMD) can lead to blindness, and age is a risk factor for AMD. However, there are treatments available, such as Verteporfin, Ranibizumab, Macuvite, and Aspirin, that may help manage the condition. It is essential to consult with an eye care professional for personalized advice and treatment."
+  },
+  {
+    "id": 85,
+    "category": "about changes in vision",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: am I going to become blind?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :IntermediateAMD }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :IntermediateAMD :hasSymptom ?o . ?o rdfs:label \"Blindness\" }\nANSWER: The patient with intermediate age-related macular degeneration in the right eye is at risk of progressing to advanced age-related macular degeneration, which can lead to blindness, but the exact outcome depends on various factors, including the effectiveness of treatment and the presence of other risk factors. Blindness is a potential symptom of advanced age-related macular degeneration. There are treatments available for intermediate age-related macular degeneration, such as Anti-VEGF therapy."
+  },
+  {
+    "id": 86,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: am I going to become blind?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o . ?o :associatedWith :Blindness . }\nANSWER: Neovascular age-related macular degeneration can lead to blindness if left untreated. Treatments such as anti-VEGF therapy can help manage the condition. Regular monitoring with diagnostic methods like OCT is essential to track the progression of the disease."
+  },
+  {
+    "id": 87,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye: am I going to become blind?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?rf WHERE { :Blindness :causesOrIncreases ?rf . ?rf :associatedWith :GeographicAtrophy . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o . ?o :associatedWith :Blindness . }\nANSWER: Geographic atrophy is a condition that can lead to blindness, but the progression and outcome can vary from person to person. The SPARQL query results did not provide a direct answer to the question, but it is known that geographic atrophy can cause vision loss and increase the risk of blindness. Patients with geographic atrophy should consult their doctor for personalized advice and treatment options."
+  },
+  {
+    "id": 88,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with 20/200 vision and with moderately dense cataract: would cataract surgery help me see better?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :Cataract .}",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { ?t :treats :Cataract .}\nANSWER: Cataract surgery may help improve vision in patients with cataracts, but the effectiveness of the surgery in improving vision in patients with neovascular age-related macular degeneration is not clear. The presence of a moderately dense cataract may be contributing to the patient's 20/200 vision, and removing the cataract may help improve vision. However, the underlying neovascular age-related macular degeneration may still affect the patient's vision, and further treatment may be necessary to address this condition."
+  },
+  {
+    "id": 89,
+    "category": "about changes in vision",
+    "question": "I am a patient with geographic atrophy in the right eye, with 20/200 vision and with moderately dense cataract: would cataract surgery help me see better?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :GeographicAtrophy :treats ?t . FILTER (?t = :CataractSurgery) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :Cataract :treats ?t . FILTER (?t = :CataractSurgery) }\nANSWER: Cataract surgery may help improve vision in patients with cataracts, but its effectiveness in patients with geographic atrophy is unclear. The presence of geographic atrophy may affect the outcome of cataract surgery. Further evaluation by an eye care professional is necessary to determine the best course of treatment."
+  },
+  {
+    "id": 90,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye with 20/200 vision and geographic atrophy in the left eye with 20/2000 vision: should I be driving?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :WetAMD :treats ?t . :GeographicAtrophy :treats ?t . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o . :GeographicAtrophy :hasSymptom ?o . }\nANSWER: The patient's neovascular age-related macular degeneration and geographic atrophy may cause symptoms such as blindness. The patient's conditions can be diagnosed by methods such as OCT. However, the patient's ability to drive should be determined by a medical professional, considering the patient's visual acuity and other factors."
+  },
+  {
+    "id": 91,
+    "category": "about changes in vision",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye with 20/50 vision and geographic atrophy in the left eye with 20/200 vision: should I be driving?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm . }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question of whether you should be driving is a complex one that depends on various factors, including your visual acuity, field of vision, and ability to respond to visual stimuli. While the provided information about your neovascular age-related macular degeneration and geographic atrophy is relevant to your eye health, it does not directly address the issue of driving safety. It is recommended that you consult with your eye care professional or a driving rehabilitation specialist to determine whether you are safe to drive."
+  },
+  {
+    "id": 92,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: can my nAMD be treated?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD }\nANSWER: Neovascular age-related macular degeneration (nAMD) can be treated with various therapies, including Anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. These treatments may help improve vision or slow down disease progression. It is essential to consult an eye care professional for personalized treatment options."
+  },
+  {
+    "id": 93,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: can my nAMD be treated?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD . }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD . }\nANSWER: Neovascular age-related macular degeneration (nAMD) can be treated with various options, including Anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. The patient's history of 3 anti-VEGF injections with Bevacizumab and the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision may be considered when determining the best course of treatment."
+  },
+  {
+    "id": 94,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: what are my treatment options?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD . }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD . }\nANSWER: Treatment options for neovascular age-related macular degeneration (nAMD) include Anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. These treatments can help manage the condition and potentially improve vision. It is essential to consult with a healthcare professional to determine the best course of treatment for your specific case."
+  },
+  {
+    "id": 95,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: what are my treatment options?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { { :WetAMD :treats ?t } UNION { :ChoroidalNeovascularization :treats ?t } . }",
+    "raw_results": [],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD . }\nANSWER: Treatment options for neovascular age-related macular degeneration (nAMD) include Anti-VEGF therapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab."
+  },
+  {
+    "id": 96,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: when will treatment start and what does it involve?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t ?dm WHERE { :WetAMD :treats ?t . :WetAMD :diagnosedBy ?dm . ?t rdf:type :AntiVEGFTherapy }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?dm WHERE { :WetAMD :treats ?t . :WetAMD :diagnosedBy ?dm }\nANSWER: Treatment for neovascular age-related macular degeneration typically involves anti-VEGF therapy. The diagnosis of wet AMD can be done using Optical Coherence Tomography (OCT). However, the exact timing of treatment and its specifics depend on various factors, including the severity of the condition and the patient's overall health, which cannot be determined from the provided information."
+  },
+  {
+    "id": 97,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: when will treatment start and what does it involve?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :Bevacizumab :treats ?t . ?t rdf:type :WetAMD }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is asking about the timing and specifics of treatment for a patient with neovascular age-related macular degeneration, which is a conversational and lifestyle-related inquiry that cannot be answered using the provided SPARQL queries. The patient's specific situation and medical history would require a consultation with a healthcare professional to determine the best course of treatment."
+  },
+  {
+    "id": 98,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: where will I have my treatment?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . }\nANSWER: The patient's treatment for neovascular age-related macular degeneration may involve diagnostic methods such as Optical Coherence Tomography (OCT). The patient's symptoms include sudden loss of vision, and risk factors for the disease include age and smoking. The treatment location is not specified in the ontology, but the patient will likely be treated by an eye care professional."
+  },
+  {
+    "id": 99,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: where will I have my treatment?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . }\nANSWER: The patient's treatment will likely be administered in an ophthalmology clinic or hospital, given the need for ocular coherence tomography (OCT) and other specialized equipment. The patient's history of anti-VEGF injections with Bevacizumab and presence of a macular disciform scar suggest a need for ongoing monitoring and treatment by an ophthalmologist. However, the specific location of treatment cannot be determined with certainty based on the provided information."
+  },
+  {
+    "id": 100,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: how many treatments will be needed?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD }",
+    "raw_results": [
+      [
+        "DryAMD"
+      ],
+      [
+        "Age"
+      ],
+      [
+        "Smoking"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about the number of treatments needed for neovascular age-related macular degeneration is out of scope as it requires quantitative information that is not available in the ontology. However, the patient's condition can be diagnosed using Optical Coherence Tomography (OCT) and the symptoms include sudden loss of vision and blindness. The risk factors for WetAMD include DryAMD, Age, and Smoking."
+  },
+  {
+    "id": 101,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: how many treatments will be needed?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :WetAMD :treats ?t . ?t rdf:type :Treatment . }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is asking for a quantitative answer regarding the number of treatments needed, which is not answerable through the provided SPARQL queries as they are designed to retrieve specific medical facts rather than predict future treatment needs. The patient's condition and history suggest the need for ongoing treatment, but the exact number of treatments required cannot be determined from the available data."
+  },
+  {
+    "id": 102,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: how exactly does the anti-VEGF shot process go?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t ?process WHERE { :Aflibercept :treats :WetAMD . ?t :treats :WetAMD . ?t rdfs:comment ?process }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy",
+        "Therapy that targets VEGF"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?process WHERE { :AntiVEGFTherapy :treats :WetAMD . ?t :treats :WetAMD . ?t rdfs:comment ?process }\nANSWER: The anti-VEGF shot process involves therapy that targets VEGF, which is used to treat neovascular age-related macular degeneration. The specific process may vary depending on the medication used, such as Ranibizumab or Aflibercept. Further information on the process is not available in the ontology."
+  },
+  {
+    "id": 103,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: how exactly does the anti-VEGF shot process go?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?p ?o WHERE { :Bevacizumab ?p ?o . }",
+    "raw_results": [
+      [
+        "type",
+        "AntiVEGFTherapy"
+      ],
+      [
+        "type",
+        "NamedIndividual"
+      ],
+      [
+        "label",
+        "Bevacizumab"
+      ],
+      [
+        "treats",
+        "WetAMD"
+      ],
+      [
+        "inhibits",
+        "VEGF"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD . }\nANSWER: The anti-VEGF shot process for treating neovascular age-related macular degeneration involves the use of medications such as Bevacizumab, which inhibits VEGF and treats WetAMD. The diagnosis of WetAMD can be done using Ocular Coherence Tomography. Other treatments for WetAMD include Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, and Eylea."
+  },
+  {
+    "id": 104,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: what are the benefits and how successful is the treatment?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t ?c WHERE { ?t :treats :WetAMD . ?t rdfs:comment ?c }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy",
+        "Therapy that targets VEGF"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { ?t :treats :WetAMD . ?t rdfs:comment ?c }\nANSWER: The treatment for neovascular age-related macular degeneration is Anti-VEGF therapy, which targets VEGF. This treatment has been shown to improve vision in patients with wet AMD. However, the success of the treatment depends on various factors, including the severity of the disease and the patient's overall health."
+  },
+  {
+    "id": 105,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: what are the benefits and how successful is the treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o ?c WHERE { :WetAMD :hasSymptom ?o . ?o rdfs:comment ?c }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :Bevacizumab :treats :WetAMD . :Bevacizumab rdfs:comment ?c }\nANSWER: The treatment for neovascular age-related macular degeneration with Bevacizumab has shown benefits in reducing disease activity, but the success of the treatment may vary depending on individual patient factors. The presence of a macular disciform scar and sign of disease activity on Ocular Coherence Tomography may indicate a more advanced stage of the disease, which could impact the effectiveness of the treatment. Further evaluation and monitoring are necessary to determine the best course of treatment and to assess the patient's response to the therapy."
+  },
+  {
+    "id": 106,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: are there any risks or side effects of intravitreal anti-VEGF treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?se WHERE { :IntravitrealAntiVEGFTherapy :hasSymptom ?se }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf ?se WHERE { :IntravitrealAntiVEGFTherapy :causesOrIncreases ?rf .  :IntravitrealAntiVEGFTherapy :hasSymptom ?se }\nANSWER: The patient with neovascular age-related macular degeneration in the right eye may be at risk of side effects from intravitreal anti-VEGF treatment, including but not limited to endophthalmitis, intraocular inflammation, and retinal detachment. However, the exact risks and side effects are not fully specified in the provided SPARQL query results. Anti-VEGF therapy is a common treatment for neovascular AMD, and it works by inhibiting the growth of new blood vessels in the eye."
+  },
+  {
+    "id": 107,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: are there any risks or side effects of intravitreal anti-VEGF treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?rf WHERE { :Bevacizumab :causesOrIncreases ?rf }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?rf WHERE { :AntiVEGFTherapy :causesOrIncreases ?rf }\nANSWER: The patient has a history of 3 anti-VEGF injections with Bevacizumab for neovascular age-related macular degeneration. Although the SPARQL query did not return specific risks or side effects of intravitreal anti-VEGF treatment, it is known that such treatments can have potential risks and side effects, including but not limited to endophthalmitis, retinal detachment, and increased intraocular pressure. Further inquiry or consultation with a medical professional is necessary to fully understand the risks and side effects associated with this treatment."
+  },
+  {
+    "id": 108,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment, with 20/60 vision, taking 75 mg Plavix daily: should I discontinue the Plavix medication prior to my intravitreal anti-VEGF injection?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :Plavix :treats ?t . ?t rdf:type :Treatment }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t . ?t :inhibits :VEGF }\nANSWER: The patient has neovascular age-related macular degeneration in the right eye and is taking 75 mg Plavix daily. The treatment for wet AMD is intravitreal anti-VEGF injection, which inhibits VEGF. However, the question of whether to discontinue Plavix medication prior to the injection is not fully answered by the SPARQL query, as it does not provide information on the interaction between Plavix and anti-VEGF therapy."
+  },
+  {
+    "id": 109,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, who had sudden loss of vision two weeks ago, without prior treatment, with 20/60 vision, taking 5 mg Coumadin daily: should I discontinue the Coumadin medication prior to my intravitreal anti-VEGF injection?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t ?o WHERE { :AntiVEGFTherapy :inhibits ?o . ?o :associatedWith :Bleeding }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?o WHERE { :Coumadin :treats ?o . ?o :hasSymptom :Bleeding }\nANSWER: The patient is taking 5 mg Coumadin daily, which may increase the risk of bleeding. However, the SPARQL query results do not provide a clear answer on whether to discontinue the Coumadin medication prior to the intravitreal anti-VEGF injection. It is recommended to consult with a doctor or a medical professional for personalized advice."
+  },
+  {
+    "id": 110,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, who had sudden loss of vision two weeks ago, without prior treatment, with 20/60 vision, taking 5 mg Eliquis twice daily: should I discontinue the Eliquis medication prior to my intravitreal anti-VEGF injection?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?i WHERE { :IntravitrealAntiVEGFInjection :inhibits ?i .}",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :NeovascularAMD :treats ?t .}\nANSWER: The patient has neovascular age-related macular degeneration and is considering an intravitreal anti-VEGF injection. The treatment for neovascular AMD is anti-VEGF therapy. However, the question of whether to discontinue Eliquis medication prior to the injection is not directly answered by the SPARQL query, as it depends on various factors such as the patient's medical history and the doctor's advice."
+  },
+  {
+    "id": 111,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: what is the cost (in time and money) of the intravitreal anti-VEGF treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is asking about the cost in time and money of intravitreal anti-VEGF treatment, which is not a medical fact that can be retrieved from the ontology. The ontology can provide information on the treatment options for neovascular age-related macular degeneration, such as intravitreal anti-VEGF therapy, but it does not contain information on the cost or duration of the treatment."
+  },
+  {
+    "id": 112,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: what is the cost (in time and money) of the intravitreal anti-VEGF treatment?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t ?c WHERE { :AntiVEGFTherapy :treats :WetAMD . :AntiVEGFTherapy rdfs:comment ?c }",
+    "raw_results": [
+      [
+        null,
+        "Therapy that targets VEGF"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: SELECT ?t ?c WHERE { :AntiVEGFTherapy :treats :WetAMD . :AntiVEGFTherapy rdfs:comment ?c }\nANSWER: The question about the cost in time and money of intravitreal anti-VEGF treatment is outside the scope of the provided ontology, which focuses on medical concepts and their relationships rather than economic or temporal costs. However, it is known that Bevacizumab and other anti-VEGF therapies are used to treat wet age-related macular degeneration."
+  },
+  {
+    "id": 113,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: will I need assistance to get home after the intravitreal anti-VEGF treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :NeovascularAgeRelatedMacularDegeneration . ?t :inhibits ?o . }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the need for assistance after a specific treatment, which is a lifestyle and logistical concern rather than a medical fact that can be answered by querying the ontology. The provided information about the patient's condition and treatment is not sufficient to determine the need for assistance, as it depends on various factors such as the patient's overall health, mobility, and living situation."
+  },
+  {
+    "id": 114,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: will I need assistance to get home after the intravitreal anti-VEGF treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :NeovascularAgeRelatedMacularDegeneration . ?t :inhibits :VEGF . }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the need for assistance after a specific medical treatment, which is a lifestyle and logistical concern rather than a question about the medical concepts themselves. The provided SPARQL queries did not return relevant results as they were focused on the medical aspects of neovascular age-related macular degeneration and its treatment, rather than the practical implications of the treatment on daily activities such as getting home."
+  },
+  {
+    "id": 115,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: what is the goal of the anti-VEGF treatment?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { :AntiVEGFTherapy :inhibits ?t . FILTER (?t = :VEGF) }",
+    "raw_results": [
+      [
+        "VEGF"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?c WHERE { :AntiVEGFTherapy rdfs:comment ?c }\nANSWER: The goal of anti-VEGF treatment is to target VEGF and treat WetAMD, which is a type of neovascular age-related macular degeneration. Anti-VEGF therapy aims to inhibit VEGF and improve vision in patients with WetAMD. The treatment targets VEGF to reduce its effects on the growth of new blood vessels in the eye, which can cause vision loss in patients with WetAMD."
+  },
+  {
+    "id": 116,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: what is the goal of the anti-VEGF treatment?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD }\nANSWER: The goal of anti-VEGF treatment, such as Bevacizumab, is to treat neovascular age-related macular degeneration by inhibiting VEGF, which is associated with disease activity. Anti-VEGF therapy aims to reduce the growth of new blood vessels and slow disease progression. Treatments like Bevacizumab, Aflibercept, and Ranibizumab are used to achieve this goal."
+  },
+  {
+    "id": 117,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, treated with aflibercept every 2 months in the past two years: is it possible to get intravitreal injections less often?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t ?i WHERE { :Aflibercept :inhibits ?i . ?t :inhibits ?i . FILTER (?t != :Aflibercept) }",
+    "raw_results": [
+      [
+        "Avastin",
+        "VEGF"
+      ],
+      [
+        "AntiVEGFTherapy",
+        "VEGF"
+      ],
+      [
+        "Lucentis",
+        "VEGF"
+      ],
+      [
+        "Verteporfin",
+        "VEGF"
+      ],
+      [
+        "Conbercept",
+        "VEGF"
+      ],
+      [
+        "OT-551",
+        "VEGF"
+      ],
+      [
+        "Ranibizumab",
+        "VEGF"
+      ],
+      [
+        "Eylea",
+        "VEGF"
+      ],
+      [
+        "Bevacizumab",
+        "VEGF"
+      ],
+      [
+        "Macuvite",
+        "VEGF"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?i WHERE { :Aflibercept :inhibits ?i . ?t :inhibits ?i . FILTER (?t != :Aflibercept) }\nANSWER: There are several treatments that inhibit VEGF, which is the same target as Aflibercept, including Avastin, Lucentis, Verteporfin, Conbercept, OT-551, Ranibizumab, Eylea, Bevacizumab, and Macuvite. However, it is unclear if these treatments can be used to reduce the frequency of intravitreal injections. Consult a doctor to determine the best course of treatment."
+  },
+  {
+    "id": 118,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had sudden loss of vision two weeks ago, without prior treatment with 20/60 vision: what are the success rates of the treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t ?c WHERE { :WetAMD :diagnosedBy ?dm . ?dm rdfs:comment ?c .}",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { ?t :treats :WetAMD . ?t rdfs:comment ?c .}\nANSWER: The success rates of treatment for neovascular age-related macular degeneration are not explicitly stated in the ontology, but the treatments include AntiVEGFTherapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. These treatments target VEGF and are used to treat WetAMD."
+  },
+  {
+    "id": 119,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye, with history of 3 anti-VEGF injections with Bevacizumab, with the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography and hand motion vision: what are the success rates of the treatment?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o ?c WHERE { :WetAMD :hasSymptom ?o . ?o rdfs:comment ?c }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?c WHERE { :Bevacizumab :treats :WetAMD . :Bevacizumab rdfs:comment ?c }\nANSWER: The success rates of the treatment for neovascular age-related macular degeneration with Bevacizumab are not explicitly stated in the ontology, but Bevacizumab is known to treat WetAMD. The patient's history of 3 anti-VEGF injections and the presence of a macular disciform scar with sign of disease activity on Ocular Coherence Tomography are relevant factors to consider. Further information on the success rates of the treatment would require additional queries or external sources."
+  },
+  {
+    "id": 120,
+    "category": "about treatment for wet amd",
+    "question": "I am a patient with neovascular age-related macular degeneration (nAMD) in the right eye: are there any experimental treatments for nAMD?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD . ?t rdf:type :ExperimentalTreatment }",
+    "raw_results": [],
+    "output": "VERDICT: ANSWERED\nSPARQL: SELECT ?t WHERE { ?t :treats :WetAMD . FILTER NOT EXISTS { ?t rdf:type :ApprovedTreatment } }\nANSWER: There are several experimental treatments for neovascular age-related macular degeneration (nAMD), including AntiVEGFTherapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab. These treatments are associated with clinical trials and may be considered for patients with nAMD. It is essential to consult with a healthcare professional to determine the best course of treatment."
+  },
+  {
+    "id": 121,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: when should I next see my optometrist for new glasses?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :AMD :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "ETDRS"
+      ],
+      [
+        "Refractometer"
+      ],
+      [
+        "ERG"
+      ],
+      [
+        "Electroretinography"
+      ],
+      [
+        "OCT"
+      ],
+      [
+        "PAECT"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about when to see an optometrist for new glasses is not related to the medical concepts in the ontology, and the SPARQL queries did not return relevant information. The patient should consult their optometrist for a routine check-up, but the frequency of visits depends on various factors, including the severity of their condition and the optometrist's recommendations."
+  },
+  {
+    "id": 122,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: when should I next see my optometrist for new glasses?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?dm WHERE { :IntermediateAMD :diagnosedBy ?dm }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the frequency of optometrist visits for new glasses, which is a lifestyle/conversational question that cannot be answered using the provided SPARQL queries. The queries attempted to retrieve information about the diagnosis and symptoms of intermediate age-related macular degeneration, but did not provide relevant information for the patient's question."
+  },
+  {
+    "id": 123,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: when should I next see my optometrist for new glasses?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about when to see an optometrist for new glasses is not related to the medical concepts in the ontology, and the SPARQL queries did not return relevant information. The patient should consult their optometrist for a routine check-up, but the specific timing depends on various factors, including their current prescription, eye health, and personal preferences."
+  },
+  {
+    "id": 124,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with geographic atrophy in the right eye: when should I next see my optometrist for new glasses?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :GeographicAtrophy :diagnosedBy ?dm }",
+    "raw_results": [
+      [
+        "OCT"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about when to see an optometrist for new glasses is not related to the medical concepts in the ontology, and the SPARQL queries did not return relevant information. The patient should consult their optometrist for a routine check-up, but the frequency of visits depends on individual factors and is not determined by the presence of geographic atrophy alone."
+  },
+  {
+    "id": 125,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: what do I do if I have problems with visual activities such as reading, etc?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b WHERE { :AMD :associatedWith ?b . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t ?o WHERE { :AMD :hasSymptom ?o . ?t :treats :AMD . }\nANSWER: For a patient with early age-related macular degeneration in the right eye experiencing problems with visual activities such as reading, possible treatments include Verteporfin, Ranibizumab, Macuvite, and Aspirin, which can help with symptoms like blindness, depression, and dependence. Diagnostic methods for AMD include ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT. However, more specific guidance on addressing reading problems is not provided by the SPARQL queries."
+  },
+  {
+    "id": 126,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: what do I do if I have problems with visual activities such as reading, etc?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?b WHERE { :IntermediateAMD :associatedWith ?b . ?b :associatedWith :LowVisionRehabilitation . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :IntermediateAMD :treats ?t . ?t :treats :VisualImpairment . }\nANSWER: Patients with intermediate age-related macular degeneration in the right eye who experience problems with visual activities such as reading may benefit from low vision rehabilitation. This can include the use of assistive devices, such as magnifying glasses or telescopic lenses, and training on how to use these devices to improve daily functioning. Additionally, patients may want to consult with a low vision specialist or occupational therapist to develop strategies for adapting to their visual impairment and maintaining independence."
+  },
+  {
+    "id": 127,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: what do I do if I have problems with visual activities such as reading, etc?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o . }",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t . }\nANSWER: If you have neovascular age-related macular degeneration in the right eye and are experiencing problems with visual activities such as reading, you may want to consider treatments for WetAMD. The disease can be diagnosed by methods such as OCT, and symptoms include blindness."
+  },
+  {
+    "id": 128,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with geographic atrophy in the right eye: what do I do if I have problems with visual activities such as reading, etc?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy . ?t rdfs:comment ?c . FILTER (regex(?c, \"visual activities\", \"i\")) }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { ?t :treats :GeographicAtrophy . ?t rdfs:comment ?c . FILTER (regex(?c, \"visual activities\", \"i\")) }\nANSWER: Patients with geographic atrophy in one eye may experience problems with visual activities such as reading. While there is no cure for geographic atrophy, treatments such as Anti-VEGF therapy may help slow disease progression. Low vision rehabilitation and assistive devices can also help improve visual function and independence."
+  },
+  {
+    "id": 129,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration and 20/50 vision in both eyes: should I see a low vision specialist?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :LowVision :treats ?t . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o . }\nANSWER: Patients with neovascular age-related macular degeneration may experience symptoms such as blindness. Low vision specialists can help patients with vision loss due to conditions like neovascular age-related macular degeneration, and diagnosis can be done using methods such as OCT. However, it is recommended to consult with a healthcare professional for personalized advice on whether to see a low vision specialist."
+  },
+  {
+    "id": 130,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration and 20/200 vision in both eyes: should I see a low vision specialist?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { :LowVision :treats ?t . }",
+    "raw_results": [],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?dm WHERE { :WetAMD :diagnosedBy ?dm . }\nANSWER: Patients with neovascular age-related macular degeneration, such as wet AMD, may experience symptoms like blindness and can be diagnosed using methods like OCT. While the query results do not directly address whether a patient should see a low vision specialist, they provide relevant information about the condition and its diagnosis. Low vision specialists can help patients with significant visual impairment, such as 20/200 vision, to adapt and make the most of their remaining vision."
+  },
+  {
+    "id": 131,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration and 20/2000 vision in both eyes: should I see a low vision specialist?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD . }",
+    "raw_results": [
+      [
+        "DryAMD"
+      ],
+      [
+        "Age"
+      ],
+      [
+        "Smoking"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t . }\nANSWER: Patients with neovascular age-related macular degeneration may benefit from seeing a low vision specialist, as their condition can cause significant vision loss, including blindness. Treatments for wet AMD include Anti-VEGF therapy. Diagnostic methods for wet AMD include OCT. Risk factors for wet AMD include dry AMD, age, and smoking."
+  },
+  {
+    "id": 132,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: I have recently changed my reading glasses but I still can’t read. Are there any other solutions?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?o WHERE { :WetAMD :hasSymptom ?o }",
+    "raw_results": [
+      [
+        "Blindness"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?t WHERE { :WetAMD :treats ?t }\nANSWER: For a patient with neovascular age-related macular degeneration, potential treatments include various therapies, but the exact options can depend on several factors including the severity of the condition and the patient's overall health. The patient's recent change in reading glasses may not be directly related to their neovascular age-related macular degeneration, and other solutions such as low vision aids or assistive technology may be explored. Diagnostic methods like OCT can help assess the condition, and symptoms such as blindness may be associated with it."
+  },
+  {
+    "id": 133,
+    "category": "about support services for vision loss",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: can you recommend any support groups?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?rf WHERE { ?rf :causesOrIncreases :WetAMD . }",
+    "raw_results": [
+      [
+        "DryAMD"
+      ],
+      [
+        "Age"
+      ],
+      [
+        "Smoking"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: While support groups for patients with neovascular age-related macular degeneration are not directly listed in the ontology, patients may find it helpful to discuss their condition with a healthcare professional or a counselor who can provide guidance on managing the disease and recommend local support groups. Additionally, online resources such as the American Macular Degeneration Foundation or the National Eye Institute may offer support and information for patients with neovascular age-related macular degeneration."
+  },
+  {
+    "id": 134,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with non-age-related macular degeneration: how often should I have my eyes checked?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?t WHERE { ?t :treats :NonExudativeAMD }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about the frequency of eye checks for a patient with non-age-related macular degeneration is outside the scope of the provided ontology, as it does not contain information on appointment frequency or lifestyle advice. The patient should consult their doctor for personalized recommendations."
+  },
+  {
+    "id": 135,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: how often should I have my eyes checked?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :AMD }",
+    "raw_results": [
+      [
+        "Verteporfin"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Macuvite"
+      ],
+      [
+        "Aspirin"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about how often to have eyes checked is a lifestyle/conversational question that cannot be answered using the provided SPARQL queries. The SPARQL queries provided information on diagnostic methods and treatments for age-related macular degeneration, but did not provide a specific answer to the question about the frequency of eye checks."
+  },
+  {
+    "id": 136,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: how often should I have my eyes checked?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about the frequency of eye checks for a patient with intermediate age-related macular degeneration is outside the scope of the provided ontology, as it does not contain information on appointment schedules or frequencies. The ontology is focused on medical concepts, treatments, and relationships rather than lifestyle or quantitative advice. Patients should consult their eye care professional for personalized guidance on eye examination schedules."
+  },
+  {
+    "id": 137,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: how often should I have my eyes checked?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about how often to have eyes checked is not answerable through the provided SPARQL queries as it pertains to appointment frequency, which is considered conversational/lifestyle and outside the scope of the ontology's medical facts. However, patients with neovascular age-related macular degeneration typically require regular monitoring, often including optical coherence tomography (OCT), and treatment with anti-VEGF therapies. The specific frequency of check-ups should be determined by an eye care professional based on individual patient needs."
+  },
+  {
+    "id": 138,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with geographic atrophy in the right eye: how often should I have my eyes checked?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy }",
+    "raw_results": [
+      [
+        "Sirolimus"
+      ],
+      [
+        "OT-551"
+      ]
+    ],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question about how often to have eyes checked is not answerable with the provided ontology, as it does not contain information about appointment frequency. However, the patient's condition, geographic atrophy, can be diagnosed by OCT, and potential treatments include Sirolimus and OT-551."
+  },
+  {
+    "id": 139,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with early age-related macular degeneration in the right eye: when should I contact you as a matter of urgency?",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?o WHERE { :AMD :hasSymptom ?o . ?o rdfs:comment ?c . FILTER regex(?c, \"sudden|severe\", \"i\") }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the urgency of contacting a doctor for age-related macular degeneration, which is a conversational and lifestyle-related question that cannot be answered using the provided SPARQL queries."
+  },
+  {
+    "id": 140,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with intermediate age-related macular degeneration in the right eye: when should I contact you as a matter of urgency?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?dm WHERE { :AMD :diagnosedBy ?dm . }",
+    "raw_results": [
+      [
+        "ETDRS"
+      ],
+      [
+        "Refractometer"
+      ],
+      [
+        "ERG"
+      ],
+      [
+        "Electroretinography"
+      ],
+      [
+        "OCT"
+      ],
+      [
+        "PAECT"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o . }\nANSWER: You should contact your doctor as a matter of urgency if you experience any symptoms of wet age-related macular degeneration, such as blindness. Additionally, if you have dry age-related macular degeneration, you should also seek urgent medical attention if you notice any sudden changes in your vision. Regular eye exams using various diagnostic methods like ETDRS, Refractometer, ERG, Electroretinography, OCT, and PAECT can help monitor the progression of the disease."
+  },
+  {
+    "id": 141,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye: when should I contact you as a matter of urgency?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :WetAMD }",
+    "raw_results": [
+      [
+        "AntiVEGFTherapy"
+      ],
+      [
+        "Aflibercept"
+      ],
+      [
+        "Lucentis"
+      ],
+      [
+        "Verteporfin"
+      ],
+      [
+        "Vitrectomy"
+      ],
+      [
+        "Conbercept"
+      ],
+      [
+        "Ranibizumab"
+      ],
+      [
+        "Eylea"
+      ],
+      [
+        "Bevacizumab"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :WetAMD :hasSymptom ?o }\nANSWER: Patients with neovascular age-related macular degeneration should contact their doctor urgently if they experience symptoms such as blindness. Diagnosis can be done using methods like OCT. Treatments include AntiVEGFTherapy, Aflibercept, Lucentis, Verteporfin, Vitrectomy, Conbercept, Ranibizumab, Eylea, and Bevacizumab."
+  },
+  {
+    "id": 142,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with geographic atrophy in the right eye: when should I contact you as a matter of urgency?",
+    "verdict": "ANSWERED",
+    "sparql": "SELECT ?t WHERE { ?t :treats :GeographicAtrophy . }",
+    "raw_results": [
+      [
+        "Sirolimus"
+      ],
+      [
+        "OT-551"
+      ]
+    ],
+    "output": "VERDICT: PARTIAL\nSPARQL: SELECT ?o WHERE { :GeographicAtrophy :hasSymptom ?o . }\nANSWER: You should contact your doctor as a matter of urgency if you experience any sudden changes in your vision, such as sudden blindness, as geographic atrophy can cause blindness. Regular monitoring with diagnostic methods like OCT is also important. While there are some potential treatments like Sirolimus and OT-551, it's essential to consult with your doctor for proper evaluation and guidance."
+  },
+  {
+    "id": 143,
+    "category": "contacting your eye health professional",
+    "question": "I am a patient with neovascular age-related macular degeneration in the right eye who had an intravitreal anti-VEGF injection: when should I contact you as a matter of urgency",
+    "verdict": "OUT_OF_SCOPE",
+    "sparql": "SELECT ?s ?o WHERE { :IntravitrealAntiVEGFInjection :inhibits ?s . ?s :associatedWith ?o . FILTER (?o = :NeovascularAgeRelatedMacularDegeneration) }",
+    "raw_results": [],
+    "output": "VERDICT: OUT_OF_SCOPE\nSPARQL: N/A\nANSWER: The question is about the urgency of contacting a doctor after an intravitreal anti-VEGF injection for neovascular age-related macular degeneration, which is a conversational and time-sensitive topic that cannot be answered by the provided SPARQL queries."
+  }
+]
