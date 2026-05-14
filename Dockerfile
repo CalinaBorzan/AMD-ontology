@@ -7,9 +7,8 @@ WORKDIR /app/frontend
 COPY frontend/package.json frontend/package-lock.json* ./
 RUN npm ci --no-audit --no-fund 2>/dev/null || npm install --no-audit --no-fund
 
+ARG FRONTEND_BUST=3
 COPY frontend/ ./
-# bust cache: 2024-05-14
-# Build with VITE_API_URL="" so axios uses relative paths (same origin as backend)
 ENV VITE_API_URL=""
 RUN npm run build
 
@@ -32,6 +31,7 @@ RUN wget -q https://github.com/SmartDataAnalytics/DL-Learner/releases/download/1
     && chmod +x dllearner-1.5.0/bin/cli
 
 # Python deps
+ARG PYTHON_BUST=3
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
