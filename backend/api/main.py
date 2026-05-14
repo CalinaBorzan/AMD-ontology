@@ -624,7 +624,8 @@ def run_hermit():
     job = manager.create("hermit", {})
 
     def _target(j: Job):
-        import tempfile
+        import tempfile, os
+        import owlready2
         from pipeline.convert_to_owl import json_to_owl
 
         j.append_log("Converting JSON ontology to OWL...")
@@ -634,7 +635,6 @@ def run_hermit():
         try:
             json_to_owl(str(ONTOLOGY_PATH), tmp_path)
             j.append_log("Running HermiT reasoner (owlready2)...")
-            import owlready2
             owlready2.onto_path.clear()
             onto = owlready2.get_ontology(f"file://{tmp_path}").load()
             with onto:
@@ -657,7 +657,6 @@ def run_hermit():
             j.append_log("Ontology is INCONSISTENT")
             return {"consistent": False, "inferred_axioms": [], "unsatisfiable_classes": ["INCONSISTENT"]}
         finally:
-            import os
             try:
                 os.unlink(tmp_path)
             except Exception:

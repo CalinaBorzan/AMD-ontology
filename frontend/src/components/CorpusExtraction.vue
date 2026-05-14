@@ -237,13 +237,20 @@ async function runPostMining() {
     }
     completedSteps.value = [...completedSteps.value, 'validation']
 
-    if (fixes.value.length > 0 && (runHermit.value || (runDLLearner.value && dllExperiment.value))) {
+    const hasNext = runHermit.value || (runDLLearner.value && dllExperiment.value)
+    if (fixes.value.length > 0 && hasNext) {
       pushLog(`Review fixes below, then click "Continue" to proceed.`)
       awaitingValidationReview.value = true
-      await new Promise((resolve) => { _validationReviewResolve = resolve })
-      awaitingValidationReview.value = false
+      pipelineActive.value = false
+      return
     }
   }
+
+  await runReasoningSteps()
+}
+
+async function runReasoningSteps() {
+  pipelineActive.value = true
 
   if (runHermit.value) {
     currentStep.value = 'hermit'
@@ -490,10 +497,17 @@ async function confirmMiningChanges() {
   }
 }
 
-function continueAfterValidation() {
-  if (_validationReviewResolve) {
-    _validationReviewResolve()
-    _validationReviewResolve = null
+async function continueAfterValidation() {
+  awaitingValidationReview.value = false
+  try {
+    await runReasoningSteps()
+    pipelineActive.value = false
+    pipelineDone.value = true
+    pushLog('✓ Pipeline complete.')
+  } catch (err) {
+    pipelineActive.value = false
+    pipelineError.value = err.message || 'Pipeline failed'
+    pushLog(`✗ ${pipelineError.value}`)
   }
 }
 
