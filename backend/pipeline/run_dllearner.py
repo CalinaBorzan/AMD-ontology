@@ -38,14 +38,16 @@ def run_experiment(experiment_name: str, owl_path: str | None = None,
     else:
         conf_path = src_conf
 
-    cli = DLLEARNER_DIR / "bin" / "cli.bat"
+    import sys as _sys
+    cli = DLLEARNER_DIR / "bin" / ("cli.bat" if _sys.platform == "win32" else "cli")
     if not cli.exists():
         return {"error": f"DL-Learner CLI not found at {cli}"}
 
     try:
         r = subprocess.run(
             [str(cli), str(conf_path)],
-            capture_output=True, text=True, timeout=timeout, shell=True,
+            capture_output=True, text=True, timeout=timeout,
+            shell=(_sys.platform == "win32"),
         )
     except subprocess.TimeoutExpired:
         return {"error": f"timeout after {timeout}s", "experiment": experiment_name}

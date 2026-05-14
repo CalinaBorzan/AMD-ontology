@@ -19,10 +19,16 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# System deps (curl for health-check; build-essential for rdflib if needed)
+# System deps
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl build-essential \
+    curl build-essential default-jre-headless wget unzip \
     && rm -rf /var/lib/apt/lists/*
+
+# Download DL-Learner 1.5.0
+RUN wget -q https://github.com/SmartDataAnalytics/DL-Learner/releases/download/1.5.0/dllearner-1.5.0.zip \
+    && unzip -q dllearner-1.5.0.zip \
+    && rm dllearner-1.5.0.zip \
+    && chmod +x dllearner-1.5.0/bin/cli
 
 # Python deps
 COPY requirements.txt ./
