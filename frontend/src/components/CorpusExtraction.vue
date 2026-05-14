@@ -237,8 +237,7 @@ async function runPostMining() {
     }
     completedSteps.value = [...completedSteps.value, 'validation']
 
-    const hasNext = runHermit.value || (runDLLearner.value && dllExperiment.value)
-    if (fixes.value.length > 0 && hasNext) {
+    if (fixes.value.length > 0) {
       pushLog(`Review fixes below, then click "Continue" to proceed.`)
       awaitingValidationReview.value = true
       pipelineActive.value = false
