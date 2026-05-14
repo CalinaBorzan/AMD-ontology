@@ -129,21 +129,21 @@ function pushLog(line) {
   overallLog.value = [...overallLog.value, line]
 }
 
-function pushLogs(lines) {
-  if (!Array.isArray(lines) || !lines.length) return
-  const last = overallLog.value.slice(-lines.length).join('\n')
-  if (last === lines.join('\n')) return
-  overallLog.value = [...overallLog.value, ...lines]
-}
-
 async function pollJob(jobId, stateRef) {
+  let offset = 0
   return new Promise((resolve, reject) => {
     const tick = async () => {
       if (cancelled) return reject(new Error('Pipeline cancelled'))
       try {
-        const state = await api.getRun(jobId)
+        const [state, logData] = await Promise.all([
+          api.getRun(jobId),
+          api.getRunLogs(jobId, offset).catch(() => null),
+        ])
         stateRef.value = state
-        if (Array.isArray(state.log_tail)) pushLogs(state.log_tail)
+        if (logData?.lines?.length) {
+          overallLog.value = [...overallLog.value, ...logData.lines]
+          offset = logData.next_offset
+        }
         if (state.status === 'done' || state.status === 'completed') return resolve(state)
         if (state.status === 'error' || state.status === 'failed') {
           return reject(new Error(state.error || 'Job reported error'))
