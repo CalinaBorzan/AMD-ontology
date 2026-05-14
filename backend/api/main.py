@@ -629,8 +629,7 @@ def run_hermit():
         from pipeline.convert_to_owl import json_to_owl
 
         j.append_log("Converting JSON ontology to OWL...")
-        with tempfile.NamedTemporaryFile(suffix=".owl", delete=False) as tmp:
-            tmp_path = tmp.name
+        tmp_path = tempfile.mktemp(suffix=".owl")
 
         try:
             json_to_owl(str(ONTOLOGY_PATH), tmp_path)

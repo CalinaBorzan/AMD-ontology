@@ -8,6 +8,7 @@ COPY frontend/package.json frontend/package-lock.json* ./
 RUN npm ci --no-audit --no-fund 2>/dev/null || npm install --no-audit --no-fund
 
 COPY frontend/ ./
+# bust cache: 2024-05-14
 # Build with VITE_API_URL="" so axios uses relative paths (same origin as backend)
 ENV VITE_API_URL=""
 RUN npm run build
