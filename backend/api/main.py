@@ -617,6 +617,66 @@ def decide_fix(job_id: str, fix_id: str, decision: FixDecision):
                           detail=f"Unknown action '{decision.action}'. Use approve|reject.")
 
 
+@app.post("/api/reasoner/hermit", response_model=RunResponse)
+def run_hermit():
+    if not ONTOLOGY_PATH.exists():
+        raise HTTPException(status_code=409, detail="No ontology found.")
+    job = manager.create("hermit", {})
+
+    def _target(j: Job):
+        import tempfile
+        from pipeline.convert_to_owl import json_to_owl
+
+        j.append_log("Converting JSON ontology to OWL...")
+        with tempfile.NamedTemporaryFile(suffix=".owl", delete=False) as tmp:
+            tmp_path = tmp.name
+
+        try:
+            json_to_owl(str(ONTOLOGY_PATH), tmp_path)
+            j.append_log("Running HermiT reasoner (owlready2)...")
+            import owlready2
+            owlready2.onto_path.clear()
+            onto = owlready2.get_ontology(f"file://{tmp_path}").load()
+            with onto:
+                owlready2.sync_reasoner_hermit(infer_property_values=True)
+
+            inferred = []
+            for cls in onto.classes():
+                for parent in cls.is_a:
+                    if isinstance(parent, owlready2.ThingClass) and parent is not owlready2.Thing:
+                        inferred.append(f"{cls.name} subClassOf {parent.name}")
+
+            unsatisfiable = [cls.name for cls in owlready2.default_world.inconsistent_classes()]
+            j.append_log(f"HermiT done: {len(inferred)} inferred axioms, {len(unsatisfiable)} unsatisfiable")
+            return {
+                "consistent": len(unsatisfiable) == 0,
+                "inferred_axioms": inferred,
+                "unsatisfiable_classes": unsatisfiable,
+            }
+        except owlready2.base.OwlReadyInconsistentOntologyError:
+            j.append_log("Ontology is INCONSISTENT")
+            return {"consistent": False, "inferred_axioms": [], "unsatisfiable_classes": ["INCONSISTENT"]}
+        finally:
+            import os
+            try:
+                os.unlink(tmp_path)
+            except Exception:
+                pass
+
+    manager.run(job, _target)
+    return RunResponse(job_id=job.id, status=job.status)
+
+
+@app.get("/api/reasoner/hermit/{job_id}/result")
+def get_hermit_result(job_id: str):
+    job = manager.get(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    if job.status not in ("done", "error"):
+        raise HTTPException(status_code=409, detail=f"Job is {job.status}")
+    return job.result or {}
+
+
 @app.post("/api/literature/fetch", response_model=RunResponse)
 def start_literature_fetch(req: LiteratureFetchRequest):
     job = manager.create("literature", req.model_dump())

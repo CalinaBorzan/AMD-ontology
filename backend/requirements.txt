@@ -5,3 +5,4 @@ langchain-groq>=0.2.0
 python-dotenv==1.0.1
 requests>=2.31.0
 rdflib==7.1.4
+owlready2>=0.46

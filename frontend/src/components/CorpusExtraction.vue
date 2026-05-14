@@ -49,6 +49,8 @@ const validationState = ref(null)
 const validationId = ref(null)
 const fixes = ref([])
 const decided = ref({})
+const awaitingValidationReview = ref(false)
+let _validationReviewResolve = null
 
 const dlState = ref(null)
 const dlResult = ref(null)
@@ -173,6 +175,8 @@ function resetPipelineState() {
   validationId.value = null
   fixes.value = []
   decided.value = {}
+  awaitingValidationReview.value = false
+  _validationReviewResolve = null
   dlState.value = null
   dlResult.value = null
   dlId.value = null
@@ -232,6 +236,13 @@ async function runPostMining() {
       pushLog(`! Fixes fetch failed: ${err.message}`)
     }
     completedSteps.value = [...completedSteps.value, 'validation']
+
+    if (fixes.value.length > 0 && (runHermit.value || (runDLLearner.value && dllExperiment.value))) {
+      pushLog(`Review fixes below, then click "Continue" to proceed.`)
+      awaitingValidationReview.value = true
+      await new Promise((resolve) => { _validationReviewResolve = resolve })
+      awaitingValidationReview.value = false
+    }
   }
 
   if (runHermit.value) {
@@ -476,6 +487,13 @@ async function confirmMiningChanges() {
     pipelineActive.value = false
     pipelineError.value = err.response?.data?.detail || err.message || 'Pipeline failed'
     pushLog(`✗ ${pipelineError.value}`)
+  }
+}
+
+function continueAfterValidation() {
+  if (_validationReviewResolve) {
+    _validationReviewResolve()
+    _validationReviewResolve = null
   }
 }
 
@@ -1003,9 +1021,9 @@ onBeforeUnmount(() => {
 
       <div class="step-body">
         <div class="overall-row">
-          <span :class="['badge', pipelineDone ? 'badge-done' : pipelineError ? 'badge-error' : awaitingApproval || awaitingMiningReview ? 'badge-paused' : 'badge-running']">
+          <span :class="['badge', pipelineDone ? 'badge-done' : pipelineError ? 'badge-error' : awaitingApproval || awaitingMiningReview || awaitingValidationReview ? 'badge-paused' : 'badge-running']">
             <span class="badge-dot" />
-            {{ pipelineDone ? 'done' : pipelineError ? 'error' : awaitingApproval ? 'waiting on you' : awaitingMiningReview ? 'waiting on you' : 'running' }}
+            {{ pipelineDone ? 'done' : pipelineError ? 'error' : awaitingApproval || awaitingMiningReview || awaitingValidationReview ? 'waiting on you' : 'running' }}
           </span>
           <span v-if="currentStep" class="now">
             Now: <strong>{{ plannedSteps.find((s) => s.key === currentStep)?.label }}</strong>
@@ -1253,6 +1271,14 @@ onBeforeUnmount(() => {
           </article>
         </div>
       </div>
+
+      <footer v-if="awaitingValidationReview" class="approval-bar">
+        <button type="button" class="btn ghost" @click="cancelPipeline">Cancel</button>
+        <button type="button" class="btn primary lg" @click="continueAfterValidation">
+          Continue to HermiT / DL-Learner
+          <span class="arrow">→</span>
+        </button>
+      </footer>
     </article>
 
     <!-- ====== HermiT result ====== -->
