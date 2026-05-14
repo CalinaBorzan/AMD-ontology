@@ -269,18 +269,32 @@ def restore_snapshot(req: SnapshotRestoreRequest):
     return {"restored": req.name, "to": str(ONTOLOGY_PATH)}
 
 
+def _ollama_available() -> bool:
+    try:
+        import os, urllib.request
+        base = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        urllib.request.urlopen(f"{base}/api/tags", timeout=2)
+        return True
+    except Exception:
+        return False
+
+
 @app.get("/api/models", response_model=list[ModelInfo])
 def list_models():
-    return [
-        ModelInfo(id="qwen2.5:32b", name="Qwen 2.5 32B", provider="ollama",
-                  description="Local — best balance of quality and speed"),
-        ModelInfo(id="llama3.1:8b", name="Llama 3.1 8B", provider="ollama",
-                  description="Local — fastest, lower quality"),
+    models = [
         ModelInfo(id="llama-3.3-70b-versatile", name="Llama 3.3 70B", provider="groq",
                   description="Cloud (Groq) — highest quality, requires GROQ_API_KEY"),
         ModelInfo(id="meta-llama/llama-4-scout-17b-16e-instruct", name="Llama 4 Scout 17B",
                   provider="groq", description="Cloud (Groq) — experimental"),
     ]
+    if _ollama_available():
+        models += [
+            ModelInfo(id="qwen2.5:32b", name="Qwen 2.5 32B", provider="ollama",
+                      description="Local — best balance of quality and speed"),
+            ModelInfo(id="llama3.1:8b", name="Llama 3.1 8B", provider="ollama",
+                      description="Local — fastest, lower quality"),
+        ]
+    return models
 
 
 @app.get("/api/ontology")
