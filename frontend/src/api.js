@@ -69,6 +69,7 @@ export const api = {
 
   runHermit: () => http.post('/api/reasoner/hermit', {}).then((r) => r.data),
   getHermitResult: (id) => http.get(`/api/reasoner/hermit/${id}/result`).then((r) => r.data),
+  applyInferred: (axioms) => http.post('/api/reasoner/hermit/apply-inferred', { axioms }).then((r) => r.data),
 
   listSnapshots: () => http.get('/api/ontology/snapshots').then((r) => r.data),
   createSnapshot: (label = '') => http.post('/api/ontology/snapshots', null, { params: { label } }).then((r) => r.data),

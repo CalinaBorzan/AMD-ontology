@@ -59,6 +59,8 @@ const dlId = ref(null)
 const hermitState = ref(null)
 const hermitResult = ref(null)
 const hermitId = ref(null)
+const hermitApplyMsg = ref('')
+const hermitApplyBusy = ref(false)
 
 // Rejected literature drawer
 const rejectedOpen = ref(false)
@@ -494,6 +496,25 @@ async function confirmMiningChanges() {
     pipelineActive.value = false
     pipelineError.value = err.response?.data?.detail || err.message || 'Pipeline failed'
     pushLog(`✗ ${pipelineError.value}`)
+  }
+}
+
+async async function applyInferredAxioms() {
+  const axioms = hermitResult.value?.inferred_axioms || []
+  const subClassAxioms = axioms.filter(a => typeof a === 'string' && a.includes('subClassOf'))
+  if (!subClassAxioms.length) {
+    hermitApplyMsg.value = 'No subClassOf axioms to apply.'
+    return
+  }
+  hermitApplyBusy.value = true
+  hermitApplyMsg.value = ''
+  try {
+    const res = await api.applyInferred(subClassAxioms)
+    hermitApplyMsg.value = `Applied ${res.applied.length}, skipped ${res.skipped.length}.`
+  } catch (e) {
+    hermitApplyMsg.value = 'Failed: ' + e.message
+  } finally {
+    hermitApplyBusy.value = false
   }
 }
 
@@ -1338,6 +1359,12 @@ onBeforeUnmount(() => {
           <p v-if="hermitResult.inferred_axioms.length > 30" class="caption">
             Showing 30 of {{ hermitResult.inferred_axioms.length }} inferred axioms.
           </p>
+          <div style="margin-top: var(--s-3); display:flex; gap: var(--s-2); align-items:center; flex-wrap:wrap">
+            <button class="btn ghost" :disabled="hermitApplyBusy" @click="applyInferredAxioms">
+              Apply subClassOf axioms to ontology
+            </button>
+            <span v-if="hermitApplyMsg" class="caption">{{ hermitApplyMsg }}</span>
+          </div>
         </section>
 
         <details v-if="hermitResult.raw_output" class="raw">

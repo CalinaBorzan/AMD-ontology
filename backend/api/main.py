@@ -692,6 +692,45 @@ def get_hermit_result(job_id: str):
     return job.result or {}
 
 
+class ApplyInferredRequest(BaseModel):
+    axioms: list[str]
+
+
+@app.post("/api/reasoner/hermit/apply-inferred")
+def apply_inferred_axioms(req: ApplyInferredRequest):
+    """Apply subClassOf inferred axioms to the ontology JSON."""
+    ont = _load_current_ontology()
+    classes = ont.get("classes", {})
+    applied = []
+    skipped = []
+
+    for axiom in req.axioms:
+        if "subClassOf" not in axiom:
+            skipped.append(axiom)
+            continue
+        parts = axiom.split("subClassOf")
+        if len(parts) != 2:
+            skipped.append(axiom)
+            continue
+        child = parts[0].strip()
+        parent = parts[1].strip()
+        if child not in classes or parent not in classes:
+            skipped.append(axiom)
+            continue
+        existing_subs = classes[parent].get("subclasses", [])
+        if child not in existing_subs:
+            classes[parent]["subclasses"] = existing_subs + [child]
+            applied.append(axiom)
+        else:
+            skipped.append(f"{axiom} (already explicit)")
+
+    if applied:
+        _snapshot_current_ontology(label="pre-inferred-apply")
+        _save_ontology(ont)
+
+    return {"applied": applied, "skipped": skipped}
+
+
 @app.post("/api/literature/fetch", response_model=RunResponse)
 def start_literature_fetch(req: LiteratureFetchRequest):
     job = manager.create("literature", req.model_dump())
