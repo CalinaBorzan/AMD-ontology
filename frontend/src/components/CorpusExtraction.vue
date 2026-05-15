@@ -249,6 +249,7 @@ async function runPostMining() {
 }
 
 async function runReasoningSteps() {
+  if (awaitingValidationReview.value) return
   pipelineActive.value = true
 
   if (runHermit.value) {

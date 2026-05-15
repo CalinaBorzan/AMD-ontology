@@ -806,6 +806,23 @@ def approve_literature(req: LiteratureApproveRequest):
     }
 
 
+@app.get("/api/literature/approved")
+def list_approved_literature():
+    """Return all approved abstracts saved to disk (from PubMed approve flow)."""
+    if not APPROVED_LIT_DIR.exists():
+        return {"approved": []}
+    approved = []
+    for txt_file in sorted(APPROVED_LIT_DIR.glob("abstract_PMID*.txt")):
+        pmid = txt_file.stem.replace("abstract_PMID", "")
+        text = txt_file.read_text(encoding="utf-8")
+        approved.append({
+            "pmid": pmid,
+            "abstract_text": text,
+            "filename": txt_file.name,
+        })
+    return {"approved": approved}
+
+
 @app.get("/api/literature/rejected")
 def list_rejected_literature():
     """Return all PMIDs the user has previously rejected.
