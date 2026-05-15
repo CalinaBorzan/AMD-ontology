@@ -499,7 +499,7 @@ async function confirmMiningChanges() {
   }
 }
 
-async async function applyInferredAxioms() {
+async function applyInferredAxioms() {
   const axioms = hermitResult.value?.inferred_axioms || []
   const subClassAxioms = axioms.filter(a => typeof a === 'string' && a.includes('subClassOf'))
   if (!subClassAxioms.length) {
