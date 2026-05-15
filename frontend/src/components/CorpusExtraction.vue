@@ -499,6 +499,8 @@ async function confirmMiningChanges() {
 
 async function continueAfterValidation() {
   awaitingValidationReview.value = false
+  fixes.value = []
+  decided.value = {}
   try {
     await runReasoningSteps()
     pipelineActive.value = false

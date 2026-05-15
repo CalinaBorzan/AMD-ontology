@@ -12,6 +12,8 @@ const selectedNode = ref(null)
 const snapshots = ref([])
 const snapBusy = ref(false)
 const snapMsg = ref('')
+const editMsg = ref('')
+const editBusy = ref(false)
 
 const filters = ref({
   showClasses: true,
@@ -380,6 +382,37 @@ function snapLabel(name) {
   return name.replace('snapshot_', '').replace('.json', '').replace(/_/g, ' ')
 }
 
+async function deleteNode(nodeId) {
+  if (!confirm(`Remove "${nodeId}" from ontology?`)) return
+  editBusy.value = true
+  editMsg.value = ''
+  try {
+    await api.deleteInstance(nodeId)
+    selectedNode.value = null
+    editMsg.value = `Removed "${nodeId}".`
+    await reload()
+  } catch (e) {
+    editMsg.value = 'Failed: ' + e.message
+  } finally {
+    editBusy.value = false
+  }
+}
+
+async function deleteRelation(r) {
+  if (!confirm(`Remove triple "${r.subject} ${r.predicate} ${r.object}"?`)) return
+  editBusy.value = true
+  editMsg.value = ''
+  try {
+    await api.deleteTriple(r.subject, r.predicate, r.object)
+    editMsg.value = `Removed triple.`
+    await reload()
+  } catch (e) {
+    editMsg.value = 'Failed: ' + e.message
+  } finally {
+    editBusy.value = false
+  }
+}
+
 onMounted(() => { loadOntology(); loadSnapshots() })
 
 onBeforeUnmount(() => {
@@ -503,6 +536,7 @@ onBeforeUnmount(() => {
         </header>
         <h3 class="node-name">{{ selectedNode.id }}</h3>
         <p v-if="selectedNode.description" class="node-desc">{{ selectedNode.description }}</p>
+        <p v-if="editMsg" class="snap-msg">{{ editMsg }}</p>
 
         <div v-if="selectedNode.parents.length" class="rel-block">
           <span class="rel-lbl">Parent of</span>
@@ -522,11 +556,19 @@ onBeforeUnmount(() => {
           <span class="rel-lbl">Relations ({{ selectedNode.relations.length }})</span>
           <ul class="rel-list">
             <li v-for="(r, i) in selectedNode.relations" :key="i">
-              <span class="rel-side">{{ r.direction === 'out' ? r.subject : r.subject }}</span>
+              <span class="rel-side">{{ r.subject }}</span>
               <span class="rel-pred">{{ r.predicate }}</span>
               <span class="rel-side">{{ r.object }}</span>
+              <button class="snap-restore" :disabled="editBusy" @click="deleteRelation(r)" title="Remove triple">×</button>
             </li>
           </ul>
+        </div>
+
+        <div v-if="selectedNode.kind === 'instance'" class="rel-block" style="margin-top: var(--s-3)">
+          <button class="btn ghost" style="width:100%; color: var(--danger); border-color: var(--danger);"
+            :disabled="editBusy" @click="deleteNode(selectedNode.id)">
+            Remove from ontology
+          </button>
         </div>
       </div>
     </aside>

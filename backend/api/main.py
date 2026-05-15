@@ -457,6 +457,23 @@ def delete_instance(name: str, cls: str | None = None):
     return {"ok": True, "removed_from": removed_from}
 
 
+@app.delete("/api/ontology/triples")
+def delete_triple(subject: str, predicate: str, object: str):
+    ont = _load_current_ontology()
+    props = ont.get("properties", {})
+    removed = False
+    if predicate in props:
+        examples = props[predicate].get("examples", [])
+        new_examples = [e for e in examples if not (e[0] == subject and e[2] == object)]
+        if len(new_examples) < len(examples):
+            props[predicate]["examples"] = new_examples
+            removed = True
+    if not removed:
+        raise HTTPException(status_code=404, detail=f"Triple '{subject} {predicate} {object}' not found")
+    _save_ontology(ont)
+    return {"ok": True}
+
+
 # ── Manual mode — extract from one abstract ──────────────────────────────────
 
 @app.post("/api/extract/abstract", response_model=ExtractResponse)

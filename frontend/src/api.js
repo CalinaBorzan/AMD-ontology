@@ -45,6 +45,8 @@ export const api = {
   addTriple: (payload) => http.post('/api/ontology/triples', payload).then((r) => r.data),
   deleteInstance: (name) =>
     http.delete(`/api/ontology/instances/${encodeURIComponent(name)}`).then((r) => r.data),
+  deleteTriple: (subject, predicate, object) =>
+    http.delete('/api/ontology/triples', { params: { subject, predicate, object } }).then((r) => r.data),
 
   fetchLiterature: (payload) =>
     http.post('/api/literature/fetch', payload).then((r) => r.data),
