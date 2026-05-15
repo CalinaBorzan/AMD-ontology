@@ -254,6 +254,8 @@ async function runPostMining() {
 
 async function runReasoningSteps() {
   if (awaitingValidationReview.value) return
+  fixes.value = []
+  decided.value = {}
   pipelineActive.value = true
 
   if (runHermit.value) {
