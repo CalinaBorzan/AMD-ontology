@@ -264,7 +264,7 @@ def discover_abstracts(model: str, provider: str, days: int,
 
         class RateLimitHandler(BaseCallbackHandler):
             def on_agent_action(self, action, **kwargs):
-                time.sleep(1)
+                time.sleep(3)
 
         agent_executor.callbacks = [RateLimitHandler()]
 
@@ -337,7 +337,7 @@ def run(model: str, provider: str, days: int):
 
         class RateLimitHandler(BaseCallbackHandler):
             def on_agent_action(self, action, **kwargs):
-                time.sleep(1)
+                time.sleep(3)
 
         agent_executor.callbacks = [RateLimitHandler()]
 
