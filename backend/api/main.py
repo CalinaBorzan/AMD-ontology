@@ -776,6 +776,8 @@ def approve_literature(req: LiteratureApproveRequest):
                 skipped_missing_text.append(pmid)
                 continue
             (APPROVED_LIT_DIR / f"abstract_PMID{pmid}.txt").write_text(text, encoding="utf-8")
+            meta = {"pmid": pmid, "title": prop.get("title", ""), "relevance": prop.get("relevance", ""), "approved_at": now}
+            (APPROVED_LIT_DIR / f"meta_PMID{pmid}.json").write_text(json.dumps(meta, ensure_ascii=False), encoding="utf-8")
             saved.append(pmid)
         else:
             if pmid in existing_rejected_pmids:
@@ -815,10 +817,14 @@ def list_approved_literature():
     for txt_file in sorted(APPROVED_LIT_DIR.glob("abstract_PMID*.txt")):
         pmid = txt_file.stem.replace("abstract_PMID", "")
         text = txt_file.read_text(encoding="utf-8")
+        meta_file = APPROVED_LIT_DIR / f"meta_PMID{pmid}.json"
+        meta = json.loads(meta_file.read_text(encoding="utf-8")) if meta_file.exists() else {}
         approved.append({
             "pmid": pmid,
+            "title": meta.get("title", ""),
+            "relevance": meta.get("relevance", ""),
+            "approved_at": meta.get("approved_at", ""),
             "abstract_text": text,
-            "filename": txt_file.name,
         })
     return {"approved": approved}
 
