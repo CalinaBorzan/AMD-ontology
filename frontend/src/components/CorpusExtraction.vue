@@ -43,6 +43,7 @@ const miningId = ref(null)
 const ontologyBefore = ref(null)
 const miningChanges = ref(null)
 const instancesToRemove = ref(new Set())
+const triplesToRemove = ref(new Set())
 const awaitingMiningReview = ref(false)
 
 const validationState = ref(null)
@@ -172,6 +173,7 @@ function resetPipelineState() {
   ontologyBefore.value = null
   miningChanges.value = null
   instancesToRemove.value = new Set()
+  triplesToRemove.value = new Set()
   awaitingMiningReview.value = false
   validationState.value = null
   validationId.value = null
@@ -463,6 +465,18 @@ function keepAllInstances() {
   instancesToRemove.value = new Set()
 }
 
+function tripleKey(t) {
+  return `${t.subject}|${t.predicate}|${t.object}`
+}
+
+function toggleTriple(t) {
+  const key = tripleKey(t)
+  const next = new Set(triplesToRemove.value)
+  if (next.has(key)) next.delete(key)
+  else next.add(key)
+  triplesToRemove.value = next
+}
+
 async function confirmMiningChanges() {
   if (!awaitingMiningReview.value) return
   awaitingMiningReview.value = false
@@ -489,6 +503,21 @@ async function confirmMiningChanges() {
     } else {
       pushLog(`✓ All additions kept.`)
     }
+
+    const triples = Array.from(triplesToRemove.value)
+    if (triples.length) {
+      pushLog(`▶ Removing ${triples.length} relation${triples.length === 1 ? '' : 's'}…`)
+      for (const key of triples) {
+        const [subject, predicate, object] = key.split('|')
+        try {
+          await api.deleteTriple(subject, predicate, object)
+          pushLog(`  − ${subject} ${predicate} ${object}`)
+        } catch (err) {
+          pushLog(`  ! Failed: ${err.message}`)
+        }
+      }
+    }
+
     completedSteps.value = [...completedSteps.value, 'review-mining']
 
     await runPostMining()
@@ -1245,18 +1274,22 @@ onBeforeUnmount(() => {
         <section v-if="miningChanges.newTriples.length" class="diff-block">
           <header class="diff-head">
             <h4>New relationships</h4>
-            <span class="diff-count">{{ miningChanges.newTriples.length }}</span>
+            <span class="diff-count">{{ miningChanges.newTriples.length - triplesToRemove.size }}</span>
           </header>
-          <details class="triples-details">
-            <summary>Show relationships</summary>
-            <ul class="triple-list">
-              <li v-for="(t, i) in miningChanges.newTriples" :key="i" class="triple-row">
-                <span class="triple-s">{{ t.subject }}</span>
-                <span class="triple-p">{{ t.predicate }}</span>
-                <span class="triple-o">{{ t.object }}</span>
-              </li>
-            </ul>
-          </details>
+          <ul class="triple-list">
+            <li v-for="(t, i) in miningChanges.newTriples" :key="i"
+              :class="['triple-row', { removed: triplesToRemove.has(tripleKey(t)) }]"
+              @click="awaitingMiningReview && toggleTriple(t)"
+              style="cursor: pointer">
+              <input type="checkbox"
+                :checked="!triplesToRemove.has(tripleKey(t))"
+                :disabled="!awaitingMiningReview"
+                @click.stop="toggleTriple(t)" />
+              <span class="triple-s" :class="{ strike: triplesToRemove.has(tripleKey(t)) }">{{ t.subject }}</span>
+              <span class="triple-p">{{ t.predicate }}</span>
+              <span class="triple-o" :class="{ strike: triplesToRemove.has(tripleKey(t)) }">{{ t.object }}</span>
+            </li>
+          </ul>
         </section>
 
         <footer v-if="awaitingMiningReview" class="approval-bar">
