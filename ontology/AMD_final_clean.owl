@@ -5,6 +5,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+ <owl:Ontology rdf:about="https://w3id.org/amd-ontology">
+    <dcterms:license 
+      rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:title>AMD Ontology</dcterms:title>
+  </owl:Ontology>
+
   <rdf:Description rdf:about="http://example.org/amd#ChoroidalNeovascularization">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>ChoroidalNeovascularization</rdfs:label>
